@@ -4,8 +4,6 @@ export const StatsList = styled.ul`
   list-style: none;
   display: flex;
   justify-content: space-between;
-  margin: 0;
-  padding: 0;
 `;
 
 export const StatsListItem = styled.li`

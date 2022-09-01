@@ -1,5 +1,5 @@
-import { TitleEl } from "./Title.styled";
+import { TitleEl } from './Title.styled';
 
-export const Title = ({ title }) => {
-  return <TitleEl>{title}</TitleEl>;
+export const Title = ({ children }) => {
+  return <div>{children && <TitleEl>{children}</TitleEl>}</div>;
 };

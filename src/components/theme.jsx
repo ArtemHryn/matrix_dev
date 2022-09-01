@@ -5,6 +5,8 @@ export const theme = {
     primary: '#dee0e3',
     nameColor: '#434544',
     staticBg: '#ebebed',
+    green: 'green',
+    red: 'red',
   },
   space: [0, 2, 4, 8, 16, 32, 64, 128, 256],
   fonts: {
@@ -35,5 +37,6 @@ export const theme = {
     boxW: '250px',
     boxH: '300px',
     imgW: '100px',
+    friendItemW: '200px'
   },
 };
