@@ -7,6 +7,9 @@ export const theme = {
     staticBg: '#ebebed',
     green: 'green',
     red: 'red',
+    tableHeader: '#25afcf',
+    tableColor1: '#ffffff',
+    tableColor2: '#f2f5f3',
   },
   space: [0, 2, 4, 8, 16, 32, 64, 128, 256],
   fonts: {
@@ -37,6 +40,7 @@ export const theme = {
     boxW: '250px',
     boxH: '300px',
     imgW: '100px',
-    friendItemW: '200px'
+    friendItemW: '200px',
+    tableWidth: '600px',
   },
 };
