@@ -5,6 +5,5 @@ export const StatItem = styled.li`
   padding: ${p => p.theme.space[3]}px;
   display: flex;
   flex-direction: column;
-
 `;
 
