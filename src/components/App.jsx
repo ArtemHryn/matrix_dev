@@ -1,29 +1,27 @@
 import { Box } from './Box';
-import { Main } from './UserProfile/Main/Main';
-import { Statistics } from './Statistics/Statistics';
-import { FriendList } from './FriendList/FriendsList/FriendsList';
-import { TransactionList } from './TransactionHistory/TransactionList/TransactionList';
 import GlobalStyle from './Global';
-import user from 'user.json';
-import data from 'data.json'
-import friends from 'friends.json'
-import transactions from 'transactions.json'
+import { Route, Routes } from 'react-router-dom';
+import { Layout } from './Layout/Layout';
+import { Calculator } from 'pages/Calculator';
+import { MatrixCalc } from './MatrixCalc/MatrixCalc';
+// import { Matrix } from './Matrix/Matrix';
+// import { MatrixForm } from './Matrix/MatrixForm/MatrixForm';
+// import { Title } from './Matrix/Title/Title';
 
 export const App = () => {
   return (
     <Box
-      display="flex"
-      flexDirection="column"
-      justifyContent="center"
-      alignItems="center"
-      bg="primary"
-      p={4}
+      m="0 auto"
+      backgroundImage="linear-gradient(180deg, #FDFCFE 0%, #E7E0F3 13.01%, #ECE6F6 25.18%, #EDE1F4 36.71%, #F5E8F3 47.22%, #F6ECF5 54.89%, #F4ECFA 71.18%, #F4EBF9 79.3%, #F7EDF8 88.76%, #F7EBF6 100%);"
     >
       <GlobalStyle />
-      <Main user={user} />
-      <Statistics data={data} />
-      <FriendList friends={friends} />
-      <TransactionList transactions={transactions} />
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route path="/" element={<Calculator />}>
+            <Route path="personal" element={<MatrixCalc />}></Route>
+          </Route>
+        </Route>
+      </Routes>
     </Box>
   );
 };

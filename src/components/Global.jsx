@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
     html {
@@ -18,9 +18,10 @@ ul {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
   letter-spacing: 0.03em;
   margin: 0;
+  font-family: 'Cormorant', serif;
+/* font-family: 'Montserrat', sans-serif; */
 }
 
 h1,
@@ -43,6 +44,9 @@ img {
 button {
   border: 0;
   padding: 0;
+}
+a {
+  text-decoration: none;
 }
 `;
 

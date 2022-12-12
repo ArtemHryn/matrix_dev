@@ -11,7 +11,7 @@ export const theme = {
     tableColor1: '#ffffff',
     tableColor2: '#f2f5f3',
   },
-  space: [0, 2, 4, 8, 16, 32, 64, 128, 256],
+  space: [142],
   fonts: {
     main: 'Serif, sans-serif',
     monospace: 'Menlo, monospace',

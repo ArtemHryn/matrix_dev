@@ -1,8 +1,8 @@
 {
-  "name": "react-homework-template",
+  "name": "matrix",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ArtemHryn.github.io/goit-react-hw-01-components/",
+  "homepage": "https://ArtemHryn.github.io/matrix/",
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
@@ -12,6 +12,8 @@
     "prop-types": "^15.8.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-hook-form": "^7.40.0",
+    "react-router-dom": "^6.4.5",
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.5",
     "styled-system": "^5.1.5",
