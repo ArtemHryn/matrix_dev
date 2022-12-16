@@ -3,21 +3,27 @@ import { CodeElement } from './CodeElement/CodeElement';
 import { Button, CodeItem, CodeList, Form } from './GenerateMatrix.styled';
 
 const table = [
-  { name: 'top_left' },
+  { name: 'topLeft1' },
   { name: 'month' },
-  { name: 'top_right' },
+  { name: 'topRight1' },
   { name: 'day' },
   { name: 'center' },
   { name: 'year' },
-  { name: 'bottom_left' },
-  { name: 'middle_center' },
-  { name: 'bottom_right' },
+  { name: 'bottomLeft1' },
+  { name: 'bottom1' },
+  { name: 'bottomRight1' },
 ];
 
-export const GenerateMatrix = () => {
+export const GenerateMatrix = ({ setIsGenerated, isShowedMatrix, addDate }) => {
   const { register, handleSubmit } = useForm();
+
+  const onFormSubmit = data => {
+    setIsGenerated(true)
+    isShowedMatrix(true)
+    addDate(data)
+  };
   return (
-    <Form onSubmit={handleSubmit()}>
+    <Form onSubmit={handleSubmit(onFormSubmit)}>
       <Button>Сгенерировать девятиричную матрицу</Button>
       <CodeList>
         {table.map(input => (

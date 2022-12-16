@@ -9,16 +9,21 @@ export function checkNum(num) {
   return +num;
 }
 
-export function allData(date) {
-
+export function allData(date, isGenerated) {
   const data = {
-    day: checkNum(date.day),
-    month: checkNum(date.month),
-    year: checkNum(date.year),
+    ...date,
   };
+Object.keys(data).forEach(element => data[element] = checkNum(data[element]));
 
-  data.bottom1 = checkNum(data.day + data.month + data.year);
-  data.center = checkNum(data.day + data.month + data.year + data.bottom1);
+
+  if (!isGenerated) {
+    data.bottom1 = checkNum(data.day + data.month + data.year);
+    data.center = checkNum(data.day + data.month + data.year + data.bottom1);
+    data.topLeft1 = checkNum(data.day + data.month);
+    data.topRight1 = checkNum(data.month + data.year);
+    data.bottomLeft1 = checkNum(data.day + data.bottom1);
+    data.bottomRight1 = checkNum(data.bottom1 + data.year);
+  }
   data.bottom3 = checkNum(data.center + data.bottom1);
   data.bottom2 = checkNum(data.bottom3 + data.bottom1);
   data.top3 = checkNum(data.center + data.month);
@@ -28,10 +33,6 @@ export function allData(date) {
   data.right3 = checkNum(data.year + data.center);
   data.right2 = checkNum(data.year + data.right3);
 
-  data.topLeft1 = checkNum(data.day + data.month);
-  data.topRight1 = checkNum(data.month + data.year);
-  data.bottomLeft1 = checkNum(data.day + data.bottom1);
-  data.bottomRight1 = checkNum(data.bottom1 + data.year);
   data.center2 = checkNum(
     data.topLeft1 + data.topRight1 + data.bottomLeft1 + data.bottomRight1
   );
@@ -44,5 +45,5 @@ export function allData(date) {
   data.bottomRight3 = checkNum(data.center2 + data.bottomRight1);
   data.bottomRight2 = checkNum(data.bottomRight1 + data.bottomRight3);
 
-  return data
+  return data;
 }

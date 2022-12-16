@@ -7,7 +7,7 @@ export const Layout = styled.div`
   transform: translate(${p => p.x}, ${p => p.y});
   display: flex;
   flex-direction: ${p => (p.direction ? p.direction : 'row')};
-  align-items: ${p => (p.start ? 'flex-start' : 'flex-end')};
+  align-items: ${p => (p.flexStart ? 'flex-start' : 'flex-end')};
 `;
 
 export const TopLeftElement = styled.span`

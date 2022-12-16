@@ -11,7 +11,7 @@ const buttons = [
   { name: 'Матрица Души', disabled: true },
 ];
 
-export const MatrixInformation = ({ name, date }) => {
+export const MatrixInformation = ({ name, date, isGenerated }) => {
   const { day, month, year } = date;
 
   const getAge = () => {
@@ -52,7 +52,7 @@ export const MatrixInformation = ({ name, date }) => {
           ))}
         </Box>
       </Box>
-      <Matrix date={date} />
+      <Matrix date={date} isGenerated={isGenerated} />
     </Box>
   );
 };

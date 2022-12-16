@@ -9,10 +9,9 @@ import { RightMatrix } from './Sides/Right/RightMatrix';
 import { GenericSquare } from './Sides/GenericSquare/GenericSquare';
 import { SoulCrystal } from './SoulCrystal/SoultCrystal';
 
-export const Matrix = ({ date }) => {
-  const data = allData(date);
+export const Matrix = ({ date, isGenerated }) => {
+  const data = allData(date, isGenerated);
 
-  console.log(data);
   return (
     <Box position="relative">
       <Img src={commonMatrix} alt="Matrix" />

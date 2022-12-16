@@ -1,14 +1,15 @@
 import { useForm } from 'react-hook-form';
 import { ButtonCalc, DataBox, Date, Form, Input } from './MatrixData.styled';
 
-export const MatrixData = ({ isShowedMatrix, addName, addDate }) => {
+export const MatrixData = ({ isShowedMatrix, addName, addDate, setIsGenerated }) => {
   const { register, handleSubmit } = useForm();
 
   const onFormSubmit = ({ name, day, month, year }) => {
-    const date = {day, month, year}
-    isShowedMatrix(true)
-    addName(name)
-    addDate(date)
+    const date = { day, month, year };
+    setIsGenerated(false)
+    isShowedMatrix(true);
+    addName(name);
+    addDate(date);
   };
 
   return (

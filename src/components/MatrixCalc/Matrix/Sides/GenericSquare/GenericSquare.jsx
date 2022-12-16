@@ -17,7 +17,7 @@ export const GenericSquare = ({ data }) => {
       top="17.5%"
       left="17.5%"
     >
-      <Layout x="-10%" y="-15%" top="0" left="0" start={true}>
+      <Layout x="-10%" y="-15%" top="0" left="0" flexStart={true}>
         <TopLeftElement>{data.topLeft1}</TopLeftElement>
         <TopLeftElement>{data.topLeft2}</TopLeftElement>
         <TopLeftElement>{data.topLeft3}</TopLeftElement>
@@ -28,7 +28,7 @@ export const GenericSquare = ({ data }) => {
         top="0"
         left="100%"
         direction="row-reverse"
-        start={true}
+        flexStart={true}
       >
         <TopRightElement>{data.topRight1}</TopRightElement>
         <TopRightElement>{data.topRight2}</TopRightElement>
