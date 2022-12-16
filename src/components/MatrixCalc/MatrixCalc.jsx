@@ -1,19 +1,30 @@
 import { Box } from 'components/Box';
 import { Container } from 'components/Container/Container';
+import { useState } from 'react';
+import { GenerateMatrix } from './GenerateMatrix/GenerateMatrix';
 import { MatrixData } from './MatrixData/MatrixData';
+import { MatrixInformation } from './MatrixInformation/MatrixInformation';
 
 export const MatrixCalc = () => {
+  const [showMatrix, setShowMatrix] = useState(false);
+  const [name, setName] = useState('');
+  const [date, setDate] = useState({});
   return (
-    <Container pl="113px" ps="62px 0">
+    <Container ps="62px 0" p="0 108px">
       <Box
-        width="813px"
-        height="357px"
-        backgroundColor="#FFFFFF"
-        borderRadius="29px"
-        p="48px"
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        mb="153px"
       >
-        <MatrixData />
+        <MatrixData
+          isShowedMatrix={setShowMatrix}
+          addName={setName}
+          addDate={setDate}
+        />
+        <GenerateMatrix isShowedMatrix={setShowMatrix} />
       </Box>
+      {showMatrix && <MatrixInformation name={name} date={date} />}
     </Container>
   );
 };

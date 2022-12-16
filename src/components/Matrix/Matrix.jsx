@@ -14,6 +14,7 @@ import {
   ComfortZone,
 } from './Matrix.styled';
 import { useState } from 'react';
+import { checkNum } from 'helper/calculateMatrix';
 
 export const Matrix = ({ day, month, year }) => {
   const [matrixColor, setMatrixColor] = useState(false);
@@ -22,16 +23,7 @@ export const Matrix = ({ day, month, year }) => {
     month: checkNum(month),
     year: checkNum(year),
   };
-  function checkNum(num) {
-    if (+num > 22) {
-      return String(num)
-        .split('')
-        .reduce((acc, number) => {
-          return acc + +number;
-        }, 0);
-    }
-    return +num;
-  }
+
   const calculate = (firstNum, secondNum, thirdNum = 0, fourthNum = 0) => {
     const number =
       checkNum(firstNum) +

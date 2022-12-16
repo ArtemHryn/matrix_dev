@@ -1,5 +1,14 @@
 import styled from 'styled-components';
 
+export const Form = styled.form`
+  width: 513px;
+  height: 303px;
+  background-color: #ffffff;
+  border-radius: 29px;
+  padding: 43px;
+  margin-right: 40px;
+`;
+
 export const Input = styled.input`
   width: 390px;
   height: 69px;
@@ -23,10 +32,15 @@ export const Date = styled.input`
   height: 38px;
 
   margin-right: 19px;
+  padding: 0 20px;
 
   border: 1px solid #ddc5ff;
   border-radius: 9px;
+`;
 
+export const DataBox = styled.div`
+  margin-bottom: 19px;
+  display: flex;
 `;
 
 export const ButtonCalc = styled.button`
@@ -43,7 +57,9 @@ export const ButtonCalc = styled.button`
   /* identical to box height */
 
   color: #ffffff;
-  :hover {
-    transform: scale(1.05) 
+  :hover,
+  :focus {
+    transform: scale(1.05);
+    background: red;
   }
 `;

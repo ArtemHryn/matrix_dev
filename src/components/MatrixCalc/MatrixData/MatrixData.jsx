@@ -1,25 +1,34 @@
 import { useForm } from 'react-hook-form';
-import { ButtonCalc, Date, Input } from './MatrixData.styled';
+import { ButtonCalc, DataBox, Date, Form, Input } from './MatrixData.styled';
 
-export const MatrixData = () => {
+export const MatrixData = ({ isShowedMatrix, addName, addDate }) => {
   const { register, handleSubmit } = useForm();
 
-  const onFormSubmit = ({ name, date }) => {
-    console.log(name);
-    console.log(date);
+  const onFormSubmit = ({ name, day, month, year }) => {
+    const date = {day, month, year}
+    isShowedMatrix(true)
+    addName(name)
+    addDate(date)
   };
 
   return (
-    <form onSubmit={handleSubmit(onFormSubmit)}>
+    <Form onSubmit={handleSubmit(onFormSubmit)}>
       <Input placeholder="Имя" type="text" {...register('name')} />
-      <div>
-        <Date width="108px" type="text" maxLength="2" {...register('day')} />
+      <DataBox>
+        <Date
+          width="108px"
+          type="text"
+          maxLength="2"
+          {...register('day')}
+          placeholder="день"
+        />
         <Date
           width="108px"
           type="text"
           {...register('month')}
           maxLength="2"
           minLength="1"
+          placeholder="месяц"
         />
         <Date
           width="136px"
@@ -27,9 +36,10 @@ export const MatrixData = () => {
           {...register('year')}
           maxLength="4"
           minLength="1"
+          placeholder="год"
         />
-      </div>
+      </DataBox>
       <ButtonCalc type="submit">Рассчитать личную матрицу судьбы</ButtonCalc>
-    </form>
+    </Form>
   );
 };

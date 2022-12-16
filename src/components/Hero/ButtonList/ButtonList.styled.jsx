@@ -26,5 +26,10 @@ export const Button = styled(NavLink)`
   box-shadow: 0px 5.48556px 9.1426px rgba(0, 0, 0, 0.25);
   border-radius: 12.7996px;
 
-  
+  font-family: 'Cormorant';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21.2332px;
+  line-height: 26px;
+  color: #9072af;
 `;

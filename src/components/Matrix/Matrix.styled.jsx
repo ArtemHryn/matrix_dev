@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
 export const Matriximg = styled.img`
-width: 1000px`;
+  width: 1000px;
+`;
+
 export const MonthLayout = styled.div`
   position: absolute;
   top: 0%;
@@ -62,7 +64,6 @@ export const MatrixYear = styled.span`
   :not(:last-child) {
     margin-left: 22px;
   }
-
 `;
 
 export const BottomLayout = styled.div`
@@ -100,4 +101,3 @@ export const ComfortZone = styled.span`
   align-items: center;
   justify-content: center;
 `;
-

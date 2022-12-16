@@ -25,7 +25,8 @@ export const Contacts = () => {
       display="flex"
       justifyContent="center"
       flexDirection="column"
-      p='0 115px'
+      p="0 115px"
+      id="contacts"
     >
       <Title>Контакты</Title>
       <ContactList>

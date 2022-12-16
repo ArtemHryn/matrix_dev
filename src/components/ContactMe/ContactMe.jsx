@@ -10,14 +10,15 @@ export const ContactMe = () => {
       justifyContent="center"
       p="50px 115px"
       flexDirection="column"
-      ps='90px 0'
+      ps="90px 0"
+      id="consultation"
     >
       <Box
         m="0 auto"
         backgroundColor="#FFFFFF"
         borderRadius="36px"
         display="flex"
-        mb='40px'
+        mb="40px"
       >
         <Box
           display="flex"
