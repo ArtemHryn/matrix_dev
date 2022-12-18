@@ -13,8 +13,9 @@ export function allData(date, isGenerated) {
   const data = {
     ...date,
   };
-Object.keys(data).forEach(element => data[element] = checkNum(data[element]));
-
+  Object.keys(data).forEach(
+    element => (data[element] = checkNum(data[element]))
+  );
 
   if (!isGenerated) {
     data.bottom1 = checkNum(data.day + data.month + data.year);
@@ -45,5 +46,43 @@ Object.keys(data).forEach(element => data[element] = checkNum(data[element]));
   data.bottomRight3 = checkNum(data.center2 + data.bottomRight1);
   data.bottomRight2 = checkNum(data.bottomRight1 + data.bottomRight3);
 
+  data.innerTopLeft = checkNum(data.left3 + data.top3);
+  data.innerTopRight = checkNum(data.right3 + data.top3);
+  data.innerBottomLeft = checkNum(data.bottom3 + data.left3);
+  data.innerBottomRight = checkNum(data.bottom3 + data.right3);
+
+  data.innerTop1 = checkNum(data.top3 + data.innerTopLeft);
+  data.innerTop2 = checkNum(data.center + data.top3);
+  data.innerTop3 = checkNum(data.top3 + data.innerTopRight);
+
+  data.innerLeft1 = checkNum(data.left3 + data.innerTopLeft);
+  data.innerLeft2 = checkNum(data.center + data.left3);
+  data.innerLeft3 = checkNum(data.left3 + data.innerBottomLeft);
+
+  data.innerRight1 = checkNum(data.right3 + data.innerTopRight);
+  data.innerRight2 = checkNum(data.center + data.right3);
+  data.innerRight3 = checkNum(data.right3 + data.innerBottomRight);
+
+  data.innerBottom1 = checkNum(data.bottom3 + data.innerBottomLeft);
+  data.innerBottom2 = checkNum(data.center + data.bottom3);
+  data.innerBottom3 = checkNum(data.bottom3 + data.innerBottomRight);
+
   return data;
 }
+
+export const assignCalc = info => {
+  const data = { ...info };
+
+  data.sky = checkNum(data.bottom1 + data.month);
+  data.earth = checkNum(data.day + data.year);
+  data.personal = checkNum(data.sky + data.earth);
+
+  data.father = checkNum(data.topLeft1 + data.bottomRight1);
+  data.mother = checkNum(data.topRight1 + data.bottomLeft1);
+  data.social = checkNum(data.father + data.mother);
+
+  data.spirit = checkNum(data.personal + data.social);
+  data.planet = checkNum(data.social + data.spirit);
+  data.insidePower = checkNum(data.center + data.center2);
+  return data;
+};
