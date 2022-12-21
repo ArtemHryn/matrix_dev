@@ -1,20 +1,21 @@
 {
   "files": {
     "main.css": "/matrix/static/css/main.3a094039.css",
-    "main.js": "/matrix/static/js/main.52099bd8.js",
+    "main.js": "/matrix/static/js/main.eb202937.js",
+    "static/media/contractMatrix.svg": "/matrix/static/media/contractMatrix.9f62b0adae7b4901e7413dc13da5c5dd.svg",
     "static/media/sun.png": "/matrix/static/media/sun.fead320a1d23996956d3.png",
     "static/media/DariPhoto.jpg": "/matrix/static/media/DariPhoto.9f0ce25a6a4d89e87b10.jpg",
     "static/media/personalAssignImage.png": "/matrix/static/media/personalAssignImage.7268c411d3b97cad8419.png",
     "static/media/social.png": "/matrix/static/media/social.6c1babcc68184425f05b.png",
-    "static/media/commonMatrix2.svg": "/matrix/static/media/commonMatrix2.b9cc2c51c64c20fc2194ee7d92d99fc4.svg",
-    "static/media/contractMatrix.svg": "/matrix/static/media/contractMatrix.c0302c6b536d3b0891766196ea43ddd3.svg",
+    "static/media/MatrixMain.svg": "/matrix/static/media/MatrixMain.042a8ac2d91d3112b750ae041f76ebee.svg",
+    "static/media/test.svg": "/matrix/static/media/test.e176883ef643d6de5ffa0f18e633a362.svg",
     "index.html": "/matrix/index.html",
     "static/media/arrowContact.svg": "/matrix/static/media/arrowContact.084e18e7fb136ece93eab69a8307bb4a.svg",
     "main.3a094039.css.map": "/matrix/static/css/main.3a094039.css.map",
-    "main.52099bd8.js.map": "/matrix/static/js/main.52099bd8.js.map"
+    "main.eb202937.js.map": "/matrix/static/js/main.eb202937.js.map"
   },
   "entrypoints": [
     "static/css/main.3a094039.css",
-    "static/js/main.52099bd8.js"
+    "static/js/main.eb202937.js"
   ]
 }
