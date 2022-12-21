@@ -1,12 +1,18 @@
-import { BottomElement, BottomLayout } from "./BottomMatrix.styled";
+import { MatrixKey } from "../../Matrix.styled";
 
 export const BottomMatrix = ({ data }) => {
   const {bottom1, bottom2, bottom3} = data
     return (
-      <BottomLayout>
-        <BottomElement>{bottom1}</BottomElement>
-        <BottomElement>{bottom2}</BottomElement>
-        <BottomElement>{bottom3}</BottomElement>
-      </BottomLayout>
+      <>
+        <MatrixKey x="47.6%" y="92.6%">
+          {bottom1}
+        </MatrixKey>
+        <MatrixKey x="47.7%" y="86.2%">
+          {bottom2}
+        </MatrixKey>
+        <MatrixKey x="47.7%" y="79.6%">
+          {bottom3}
+        </MatrixKey>
+      </>
     );
 }

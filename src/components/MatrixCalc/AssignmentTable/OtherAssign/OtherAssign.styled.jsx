@@ -28,11 +28,11 @@ export const Key = styled.span`
   width: 40px;
   height: 40px;
 
-  font-family: 'Cormorant';
-  font-style: italic;
+  font-family: 'PT Serif';
+  font-style: normal;
   font-weight: 400;
-  font-size: 30px;
-  line-height: 36px;
+  font-size: 22px;
+  line-height: 29px;
   letter-spacing: 0.01em;
 
   background: #ffffff;

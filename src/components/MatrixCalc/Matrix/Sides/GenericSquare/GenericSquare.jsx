@@ -1,49 +1,60 @@
-import { Box } from 'components/Box';
-import {
-  BottomLeftElement,
-  BottomRightElement,
-  Layout,
-  TopLeftElement,
-  TopRightElement,
-} from './GenericSquare.styled';
+import { MatrixKey } from '../../Matrix.styled';
 
 export const GenericSquare = ({ data }) => {
+  const {
+    topLeft1,
+    topLeft2,
+    topLeft3,
+    topRight1,
+    topRight2,
+    topRight3,
+    bottomLeft1,
+    bottomLeft2,
+    bottomLeft3,
+    bottomRight1,
+    bottomRight2,
+    bottomRight3,
+  } = data;
   return (
-    <Box
-      width="437px"
-      height="437px"
-      //   border="3px solid black"
-      position="absolute"
-      top="17.5%"
-      left="17.5%"
-    >
-      <Layout x="-10%" y="-15%" top="0" left="0" flexStart={true}>
-        <TopLeftElement>{data.topLeft1}</TopLeftElement>
-        <TopLeftElement>{data.topLeft2}</TopLeftElement>
-        <TopLeftElement>{data.topLeft3}</TopLeftElement>
-      </Layout>
-      <Layout
-        x="-90%"
-        y="-15%"
-        top="0"
-        left="100%"
-        direction="row-reverse"
-        flexStart={true}
-      >
-        <TopRightElement>{data.topRight1}</TopRightElement>
-        <TopRightElement>{data.topRight2}</TopRightElement>
-        <TopRightElement>{data.topRight3}</TopRightElement>
-      </Layout>
-      <Layout x="-5%" y="-90%" top="100%" left="0">
-        <BottomLeftElement>{data.bottomLeft1}</BottomLeftElement>
-        <BottomLeftElement>{data.bottomLeft2}</BottomLeftElement>
-        <BottomLeftElement>{data.bottomLeft3}</BottomLeftElement>
-      </Layout>
-      <Layout x="-90%" y="-92%" top="100%" left="100%" direction="row-reverse">
-        <BottomRightElement>{data.bottomRight1}</BottomRightElement>
-        <BottomRightElement>{data.bottomRight2}</BottomRightElement>
-        <BottomRightElement>{data.bottomRight3}</BottomRightElement>
-      </Layout>
-    </Box>
+    <>
+      <MatrixKey x="15.9%" y="16.1%">
+        {topLeft1}
+      </MatrixKey>
+      <MatrixKey x="20.7%" y="20.7%">
+        {topLeft2}
+      </MatrixKey>
+      <MatrixKey x="25.2%" y="25.2%">
+        {topLeft3}
+      </MatrixKey>
+
+      <MatrixKey x="79.3%" y="15.8%">
+        {topRight1}
+      </MatrixKey>
+      <MatrixKey x="74.8%" y="20.7%">
+        {topRight2}
+      </MatrixKey>
+      <MatrixKey x="70%" y="25.3%">
+        {topRight3}
+      </MatrixKey>
+
+      <MatrixKey x="16.4%" y="80%">
+        {bottomLeft1}
+      </MatrixKey>
+      <MatrixKey x="20.9%" y="74.8%">
+        {bottomLeft2}
+      </MatrixKey>
+      <MatrixKey x="25.3%" y="69.9%">
+        {bottomLeft3}
+      </MatrixKey>
+      <MatrixKey x="79.4%" y="79.7%">
+        {bottomRight1}
+      </MatrixKey>
+      <MatrixKey x="74.9%" y="74.9%">
+        {bottomRight2}
+      </MatrixKey>
+      <MatrixKey x="70.3%" y="70.2%">
+        {bottomRight3}
+      </MatrixKey>
+    </>
   );
 };

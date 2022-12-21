@@ -28,11 +28,11 @@ export const Key = styled.span`
   border: 1px solid #c0b8c9;
   border-radius: 50%;
 
-  font-family: 'Cormorant';
+  font-family: 'PT Serif';
   font-style: normal;
-  font-weight: 500;
-  font-size: 26px;
-  line-height: 32px;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 29px;
 
   text-align: center;
 
@@ -49,15 +49,14 @@ export const FinalKey = styled.span`
   width: 64px;
   height: 64px;
 
-  font-family: 'Cormorant';
+  font-family: 'PT Serif';
   font-style: normal;
-  font-weight: 500;
-  font-size: 36px;
-  line-height: 32px;
-
-  text-align: center;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 37px;
 
   color: #000000;
+
   background-image: url(${resultImg});
   background-size: contain;
 

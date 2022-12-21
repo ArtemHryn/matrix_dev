@@ -1,6 +1,7 @@
+import { useState, useEffect } from 'react';
 import { Box } from 'components/Box';
-import { CenterSpan, CenterSpan2, Img } from './Matrix.styled';
-import commonMatrix from '../../../images/commonMatrix2.svg';
+import {Img, MatrixKey } from './Matrix.styled';
+import MainMatrix from '../../../images/MatrixMain.svg';
 import contractMatrix from '../../../images/contractMatrix.svg'
 import { allData } from 'helper/calculateMatrix';
 import { TopMatrix } from './Sides/Top/TopMatrix';
@@ -9,8 +10,7 @@ import { BottomMatrix } from './Sides/Bottom/BottomMatrix';
 import { RightMatrix } from './Sides/Right/RightMatrix';
 import { GenericSquare } from './Sides/GenericSquare/GenericSquare';
 import { SoulCrystal } from './SoulCrystal/SoultCrystal';
-import { useEffect } from 'react';
-import { useState } from 'react';
+import testImg from '../../../images/test.svg'
 
 export const Matrix = ({ date, isGenerated, setData, matrixType }) => {
   const [dataM, setDataM] = useState({});
@@ -18,12 +18,14 @@ export const Matrix = ({ date, isGenerated, setData, matrixType }) => {
   const typeOfMatrix = () => {
     switch (matrixType) {
       case 'perconal':
-        return commonMatrix;
+        return MainMatrix;
       case 'contract':
         return contractMatrix;
+      case 'health':
+        return testImg;
 
       default:
-        return commonMatrix;;
+        return MainMatrix;
     }
   };
 
@@ -33,6 +35,7 @@ export const Matrix = ({ date, isGenerated, setData, matrixType }) => {
     setData(result);
   }, [date, isGenerated, setData]);
 
+  const {center, center2} = dataM
   return (
     <Box position="relative">
       <Img src={typeOfMatrix()} alt="Matrix" />
@@ -40,8 +43,12 @@ export const Matrix = ({ date, isGenerated, setData, matrixType }) => {
       <LeftMatrix data={dataM} />
       <BottomMatrix data={dataM} />
       <RightMatrix data={dataM} />
-      <CenterSpan>{dataM.center}</CenterSpan>
-      <CenterSpan2>{dataM.center2}</CenterSpan2>
+      <MatrixKey x="47.6%" y="47.8%" fontSize="26px">
+        {center}
+      </MatrixKey>
+      <MatrixKey x="51%" y="51.2%" fontSize="19px">
+        {center2}
+      </MatrixKey>
       <GenericSquare data={dataM} />
       <SoulCrystal data={dataM} matrixType={matrixType} />
     </Box>

@@ -1,53 +1,76 @@
-import { Box } from 'components/Box';
-import { Layout } from '../Sides/GenericSquare/GenericSquare.styled';
-import {
-  InnerBottom,
-  InnerCorners,
-  InnerLeftRight,
-  InnerTop,
-} from './SoulCrystal.styled';
+import { MatrixKey } from "../Matrix.styled";
+
 
 export const SoulCrystal = ({ data }) => {
+  const {
+    innerTop1,
+    innerTop2,
+    innerTop3,
+    innerLeft1,
+    innerLeft2,
+    innerLeft3,
+    innerRight1,
+    innerRight2,
+    innerRight3,
+    innerBottom1,
+    innerBottom2,
+    innerBottom3,
+    innerTopLeft,
+    innerTopRight,
+    innerBottomLeft,
+    innerBottomRight,
+  } = data;
   return (
-    <Box
-      position="absolute"
-      width="310px"
-      height="312px"
-      top="26.5%"
-      left="27%"
-    >
-      <Layout x="-50%" y="-55%" top="0" left="50%" flexStart={true}>
-        <InnerTop>{data.innerTop1}</InnerTop>
-        <InnerTop>{data.innerTop2}</InnerTop>
-        <InnerTop>{data.innerTop3}</InnerTop>
-      </Layout>
-      <Layout x="-49%" y="-50%" top="50%" left="0" direction="column">
-        <InnerLeftRight>{data.innerLeft1}</InnerLeftRight>
-        <InnerLeftRight>{data.innerLeft2}</InnerLeftRight>
-        <InnerLeftRight>{data.innerLeft3}</InnerLeftRight>
-      </Layout>
-      <Layout x="-49%" y="-50%" top="50%" left="100%" direction="column">
-        <InnerLeftRight>{data.innerRight1}</InnerLeftRight>
-        <InnerLeftRight>{data.innerRight1}</InnerLeftRight>
-        <InnerLeftRight>{data.innerRight1}</InnerLeftRight>
-      </Layout>
-      <Layout x="-50%" y="-52%" top="100%" left="50%">
-        <InnerBottom>{data.innerBottom1}</InnerBottom>
-        <InnerBottom>{data.innerBottom2}</InnerBottom>
-        <InnerBottom>{data.innerBottom3}</InnerBottom>
-      </Layout>
-      <InnerCorners x="11%" y="9%">
-        {data.innerTopLeft}
-      </InnerCorners>
-      <InnerCorners x="82%" y="9%">
-        {data.innerTopRight}
-      </InnerCorners>
-      <InnerCorners x="12%" y="79%">
-        {data.innerBottomLeft}
-      </InnerCorners>
-      <InnerCorners x="82%" y="79%">
-        {data.innerBottomRight}
-      </InnerCorners>
-    </Box>
+    <>
+      <MatrixKey x="38%" y="24.9%" fontSize="20px">
+        {innerTop1}
+      </MatrixKey>
+      <MatrixKey x="47.7%" y="24.3%">
+        {innerTop2}
+      </MatrixKey>
+      <MatrixKey x="57.7%" y="24.9%" fontSize="20px">
+        {innerTop3}
+      </MatrixKey>
+      <MatrixKey x="24.9%" y="38.5%" fontSize="20px">
+        {innerLeft1}
+      </MatrixKey>
+      <MatrixKey x="24.5%" y="47.8%">
+        {innerLeft2}
+      </MatrixKey>
+      <MatrixKey x="24.8%" y="57%" fontSize="20px">
+        {innerLeft3}
+      </MatrixKey>
+      <MatrixKey x="70.4%" y="38.5%" fontSize="20px">
+        {innerRight1}
+      </MatrixKey>
+      <MatrixKey x="70.7%" y="47.6%">
+        {innerRight2}
+      </MatrixKey>
+      <MatrixKey x="70.5%" y="57.2%" fontSize="20px">
+        {innerRight3}
+      </MatrixKey>
+      <MatrixKey x="37.8%" y="70.5%" fontSize="20px">
+        {innerBottom1}
+      </MatrixKey>
+      <MatrixKey x="47.8%" y="70.9%">
+        {innerBottom2}
+      </MatrixKey>
+      <MatrixKey x="57.6%" y="70.6%" fontSize="20px">
+        {innerBottom3}
+      </MatrixKey>
+
+      <MatrixKey x="31.3%" y="31.2%">
+        {innerTopLeft}
+      </MatrixKey>
+      <MatrixKey x="63.9%" y="31%">
+        {innerTopRight}
+      </MatrixKey>
+      <MatrixKey x="31.1%" y="64.1%">
+        {innerBottomLeft}
+      </MatrixKey>
+      <MatrixKey x="64.1%" y="63.9%">
+        {innerBottomRight}
+      </MatrixKey>
+    </>
   );
 };
