@@ -11,7 +11,6 @@ export const Logo = styled.a`
 
   color: #9072af;
   margin-right: 74px;
-
 `;
 
 export const HeaderList = styled.ul`

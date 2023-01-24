@@ -1,4 +1,14 @@
 import styled from 'styled-components';
+import {
+  // color,
+  // space,
+  // layout,
+  // typography,
+  // flexbox,
+  // border,
+  position,
+  // background,
+} from 'styled-system';
 
 export const Img = styled.img`
 
@@ -20,4 +30,5 @@ export const MatrixKey = styled.span`
   justify-content: center;
 
   color: #000000;
+  ${position}
 `;

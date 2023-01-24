@@ -71,6 +71,7 @@ export function allData(date, isGenerated) {
 }
 
 export const assignCalc = info => {
+  info.year = checkNum(info.year)
   const data = { ...info };
 
   data.sky = checkNum(data.bottom1 + data.month);

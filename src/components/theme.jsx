@@ -1,27 +1,15 @@
 export const theme = {
+  breakpoints: ['768px', '1440px'],
   colors: {
     stats: '#000',
-    secondary: '#828487',
-    primary: '#dee0e3',
-    nameColor: '#434544',
-    staticBg: '#ebebed',
-    green: 'green',
-    red: 'red',
-    tableHeader: '#25afcf',
-    tableColor1: '#ffffff',
-    tableColor2: '#f2f5f3',
   },
   space: [142],
   fonts: {
-    main: 'Serif, sans-serif',
-    monospace: 'Menlo, monospace',
+    main: 'Cormorant',
+    title: 'Cormorant SC',
   },
   fontSizes: {
     xs: '12px',
-    s: '14px',
-    m: '16px',
-    l: '32px',
-    xl: '64px',
   },
   fontWeights: {
     normal: 400,
@@ -38,9 +26,5 @@ export const theme = {
   },
   sizes: {
     boxW: '250px',
-    boxH: '300px',
-    imgW: '100px',
-    friendItemW: '200px',
-    tableWidth: '600px',
   },
 };
