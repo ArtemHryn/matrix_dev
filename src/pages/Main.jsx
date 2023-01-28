@@ -13,6 +13,7 @@ import { WhatIsMatrix } from 'components/MainPageComponents/WhatIsMatrix/WhatIsM
 import { WhatPeopleAsk } from 'components/MainPageComponents/WhatPeopleAsk/WhatPeopleAsk';
 import backgroundFooterImage from 'images/backgroundPlanet.png';
 import { MatrixPlusAndMinus } from 'components/MainPageComponents/MatrixPlusAndMinus/MatrixPlusAndMinus';
+import { Header } from 'components/MainPageComponents/Header/Header';
 
 const imgLink = `url(${backgroundFooterImage})`;
 
@@ -20,7 +21,10 @@ export const Main = ({ setIsMain }) => {
   useEffect(() => setIsMain(true), [setIsMain]);
   return (
     <>
-      <MainHero />
+      <Box backgroundImage="linear-gradient(to bottom,rgba(158, 118, 255, 0.18) 50%,#fff)">
+        <Header />
+        <MainHero />
+      </Box>
       <Author />
       <AboutKarma />
       <WhatIsMatrix />

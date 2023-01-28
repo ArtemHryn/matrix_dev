@@ -9,21 +9,34 @@ export const FeedbackTitle = styled.h3`
 
   margin-bottom: 20px;
 
-  color: #9072af;
+  color: ${p => p.theme.colors.main};
+
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    margin-bottom: 20px;
+
+    font-size: 80px;
+    line-height: 1.12;
+  }
 `;
 
 export const FeedbackDescription = styled.p`
   font-family: ${p => p.theme.fonts.main};
   font-weight: 400;
   font-size: 20px;
-  line-height: 24px;
+  line-height: 1.2;
   letter-spacing: 0.01em;
 
   color: #3d3d3d;
+
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    font-size: 20px;
+    line-height: 1.1;
+    width: 317px;
+  }
 `;
 
 export const YourDarina = styled.h5`
-  font-family: 'Cormorant';
+  font-family: ${p => p.theme.fonts.main};
   font-style: italic;
   font-weight: 400;
   font-size: 20px;
@@ -33,6 +46,7 @@ export const YourDarina = styled.h5`
   margin-bottom: 30px;
 
   color: #72499b;
+
 `;
 
 export const Cont = styled.img`

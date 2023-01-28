@@ -2,15 +2,20 @@ import styled from 'styled-components';
 
 export const ServiceAndPriceTitle = styled.h2`
   font-family: ${p => p.theme.fonts.main};
-  font-style: normal;
   font-weight: 400;
   font-size: 48px;
   line-height: 1.88;
   letter-spacing: 0.01em;
 
-  color: #9072af;
+  color: ${p => p.theme.colors.main};
 
   margin-bottom: 24px;
+
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    font-size: 80px;
+    line-height: 1.12;
+    margin-bottom: 30px;
+  }
 `;
 
 export const FourStagesTitle = styled.h3`
@@ -21,15 +26,28 @@ export const FourStagesTitle = styled.h3`
   line-height: 1;
   letter-spacing: 0.01em;
 
-  color: #9072af;
+  color: ${p => p.theme.colors.main};
 
   margin-bottom: 24px;
+
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    font-size: 36px;
+    line-height: 1.2;
+
+    margin-bottom: 30px;
+  }
 `;
 
 export const CardList = styled.ul`
   display: flex;
   flex-direction: column;
   margin-bottom: 42px;
+
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 -14px 15px 0;
+  }
 `;
 
 export const ServiceWarning = styled.p`
@@ -42,7 +60,12 @@ export const ServiceWarning = styled.p`
 
   margin-bottom: 59px;
 
-  color: #494949;
+  color: ${p => p.theme.colors.third};
+
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    font-size: 17px;
+    line-height: 1.24;
+  }
 `;
 
 export const IndividualRequestTitle = styled.h3`
@@ -54,8 +77,11 @@ export const IndividualRequestTitle = styled.h3`
   letter-spacing: 0.01em;
 
   margin-bottom: 20px;
+  text-align: center;
+  color: ${p => p.theme.colors.main};
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
 
-  color: #9072af;
+  }
 `;
 
 export const ContactMeSocial = styled.a`

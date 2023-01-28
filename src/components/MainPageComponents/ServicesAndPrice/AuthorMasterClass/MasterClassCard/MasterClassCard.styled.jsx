@@ -4,8 +4,16 @@ export const MasterClassCardElement = styled.li`
   padding: 34px 24px;
   border: 1px solid #72499b;
   border-radius: 30px;
-  :first-child {
-    margin-bottom: 10px;
+
+  @media screen and (max-width: ${p => p.theme.sizes.tablet}) {
+    :first-child {
+      margin-bottom: 10px;
+    }
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    margin-right: 10px;
+    width: calc((100% - 30px) / 2);
+    height: 745px;
   }
 `;
 
@@ -21,6 +29,9 @@ export const TitleContainer = styled.div`
   background-position: bottom;
   background-size: 15px 2px;
   background-repeat: repeat-x;
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    margin-bottom: 25px;
+  }
 `;
 
 export const CardTitle = styled.h4`
@@ -36,7 +47,7 @@ export const CardTitle = styled.h4`
   line-height: 1.2;
   letter-spacing: 0.01em;
 
-  color: #72499b;
+  color: ${p => p.theme.colors.main};
   background-color: #f5f1ff;
   border-radius: 100px;
 `;
@@ -71,14 +82,14 @@ export const ServiceText = styled.p`
   font-size: 20px;
   line-height: 1.25;
 
-  color: #494949;
+  color: ${p => p.theme.colors.third};
 `;
 
 export const ServiceFormat = styled.p`
   font-family: ${p => p.theme.fonts.main};
   font-weight: 400;
   font-size: 20px;
-  line-height: 24px;
+  line-height: 1.2;
   color: rgba(0, 0, 0, 0.7);
 
   padding-bottom: 34px;
@@ -117,6 +128,9 @@ export const ServicePrice = styled.p`
 `;
 
 export const Button = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 244px;
   height: 52px;
 
@@ -126,11 +140,14 @@ export const Button = styled.button`
   font-size: 18px;
   line-height: 22px;
 
-  text-align: center;
   letter-spacing: 0.03em;
 
   color: #ffffff;
 
   background-color: #9071af;
   border-radius: 50px;
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    width: 260px;
+    margin: 0 auto;
+  }
 `;

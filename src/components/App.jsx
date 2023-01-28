@@ -3,7 +3,6 @@ import { useLocation } from 'react-router-dom';
 import { Box } from './Box';
 import GlobalStyle from './Global';
 import { Route, Routes } from 'react-router-dom';
-import { Layout } from './Layout/Layout';
 import { Calculator } from 'pages/Calculator';
 import { MatrixCalc } from './MatrixCalc/MatrixCalc';
 import React, { useState } from 'react';
@@ -36,7 +35,6 @@ export const App = () => {
         {React.cloneElement(elementRoutes, { key: location.pathname })}
       </AnimatePresence> */}
       <Routes key={location.pathname} location={location}>
-        <Route path="/" element={<Layout isMain={isMain} />}>
           <Route path="/" element={<Main setIsMain={setIsMain} />} />
           <Route
             path="/calculator"
@@ -44,7 +42,6 @@ export const App = () => {
           >
             <Route path="personal" element={<MatrixCalc />}></Route>
           </Route>
-        </Route>
       </Routes>
     </Box>
   );

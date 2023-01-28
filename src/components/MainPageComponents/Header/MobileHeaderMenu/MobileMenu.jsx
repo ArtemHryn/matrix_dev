@@ -3,7 +3,7 @@ import { Box } from 'components/Box';
 import menuButton from 'images/menuButton.svg';
 import { useState } from 'react';
 import { ShowMenu } from './ShowMenu/ShowMenu';
-
+import { OpenModalButton } from './MobileMenu.styled';
 
 export const MainPageHeader = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -19,7 +19,6 @@ export const MainPageHeader = () => {
       maxWidth={['430px', '768px', '1440px']}
       m="0 auto"
       height="37px"
-     
     >
       <AnimatePresence mode="wait" onExitComplete={() => null}>
         {showMenu ? (
@@ -31,7 +30,7 @@ export const MainPageHeader = () => {
             whileTap={{ scale: 0.9 }}
             onClick={() => setShowMenu(true)}
           >
-            <img src={menuButton} alt="menu button" />
+            <OpenModalButton src={menuButton} alt="menu button" />
           </motion.button>
         )}
       </AnimatePresence>

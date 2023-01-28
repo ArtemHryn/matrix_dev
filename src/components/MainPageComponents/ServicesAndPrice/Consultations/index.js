@@ -1,0 +1,19 @@
+export { default as moneyCard } from 'images/ServicesAndPrice/cardsMob/moneyCard.png';
+export { default as personalLife } from 'images/ServicesAndPrice/cardsMob/personalLife.png';
+export { default as proforientation } from 'images/ServicesAndPrice/cardsMob/proforientationCard.png';
+export { default as periodCard } from 'images/ServicesAndPrice/cardsMob/periodCard.png';
+export { default as conscienceCard } from 'images/ServicesAndPrice/cardsMob/conscienceCard.png';
+export { default as couplesTherapyCard } from 'images/ServicesAndPrice/cardsMob/couplesTherapyCard.png';
+export { default as parentChildrenCard } from 'images/ServicesAndPrice/cardsMob/parentsChildrenCard.png';
+export { default as demonOfferingCard } from 'images/ServicesAndPrice/cardsMob/deamonOfferingCard.png';
+export { default as yearCard } from 'images/ServicesAndPrice/cardsMob/yearCard.png';
+
+export { default as moneyCardTab } from 'images/ServicesAndPrice/cardsTab/moneyCard.png';
+export { default as personalLifeTab } from 'images/ServicesAndPrice/cardsTab/personalLife.png';
+export { default as proforientationTab } from 'images/ServicesAndPrice/cardsTab/proforientationCard.png';
+export { default as periodCardTab } from 'images/ServicesAndPrice/cardsTab/periodCard.png';
+export { default as conscienceCardTab } from 'images/ServicesAndPrice/cardsTab/conscienceCard.png';
+export { default as couplesTherapyCardTab } from 'images/ServicesAndPrice/cardsTab/couplesTherapyCard.png';
+export { default as parentChildrenCardTab } from 'images/ServicesAndPrice/cardsTab/parentsChildrenCard.png';
+export { default as demonOfferingCardTab } from 'images/ServicesAndPrice/cardsTab/deamonOfferingCard.png';
+export { default as yearCardTab } from 'images/ServicesAndPrice/cardsTab/yearCard.png';

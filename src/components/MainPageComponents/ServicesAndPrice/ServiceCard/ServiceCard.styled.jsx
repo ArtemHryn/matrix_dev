@@ -5,10 +5,18 @@ export const CardElement = styled.li`
   max-width: 300px;
   margin-bottom: 52px;
 
-  background-color: #ffffff;
+  background-color: ${p => p.theme.colors.white};
   border-radius: 30px;
-  :last-child {
-    margin-bottom: 0;
+
+  @media screen and (max-width: ${p => p.theme.sizes.tablet}) {
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    max-width: calc((100% - 50px) / 2);
+    margin: 0 14px 35px 0;
+
   }
 `;
 
@@ -36,7 +44,7 @@ export const CardTitle = styled.h4`
   line-height: 1.2;
   letter-spacing: 0.01em;
 
-  color: #72499b;
+  color: ${p => p.theme.colors.main};
   //dots like border
   background-image: linear-gradient(
     to right,
@@ -58,7 +66,7 @@ export const CardDescription = styled.p`
   font-size: 17px;
   line-height: 21px;
 
-  color: #494949;
+  color: ${p => p.theme.colors.third};
 `;
 
 export const Price = styled.p`
@@ -67,9 +75,9 @@ export const Price = styled.p`
   font-style: normal;
   font-weight: 400;
   font-size: 25px;
-  line-height: 30px;
+  line-height: 1.2;
 
-  color: #000000;
+  color: ${p => p.theme.colors.secondText};
 `;
 
 export const Button = styled.button`
@@ -85,11 +93,22 @@ export const Button = styled.button`
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 1.19;
   letter-spacing: 0.03em;
 
-  color: #ffffff;
+  color: ${p => p.theme.colors.white};
 
   background-color: #9071af;
   border-radius: 50px;
+
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    width: 238px;
+    height: 52px;
+
+    font-size: 18px;
+    line-height: 1.22;
+    li:last-child & {
+      transform: translate(0%, 110%);
+    }
+  }
 `;

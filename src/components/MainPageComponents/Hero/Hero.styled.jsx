@@ -1,39 +1,38 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-export const SectionBox = styled.section`
-  padding: 54px 0 45px;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(158, 118, 255, 0.28) 50%,
-    #fff
-  );
-`;
 
 export const ProjectText = styled.p`
-  font-family: 'Cormorant';
-  font-style: normal;
+  font-family: ${p => p.theme.fonts.main};
   font-weight: 300;
   font-size: 16px;
   line-height: 19px;
   letter-spacing: 0.03em;
-  color: #000000;
+  color: ${p => p.theme.colors.secondText};
+
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    font-size: 20px;
+    line-height: 24px;
+  }
 `;
 
 export const Title = styled.h1`
-  font-family: ${p => p.theme.title};
-  font-style: normal;
+  font-family: ${p => p.theme.fonts.title};
   font-weight: 400;
   font-size: 64px;
   line-height: 1.71;
-
   letter-spacing: 0.01em;
 
-  color: #9072af;
+  color: ${p => p.theme.colors.main};
+
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    font-size: 120px;
+    line-height: 1;
+  }
 `;
 
 export const MoveText = styled.p`
-  width: 302px;
+  max-width: 302px;
   font-family: ${p => p.theme.main};
   font-style: italic;
   font-weight: 400;
@@ -41,7 +40,13 @@ export const MoveText = styled.p`
   line-height: 30px;
   letter-spacing: 0.01em;
 
-  color: #161616;
+  color: ${p => p.theme.colors.motivationText};
+
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    max-width: 419px;
+    font-size: 35px;
+    line-height: 42px;
+  }
 `;
 
 export const Image = styled.img`
@@ -59,14 +64,18 @@ export const ServicesLink = styled.a`
 
   background: #9071af;
   border-radius: 50px;
-  font-family: 'Cormorant';
+  font-family: ${p => p.theme.fonts.main};
   font-style: normal;
   font-weight: 300;
   font-size: 18px;
   line-height: 22px;
   letter-spacing: 0.03em;
 
-  color: #ffffff;
+  color: ${p => p.theme.colors.white};
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    width: 380px;
+    margin: 0 7px 0 0;
+  }
 `;
 
 export const MatrxiLink = styled(Link)`
@@ -80,7 +89,7 @@ export const MatrxiLink = styled(Link)`
   border: 1px solid #9071af;
   border-radius: 80px;
 
-  font-family: 'Cormorant';
+  font-family: ${p => p.theme.fonts.main};
   font-style: normal;
   font-weight: 300;
   font-size: 18px;
@@ -88,5 +97,8 @@ export const MatrxiLink = styled(Link)`
 
   letter-spacing: 0.03em;
 
-  color: #9072af;
+  color: ${p => p.theme.colors.main};
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    width: 380px;
+  }
 `;

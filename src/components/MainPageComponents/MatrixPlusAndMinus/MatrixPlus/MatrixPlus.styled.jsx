@@ -1,16 +1,27 @@
 import styled from 'styled-components';
-import { position } from 'styled-system';
+import { position, layout } from 'styled-system';
 
 export const PuzzleTextPlus = styled.p`
   position: absolute;
 
-  max-width: ${p => p.maxWidth};
   font-family: ${p => p.theme.fonts.main};
   font-weight: 400;
   font-size: 17px;
-  line-height: 21px;
+  line-height: 1.24;
   text-align: center;
 
-  color: #000000;
+  color: ${p => p.theme.colors.secondText};
   ${position}
+  ${layout}
+  :last-child {
+    display: none;
+  }
+
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    font-size: 22px;
+    text-align: left;
+    :last-child {
+      display: block;
+    }
+  }
 `;

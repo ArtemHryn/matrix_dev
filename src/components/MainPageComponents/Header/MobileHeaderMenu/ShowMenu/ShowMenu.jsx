@@ -1,10 +1,5 @@
 import { motion } from 'framer-motion';
-import {
-  CloseModal,
-  MenuItem,
-  MenuLink,
-  MenuList,
-} from '../MainPageHeader.styled';
+import { CloseModal, MenuItem, MenuLink, MenuList } from '../MobileMenu.styled';
 import closeModal from 'images/Header/closeModal.png';
 import { useEffect } from 'react';
 
@@ -57,7 +52,7 @@ export const ShowMenu = ({ setShowMenu }) => {
       animate={animation.animate}
       exit={animation.exit}
     >
-      <MenuList  data-name="modal">
+      <MenuList data-name="modal">
         <MenuItem>
           <motion.button
             whileHover={{ scale: 1.1 }}

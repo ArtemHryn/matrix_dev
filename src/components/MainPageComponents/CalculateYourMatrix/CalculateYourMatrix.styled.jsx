@@ -11,7 +11,13 @@ export const Title = styled.h2`
   letter-spacing: 0.01em;
   margin-bottom: 35px;
 
-  color: #9072af;
+  color: ${p => p.theme.colors.main};
+
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    font-size: 80px;
+    line-height: 1.12;
+    max-width: 660px;
+  }
 `;
 
 export const ImgPhones = styled.img`
@@ -22,17 +28,26 @@ export const ImgPhones = styled.img`
     rgba(255, 255, 255, 0.58) 69%
   );
   margin-bottom: 35px;
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    transform: scale(1.18);
+    background-image: none
+  }
 `;
 
 export const AboutCalculator = styled.p`
   font-family: ${p => p.theme.fonts.main};
-  font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.33;
   margin-bottom: 30px;
 
-  color: #000000;
+  color: ${p => p.theme.colors.secondText};
+
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    font-size: 22px;
+    line-height: 1.23;
+    margin-bottom: 141px;
+  }
 `;
 
 export const LinkToCalculator = styled(Link)`
@@ -42,19 +57,22 @@ export const LinkToCalculator = styled(Link)`
   width: 300px;
   height: 64px;
 
-  background-color: #9071af;
+  background-color: ${p => p.theme.colors.main};
   border-radius: 50px;
 
   font-family: ${p => p.theme.fonts.main};
-  font-style: normal;
   font-weight: 300;
   font-size: 18px;
-  line-height: 22px;
+  line-height: 1.22;
   letter-spacing: 0.03em;
 
-  color: #ffffff;
+  color: ${p => p.theme.colors.white};
 
   margin-bottom: 20px;
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    width: 320px;
+    margin-bottom: 11px;
+  }
 `;
 
 export const Info = styled.p`
@@ -62,7 +80,10 @@ export const Info = styled.p`
   font-style: normal;
   font-weight: 400;
   font-size: 17px;
-  line-height: 21px;
+  line-height: 1.24;
 
-  color: #494949;
+  color: ${p => p.theme.colors.third};
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    width: 408px;
+  }
 `;

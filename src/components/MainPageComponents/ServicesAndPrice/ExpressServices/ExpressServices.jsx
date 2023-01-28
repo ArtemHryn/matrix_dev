@@ -5,26 +5,34 @@ import {
   ExpressServicesList,
   ExpressServicesTitle,
 } from './ExpressServices.styled';
-import card1 from 'images/ServicesAndPrice/card1.png';
-import card2 from 'images/ServicesAndPrice/card2.png';
-import card3 from 'images/ServicesAndPrice/card3.png';
-import card4 from 'images/ServicesAndPrice/card4.png';
-import card5 from 'images/ServicesAndPrice/card5.png';
+
+import {
+  card1,
+  card2,
+  card3,
+  card4,
+  card5,
+  card1Tab,
+  card2Tab,
+  card3Tab,
+  card4Tab,
+  card5Tab,
+} from './';
 
 const cards = [
-  { img: card1, text: 'Диагностика состояния матрицы' },
-  { img: card2, text: 'Совместимость' },
-  { img: card3, text: 'Подбор благоприятной даты, периода' },
-  { img: card4, text: 'Энергии длительного действия' },
-  { img: card5, text: 'SOS - помощь' },
+  { img: card1, text: 'Диагностика состояния матрицы', imgTab: card1Tab },
+  { img: card2, text: 'Совместимость', imgTab: card2Tab },
+  { img: card3, text: 'Подбор благоприятной даты, периода', imgTab: card3Tab },
+  { img: card4, text: 'Энергии длительного действия', imgTab: card4Tab },
+  { img: card5, text: 'SOS - помощь', imgTab: card5Tab },
 ];
 export const ExpressServices = () => {
   return (
-    <Box mb='80px'>
+    <Box mb="80px">
       <ExpressServicesTitle>Экспресс-услуги:</ExpressServicesTitle>
       <ExpressServicesList>
-        {cards.map(card => (
-          <ExpressServiceCard img={card.img} text={card.text} key={ card.text} />
+        {cards.map(({ img, text, imgTab }) => (
+          <ExpressServiceCard key={text} img={img} text={text} imgTab={imgTab } />
         ))}
       </ExpressServicesList>
       <AdditionalInfo>

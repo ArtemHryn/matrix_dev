@@ -1,9 +1,13 @@
-import { ExpressServiceCardElement, ExpressServiceCardText } from "./ExpressServiceCard.styled"
+import { ExpressServiceCardElement, ExpressServiceCardText, Img } from "./ExpressServiceCard.styled"
 
-export const ExpressServiceCard = ({img, text}) => {
+export const ExpressServiceCard = ({img, text, imgTab}) => {
     return (
       <ExpressServiceCardElement key={text}>
-        <img src={img} alt="card" />
+        <picture>
+          <source srcSet={imgTab} media="(min-width: 768px)" />
+          <Img srcSet={img} alt="card" />
+        </picture>
+
         <ExpressServiceCardText>{text}</ExpressServiceCardText>
       </ExpressServiceCardElement>
     );

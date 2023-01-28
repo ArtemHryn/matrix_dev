@@ -1,7 +1,12 @@
 export const theme = {
   breakpoints: ['768px', '1440px'],
+
   colors: {
-    stats: '#000',
+    main: '#9072af',
+    secondText: '#000',
+    motivationText: '#161616',
+    white: '#fff',
+    third: '#494949',
   },
   space: [142],
   fonts: {
@@ -25,6 +30,7 @@ export const theme = {
     round: '50%',
   },
   sizes: {
-    boxW: '250px',
+    mobile: '430px',
+    tablet: '768px',
   },
 };

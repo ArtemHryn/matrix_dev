@@ -1,5 +1,6 @@
 import { Box } from 'components/Box';
 import starLine from 'images/whatIsMatrix/starLine.png';
+import starLineTab from 'images/whatIsMatrix/starLineTab.png';
 import deepDrow from 'images/whatIsMatrix/deepDrow.png';
 import saturn from 'images/whatIsMatrix/saturn.png';
 import sun from 'images/whatIsMatrix/sun.png';
@@ -26,18 +27,32 @@ const factsAboutMatrix = [
 
 export const WhatIsMatrix = () => {
   return (
-    <Box as="section" pt="40px" pb="40px" id='aboutMatrix'>
-      <Box maxWidth={['430px', '768px', '1440px']} px="60px" m="0 auto">
+    <Box as="section" pt="40px" pb="40px" id="aboutMatrix">
+      <Box
+        maxWidth={['430px', '768px', '1440px']}
+        px={['60px', '33px', '100px']}
+        m="0 auto"
+      >
         <Title>Что такое Матрица Судьбы?</Title>
-        <MatrixCreator>
-          Авторский метод Наталии Ладини, которому более 16 лет.
-        </MatrixCreator>
-        <StarLineImg src={starLine} alt="star line" />
-        <AboutMethod>
-          Этот метод фактически является зеркалом вашей кармы и уникальным
-          инструментом для диагностики предназначения и исцеления души, разума и
-          тела.
-        </AboutMethod>
+        <Box
+          display={[null, 'flex', 'flex']}
+          alignItems="center"
+          mb={[null, '40px', '40px']}
+        >
+          <MatrixCreator>
+            Авторский метод Наталии Ладини, которому более 16 лет.
+          </MatrixCreator>
+          <picture>
+            <source srcSet={starLineTab} media="(min-width: 768px)" />
+            <StarLineImg srcSet={starLine} alt="star line" />
+          </picture>
+
+          <AboutMethod>
+            Этот метод фактически является зеркалом вашей кармы и уникальным
+            инструментом для диагностики предназначения и исцеления души, разума
+            и тела.
+          </AboutMethod>
+        </Box>
         <MethodList>
           {factsAboutMatrix.map(fact => (
             <MatrixFact

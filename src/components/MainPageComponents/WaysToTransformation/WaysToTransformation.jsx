@@ -3,16 +3,31 @@ import { ConsultationWay } from './ConsultationWay/ConsultationWay';
 import { TransformationWay } from './TransformationWay/TransformationWay';
 import { About, Title, TransformationWarning } from './WaysToTransformation.styled';
 
+import line from 'images/WaysToTransformation/line.png';
+
+
 export const WaysToTransformation = () => {
   return (
-    <Box as="section" pt="40px" pb="40px">
-      <Box maxWidth={['430px', '768px', '1440px']} px="60px" m="0 auto">
+    <Box
+      as="section"
+      pt="40px"
+      pb="40px"
+      backgroundImage={[null, `url(${line})`]}
+      backgroundSize="contain"
+      backgroundPosition="0 -5vw"
+      backgroundRepeat="no-repeat"
+    >
+      <Box
+        maxWidth={['430px', '768px', '1440px']}
+        px={['60px', '33px', '100px']}
+        m="0 auto"
+      >
         <Title>Я проведу тебя к истинным желаниям твоей души</Title>
         <About>
           Ты не останешься один с багажом новой информации о себе - так как я
           гарантирую:
         </About>
-        <Box>
+        <Box display={[null, 'flex', 'flex']}>
           <ConsultationWay />
           <TransformationWay />
         </Box>

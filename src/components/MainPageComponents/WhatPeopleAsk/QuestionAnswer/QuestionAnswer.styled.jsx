@@ -7,20 +7,28 @@ export const QuestionElement = styled.li`
   border-image: url(${goldenBorder});
   border-image-slice: 0 0 10 0;
   border-image-width: 2px;
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    padding: 24px 0;
+  }
 `;
 
 export const TitleContainer = styled.div`
   display: flex;
   margin-bottom: 10px;
+  justify-content: space-between;
+  align-items: center;
 `;
 export const Title = styled.h4`
   max-width: 250px;
   font-family: ${p => p.theme.fonts.main};
   font-weight: 400;
   font-size: 18px;
-  line-height: 22px;
+  line-height: 1.22;
 
-  color: #000000;
+  color: ${p => p.theme.colors.secondTitle};
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    max-width: 100%;
+  }
 `;
 export const Button = styled.button`
   background-color: transparent;
@@ -30,8 +38,12 @@ export const Answer = styled.p`
   font-family: ${p => p.theme.fonts.main};
   font-weight: 400;
   font-size: 15px;
-  line-height: 18px;
+  line-height: 1.2;
 
-  color: #000000;
+  color: ${p => p.theme.colors.secondTitle};
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    font-size: 18px;
+    line-height: 1.22;
+  }
 `;
 

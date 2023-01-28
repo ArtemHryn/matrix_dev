@@ -1,13 +1,24 @@
 import { Box } from 'components/Box';
-import moneyCard from 'images/ServicesAndPrice/moneyCard.png';
-import personalLife from 'images/ServicesAndPrice/personalLife.png';
-import proforientation from 'images/ServicesAndPrice/proforientationCard.png';
-import periodCard from 'images/ServicesAndPrice/periodCard.png';
-import conscienceCard from 'images/ServicesAndPrice/conscienceCard.png';
-import couplesTherapyCard from 'images/ServicesAndPrice/couplesTherapyCard.png';
-import parentChildrenCard from 'images/ServicesAndPrice/parentsChildrenCard.png';
-import demonOfferingCard from 'images/ServicesAndPrice/deamonOfferingCard.png';
-import yearCard from 'images/ServicesAndPrice/yearCard.png';
+import {
+  moneyCard,
+  personalLife,
+  proforientation,
+  periodCard,
+  conscienceCard,
+  couplesTherapyCard,
+  parentChildrenCard,
+  demonOfferingCard,
+  yearCard,
+  moneyCardTab,
+  personalLifeTab,
+  proforientationTab,
+  periodCardTab,
+  conscienceCardTab,
+  couplesTherapyCardTab,
+  parentChildrenCardTab,
+  demonOfferingCardTab,
+  yearCardTab,
+} from './';
 import { ConsultaionCard } from './ConsultationCard/ConsultationCard';
 import {
   ConsultationsList,
@@ -19,25 +30,45 @@ const cards = [
   {
     img: moneyCard,
     text: 'Деньги\\Личный бренд',
+    imgtab: moneyCardTab,
   },
-  { img: personalLife, text: 'Личная жизнь' },
-  { img: proforientation, text: 'Профориентация' },
-  { img: periodCard, text: 'Матрица периода' },
-  { img: conscienceCard, text: 'Осознанность' },
-  { img: couplesTherapyCard, text: 'Парная терапия' },
-  { img: parentChildrenCard, text: 'Дето-родительские отношения' },
-  { img: demonOfferingCard, text: 'Матрица “Демон-Жертва”' },
-  { img: yearCard, text: ' Прогноз на год ' },
+  { img: personalLife, text: 'Личная жизнь', imgtab: personalLifeTab },
+  { img: proforientation, text: 'Профориентация', imgtab: proforientationTab },
+  { img: periodCard, text: 'Матрица периода', imgtab: periodCardTab },
+  { img: conscienceCard, text: 'Осознанность', imgtab: conscienceCardTab },
+  {
+    img: couplesTherapyCard,
+    text: 'Парная терапия',
+    imgtab: couplesTherapyCardTab,
+  },
+  {
+    img: parentChildrenCard,
+    text: 'Дето-родительские отношения',
+    imgtab: parentChildrenCardTab,
+  },
+  {
+    img: demonOfferingCard,
+    text: 'Матрица “Демон-Жертва”',
+    imgtab: demonOfferingCardTab,
+  },
+  { img: yearCard, text: ' Прогноз на год ', imgtab: yearCardTab },
 ];
 
 export const Consultations = () => {
   return (
     <Box>
-      <ConsultationsTitle>Консультации:</ConsultationsTitle>
-      <SolutionsText>для решения точечных проблем</SolutionsText>
+      <Box
+        display={[null, 'flex']}
+        alignItems={[null, 'center']}
+        justifyContent={[null, 'space-between']}
+        mb={['27px', '21px']}
+      >
+        <ConsultationsTitle>Консультации:</ConsultationsTitle>
+        <SolutionsText>для решения точечных проблем</SolutionsText>
+      </Box>
       <ConsultationsList>
-        {cards.map(card => (
-          <ConsultaionCard img={card.img} text={card.text} key={card.text} />
+        {cards.map(({ img, text, imgtab }) => (
+          <ConsultaionCard img={img} text={text} key={text} imgtab={imgtab} />
         ))}
       </ConsultationsList>
     </Box>

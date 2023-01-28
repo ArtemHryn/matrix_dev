@@ -8,7 +8,12 @@ export const Title = styled.h2`
   line-height: 1;
   letter-spacing: 0.01em;
 
-  color: #9072af;
+  color: ${p => p.theme.colors.main};
 
   margin-bottom: 30px;
+
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    font-size: 80px;
+    max-width: 600px;
+  }
 `;

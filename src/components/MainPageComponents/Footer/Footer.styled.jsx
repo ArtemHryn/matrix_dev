@@ -3,6 +3,9 @@ import styled from 'styled-components';
 export const FooterLogo = styled.img`
   width: 110px;
   margin: 0 auto;
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    margin: 0 auto 0 0;
+  }
 `;
 
 export const FooterTitle = styled.h2`
@@ -10,13 +13,18 @@ export const FooterTitle = styled.h2`
   font-style: normal;
   font-weight: 400;
   font-size: 50px;
-  line-height: 61px;
+  line-height: 1.22;
   letter-spacing: 0.01em;
   text-align: center;
 
-  color: #9072af;
+  color: ${p => p.theme.colors.main};
 
   margin-bottom: 30px;
+
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    text-align: left;
+    font-size: 54px;
+  }
 `;
 
 export const NavigationList = styled.ul`
@@ -24,6 +32,9 @@ export const NavigationList = styled.ul`
   flex-wrap: wrap;
   margin-bottom: 42px;
   margin-right: -22px;
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    margin-bottom: 0;
+  }
 `;
 
 export const NavigationElement = styled.li`
@@ -39,10 +50,13 @@ export const NavigationLink = styled.a`
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
-  line-height: 22px;
+  line-height: 1.22;
   letter-spacing: 0.01em;
 
-  color: #000000;
+  color: ${p => p.theme.colors.secondText};
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    width: 200px;
+  }
 `;
 
 export const PoliticsAndDesign = styled.p`

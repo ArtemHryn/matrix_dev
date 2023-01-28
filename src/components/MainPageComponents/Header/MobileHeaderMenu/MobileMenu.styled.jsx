@@ -38,3 +38,7 @@ export const MenuLink = styled.a`
 
   color: #000000;
 `;
+
+export const OpenModalButton = styled.img`
+  background-color: rgba(224, 163, 240, 0.08);
+`;

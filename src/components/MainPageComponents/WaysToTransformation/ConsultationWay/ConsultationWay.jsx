@@ -3,21 +3,30 @@ import { ConsultationList, ConsultationText, ConsultationTitlte } from './Consul
 
 export const ConsultationWay = () => {
   return (
-    <Box id='consultations'>
-      <ConsultationTitlte>На Консультации</ConsultationTitlte>
-      <ConsultationList>
-        <li>
-          <ConsultationText>Индивидуальный подход к каждой душе и её жизенным проблемам</ConsultationText>
-        </li>
-        <li>
-          <ConsultationText>Уникальные трактовки соединений энергий в твоей матрице</ConsultationText>
-        </li>
-        <li>
-          <ConsultationText>
-            Информацию, которая со временем раскроется в новом глубинном ключе
-          </ConsultationText>
-        </li>
-      </ConsultationList>
+    <Box
+      id="consultations"
+      mr={[null, '25px']}
+    >
+      <div>
+        <ConsultationTitlte>На Консультации</ConsultationTitlte>
+      </div>
+        <ConsultationList>
+          <li>
+            <ConsultationText>
+              Индивидуальный подход к каждой душе и её жизенным проблемам
+            </ConsultationText>
+          </li>
+          <li>
+            <ConsultationText>
+              Уникальные трактовки соединений энергий в твоей матрице
+            </ConsultationText>
+          </li>
+          <li>
+            <ConsultationText>
+              Информацию, которая со временем раскроется в новом глубинном ключе
+            </ConsultationText>
+          </li>
+        </ConsultationList>
     </Box>
   );
 };

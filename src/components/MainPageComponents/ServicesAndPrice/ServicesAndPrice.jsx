@@ -42,15 +42,25 @@ const sectionGradient =
 
 export const ServicesAndPrice = () => {
   return (
-    <Box as="section" pt="40px" pb="40px" backgroundImage={sectionGradient} id='4methods'>
-      <Box maxWidth={['430px', '768px', '1440px']} px="60px" m="0 auto">
+    <Box
+      as="section"
+      pt="40px"
+      pb="40px"
+      backgroundImage={sectionGradient}
+      id="4methods"
+    >
+      <Box
+        maxWidth={['430px', '768px', '1440px']}
+        px={['60px', '33px', '100px']}
+        m="0 auto"
+      >
         <ServiceAndPriceTitle>Услуги и прайс</ServiceAndPriceTitle>
         <FourStagesTitle>
           Глубинные проработки: 4 уровня матрицы
         </FourStagesTitle>
         <CardList>
           {cards.map(({ name, img, text }) => (
-            <ServiceCard name={name} img={img} text={text} key={name } />
+            <ServiceCard name={name} img={img} text={text} key={name} />
           ))}
         </CardList>
         <ServiceWarning>
@@ -60,8 +70,7 @@ export const ServicesAndPrice = () => {
         <IndividualRequestTitle>
           Также вы можете разобрать вашу проблему по индивидуальному запросу
         </IndividualRequestTitle>
-        {/* <p>Заполните форму и мы обсудим как я могу быть полезна для вас</p> */}
-        <Box display="flex" mb="68px">
+        <Box display="flex" mb="68px" justifyContent="center">
           <ContactMeSocial href="https://instagram.com/dari.karma?igshid=YmMyMTA2M2Y=">
             Instagram
           </ContactMeSocial>
@@ -70,7 +79,7 @@ export const ServicesAndPrice = () => {
           </ContactMeSocial>
         </Box>
         <ExpressServices />
-        <AuthorMasterClass/>
+        <AuthorMasterClass />
       </Box>
     </Box>
   );

@@ -20,12 +20,18 @@ import 'swiper/css/pagination';
 
 export const CustomerReviewers = () => {
   return (
-    <Box as="section" pt="40px" pb="40px" id='feedback'>
-      <Box maxWidth={['430px', '768px', '1440px']} px="60px" m="0 auto">
-        <FeedbackTitle>Отзывы</FeedbackTitle>
-        <FeedbackDescription>
-          Я буду рада стать твоим проводником в новом этапе твоей жизни!
-        </FeedbackDescription>
+    <Box as="section" pt="40px" pb="40px" id="feedback">
+      <Box
+        maxWidth={['430px', '768px', '1440px']}
+        px={['60px', '33px', '100px']}
+        m="0 auto"
+      >
+        <Box display={[null, 'flex', 'flex']} alignItems='center' justifyContent='space-between'>
+          <FeedbackTitle>Отзывы</FeedbackTitle>
+          <FeedbackDescription>
+            Я буду рада стать твоим проводником в новом этапе твоей жизни!
+          </FeedbackDescription>
+        </Box>
         <YourDarina>
           ваша Дарина <HeardIcon />
         </YourDarina>
