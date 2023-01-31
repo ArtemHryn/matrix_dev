@@ -17,7 +17,7 @@ import { Header } from 'components/MainPageComponents/Header/Header';
 
 const imgLink = `url(${backgroundFooterImage})`;
 
-export const Main = ({ setIsMain }) => {
+const Main = ({ setIsMain }) => {
   useEffect(() => setIsMain(true), [setIsMain]);
   return (
     <>
@@ -41,3 +41,5 @@ export const Main = ({ setIsMain }) => {
     </>
   );
 };
+
+export default Main

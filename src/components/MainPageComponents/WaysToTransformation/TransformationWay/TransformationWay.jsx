@@ -3,11 +3,13 @@ import { TransformationList, TransformationText, TransformationTitle } from "./T
 
 export const TransformationWay = () => {
     return (
-      <Box>
+      <Box width={[null, null, '478px']}>
         <TransformationTitle>На Трансформации</TransformationTitle>
         <TransformationList>
           <li>
-            <TransformationText>Энергетическую и информационную поддержку. </TransformationText>
+            <TransformationText>
+              Энергетическую и информационную поддержку.{' '}
+            </TransformationText>
           </li>
           <li>
             <TransformationText>
@@ -16,7 +18,9 @@ export const TransformationWay = () => {
             </TransformationText>
           </li>
           <li>
-            <TransformationText>Разноплановые методики и практики для проработки</TransformationText>
+            <TransformationText>
+              Разноплановые методики и практики для проработки
+            </TransformationText>
           </li>
           <li>
             <TransformationText>

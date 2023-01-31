@@ -21,7 +21,7 @@ export const QuestionAnswer = ({ question, answer }) => {
         </Button>
       </TitleContainer>
 
-      <AnimatePresence mode='wait' onExitComplete={() => null} >
+      <AnimatePresence mode="wait" onExitComplete={() => null}>
         {showAnswer && (
           <motion.div
             initial={{ y: -30, opacity: 0 }}

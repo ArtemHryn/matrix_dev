@@ -19,20 +19,30 @@ export const MatrixPlusAndMinus = () => {
     setIsChecked(e.target.checked);
   };
   return (
-    <Box as="section" pt="40px" pb="40px">
+    <Box as="section" py={['40px', '40px', '90px']}>
       <Box
         maxWidth={['430px', '768px', '1440px']}
         px={['60px', '33px', '100px']}
         m="0 auto"
+        display={[null, null, 'flex']}
+        justifyContent="space-between"
+        height={[null, null, '700px']}
       >
         <Box
           display={[null, 'flex']}
           justifyContent="space-between"
-          alignItems="flex-end"
+          alignItems={[null, 'flex-end', 'flex-start']}
           mb="25px"
+          order={[null, null, 2]}
+          pt={[null, null, '30px']}
+          flexDirection={[null, null, 'column']}
         >
           <Title>Матрица в минусе</Title>
-          <Box display={['none', 'flex']} alignItems="center">
+          <Box
+            display={['none', 'flex']}
+            alignItems={[null, 'center', 'flex-start']}
+            flexDirection={[null, null, 'column']}
+          >
             <CheckBoxText op={isChecked}>Проработать матрицу</CheckBoxText>
             <Label>
               <Input

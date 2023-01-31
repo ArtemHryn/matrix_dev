@@ -8,6 +8,7 @@ export const AuthorTitle = styled.h2`
   line-height: 58px;
   letter-spacing: 0.01em;
   margin-bottom: 25px;
+  letter-spacing: 0.01em;
 
   color: ${p => p.theme.colors.main};
 
@@ -15,6 +16,9 @@ export const AuthorTitle = styled.h2`
     font-size: 80px;
     line-height: 1;
     margin-bottom: 30px;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    font-size: 90px;
   }
 `;
 
@@ -30,6 +34,8 @@ export const Name = styled.span`
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     font-size: 45px;
   }
+
+
 `;
 
 export const Description = styled.p`
@@ -51,6 +57,10 @@ export const Description = styled.p`
 
     color: ${p => p.theme.colors.secondText};
   }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    font-size: 25px;
+    line-height: 1.44;
+  }
 `;
 
 export const AuthorImg = styled.img`
@@ -60,10 +70,16 @@ export const AuthorImg = styled.img`
     width: 390px;
     float: right;
   }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    display: none;
+  }
 `;
 export const AboutAuthor = styled.ul`
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
-   margin-bottom: 54px;
+    margin-bottom: 54px;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    display: flex;
   }
 `;
 
@@ -74,6 +90,12 @@ export const AboutAuthorListElement = styled.li`
   margin-bottom: 34px;
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     margin-bottom: 48px;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    margin-bottom: 0;
+    :first-child {
+      margin-right: 45px;
+    }
   }
 `;
 
@@ -88,14 +110,17 @@ export const AboutAuthorWork = styled.p`
   font-family: ${p => p.theme.fonts.main};
   font-weight: 600;
   font-size: 23px;
-  line-height: 28px;
+  line-height: 1.22;
 
   color: #1f1f1f;
 
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     font-size: 25px;
-    line-height: 30px;
+    line-height: 1.2;
     margin-bottom: 15px;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+
   }
 `;
 
@@ -103,12 +128,12 @@ export const AboutAuthorDesc = styled.p`
   font-family: ${p => p.theme.fonts.main};
   font-weight: 400;
   font-size: 18px;
-  line-height: 22px;
+  line-height: 1.22;
 
   color: #1f1f1f;
 
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     font-size: 20px;
-    line-height: 24px;
+    line-height: 1.2;
   }
 `;

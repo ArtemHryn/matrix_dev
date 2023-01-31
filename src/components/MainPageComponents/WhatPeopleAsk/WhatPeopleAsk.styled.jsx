@@ -12,4 +12,14 @@ export const Title = styled.h2`
     font-size: 80px;
     margin-bottom: 10px;
   }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    font-size: 90px;
+  }
+`;
+
+export const List = styled.ul`
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 `;

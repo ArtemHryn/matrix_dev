@@ -11,6 +11,10 @@ export const ExpressServicesTitle = styled.h3`
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     margin-bottom: 23px;
   }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    font-size: 40px;
+    margin-bottom: 36px;
+  }
 `;
 
 export const ExpressServicesList = styled.ul`
@@ -23,6 +27,11 @@ export const ExpressServicesList = styled.ul`
     margin-bottom: 35px;
     display: flex;
     flex-wrap: wrap;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    flex-wrap: nowrap;
+    gap: 15px;
+    margin-bottom: 30px;
   }
 `;
 

@@ -10,7 +10,6 @@ export const FactElement = styled.li`
   border-radius: 30px;
   overflow: hidden;
 
-
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     width: calc((100% - 18px) / 3);
     margin-bottom: 0;
@@ -20,6 +19,9 @@ export const FactElement = styled.li`
   :last-child {
     margin-bottom: 0;
     margin-right: 0px;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    padding: 115px 28px 47px 28px;
   }
 `;
 
@@ -55,6 +57,7 @@ export const Img = styled.img`
   top: 0%;
   right: 0%;
 `;
+
 export const OneFact = styled.p`
   font-family: ${p => p.theme.fonts.main};
   font-style: normal;
@@ -63,4 +66,12 @@ export const OneFact = styled.p`
   line-height: 1.33;
 
   color: ${p => p.theme.colors.third};
+
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    padding-top: 32px;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    font-size: 20px;
+    line-height: 1.2;
+  }
 `;

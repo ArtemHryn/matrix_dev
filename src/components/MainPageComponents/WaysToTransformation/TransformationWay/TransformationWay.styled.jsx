@@ -20,7 +20,13 @@ export const TransformationTitle = styled.h4`
   color: #72499b;
 
   background-color: #f5f1ff;
-  border-radius: 88.6598px;
+  border-radius: 88px;
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    width: 385px;
+    height: 65px;
+    padding-left: 57px;
+    margin-bottom: 12px;
+  }
 `;
 
 export const TransformationList = styled.ul`
@@ -33,4 +39,7 @@ export const TransformationText = styled.p`
   border-image: url(${goldenBorder});
   border-image-slice: 0 0 10 0;
   border-image-width: 2px;
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    padding: 20px 0;
+  }
 `;

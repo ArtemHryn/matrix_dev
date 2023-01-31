@@ -44,8 +44,7 @@ export const ServicesAndPrice = () => {
   return (
     <Box
       as="section"
-      pt="40px"
-      pb="40px"
+      py={['40px', '40px', '90px']}
       backgroundImage={sectionGradient}
       id="4methods"
     >
@@ -71,10 +70,18 @@ export const ServicesAndPrice = () => {
           Также вы можете разобрать вашу проблему по индивидуальному запросу
         </IndividualRequestTitle>
         <Box display="flex" mb="68px" justifyContent="center">
-          <ContactMeSocial href="https://instagram.com/dari.karma?igshid=YmMyMTA2M2Y=">
+          <ContactMeSocial
+            href="https://instagram.com/dari.karma?igshid=YmMyMTA2M2Y="
+            target="_blank"
+            rel="noreferrer noopener"
+          >
             Instagram
           </ContactMeSocial>
-          <ContactMeSocial href="https://t.me/+eAczkWqkslIzMjky">
+          <ContactMeSocial
+            href="https://t.me/+eAczkWqkslIzMjky"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
             Telegram
           </ContactMeSocial>
         </Box>

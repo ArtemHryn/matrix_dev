@@ -17,3 +17,13 @@ export { default as couplesTherapyCardTab } from 'images/ServicesAndPrice/cardsT
 export { default as parentChildrenCardTab } from 'images/ServicesAndPrice/cardsTab/parentsChildrenCard.png';
 export { default as demonOfferingCardTab } from 'images/ServicesAndPrice/cardsTab/deamonOfferingCard.png';
 export { default as yearCardTab } from 'images/ServicesAndPrice/cardsTab/yearCard.png';
+
+export { default as moneyCardDesc } from 'images/ServicesAndPrice/cardsDesc/moneyCard.png';
+export { default as personalLifeDesc } from 'images/ServicesAndPrice/cardsDesc/personalLife.png';
+export { default as proforientationDesc } from 'images/ServicesAndPrice/cardsDesc/proforientationCard.png';
+export { default as periodCardDesc } from 'images/ServicesAndPrice/cardsDesc/periodCard.png';
+export { default as conscienceCardDesc } from 'images/ServicesAndPrice/cardsDesc/conscienceCard.png';
+export { default as couplesTherapyCardDesc } from 'images/ServicesAndPrice/cardsDesc/couplesTherapyCard.png';
+export { default as parentChildrenCardDesc } from 'images/ServicesAndPrice/cardsDesc/parentsChildrenCard.png';
+export { default as demonOfferingCardDesc } from 'images/ServicesAndPrice/cardsDesc/deamonOfferingCard.png';
+export { default as yearCardDesc } from 'images/ServicesAndPrice/cardsDesc/yearCard.png';

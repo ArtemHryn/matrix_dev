@@ -5,11 +5,12 @@ export const ConsultationWay = () => {
   return (
     <Box
       id="consultations"
-      mr={[null, '25px']}
+      mr={[null, '25px', '112px']}
+      width={[null, null, '385px']}
     >
-      <div>
+      <Box>
         <ConsultationTitlte>На Консультации</ConsultationTitlte>
-      </div>
+      </Box>
         <ConsultationList>
           <li>
             <ConsultationText>

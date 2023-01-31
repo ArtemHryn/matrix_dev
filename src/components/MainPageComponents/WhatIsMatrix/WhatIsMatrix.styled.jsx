@@ -16,6 +16,12 @@ export const Title = styled.h2`
     max-width: 70vw;
     margin-bottom: 30px;
   }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    font-size: 90px;
+    line-height: 1;
+    max-width: 670px;
+    margin-bottom: 53px;
+  }
 `;
 
 export const MatrixCreator = styled.p`
@@ -33,6 +39,7 @@ export const MatrixCreator = styled.p`
     margin: 0;
     width: 540px;
   }
+
 `;
 
 export const AboutMethod = styled.p`
@@ -49,6 +56,9 @@ export const AboutMethod = styled.p`
     margin: 0;
     margin-left: 20px;
   }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+   max-width: 640px;
+  }
 `;
 
 export const StarLineImg = styled.img`
@@ -64,6 +74,9 @@ export const MethodList = styled.ul`
   margin-bottom: 30px;
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     flex-direction: row;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    margin-bottom: 47px;
   }
 `;
 
@@ -82,13 +95,26 @@ export const LinkToCalculator = styled(Link)`
   font-style: normal;
   font-weight: 300;
   font-size: 18px;
-  line-height: 22px;
+  line-height: 1.22;
   letter-spacing: 0.03em;
 
   color: ${p => p.theme.colors.white};
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  :hover,
+  :focus {
+    transform: scale(1.05);
+  }
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     width: 358px;
-    padding: 0 43px;
+    font-size: 22px;
+    line-height: 1.2;
+    padding: 0 27px;
     margin: 0 auto;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    width: 398px;
+    font-size: 22px;
+    line-height: 1.2;
+    padding: 0 20px;
   }
 `;

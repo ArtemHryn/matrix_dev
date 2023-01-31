@@ -32,5 +32,6 @@ export const theme = {
   sizes: {
     mobile: '430px',
     tablet: '768px',
+    desktop: '1440px',
   },
 };

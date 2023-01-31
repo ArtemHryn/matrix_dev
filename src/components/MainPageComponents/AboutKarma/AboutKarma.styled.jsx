@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { space, position, layout } from 'styled-system';
+import { space, position, layout, flexbox } from 'styled-system';
 import circle from 'images/aboutImages/aboutCircle.png';
 import handsContainerImg from 'images/aboutImages/handsLine.png'
 
@@ -15,12 +15,23 @@ export const Title = styled.h2`
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     font-size: 80px;
   }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    font-size: 90px;
+    line-height: 1;
+    max-width: 725px;
+    
+  }
 `;
 
 export const TitleStarImg = styled.img`
   position: absolute;
   top: 0;
   right: 0;
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    width: 45px;
+    top: 25%;
+    right: 10%;
+  }
 `;
 
 export const AboutReasonContainer = styled.div`
@@ -34,6 +45,10 @@ export const AboutReasonContainer = styled.div`
   ${space}
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     width: 380px;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    width: 568px;
+    ${flexbox}
   }
 `;
 
@@ -68,6 +83,10 @@ export const AboutDesc = styled.p`
     line-height: 1.24;
     max-width: 240px;
   }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    max-width: 100%;
+    text-align: center;
+  }
 `;
 
 export const HandsContainer = styled.div`
@@ -86,6 +105,10 @@ export const HandsContainer = styled.div`
     background-image: url(${handsContainerImg});
     background-size: cover;
   }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    align-items: flex-end;
+    background-image: none;
+  }
 `;
 
 export const TextNearHands = styled.p`
@@ -101,6 +124,11 @@ export const TextNearHands = styled.p`
   z-index: 10;
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     max-width: 385px;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    max-width: 435px;
+    font-size: 22px;
+    line-height: 1.22;
   }
 `;
 
@@ -121,6 +149,11 @@ export const UnderHandImg = styled.div`
   backdrop-filter: blur(7px);
 
   ${position}
+
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    width: 120px;
+    height: 120px;
+  }
 `;
 
 export const TextUnderHandsContainer = styled.p`
@@ -128,7 +161,7 @@ export const TextUnderHandsContainer = styled.p`
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
-  line-height: 22px;
+  line-height: 1.22;
   padding: 31px 0;
   margin-bottom: 22px;
 
@@ -144,8 +177,15 @@ export const TextUnderHandsContainer = styled.p`
   background-repeat: repeat-x;
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     font-size: 20px;
-    line-height: 24px;
+    line-height: 1.2;
     max-width: 435px;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    margin-left: auto;
+    padding-top: 0;
+
+    font-size: 22px;
+    line-height: 1.22;
   }
 `;
 
@@ -154,7 +194,11 @@ export const AboutResultText = styled.p`
   font-style: italic;
   font-weight: 400;
   font-size: 30px;
-  line-height: 36px;
+  line-height: 1.2;
 
   color: ${p => p.theme.colors.main};
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    margin-left: auto;
+    max-width: 435px;
+  }
 `;

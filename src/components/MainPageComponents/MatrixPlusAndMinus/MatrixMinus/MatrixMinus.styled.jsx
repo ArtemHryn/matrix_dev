@@ -8,6 +8,9 @@ export const Puzzle = styled.img`
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     width: 260px;
   }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    width: 220px;
+  }
 `;
 
 export const AnimatedPuzzle = styled.div`
@@ -24,6 +27,10 @@ export const AnimatedPuzzle = styled.div`
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     bottom: 20px;
     left: 55px;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    bottom: 70px;
+    left: 0;
   }
 `;
 
@@ -53,5 +60,15 @@ export const PuzzleText = styled.p`
     :last-child {
       display: block;
     }
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+`;
+
+export const MatrixImg = styled.img`
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    width: 600px;
   }
 `;

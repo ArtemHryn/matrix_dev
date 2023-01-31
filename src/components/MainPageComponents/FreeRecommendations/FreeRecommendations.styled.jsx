@@ -16,4 +16,9 @@ export const Title = styled.h2`
     font-size: 80px;
     max-width: 600px;
   }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    font-size: 90px;
+    max-width: 1000px;
+    margin-bottom: 124px;
+  }
 `;

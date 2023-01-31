@@ -27,7 +27,7 @@ const factsAboutMatrix = [
 
 export const WhatIsMatrix = () => {
   return (
-    <Box as="section" pt="40px" pb="40px" id="aboutMatrix">
+    <Box as="section" py={['40px', '40px', '90px']} id="aboutMatrix">
       <Box
         maxWidth={['430px', '768px', '1440px']}
         px={['60px', '33px', '100px']}
@@ -37,7 +37,7 @@ export const WhatIsMatrix = () => {
         <Box
           display={[null, 'flex', 'flex']}
           alignItems="center"
-          mb={[null, '40px', '40px']}
+          mb={[null, '40px', '47px']}
         >
           <MatrixCreator>
             Авторский метод Наталии Ладини, которому более 16 лет.

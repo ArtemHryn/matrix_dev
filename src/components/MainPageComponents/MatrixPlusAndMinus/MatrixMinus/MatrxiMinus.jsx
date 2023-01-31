@@ -1,12 +1,16 @@
 import { motion } from 'framer-motion';
 import { Box } from 'components/Box';
-import { AnimatedPuzzle, Puzzle, PuzzleText } from './MatrixMinus.styled';
+import {
+  AnimatedPuzzle,
+  MatrixImg,
+  Puzzle,
+  PuzzleText,
+} from './MatrixMinus.styled';
 import puzzlesText from './puzzlesText';
 import matrixMinus from 'images/matrixPlusAndMinus/pazzles.png';
 import matrixMinusTab from 'images/matrixPlusAndMinus/pazzlesTab.png';
 import matrixPuzzle from 'images/matrixPlusAndMinus/animatedPuzzle.png';
 import matrixPuzzleTab from 'images/matrixPlusAndMinus/animatedPuzzleTab.png';
-
 
 export const MatrixMinus = () => {
   return (
@@ -33,7 +37,7 @@ export const MatrixMinus = () => {
       >
         <picture>
           <source srcSet={matrixMinusTab} media="(min-width: 768px)" />
-          <img src={matrixMinus} alt="matrixMinus" />
+          <MatrixImg src={matrixMinus} alt="matrixMinus" />
         </picture>
         <AnimatedPuzzle className="animate__hinge">
           <picture>
@@ -42,8 +46,8 @@ export const MatrixMinus = () => {
             <Puzzle src={matrixPuzzle} alt="puzzle" />
           </picture>
           <PuzzleText
-            top={['55px', '85px']}
-            left={['20px', '75px']}
+            top={['55px', '85px', '65px']}
+            left={['20px', '75px', '45px']}
             maxWidth="109px"
             rotate="-9deg"
             display="block"
@@ -53,14 +57,27 @@ export const MatrixMinus = () => {
         </AnimatedPuzzle>
 
         {puzzlesText.map(
-          ({ text, xm, ym, xt, yt, r, rt, maxWidth, maxWidthTab }) => (
+          ({
+            text,
+            xm,
+            ym,
+            xt,
+            yt,
+            xd,
+            yd,
+            r,
+            rt,
+            maxWidth,
+            maxWidthTab,
+            maxWidthDesc,
+          }) => (
             <PuzzleText
-              top={[ym, yt]}
-              left={[xm, xt]}
+              top={[ym, yt, yd]}
+              left={[xm, xt, xd]}
               key={text}
               rotate={r}
               rt={rt}
-              maxWidth={[maxWidth, maxWidthTab]}
+              maxWidth={[maxWidth, maxWidthTab, maxWidthDesc]}
             >
               {text}
             </PuzzleText>

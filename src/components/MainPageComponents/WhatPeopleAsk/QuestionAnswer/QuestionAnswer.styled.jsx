@@ -10,6 +10,11 @@ export const QuestionElement = styled.li`
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     padding: 24px 0;
   }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    width: 560px;
+    margin-right: 37px;
+    padding: 18px 0;
+  }
 `;
 
 export const TitleContainer = styled.div`
@@ -17,6 +22,7 @@ export const TitleContainer = styled.div`
   margin-bottom: 10px;
   justify-content: space-between;
   align-items: center;
+
 `;
 export const Title = styled.h4`
   max-width: 250px;
@@ -28,6 +34,11 @@ export const Title = styled.h4`
   color: ${p => p.theme.colors.secondTitle};
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     max-width: 100%;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    font-size: 20px;
+    line-height: 1.2;
+    width: 380px;
   }
 `;
 export const Button = styled.button`

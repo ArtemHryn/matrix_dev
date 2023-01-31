@@ -23,15 +23,21 @@ export const SocialNameContainer = styled.div`
     flex-direction: column;
     margin-bottom: 0;
   }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    margin-bottom: 12px;
+  }
 `;
 export const SocialName = styled.h4`
   font-family: ${p => p.theme.fonts.main};
   font-style: italic;
   font-weight: 400;
   font-size: 40px;
-  line-height: 48px;
+  line-height: 1.2;
 
   color: #b388d3;
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    font-size: 48px;
+  }
 `;
 
 export const SocialLink = styled.a`
@@ -43,6 +49,17 @@ export const SocialLink = styled.a`
   background-color: #9071af;
   border-radius: 50%;
   ${layout}
+
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  :hover,
+  :focus {
+    transform: scale(1.05);
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    width: 52px;
+    height: 52px;
+  }
 `;
 
 export const Description = styled.p`
@@ -53,5 +70,9 @@ export const Description = styled.p`
   line-height: 1.22;
 
   color: ${p => p.theme.colors.secondText};
-
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    font-size: 22px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
 `;

@@ -18,6 +18,11 @@ export const Title = styled.h2`
     line-height: 1.12;
     max-width: 660px;
   }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    font-size: 90px;
+    line-height: 1;
+    margin-bottom: 40px;
+  }
 `;
 
 export const ImgPhones = styled.img`
@@ -30,7 +35,10 @@ export const ImgPhones = styled.img`
   margin-bottom: 35px;
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     transform: scale(1.18);
-    background-image: none
+    background-image: none;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    display: none;
   }
 `;
 
@@ -48,6 +56,9 @@ export const AboutCalculator = styled.p`
     line-height: 1.23;
     margin-bottom: 141px;
   }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    margin-bottom: 100px;
+  }
 `;
 
 export const LinkToCalculator = styled(Link)`
@@ -61,6 +72,7 @@ export const LinkToCalculator = styled(Link)`
   border-radius: 50px;
 
   font-family: ${p => p.theme.fonts.main};
+  font-style: normal;
   font-weight: 300;
   font-size: 18px;
   line-height: 1.22;
@@ -69,9 +81,19 @@ export const LinkToCalculator = styled(Link)`
   color: ${p => p.theme.colors.white};
 
   margin-bottom: 20px;
+
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  :hover,
+  :focus {
+    transform: scale(1.05);
+  }
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     width: 320px;
     margin-bottom: 11px;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    font-size: 20px;
   }
 `;
 
@@ -85,5 +107,13 @@ export const Info = styled.p`
   color: ${p => p.theme.colors.third};
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     width: 408px;
+  }
+`;
+
+export const DescTopImg = styled.img`
+  display: none;
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    display: block;
+    width: 600px;
   }
 `;

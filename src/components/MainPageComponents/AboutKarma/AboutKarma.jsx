@@ -1,15 +1,24 @@
 import { Box } from 'components/Box';
-import smallStar from 'images/smallStar.png';
-import crystal from 'images/crystal.png';
-import mirrorCrystal from 'images/mirrorCrystal.png';
-import handWithJel from 'images/aboutImages/handWithJel.png';
-import handWithJelTab from 'images/aboutImages/handWithJelTab.png';
-import hands from 'images/aboutImages/hands.png';
-import plant from 'images/aboutImages/plant.png';
-import handWithFlower from 'images/aboutImages/handWithFlower.png';
-import handsTab from 'images/aboutImages/handsTab.png';
-import plantTab from 'images/aboutImages/plantTab.png';
-import handWithFlowerTab from 'images/aboutImages/handWithFlowerTab.png';
+
+import {
+  smallStar,
+  crystal,
+  mirrorCrystal,
+  handWithJel,
+  handWithJelTab,
+  hands,
+  plant,
+  handWithFlower,
+  handsTab,
+  plantTab,
+  handWithFlowerTab,
+  handsContainerImgDesc,
+  handWithJelDesc,
+  handsDesc,
+  plantDesc,
+  handWithFlowerDesc,
+} from './';
+
 import {
   AboutDesc,
   AboutReasonContainer,
@@ -30,7 +39,18 @@ const sectionGradient =
 
 export const AboutKarma = () => {
   return (
-    <Box as="section" pt="40px" pb="40px" backgroundImage={sectionGradient}>
+    <Box
+      as="section"
+      py={['40px', '40px', '90px']}
+      backgroundImage={[
+        sectionGradient,
+        sectionGradient,
+        `url(${handsContainerImgDesc}), ${sectionGradient}`,
+      ]}
+      backgroundPosition={[null, null, '0 350px, 0 0']}
+      backgroundSize={[null, null, 'contain, auto']}
+      backgroundRepeat="no-repeat"
+    >
       <Box
         maxWidth={['430px', '768px', '1440px']}
         px={['60px', '33px', '100px']}
@@ -44,18 +64,22 @@ export const AboutKarma = () => {
           <AboutReasonContainer
             p="18px 32px 18px 5px"
             mb="11px"
-            mr={[null, '13px', '13px']}
+            mr={[null, '13px', '25px']}
+            justifyContent={[null, null, 'flex-start']}
           >
-            <CrystalContainer mr="5px">
+            <CrystalContainer mr={['5px', '5px', '50px']}>
               <CrystalImg src={crystal} alt="crystal" left="40%" />
             </CrystalContainer>
             <AboutDesc>Учениям о карме более 2,5 тыс лет</AboutDesc>
           </AboutReasonContainer>
-          <AboutReasonContainer p="18px 5px 18px 32px" mb="45px">
+          <AboutReasonContainer
+            p="18px 5px 18px 32px"
+            flexDirection="row-reverse"
+          >
             <AboutDesc>
               “Карма” с санскрита переводится, как «действие, деятельность»
             </AboutDesc>
-            <CrystalContainer ml="5px">
+            <CrystalContainer ml="5px" mr={[null, null, '30px']}>
               <CrystalImg src={mirrorCrystal} alt="crystal" left="60%" />
             </CrystalContainer>
           </AboutReasonContainer>
@@ -68,69 +92,73 @@ export const AboutKarma = () => {
 
           <div>
             <UnderHandImg
-              top={['10%', '20%', '20%']}
-              left={['-20%', '15%', '15%']}
+              top={['10%', '20%', '123%']}
+              left={['-20%', '15%', '5%']}
             ></UnderHandImg>
             <picture>
+              <source srcSet={handWithJelDesc} media="(min-width: 1440px)" />
               <source srcSet={handWithJelTab} media="(min-width: 768px)" />
               <source srcSet={handWithJel} />
               <HandImg
                 srcSet={handWithJel}
                 alt="Darina"
-                top={['10%', '15%', '20%']}
-                left={['-20%', '10%', '-20%']}
-                width={[null, '148px', '148px']}
+                top={['10%', '15%', '103%']}
+                left={['-20%', '10%', '-1%']}
+                width={[null, '148px', '212px']}
               />
             </picture>
           </div>
           <div>
             <UnderHandImg
-              bottom={['-10%', '-10%', '-10%']}
-              left={['0%', '80%', '0%']}
+              bottom={['-10%', '-10%', '42%']}
+              left={['0%', '80%', '90%']}
             ></UnderHandImg>
             <picture>
+              <source srcSet={handsDesc} media="(min-width: 1440px)" />
               <source srcSet={handsTab} media="(min-width: 768px)" />
               <source srcSet={hands} />
               <HandImg
                 srcSet={hands}
                 alt="Darina"
-                bottom={['-10%', '-15%', '-10%']}
-                left={['0%', '80%', '0%']}
-                width={[null, '137px', '137px']}
+                bottom={['-10%', '-15%', '40%']}
+                left={['0%', '80%', '87%']}
+                width={[null, '137px', '167px']}
               />
             </picture>
           </div>
           <div>
             <UnderHandImg
-              top={['-5%', '10%', '-5%']}
-              right={['-5%', '49%', '-5%']}
+              top={['-5%', '10%', '81%']}
+              right={['-5%', '49%', '72%']}
             ></UnderHandImg>
             <picture>
+              <source srcSet={plantDesc} media="(min-width: 1440px)" />
               <source srcSet={plantTab} media="(min-width: 768px)" />
               <source srcSet={plant} />
               <HandImg
                 srcSet={plant}
                 alt="Darina"
-                top={['-5%', '10%', '-5%']}
-                right={['-5%', '42%', '-5%']}
-                width={[null, '207px', '207px']}
+                top={['-5%', '10%', '47%']}
+                right={['-5%', '42%', '66%']}
+                width={[null, '207px', '254px']}
               />
             </picture>
           </div>
           <div>
             <UnderHandImg
-              bottom={['10%', '31%', '10%']}
-              right={['-15%', '22%', '-15%']}
+              bottom={['10%', '31%', '51%']}
+              right={['-15%', '22%', '26%']}
             ></UnderHandImg>
             <picture>
+              <source srcSet={handWithFlowerDesc} media="(min-width: 1440px)" />
               <source srcSet={handWithFlowerTab} media="(min-width: 768px)" />
               <source srcSet={handWithFlower} />
               <HandImg
                 srcSet={handWithFlower}
                 alt="Darina"
-                bottom={['3%', '13%', '3%']}
-                right={['-15%', '20%', '-15%']}
-                width={[null, '185px', '185px']}
+                bottom={['3%', '13%', '49%']}
+                right={['-15%', '20%', '22%']}
+                width={[null, '185px', '226px']}
               />
             </picture>
           </div>

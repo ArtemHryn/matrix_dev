@@ -4,7 +4,7 @@ import { FooterLogo, FooterTitle, NavigationElement, NavigationLink, NavigationL
 
 export const Footer = () => {
   return (
-    <Box as="footer" pt="40px" pb="40px">
+    <Box as="footer" py={['40px', '40px', '90px']}>
       <Box
         maxWidth={['430px', '768px', '1440px']}
         px={['60px', '33px', '100px']}
@@ -12,7 +12,7 @@ export const Footer = () => {
       >
         <FooterLogo src={logo} alt="logo" />
         <FooterTitle>Dari.Karma</FooterTitle>
-        <Box display={[null, 'flex']} alignItems='center'>
+        <Box display={[null, 'flex']} alignItems="center">
           <NavigationList>
             <NavigationElement>
               <NavigationLink href="#author">Автор проекта</NavigationLink>

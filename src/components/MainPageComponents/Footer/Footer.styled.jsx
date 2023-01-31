@@ -6,6 +6,9 @@ export const FooterLogo = styled.img`
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     margin: 0 auto 0 0;
   }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    width: 180px;
+  }
 `;
 
 export const FooterTitle = styled.h2`
@@ -24,6 +27,9 @@ export const FooterTitle = styled.h2`
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     text-align: left;
     font-size: 54px;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    font-size: 70px;
   }
 `;
 
@@ -54,8 +60,21 @@ export const NavigationLink = styled.a`
   letter-spacing: 0.01em;
 
   color: ${p => p.theme.colors.secondText};
+
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+  :hover,
+  :focus {
+    transform: scale(1.1);
+    color: ${p => p.theme.colors.main};
+  }
+
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     width: 200px;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    font-size: 30px;
+    width: 320px;
   }
 `;
 
@@ -68,9 +87,17 @@ export const PoliticsAndDesign = styled.p`
   text-align: center;
   letter-spacing: 0.01em;
 
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.5);
   margin-bottom: 5px;
   :last-child {
     margin-bottom: 0;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    font-size: 30px;
+    text-align: left;
+    width: 400px;
+    :first-child {
+      margin-bottom: 20px;
+    }
   }
 `;

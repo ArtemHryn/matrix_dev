@@ -38,4 +38,9 @@ export const ConcultationCardText = styled.p`
     font-size: 22px;
     line-height: 1.22;
   }
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    bottom: 36px;
+    font-size: 30px;
+    line-height: 1.22;
+  }
 `;

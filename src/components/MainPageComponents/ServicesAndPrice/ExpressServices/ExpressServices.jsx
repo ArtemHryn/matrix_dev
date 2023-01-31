@@ -17,22 +17,49 @@ import {
   card3Tab,
   card4Tab,
   card5Tab,
+  card1Desc,
+  card2Desc,
+  card3Desc,
+  card4Desc,
+  card5Desc,
 } from './';
 
 const cards = [
-  { img: card1, text: 'Диагностика состояния матрицы', imgTab: card1Tab },
-  { img: card2, text: 'Совместимость', imgTab: card2Tab },
-  { img: card3, text: 'Подбор благоприятной даты, периода', imgTab: card3Tab },
-  { img: card4, text: 'Энергии длительного действия', imgTab: card4Tab },
-  { img: card5, text: 'SOS - помощь', imgTab: card5Tab },
+  {
+    img: card1,
+    text: 'Диагностика состояния матрицы',
+    imgTab: card1Tab,
+    imgDesc: card1Desc,
+  },
+  {
+    img: card3,
+    text: 'Подбор благоприятной даты, периода',
+    imgTab: card3Tab,
+    imgDesc: card3Desc,
+  },
+  { img: card2, text: 'Совместимость', imgTab: card2Tab, imgDesc: card2Desc },
+
+  {
+    img: card4,
+    text: 'Энергии длительного действия',
+    imgTab: card4Tab,
+    imgDesc: card4Desc,
+  },
+  { img: card5, text: 'SOS - помощь', imgTab: card5Tab, imgDesc: card5Desc },
 ];
 export const ExpressServices = () => {
   return (
     <Box mb="80px">
       <ExpressServicesTitle>Экспресс-услуги:</ExpressServicesTitle>
       <ExpressServicesList>
-        {cards.map(({ img, text, imgTab }) => (
-          <ExpressServiceCard key={text} img={img} text={text} imgTab={imgTab } />
+        {cards.map(({ img, text, imgTab, imgDesc }) => (
+          <ExpressServiceCard
+            key={text}
+            img={img}
+            text={text}
+            imgTab={imgTab}
+            imgDesc={imgDesc}
+          />
         ))}
       </ExpressServicesList>
       <AdditionalInfo>

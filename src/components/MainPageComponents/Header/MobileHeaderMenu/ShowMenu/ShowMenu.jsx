@@ -36,7 +36,6 @@ export const ShowMenu = ({ setShowMenu }) => {
   useEffect(() => {
     const onBackdropClick = e => {
       if (e.target.dataset.name !== 'modal') {
-        console.log(1);
         setShowMenu(false);
       }
     };

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import titleLine from 'images/WaysToTransformation/titleLine.png'
+import titleLine from 'images/WaysToTransformation/titleLine.png';
 
 export const Title = styled.h2`
   font-family: ${p => p.theme.fonts.main};
@@ -20,6 +20,11 @@ export const Title = styled.h2`
     line-height: 1;
     letter-spacing: 0.01em;
   }
+
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    font-size: 90px;
+    margin-bottom: 41px;
+  }
 `;
 
 export const About = styled.p`
@@ -27,7 +32,7 @@ export const About = styled.p`
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
-  line-height: 22px;
+  line-height: 1.22;
 
   margin-bottom: 35px;
 
@@ -36,7 +41,11 @@ export const About = styled.p`
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     width: 466px;
     font-size: 20px;
-    line-height: 24px;
+    line-height: 1.2;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    width: 290px;
+    margin: 0 auto 41px;
   }
 `;
 
@@ -45,7 +54,12 @@ export const TransformationWarning = styled.p`
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 1.18;
 
   color: rgba(0, 0, 0, 0.6);
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    font-size: 20px;
+    line-height: 1.2;
+    width: 1070px;
+  }
 `;

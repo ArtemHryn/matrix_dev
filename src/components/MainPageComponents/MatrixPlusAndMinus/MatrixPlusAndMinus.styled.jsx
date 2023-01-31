@@ -14,6 +14,9 @@ export const Title = styled.h2`
     width: 335px;
     font-size: 80px;
   }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    font-size: 90px;
+  }
 `;
 
 
@@ -32,6 +35,11 @@ export const CheckBoxText = styled.p`
     font-size: 30px;
     line-height: 1;
   }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    font-size: 36px;
+    max-width: 100%;
+    order: 2;
+  }
 `;
 
 //checkbox
@@ -41,6 +49,11 @@ export const Label = styled.label`
   display: inline-block;
   width: 3.5em;
   height: 2em;
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    margin-bottom: 20px;
+    width: 5.5em;
+    height: 3em;
+  }
 `;
 
 export const Input = styled.input`
@@ -53,6 +66,11 @@ export const Input = styled.input`
   }
   &:checked + span:before {
     transform: translateX(1.5em);
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    &:checked + span:before {
+      transform: translateX(2.5em);
+    }
   }
 `;
 
@@ -76,5 +94,11 @@ export const Slider = styled.span`
     bottom: 0.3em;
     background-color: #fff;
     transition: 0.4s;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    ::before {
+      height: 2.4em;
+      width: 2.4em;
+    }
   }
 `;

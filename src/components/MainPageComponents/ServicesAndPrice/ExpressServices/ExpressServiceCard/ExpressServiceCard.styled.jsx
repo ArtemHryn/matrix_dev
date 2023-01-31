@@ -8,15 +8,20 @@ export const ExpressServiceCardElement = styled.li`
       grid-column-end: 3;
     }
   }
-  
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    
+  }
 `;
 
 export const Img = styled.img`
-  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+  @media screen and (min-width: ${p=>p.theme.sizes.tablet}) and (max-width: ${p => p.theme.sizes.desktop}) {
     width: 234px;
-    li:nth-last-child(-n + 2) &{
+    li:nth-last-child(-n + 2) & {
       width: 350px;
     }
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    flex-wrap: nowrap;
   }
 `;
 export const ExpressServiceCardText = styled.p`

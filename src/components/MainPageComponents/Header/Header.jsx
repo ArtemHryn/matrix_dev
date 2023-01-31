@@ -11,7 +11,7 @@ export const Header = () => {
         display={['none', 'flex', 'flex']}
         justifyContent="center"
         alignItems="center"
-        pt="44px"
+        pt="24px"
         maxWidth={['430px', '768px', '1440px']}
         px={['60px', '33px', '100px']}
         m="0 auto"

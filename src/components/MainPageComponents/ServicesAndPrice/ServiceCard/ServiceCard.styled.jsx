@@ -16,7 +16,10 @@ export const CardElement = styled.li`
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     max-width: calc((100% - 50px) / 2);
     margin: 0 14px 35px 0;
-
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    max-width: calc((100% - 120px) / 4);
+    margin: 0 14px 35px 0;
   }
 `;
 
@@ -64,9 +67,11 @@ export const CardDescription = styled.p`
   font-style: normal;
   font-weight: 400;
   font-size: 17px;
-  line-height: 21px;
+  line-height: 1.24;
 
   color: ${p => p.theme.colors.third};
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+  }
 `;
 
 export const Price = styled.p`
@@ -100,7 +105,11 @@ export const Button = styled.button`
 
   background-color: #9071af;
   border-radius: 50px;
-
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  :hover,
+  :focus {
+    transform: translate(0%, 50%) scale(1.05);
+  }
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     width: 238px;
     height: 52px;
@@ -110,5 +119,26 @@ export const Button = styled.button`
     li:last-child & {
       transform: translate(0%, 110%);
     }
+    li:last-child &:hover,
+    li:last-child &:focus {
+      transform: translate(0%, 110%) scale(1.05);
+    }
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    transform: translate(0%, 86%);
+    :hover,
+    :focus {
+      transform: translate(0%, 86%) scale(1.05);
+    }
+  }
+  li:last-child &,
+  li:nth-child(2) & {
+    transform: translate(0%, 50%);
+  }
+  li:last-child &:hover,
+  li:last-child &:focus,
+  li:nth-child(2) &:hover,
+  li:nth-child(2) &:focus {
+    transform: translate(0%, 50%) scale(1.05);
   }
 `;

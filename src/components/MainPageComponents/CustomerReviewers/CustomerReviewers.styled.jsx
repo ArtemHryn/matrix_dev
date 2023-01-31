@@ -17,6 +17,11 @@ export const FeedbackTitle = styled.h3`
     font-size: 80px;
     line-height: 1.12;
   }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    font-size: 90px;
+    line-height: 1;
+    
+  }
 `;
 
 export const FeedbackDescription = styled.p`
@@ -32,6 +37,11 @@ export const FeedbackDescription = styled.p`
     font-size: 20px;
     line-height: 1.1;
     width: 317px;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    font-size: 30px;
+    line-height: 1.2;
+    width: 490px;
   }
 `;
 
@@ -56,4 +66,7 @@ export const Cont = styled.img`
 export const Separator = styled.img`
   width: 179px;
   margin: 30px auto 0;
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+   margin-top: 60px;
+  }
 `;

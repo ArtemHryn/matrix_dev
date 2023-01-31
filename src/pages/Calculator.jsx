@@ -4,7 +4,7 @@ import { Hero } from 'components/Hero/Hero';
 import { useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 
-export const Calculator = ({ setIsMain }) => {
+ const Calculator = ({ setIsMain }) => {
   useEffect(() => setIsMain(false), [setIsMain])
   return (
     <>
@@ -15,3 +15,5 @@ export const Calculator = ({ setIsMain }) => {
     </>
   );
 };
+
+export default Calculator

@@ -18,21 +18,19 @@ export const ConsultationsTitle = styled.h3`
   }
 `;
 
-export const SolutionsText = styled.p`
-  font-family: ${p => p.theme.fonts.main};
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.22;
+// export const SolutionsText = styled.p`
+//   font-family: ${p => p.theme.fonts.main};
+//   font-style: normal;
+//   font-weight: 400;
+//   font-size: 18px;
+//   line-height: 1.22;
 
-  color: ${p => p.theme.colors.secondText};
-  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
-    font-size: 20px;
-    line-height: 1.2;
-
-    color: ${p => p.theme.colors.secondText};
-  }
-`;
+//   color: ${p => p.theme.colors.secondText};
+//   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+//     font-size: 20px;
+//     line-height: 1.2;
+//   }
+// `;
 
 export const ConsultationsList = styled.ul`
   display: grid;
@@ -41,5 +39,9 @@ export const ConsultationsList = styled.ul`
   margin-bottom: 30px;
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     grid-template-columns: repeat(3, 240px);
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    grid-template-columns: repeat(3, calc((100% - 200px) / 3));
+    justify-content: center;
   }
 `;

@@ -12,8 +12,18 @@ export const MasterClassCardElement = styled.li`
   }
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     margin-right: 10px;
-    width: calc((100% - 30px) / 2);
+    width: calc((100% - 20px) / 2);
     height: 745px;
+    :first-child {
+      margin-right: 20px;
+    }
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    width: calc((100% - 30px) / 2);
+    :first-child {
+      margin-right: 20px;
+    }
+    height: 675px;
   }
 `;
 
@@ -31,6 +41,9 @@ export const TitleContainer = styled.div`
   background-repeat: repeat-x;
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     margin-bottom: 25px;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    padding-top: 34px;
   }
 `;
 
@@ -50,6 +63,10 @@ export const CardTitle = styled.h4`
   color: ${p => p.theme.colors.main};
   background-color: #f5f1ff;
   border-radius: 100px;
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    padding-top: 34px;
+    padding-bottom: 34px;
+  }
 `;
 
 export const Img = styled.img`
@@ -58,6 +75,9 @@ export const Img = styled.img`
   padding: 7px;
   background-color: #ffffff;
   border-radius: 50%;
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+   width: 64px;
+  }
 `;
 
 export const ServiceList = styled.ul`
@@ -104,6 +124,18 @@ export const ServiceFormat = styled.p`
   background-position: bottom;
   background-size: 15px 2px;
   background-repeat: repeat-x;
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    margin-bottom: 0;
+    width: 290px;
+    background-image: linear-gradient(
+      to top,
+      #000 10%,
+      rgba(255, 255, 255, 0) 0%
+    );
+    background-repeat: repeat-y;
+    background-position: right;
+    background-size: 2px 15px;
+  }
 `;
 
 export const ServiceDuration = styled.p`
@@ -125,9 +157,12 @@ export const ServicePrice = styled.p`
 
   padding-left: 25px;
   margin-bottom: 34px;
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    margin-bottom: 0;
+  }
 `;
 
-export const Button = styled.button`
+export const Button = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -146,8 +181,17 @@ export const Button = styled.button`
 
   background-color: #9071af;
   border-radius: 50px;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  :hover,
+  :focus {
+    transform: scale(1.05);
+  }
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     width: 260px;
     margin: 0 auto;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    width: 460px;
   }
 `;

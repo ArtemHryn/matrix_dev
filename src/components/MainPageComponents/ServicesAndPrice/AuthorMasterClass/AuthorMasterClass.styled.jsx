@@ -15,6 +15,10 @@ export const AuthorMasterClassTitle = styled.h3`
     font-size: 80px;
     width: 500px;
   }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    font-size: 90px;
+    width: 700px;
+  }
 `;
 
 export const MasterClassList = styled.ul`

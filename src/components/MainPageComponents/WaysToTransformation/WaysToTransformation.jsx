@@ -4,17 +4,17 @@ import { TransformationWay } from './TransformationWay/TransformationWay';
 import { About, Title, TransformationWarning } from './WaysToTransformation.styled';
 
 import line from 'images/WaysToTransformation/line.png';
+import titleLineDesc from 'images/WaysToTransformation/titleLineDesc.png';
 
 
 export const WaysToTransformation = () => {
   return (
     <Box
       as="section"
-      pt="40px"
-      pb="40px"
-      backgroundImage={[null, `url(${line})`]}
+      py={['40px', '40px', '90px']}
+      backgroundImage={[null, `url(${line})`, `url(${titleLineDesc})`]}
       backgroundSize="contain"
-      backgroundPosition="0 -5vw"
+      backgroundPosition={[null, '0 -5vw', '0 -15vw']}
       backgroundRepeat="no-repeat"
     >
       <Box

@@ -24,4 +24,14 @@ export const PuzzleTextPlus = styled.p`
       display: block;
     }
   }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+`;
+
+export const MatrixImg = styled.img`
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    width: 600px;
+  }
 `;
