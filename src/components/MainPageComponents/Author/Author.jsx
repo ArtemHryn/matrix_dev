@@ -74,7 +74,7 @@ export const Author = () => {
             <AboutAuthorListElement>
               <Symbols src={symbol3} alt="star symbol" width={65} />
               <AboutAuthorDesc>
-                Получаю магистрерскую степень по психологии в Таврическом
+                Получила магистрерскую степень по психологии в Таврическом
                 национальном университете имени В. И. Вернадского
               </AboutAuthorDesc>
             </AboutAuthorListElement>

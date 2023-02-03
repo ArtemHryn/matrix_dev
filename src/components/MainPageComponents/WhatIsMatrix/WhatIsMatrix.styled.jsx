@@ -97,6 +97,7 @@ export const LinkToCalculator = styled(Link)`
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.03em;
+  text-align: center;
 
   color: ${p => p.theme.colors.white};
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);

@@ -11,21 +11,11 @@ export const TransformationTitle = styled.h4`
   font-size: 26px;
   line-height: 1.38;
   letter-spacing: 0.01em;
+  color: ${p => p.theme.colors.text};
 
-  width: 300px;
-  height: 57px;
-  padding-left: 26px;
-  margin-bottom: 8px;
-
-  color: #72499b;
-
-  background-color: #f5f1ff;
-  border-radius: 88px;
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
-    width: 385px;
     height: 65px;
-    padding-left: 57px;
-    margin-bottom: 12px;
+
   }
 `;
 

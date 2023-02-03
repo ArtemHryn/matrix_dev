@@ -2,13 +2,6 @@ import styled from 'styled-components';
 
 export const ConcultationCardElement = styled.li`
   position: relative;
-
-  @media screen and (max-width: ${p => p.theme.sizes.tablet}) {
-    :last-child {
-      grid-column-start: 1;
-      grid-column-end: 3;
-    }
-  }
 `;
 
 export const ConcultationCardText = styled.p`
@@ -26,21 +19,16 @@ export const ConcultationCardText = styled.p`
 
   color: ${p => p.theme.colors.main};
 
-  @media screen and (max-width: ${p => p.theme.sizes.tablet}) {
-    li:last-child & {
-      bottom: 50%;
-      right: 25%;
-      transform: translate(50%, 50%);
-    }
-  }
+  
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     bottom: 36px;
     font-size: 22px;
     line-height: 1.22;
   }
-  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
     bottom: 36px;
     font-size: 30px;
     line-height: 1.22;
   }
 `;
+

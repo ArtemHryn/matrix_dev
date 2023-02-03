@@ -1,5 +1,5 @@
 import { Box } from 'components/Box';
-import dariPhoto from 'images//hero/hero_image_mob.png';
+import dariPhoto from 'images//hero/dariPhoto.png';
 import dariPhotoTab from 'images//hero/DarinaInHero.png';
 import dariPhotoDesk from 'images//hero/hero_image_desktop.png';
 import heroStar from 'images//hero/hero_star.png';
@@ -17,7 +17,7 @@ import { useState } from 'react';
 export const MainHero = () => {
   const [clicked, setClicked] = useState(false);
   return (
-    <Box as="section" pb={['40px', '40px', '90px']}>
+    <Box as="section" py={['40px', '40px', '90px']}>
       <Box
         maxWidth={['430px', '768px', '1440px']}
         px={['60px', '33px', '100px']}

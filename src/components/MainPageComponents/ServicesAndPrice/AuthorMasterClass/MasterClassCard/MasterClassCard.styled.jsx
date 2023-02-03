@@ -191,7 +191,7 @@ export const Button = styled.a`
     width: 260px;
     margin: 0 auto;
   }
-  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
     width: 460px;
   }
 `;

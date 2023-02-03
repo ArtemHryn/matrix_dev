@@ -18,5 +18,5 @@ export const Box = styled('div')(
   flexbox,
   border,
   position,
-  background
+  background,
 );

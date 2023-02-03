@@ -3,7 +3,8 @@ export const theme = {
 
   colors: {
     main: '#9072af',
-    secondText: '#000',
+    text: '#72499b',
+    secondText: '#000000',
     motivationText: '#161616',
     white: '#fff',
     third: '#494949',
@@ -33,5 +34,8 @@ export const theme = {
     mobile: '430px',
     tablet: '768px',
     desktop: '1440px',
+    mobileModal: '380px',
+    tabletModal: '718px',
+    desktopModal: '1240px',
   },
 };

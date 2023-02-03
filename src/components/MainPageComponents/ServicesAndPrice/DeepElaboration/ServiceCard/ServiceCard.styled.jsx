@@ -70,8 +70,7 @@ export const CardDescription = styled.p`
   line-height: 1.24;
 
   color: ${p => p.theme.colors.third};
-  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
-  }
+
 `;
 
 export const Price = styled.p`
@@ -130,15 +129,15 @@ export const Button = styled.button`
     :focus {
       transform: translate(0%, 86%) scale(1.05);
     }
-  }
-  li:last-child &,
-  li:nth-child(2) & {
-    transform: translate(0%, 50%);
-  }
-  li:last-child &:hover,
-  li:last-child &:focus,
-  li:nth-child(2) &:hover,
-  li:nth-child(2) &:focus {
-    transform: translate(0%, 50%) scale(1.05);
+    li:last-child &,
+    li:nth-child(2) & {
+      transform: translate(0%, 50%);
+    }
+    li:last-child &:hover,
+    li:last-child &:focus,
+    li:nth-child(2) &:hover,
+    li:nth-child(2) &:focus {
+      transform: translate(0%, 50%) scale(1.05);
+    }
   }
 `;

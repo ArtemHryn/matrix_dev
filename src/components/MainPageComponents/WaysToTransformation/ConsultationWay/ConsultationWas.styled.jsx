@@ -41,6 +41,9 @@ export const ConsultationText = styled.p`
   border-image: url(${goldenBorder});
   border-image-slice: 0 0 10 0;
   border-image-width: 2px;
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    padding: 16px 0;
+  }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
     padding: 27px 0;
   }

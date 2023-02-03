@@ -27,11 +27,17 @@ import {
   parentChildrenCardDesc,
   demonOfferingCardDesc,
   yearCardDesc,
+  gameCard,
+  gameCardTab,
+  gameCardDesc,
 } from './';
 import { ConsultaionCard } from './ConsultationCard/ConsultationCard';
 import {
   ConsultationsList,
   ConsultationsTitle,
+  ContactMeSocial,
+  IndividualRequestElement,
+  IndividualRequestTitle,
 } from './Consultations.styled';
 
 const cards = [
@@ -83,17 +89,27 @@ const cards = [
     imgtab: demonOfferingCardTab,
     imgDesc: demonOfferingCardDesc,
   },
-  { img: yearCard, text: ' Прогноз на год ', imgtab: yearCardTab, imgDesc: yearCardDesc },
+  {
+    img: yearCard,
+    text: ' Прогноз на год ',
+    imgtab: yearCardTab,
+    imgDesc: yearCardDesc,
+  },
+  {
+    img: gameCard,
+    text: 'Игра“Кармические Путешествия”',
+    imgtab: gameCardTab,
+    imgDesc: gameCardDesc,
+  },
 ];
 
 export const Consultations = () => {
   return (
-    <Box>
+    <Box mb={'68px'}>
       <Box
         display={[null, 'flex', 'flex']}
         alignItems={[null, 'center']}
         justifyContent={[null, 'space-between', 'space-between']}
-        mb={['27px', '21px', '21px']}
       >
         <ConsultationsTitle>Консультации:</ConsultationsTitle>
       </Box>
@@ -107,6 +123,27 @@ export const Consultations = () => {
             imgDesc={imgDesc}
           />
         ))}
+        <IndividualRequestElement>
+          <IndividualRequestTitle>
+            Также вы можете разобрать вашу проблему по индивидуальному запросу
+          </IndividualRequestTitle>
+          <Box display="flex" justifyContent="center">
+            <ContactMeSocial
+              href="https://instagram.com/dari.karma?igshid=YmMyMTA2M2Y="
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Instagram
+            </ContactMeSocial>
+            <ContactMeSocial
+              href="https://t.me/+eAczkWqkslIzMjky"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Telegram
+            </ContactMeSocial>
+          </Box>
+        </IndividualRequestElement>
       </ConsultationsList>
     </Box>
   );

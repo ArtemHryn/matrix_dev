@@ -19,6 +19,7 @@ export const MainPageHeader = () => {
       maxWidth={['430px', '768px', '1440px']}
       m="0 auto"
       height="37px"
+      zIndex='10'
     >
       <AnimatePresence mode="wait" onExitComplete={() => null}>
         {showMenu ? (

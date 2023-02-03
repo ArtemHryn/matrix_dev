@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-
 export const ProjectText = styled.p`
   font-family: ${p => p.theme.fonts.main};
   font-weight: 300;
@@ -22,8 +21,8 @@ export const ProjectText = styled.p`
 export const Title = styled.h1`
   font-family: ${p => p.theme.fonts.title};
   font-weight: 400;
-  font-size: 64px;
-  line-height: 1.71;
+  font-size: 55px;
+  line-height: 1.22;
   letter-spacing: 0.01em;
 
   color: ${p => p.theme.colors.main};
@@ -68,8 +67,8 @@ export const ServicesLink = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 300px;
-  height: 64px;
+  width: 270px;
+  height: 58px;
   margin: 0 auto 10px;
 
   background: ${p => p.theme.colors.main};
@@ -101,8 +100,8 @@ export const MatrxiLink = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 300px;
-  height: 64px;
+  width: 270px;
+  height: 58px;
   margin: 0 auto;
 
   border: 1px solid ${p => p.theme.colors.main};
@@ -134,4 +133,4 @@ export const ImgStar = styled.img`
   position: absolute;
   width: 24px;
   left: 29%;
-`
+`;

@@ -10,7 +10,7 @@ export const MenuList = styled.ul`
   align-items: center;
   width: 300px;
   height: 342px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.93);
   border-radius: 30px;
   padding: 30px;
 `;

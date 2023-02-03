@@ -1,41 +1,14 @@
 import { Box } from 'components/Box';
-import personalMatrix from 'images/ServicesAndPrice/personalMatrix.png';
-import awarenessMatrix from 'images/ServicesAndPrice/awarenessMatrix.png';
-import { ServiceCard } from './ServiceCard/ServiceCard';
+
 import {
-  CardList,
-  ContactMeSocial,
   FourStagesTitle,
-  IndividualRequestTitle,
   ServiceAndPriceTitle,
   ServiceWarning,
 } from './ServicesAndPrice.styled';
 import { Consultations } from './Consultations/Consultations';
 import { ExpressServices } from './ExpressServices/ExpressServices';
 import { AuthorMasterClass } from './AuthorMasterClass/AuthorMasterClass';
-
-const cards = [
-  {
-    name: 'Целостная личная матрица',
-    img: personalMatrix,
-    text: 'Ответит на все вопросы,  предоставит фундаментальные знания о своей личности',
-  },
-  {
-    name: 'Матрица 9 колен рода',
-    img: personalMatrix,
-    text: 'Проработка родовых сценариев, исцеление 9 колен рода, социальная реализация, родовое изобилие',
-  },
-  {
-    name: 'Матрица осознанности',
-    img: awarenessMatrix,
-    text: 'Глубинное познание истинного я, усиление защиты судьбы, проход в мир истинного Духа',
-  },
-  {
-    name: 'Звезда процветания',
-    img: personalMatrix,
-    text: 'Исполнение желаний, ключи материализации, ключи признания, почестей и известности',
-  },
-];
+import { DeepElaboration } from './DeepElaboration/DeepElaboration';
 
 const sectionGradient =
   'linear-gradient(to bottom,#fff,rgba(158, 118, 255, 0.1) 16%,rgba(158, 118, 255, 0.1) 26%,#fff 100%)';
@@ -57,34 +30,12 @@ export const ServicesAndPrice = () => {
         <FourStagesTitle>
           Глубинные проработки: 4 уровня матрицы
         </FourStagesTitle>
-        <CardList>
-          {cards.map(({ name, img, text }) => (
-            <ServiceCard name={name} img={img} text={text} key={name} />
-          ))}
-        </CardList>
+        <DeepElaboration />
         <ServiceWarning>
           *Каждый уровень прорабатывается последовательно
         </ServiceWarning>
         <Consultations />
-        <IndividualRequestTitle>
-          Также вы можете разобрать вашу проблему по индивидуальному запросу
-        </IndividualRequestTitle>
-        <Box display="flex" mb="68px" justifyContent="center">
-          <ContactMeSocial
-            href="https://instagram.com/dari.karma?igshid=YmMyMTA2M2Y="
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            Instagram
-          </ContactMeSocial>
-          <ContactMeSocial
-            href="https://t.me/+eAczkWqkslIzMjky"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            Telegram
-          </ContactMeSocial>
-        </Box>
+
         <ExpressServices />
         <AuthorMasterClass />
       </Box>
