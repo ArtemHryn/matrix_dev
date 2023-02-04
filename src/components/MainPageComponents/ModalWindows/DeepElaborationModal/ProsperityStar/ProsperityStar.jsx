@@ -1,34 +1,12 @@
 import { Box } from 'components/Box';
-import { AdditionalInfo, Button, BuyButton, HowIsGoingConsultation, List, ListTitle, MainTitle, Price, Requests, Text } from './ProsperityStar.styled';
-
-import { ReactComponent as CloseModal } from 'images/modals/closeModal.svg';
-import star from 'images/modals/star.png';
+import { AdditionalInfo, BuyButton, HowIsGoingConsultation, List, ListTitle, MainTitle, Price, Requests, Text } from './ProsperityStar.styled';
 
 const dotGradient =
   'linear-gradient( to right, #000 10%, rgba(255, 255,255, 0) 0% )';
 
-export const ProsperityStar = ({ setShowModal }) => {
+export const ProsperityStar = () => {
   return (
     <>
-      <Button onClick={() => setShowModal(false)}>
-        <CloseModal />
-      </Button>
-      <Box
-        position="absolute"
-        backgroundColor="#FFFFFF"
-        border="1px solid #C8B3E6;"
-        borderRadius="50%"
-        top={['15px', '26px', '36px']}
-        right={['15px', '26px', '36px']}
-        width={['40px', '49px']}
-        height={['40px', '49px']}
-        display="flex"
-        alignItems="center"
-        justifyContent="center"
-        p="5px"
-      >
-        <img src={star} alt="star" />
-      </Box>
       <MainTitle display={['none', 'none', 'block']}>
         Звезда процветания
       </MainTitle>

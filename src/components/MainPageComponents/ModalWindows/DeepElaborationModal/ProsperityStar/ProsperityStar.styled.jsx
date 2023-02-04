@@ -1,19 +1,6 @@
 import styled from "styled-components";
 import { layout, space } from "styled-system";
 
-export const Button = styled.button`
-  display: block;
-
-  margin: 0 auto 49px;
-  background-color: transparent;
-  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
-    margin-bottom: 62px;
-  }
-  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
-    margin-bottom: 29px;
-  }
-`;
-
 export const MainTitle = styled.h3`
   font-family: ${p => p.theme.fonts.main};
   font-weight: 400;

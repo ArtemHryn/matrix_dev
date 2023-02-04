@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { color, shadow } from 'styled-system';
 
 export const ModalContainer = styled.div`
   position: relative;
@@ -13,6 +14,8 @@ export const ModalContainer = styled.div`
   border-radius: 30px;
 
   overflow-y: auto;
+  ${color}
+  ${shadow}
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     max-width: ${p => p.theme.sizes.tabletModal};
     padding-top: 64px;
@@ -22,5 +25,18 @@ export const ModalContainer = styled.div`
     padding: 51px 80px 100px 120px;
     height: 90vh;
     transform: translateY(-5%);
+  }
+`;
+
+export const Button = styled.button`
+  display: block;
+
+  margin: 0 auto 49px;
+  background-color: transparent;
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    margin-bottom: 62px;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    margin-bottom: 29px;
   }
 `;

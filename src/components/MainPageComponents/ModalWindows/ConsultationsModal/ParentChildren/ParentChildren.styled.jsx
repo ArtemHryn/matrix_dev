@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { space, layout } from 'styled-system';
+import { layout, space } from 'styled-system';
 
 export const MainTitle = styled.h3`
   font-family: ${p => p.theme.fonts.main};
@@ -39,6 +39,15 @@ export const Requests = styled.p`
   }
 `;
 
+export const List = styled.ul`
+  list-style: disc;
+  padding-left: 15px;
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+`;
+
 export const Text = styled.p`
   font-family: ${p => p.theme.fonts.main};
   font-weight: 400;
@@ -49,7 +58,7 @@ export const Text = styled.p`
 
   color: rgba(0, 0, 0, 0.8);
   ${space}
-  ${layout}
+
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     font-size: 17px;
     line-height: 1.23;
@@ -58,13 +67,7 @@ export const Text = styled.p`
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
     font-size: 18px;
   }
-`;
-
-export const List = styled.ul`
-  list-style: disc;
-  padding-left: 20px;
-  margin-bottom: 20px;
-  width: 320px;
+  ${layout}
 `;
 
 export const HowIsGoingConsultation = styled.h4`
@@ -79,24 +82,6 @@ export const HowIsGoingConsultation = styled.h4`
   color: ${p => p.theme.colors.secondText};
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     font-size: 25px;
-  }
-
-`;
-
-export const AdditionalInfo = styled.p`
-  font-family: ${p => p.theme.fonts.main};
-  font-style: normal;
-  font-weight: 300;
-  font-size: 13px;
-  line-height: 1.23;
-  letter-spacing: 0.03em;
-
-  color: rgba(0, 0, 0, 0.8);
-  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
-    max-width: 200px;
-    :first-child{
-        margin-right: 30px;
-    }
   }
 `;
 
@@ -130,7 +115,7 @@ export const BuyButton = styled.a`
 
   color: ${p => p.theme.colors.white};
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
-    width: 253px;
+    width: 180px;
     height: 52px;
     font-size: 18px;
     line-height: 1.22;

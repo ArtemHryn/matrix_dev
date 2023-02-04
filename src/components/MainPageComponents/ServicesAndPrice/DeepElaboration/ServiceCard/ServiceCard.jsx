@@ -27,8 +27,8 @@ export const ServiceCard = ({ name, img, text, component: Component }) => {
       </Button>
       <AnimatePresence mode="wait" onExitComplete={() => null}>
         {showModal && (
-          <ModalLayout key={name} setShowModal={setShowModal}>
-            <Component setShowModal={setShowModal} />
+          <ModalLayout setShowModal={setShowModal}>
+            <Component />
           </ModalLayout>
         )}
       </AnimatePresence>
