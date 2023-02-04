@@ -11,6 +11,7 @@ import {
 } from './ServiceCard.styled';
 import { useState } from 'react';
 import { ModalLayout } from 'components/MainPageComponents/ModalWindows/ModalLayout';
+import { AnimatePresence } from 'framer-motion';
 
 export const ServiceCard = ({ name, img, text, component: Component }) => {
   const [showModal, setShowModal] = useState(false);
@@ -24,11 +25,13 @@ export const ServiceCard = ({ name, img, text, component: Component }) => {
       <Button onClick={() => setShowModal(true)}>
         Подробнее <img src={lock} alt="lock" />
       </Button>
-      {showModal && (
-        <ModalLayout setShowModal={setShowModal}>
-          <Component setShowModal={setShowModal} />
-        </ModalLayout>
-      )}
+      <AnimatePresence mode="wait" onExitComplete={() => null}>
+        {showModal && (
+          <ModalLayout key={name} setShowModal={setShowModal}>
+            <Component setShowModal={setShowModal} />
+          </ModalLayout>
+        )}
+      </AnimatePresence>
     </CardElement>
   );
 };

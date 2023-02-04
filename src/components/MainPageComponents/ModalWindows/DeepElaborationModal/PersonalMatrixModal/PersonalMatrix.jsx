@@ -8,7 +8,7 @@ import {
   Price,
   Requests,
   Text,
-} from '../PersonalMatrix.styled';
+} from './PersonalMatrix.styled';
 
 import { ReactComponent as CloseModal } from 'images/modals/closeModal.svg';
 import star from 'images/modals/star.png';
@@ -111,8 +111,7 @@ export const PersonalMatrix = ({ setShowModal }) => {
             display={[null, 'flex']}
             alignItems="center"
             py={['25px', '40px']}
-            backgroundImage="linear-gradient( to right, #000 10%, rgba(255, 255,
-        255, 0) 0% )"
+            backgroundImage={dotGradient}
             backgroundPosition="bottom"
             backgroundSize="15px 2px"
             backgroundRepeat="repeat-x"
@@ -142,7 +141,7 @@ export const PersonalMatrix = ({ setShowModal }) => {
             justifyContent={['space-between', 'flex-start']}
             pt={['25px', '40px']}
           >
-            <Price>$250</Price>
+            <Price>$117</Price>
             <BuyButton href="https://t.me/DariKarma">Купить</BuyButton>
           </Box>
         </Box>

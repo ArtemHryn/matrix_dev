@@ -6,7 +6,7 @@ export const ModalContainer = styled.div`
   max-width: ${p => p.theme.sizes.mobileModal};
   height: 100%;
   padding: 20px 30px 107px;
-  background-color: rgba(245, 241, 255, 0.8);
+  background-color: rgba(245, 241, 255, 0.95);
   box-shadow: 0px 0px 30px rgba(190, 148, 232, 0.3);
   backdrop-filter: blur(15px);
 
