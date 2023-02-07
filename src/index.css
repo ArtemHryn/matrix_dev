@@ -26,3 +26,7 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.swiper-button-next:after, .swiper-button-prev:after {
+  color: #9072af;
+}

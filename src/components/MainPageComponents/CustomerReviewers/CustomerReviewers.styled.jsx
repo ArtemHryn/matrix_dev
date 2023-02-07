@@ -20,7 +20,6 @@ export const FeedbackTitle = styled.h3`
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
     font-size: 90px;
     line-height: 1;
-    
   }
 `;
 
@@ -56,18 +55,21 @@ export const YourDarina = styled.h5`
   margin-bottom: 30px;
 
   color: #72499b;
-
 `;
 
 export const Cont = styled.img`
-  width: 390px;
   border-radius: 10px;
+  max-width: 100%;
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    max-width: 390px;
+  }
 `;
 
 export const Separator = styled.img`
   width: 179px;
   margin: 30px auto 0;
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
-   margin-top: 60px;
+    margin-top: 60px;
   }
 `;
+

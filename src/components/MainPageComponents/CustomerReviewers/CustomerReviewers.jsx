@@ -1,5 +1,13 @@
+import { useEffect, useState } from 'react';
+import useMeasure from 'react-use-measure';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Thumbs, Navigation, Pagination, EffectCoverflow } from 'swiper';
+import {
+  Autoplay,
+  Thumbs,
+  Navigation,
+  Pagination,
+  EffectCoverflow,
+} from 'swiper';
 import {
   Cont,
   FeedbackDescription,
@@ -28,15 +36,33 @@ import 'swiper/css';
 import 'swiper/css/autoplay';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import 'swiper/css/effect-fade';
 import 'swiper/css/effect-coverflow';
 
+
 export const CustomerReviewers = () => {
+  const [swiperStyleNumber, setSwiperStyleNumber] = useState(null)
+  const [ref, {width}] = useMeasure()
+
+  useEffect(() => {
+    if (width === 1440) {
+      setSwiperStyleNumber(3);
+    }
+    if (width === 768) {
+      setSwiperStyleNumber(1);
+    }
+    if (width === 430) {
+      setSwiperStyleNumber(1);
+        }
+  }, [width]);
+
   return (
     <Box as="section" py={['40px', '40px', '90px']} id="feedback">
       <Box
         maxWidth={['430px', '768px', '1440px']}
         px={['60px', '33px', '100px']}
         m="0 auto"
+        ref={ref}
       >
         <Box
           display={[null, 'flex', 'flex']}
@@ -53,39 +79,33 @@ export const CustomerReviewers = () => {
         </YourDarina>
 
         <Swiper
-          slidesPerView={3}
-          spaceBetween={40}
+          slidesPerView={swiperStyleNumber}
+          // spaceBetween={10}
           autoplay={true}
           navigation
           pagination={{ clickable: true }}
           effect="coverflow"
-          modules={[
-            Thumbs,
-            Navigation,
-            Autoplay,
-            Pagination,
-            EffectCoverflow,
-          ]}
+          modules={[Thumbs, Navigation, Autoplay, Pagination, EffectCoverflow]}
         >
           <SwiperSlide>
             <Cont src={feedback13} alt="feedback" />
           </SwiperSlide>
-          <SwiperSlide >
+          <SwiperSlide>
             <Cont src={feedback1} alt="feedback" />
           </SwiperSlide>
-          <SwiperSlide >
+          <SwiperSlide>
             <Cont src={feedback2} alt="feedback" />
           </SwiperSlide>
-          <SwiperSlide >
+          <SwiperSlide>
             <Cont src={feedback12} alt="feedback" />
           </SwiperSlide>
-          <SwiperSlide >
+          <SwiperSlide>
             <Cont src={feedback3} alt="feedback" />
           </SwiperSlide>
-          <SwiperSlide >
+          <SwiperSlide>
             <Cont src={feedback4} alt="feedback" />
           </SwiperSlide>
-          <SwiperSlide >
+          <SwiperSlide>
             <Cont src={feedback6} alt="feedback" />
           </SwiperSlide>
           <SwiperSlide>
