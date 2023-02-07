@@ -60,7 +60,8 @@ export const YourDarina = styled.h5`
 `;
 
 export const Cont = styled.img`
-  width: 200px;
+  width: 390px;
+  border-radius: 10px;
 `;
 
 export const Separator = styled.img`

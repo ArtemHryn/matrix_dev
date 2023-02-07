@@ -35,8 +35,6 @@ export const Requests = styled.p`
     font-size: 25px;
     margin-bottom: 20px;
   }
-  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
-  }
 `;
 
 export const List = styled.ul`

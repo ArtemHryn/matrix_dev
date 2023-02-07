@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Thumbs, Navigation } from 'swiper';
+import { Autoplay, Thumbs, Navigation, Pagination, EffectCoverflow } from 'swiper';
 import {
   Cont,
   FeedbackDescription,
@@ -8,15 +8,27 @@ import {
   YourDarina,
 } from './CustomerReviewers.styled';
 import { Box } from 'components/Box';
-import feedback1 from 'images/customerReviewers/feedback1.png';
-import feedback2 from 'images/customerReviewers/feedback2.png';
-import feedback3 from 'images/customerReviewers/feedback3.png';
+import feedback1 from 'images/customerReviewers/1.jpg';
+import feedback2 from 'images/customerReviewers/2.jpg';
+import feedback3 from 'images/customerReviewers/3.jpg';
+import feedback4 from 'images/customerReviewers/4.jpg';
+import feedback5 from 'images/customerReviewers/5.jpg';
+import feedback6 from 'images/customerReviewers/6.jpg';
+import feedback7 from 'images/customerReviewers/7.jpg';
+import feedback8 from 'images/customerReviewers/8.jpg';
+import feedback9 from 'images/customerReviewers/9.jpg';
+import feedback10 from 'images/customerReviewers/10.jpg';
+import feedback11 from 'images/customerReviewers/11.jpg';
+import feedback12 from 'images/customerReviewers/12.jpg';
+import feedback13 from 'images/customerReviewers/13.jpg';
 import goldenSeparator from 'images/customerReviewers/goldenSeparator.png';
 import { ReactComponent as HeardIcon } from 'images/customerReviewers/heard.svg';
 
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import 'swiper/css/effect-coverflow';
 
 export const CustomerReviewers = () => {
   return (
@@ -41,23 +53,59 @@ export const CustomerReviewers = () => {
         </YourDarina>
 
         <Swiper
-          slidesPerView={2}
+          slidesPerView={3}
           spaceBetween={40}
           autoplay={true}
           navigation
-          modules={[Thumbs, Navigation, Autoplay]}
+          pagination={{ clickable: true }}
+          effect="coverflow"
+          modules={[
+            Thumbs,
+            Navigation,
+            Autoplay,
+            Pagination,
+            EffectCoverflow,
+          ]}
         >
           <SwiperSlide>
+            <Cont src={feedback13} alt="feedback" />
+          </SwiperSlide>
+          <SwiperSlide >
             <Cont src={feedback1} alt="feedback" />
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide >
             <Cont src={feedback2} alt="feedback" />
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide >
+            <Cont src={feedback12} alt="feedback" />
+          </SwiperSlide>
+          <SwiperSlide >
             <Cont src={feedback3} alt="feedback" />
           </SwiperSlide>
+          <SwiperSlide >
+            <Cont src={feedback4} alt="feedback" />
+          </SwiperSlide>
+          <SwiperSlide >
+            <Cont src={feedback6} alt="feedback" />
+          </SwiperSlide>
           <SwiperSlide>
-            <Cont src={feedback1} alt="feedback" />
+            <Cont src={feedback5} alt="feedback" />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <Cont src={feedback7} alt="feedback" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Cont src={feedback8} alt="feedback" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Cont src={feedback9} alt="feedback" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Cont src={feedback10} alt="feedback" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Cont src={feedback11} alt="feedback" />
           </SwiperSlide>
         </Swiper>
         <Separator src={goldenSeparator} alt="golden stars" />

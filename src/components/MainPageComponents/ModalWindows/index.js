@@ -10,6 +10,6 @@ export { CoupleTherapy } from './ConsultationsModal/CoupleTherapy/CoupleTherapy'
 export { ParentChildren } from './ConsultationsModal/ParentChildren/ParentChildren';
 export { Conscience } from './ConsultationsModal/Conscience/Conscience';
 export { DemonOffering } from './ConsultationsModal/DemonOffering/DemonOffering';
-export { MoneyModal } from './ConsultationsModal/MoneyModal/MoneyModal';
 export { Proforientation } from './ConsultationsModal/Proforientation/Proforientation';
 export { PersonalLife } from './ConsultationsModal/PersonalLife/PersonalLife';
+export { GameModal } from './ConsultationsModal/GameModal/GameModal';

@@ -7,17 +7,18 @@ import {
   ShowDetailsButton,
 } from './ConsultationCard.styled';
 import { ModalLayout } from 'components/MainPageComponents/ModalWindows/ModalLayout';
+import { ModalTeamplate } from 'components/MainPageComponents/ModalWindows/ModalTemplate/ModalTemplate';
 
 export const ConsultaionCard = ({
-  img,
-  text,
-  imgtab,
-  imgDesc,
-  price,
-  component: Component,
+  card: { img, text, imgtab, imgDesc, price, component: Component, info },
 }) => {
   const [showDetails, setShowDetails] = useState(false);
-  const [showModal, setShowModal] = useState(false)
+  const [showModal, setShowModal] = useState(false);
+
+  const onOpenModal = () => {
+    setShowModal(true);
+    setShowDetails(false);
+  };
   return (
     <ConcultationCardElement
       onMouseEnter={() => setShowDetails(true)}
@@ -37,7 +38,7 @@ export const ConsultaionCard = ({
             animate={{ opacity: 1, transition: { duration: 0.3 } }}
             exit={{ opacity: 0, transition: { duration: 0.3 } }}
           >
-            <ShowDetailsButton onClick={() => setShowModal(true)}>
+            <ShowDetailsButton onClick={onOpenModal}>
               Подробнее
             </ShowDetailsButton>
           </DetailsContainer>
@@ -49,11 +50,14 @@ export const ConsultaionCard = ({
             boxShadow="0px 0px 30px rgba(190, 148, 232, 0.3);"
             backgroundColor="rgba(255, 255, 255, 0.95);"
           >
-            <Component price={price} />
+            {info ? (
+              <ModalTeamplate info={info} title={text} price={price} />
+            ) : (
+              <Component price={price} />
+            )}
           </ModalLayout>
         )}
       </AnimatePresence>
-      <AnimatePresence onExitComplete={() => null}></AnimatePresence>
     </ConcultationCardElement>
   );
 };
