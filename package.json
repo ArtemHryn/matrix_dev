@@ -19,6 +19,7 @@
     "react-hook-form": "^7.40.0",
     "react-router-dom": "^6.4.5",
     "react-scripts": "5.0.1",
+    "react-use-measure": "^2.1.1",
     "styled-components": "^5.3.5",
     "styled-system": "^5.1.5",
     "swiper": "^8.4.6",

@@ -13,7 +13,7 @@ export const ModalContainer = styled.div`
 
   border-radius: 30px;
 
-  overflow-y: auto;
+  overflow-y: scroll;
   ${color}
   ${shadow}
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
@@ -23,7 +23,7 @@ export const ModalContainer = styled.div`
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
     max-width: ${p => p.theme.sizes.desktopModal};
     padding: 51px 80px 100px 120px;
-    height: 90vh;
+    height: 80%;
     transform: translateY(-5%);
   }
 `;

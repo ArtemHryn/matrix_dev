@@ -1,9 +1,11 @@
 import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
+import { motion } from 'framer-motion';
+import useMeasure from 'react-use-measure';
+
 import { Box } from 'components/Box';
 import { Button, ModalContainer } from './ModalLayout.styled';
-import { motion } from 'framer-motion';
 
 import { ReactComponent as CloseModal } from 'images/modals/closeModal.svg';
 import star from 'images/modals/star.png';
@@ -16,6 +18,8 @@ export const ModalLayout = ({
   boxShadow,
   backgroundColor,
 }) => {
+  const [ref, { width }] = useMeasure();
+
   useEffect(() => {
     const onCloseByEscape = e => {
       if (e.code === 'Escape') {
@@ -23,14 +27,17 @@ export const ModalLayout = ({
       }
     };
     window.addEventListener('keydown', onCloseByEscape);
-
-    disableBodyScroll(modalRoot);
-
+    console.log()
+    if (width >= 1440) {
+      disableBodyScroll(modalRoot);
+    }
     return () => {
       window.removeEventListener('keydown', onCloseByEscape);
-      enableBodyScroll(modalRoot);
+      if (width >= 1440) {
+        enableBodyScroll(modalRoot);
+      }
     };
-  }, [setShowModal]);
+  }, [setShowModal, width]);
 
   const onBackdropClick = e => {
     if (e.currentTarget === e.target) {
@@ -44,6 +51,7 @@ export const ModalLayout = ({
       exit={{ opacity: 0, transition: { duration: 0.3 } }}
     >
       <Box
+        ref={ref}
         position="fixed"
         top="0px"
         left="0px"
