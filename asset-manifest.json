@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/matrix/static/css/main.99961fc5.css",
-    "main.js": "/matrix/static/js/main.3811d2d4.js",
-    "static/js/367.858c4d6a.chunk.js": "/matrix/static/js/367.858c4d6a.chunk.js",
+    "main.js": "/matrix/static/js/main.3a58be3c.js",
+    "static/js/367.026f062e.chunk.js": "/matrix/static/js/367.026f062e.chunk.js",
     "static/js/556.e4e43f71.chunk.js": "/matrix/static/js/556.e4e43f71.chunk.js",
-    "static/css/577.3525f93f.chunk.css": "/matrix/static/css/577.3525f93f.chunk.css",
-    "static/js/577.8d769cfd.chunk.js": "/matrix/static/js/577.8d769cfd.chunk.js",
+    "static/css/676.9c05ef43.chunk.css": "/matrix/static/css/676.9c05ef43.chunk.css",
+    "static/js/676.0e276d45.chunk.js": "/matrix/static/js/676.0e276d45.chunk.js",
     "static/media/backgroundPlanet.png": "/matrix/static/media/backgroundPlanet.8707be58272986280879.png",
     "static/media/hero_image_desktop.png": "/matrix/static/media/hero_image_desktop.54f799c7189d4f9aa331.png",
     "static/media/periodCard.png": "/matrix/static/media/periodCard.78ab81eca1dbe144cdf0.png",
@@ -96,14 +96,14 @@
     "static/media/closeModal.svg": "/matrix/static/media/closeModal.77f566a13863502e75085358a5296aff.svg",
     "static/media/menuButton.svg": "/matrix/static/media/menuButton.6543f21211fdf3fdf52f174cb0d6e241.svg",
     "main.99961fc5.css.map": "/matrix/static/css/main.99961fc5.css.map",
-    "main.3811d2d4.js.map": "/matrix/static/js/main.3811d2d4.js.map",
-    "367.858c4d6a.chunk.js.map": "/matrix/static/js/367.858c4d6a.chunk.js.map",
+    "main.3a58be3c.js.map": "/matrix/static/js/main.3a58be3c.js.map",
+    "367.026f062e.chunk.js.map": "/matrix/static/js/367.026f062e.chunk.js.map",
     "556.e4e43f71.chunk.js.map": "/matrix/static/js/556.e4e43f71.chunk.js.map",
-    "577.3525f93f.chunk.css.map": "/matrix/static/css/577.3525f93f.chunk.css.map",
-    "577.8d769cfd.chunk.js.map": "/matrix/static/js/577.8d769cfd.chunk.js.map"
+    "676.9c05ef43.chunk.css.map": "/matrix/static/css/676.9c05ef43.chunk.css.map",
+    "676.0e276d45.chunk.js.map": "/matrix/static/js/676.0e276d45.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.99961fc5.css",
-    "static/js/main.3811d2d4.js"
+    "static/js/main.3a58be3c.js"
   ]
 }
