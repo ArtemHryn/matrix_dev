@@ -8,6 +8,7 @@ export const ExpressServicesTitle = styled.h3`
   letter-spacing: 0.01em;
 
   color: ${p => p.theme.colors.main};
+  margin-bottom: 20px;
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     margin-bottom: 23px;
   }
@@ -22,7 +23,7 @@ export const ExpressServicesList = styled.ul`
   grid-template-columns: repeat(2, 150px);
 
   margin-bottom: 20px;
-
+  gap: 2px;
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     margin-bottom: 35px;
     display: flex;
@@ -48,7 +49,11 @@ export const AdditionalInfo = styled.p`
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     font-size: 20px;
     line-height: 1.2;
-    width: 479px;
     margin: 0 auto;
   }
+`;
+
+export const LinkToCert = styled.a`
+  text-decoration: underline;
+  color: #be94e8;
 `;

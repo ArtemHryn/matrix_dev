@@ -24,7 +24,7 @@ export const ConsultationWay = () => {
           </li>
           <li>
             <ConsultationText>
-              Информацию, которая со временем раскроется в новом глубинном ключе
+              Информацию, которая со временем раскроется в новом, глубинном ключе
             </ConsultationText>
           </li>
         </ConsultationList>

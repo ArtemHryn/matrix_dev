@@ -56,6 +56,9 @@ export const Img = styled.img`
   position: absolute;
   top: 0%;
   right: 0%;
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    width: 60%;
+  }
 `;
 
 export const OneFact = styled.p`

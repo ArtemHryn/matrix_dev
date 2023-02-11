@@ -58,3 +58,7 @@ export const Answer = styled.p`
   }
 `;
 
+export const LittleStar = styled.img`
+  display: inline-block;
+  width: 19px;
+`

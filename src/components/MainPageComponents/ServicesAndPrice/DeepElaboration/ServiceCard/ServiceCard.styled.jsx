@@ -15,7 +15,7 @@ export const CardElement = styled.li`
   }
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     max-width: calc((100% - 50px) / 2);
-    margin: 0 14px 35px 0;
+    margin: 0 14px 40px 0;
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
     max-width: calc((100% - 120px) / 4);

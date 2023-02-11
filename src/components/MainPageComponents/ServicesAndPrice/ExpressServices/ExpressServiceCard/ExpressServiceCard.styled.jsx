@@ -21,7 +21,7 @@ export const ExpressServiceCardElement = styled.li`
 
 export const Img = styled.img`
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) and (max-width: ${p => p.theme.sizes.desktop}) {
-    width: 234px;
+    width: 232px;
     li:nth-last-child(-n + 2) & {
       width: 350px;
     }
@@ -64,7 +64,7 @@ export const DetailsContainer = styled(motion.div)`
   top: 3px;
   left: 3px;
   width: calc(100% - 6px);
-  height: 100%;
+  height: 97%;
   background-color: rgba(216, 166, 255, 0.07);
   backdrop-filter: blur(7.5px);
   display: flex;

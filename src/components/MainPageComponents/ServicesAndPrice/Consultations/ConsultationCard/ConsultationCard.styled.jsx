@@ -9,7 +9,7 @@ export const ConcultationCardElement = styled.li`
     border-radius: 23px;
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
-    border-radius: 35px;
+    border-radius: 32px;
   }
 `;
 
@@ -44,8 +44,8 @@ export const DetailsContainer = styled(motion.div)`
   position: absolute;
   top: 2px;
   left: 2px;
-  width: calc(100% - 4px);
-  height: 100%;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
   background-color: rgba(216, 166, 255, 0.07);
   backdrop-filter: blur(7.5px);
   display: flex;

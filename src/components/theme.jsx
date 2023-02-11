@@ -32,7 +32,7 @@ export const theme = {
   },
   sizes: {
     mobile: '430px',
-    tablet: '768px',
+    tablet: '767.9px',
     desktop: '1440px',
     mobileModal: '380px',
     tabletModal: '718px',

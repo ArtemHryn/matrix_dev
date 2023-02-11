@@ -13,7 +13,6 @@ export const MasterClassCardElement = styled.li`
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     margin-right: 10px;
     width: calc((100% - 20px) / 2);
-    height: 745px;
     :first-child {
       margin-right: 20px;
     }
@@ -23,7 +22,6 @@ export const MasterClassCardElement = styled.li`
     :first-child {
       margin-right: 20px;
     }
-    height: 675px;
   }
 `;
 

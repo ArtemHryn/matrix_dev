@@ -9,6 +9,7 @@ import {
   Info,
   LinkToCalculator,
   Title,
+  TitleAdditional,
 } from './CalculateYourMatrix.styled';
 
 const sectionGradient =
@@ -31,11 +32,20 @@ export const CalculateYourMatrix = () => {
         display={[null, null, 'flex']}
       >
         <Box display={[null, null, 'flex']} flexDirection={'column'}>
-          <Title>Рассчитай свою Матрицу Судьбы</Title>
+          <Title>
+            Рассчитай{' '}
+            <TitleAdditional fontStyle="normal" m="0px">
+              свою Матрицу Судьбы
+            </TitleAdditional>
+          </Title>
           <Box display={[null, 'flex']} flexDirection="row-reverse">
             <picture>
               <source srcSet={phonesTab} media="(min-width: 768px)" />
-              <ImgPhones srcSet={phones} alt="phones with calc" />
+              <ImgPhones
+                srcSet={phones}
+                alt="phones with calc"
+                loading="lazy"
+              />
             </picture>
             <Box ml="10px">
               <AboutCalculator>
@@ -50,7 +60,7 @@ export const CalculateYourMatrix = () => {
             </Box>
           </Box>
         </Box>
-        <DescTopImg src={phonesDesc} alt="phone" />
+        <DescTopImg src={phonesDesc} alt="phone" loading="lazy" />
       </Box>
     </Box>
   );

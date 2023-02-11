@@ -27,7 +27,7 @@ export const TransformationWay = () => {
             alignItems="center"
             justifyContent="center"
           >
-            <img src={littleStar} alt="star" />
+            <img src={littleStar} alt="star" loading="lazy"/>
           </Box>
         </Box>
 
@@ -51,7 +51,7 @@ export const TransformationWay = () => {
           <li>
             <TransformationText>
               Отслеживание процесса трансформации с помощью точек контроля между
-              этапами в формате созвонов.{' '}
+              этапами в формате созвонов.
             </TransformationText>
           </li>
         </TransformationList>

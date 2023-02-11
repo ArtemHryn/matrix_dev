@@ -90,7 +90,7 @@ export const AdditionalInfo = styled.p`
   letter-spacing: 0.03em;
 
   color: rgba(0, 0, 0, 0.8);
-
+${space}
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     max-width: 325px;
   }

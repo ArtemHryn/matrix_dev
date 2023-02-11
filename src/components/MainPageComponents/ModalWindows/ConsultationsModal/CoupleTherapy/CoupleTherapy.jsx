@@ -1,6 +1,12 @@
 import { Box } from 'components/Box';
 import { BuyContainer } from '../../Buy';
-import { HowIsGoingConsultation, MainTitle, Requests, Text, Warning } from './CoupleTherapy.styled';
+import {
+  HowIsGoingConsultation,
+  MainTitle,
+  Requests,
+  Text,
+  Warning,
+} from './CoupleTherapy.styled';
 
 const dotGradient =
   'linear-gradient( to right, #000 10%, rgba(255, 255,255, 0) 0% )';
@@ -26,7 +32,6 @@ export const CoupleTherapy = ({ price }) => {
             Диагностика взаимоотношений с партнёром (вторая половинка, родители,
             дети, друзья, знакомые, братья/сестры, коллеги).
           </Text>
-          <Warning>*ТРЕБУЕТСЯ ПРИСУТСТВИЕ ДВУХ ПАРТНЁРОВ!</Warning>
           <Text mb="15px">
             Поможет выявить цели и проблемы коммуникации; точки роста; задачи
             партнёров; ресурсное состояние. Работа с негативными и позитивными
@@ -54,10 +59,11 @@ export const CoupleTherapy = ({ price }) => {
               <HowIsGoingConsultation>
                 Как проходит консультация?
               </HowIsGoingConsultation>
-              <Text mb={['20px', '0px']} width={[null, '485px', '100%']}>
-                личная или видеовстреча от 3-х часов ( 1-2 перерыва по 10 минут)
-                + трансформация для партнеров
+              <Text mb={['20px']} width={[null, '485px', '100%']}>
+                Личная встреча или видеовстреча от 3-х часов ( 1-2 перерыва по
+                10 минут) + трансформация для партнеров
               </Text>
+              <Warning>*ТРЕБУЕТСЯ ПРИСУТСТВИЕ ДВУХ ПАРТНЁРОВ!</Warning>
             </Box>
           </Box>
           <BuyContainer price={price} />

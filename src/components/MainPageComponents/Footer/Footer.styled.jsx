@@ -1,16 +1,5 @@
 import styled from 'styled-components';
 
-export const FooterLogo = styled.img`
-  width: 110px;
-  margin: 0 auto;
-  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
-    margin: 0 auto 0 0;
-  }
-  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
-    width: 180px;
-  }
-`;
-
 export const FooterTitle = styled.h2`
   font-family: ${p => p.theme.title};
   font-style: normal;
@@ -91,6 +80,9 @@ export const PoliticsAndDesign = styled.p`
   margin-bottom: 5px;
   :last-child {
     margin-bottom: 0;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    width: 230px;
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
     font-size: 30px;

@@ -8,7 +8,7 @@ export const CardList = styled.ul`
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 0 -14px 15px 0;
+    margin: 0 -14px 20px 0;
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
     margin: 0 -30px 51px 0;

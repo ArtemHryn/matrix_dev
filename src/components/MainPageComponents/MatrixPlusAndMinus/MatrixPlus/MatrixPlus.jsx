@@ -1,13 +1,12 @@
-import { motion } from 'framer-motion';
 import { Box } from 'components/Box';
 import compltedMatrix from 'images/matrixPlusAndMinus/pazzlesInPlus.png';
 import compltedMatrixTab from 'images/matrixPlusAndMinus/matrixInPlusTab.png';
-import { MatrixImg, PuzzleTextPlus } from './MatrixPlus.styled';
+import { MatrixContainer, MatrixImg, PuzzleTextPlus } from './MatrixPlus.styled';
 import puzzlesTextPlus from './puzzleTextPlus';
 
 export const MatrixPlus = () => {
   return (
-    <motion.div
+    <MatrixContainer
       initial={{
         x: -300,
         opacity: 0.3,
@@ -30,7 +29,11 @@ export const MatrixPlus = () => {
       >
         <picture>
           <source srcSet={compltedMatrixTab} media="(min-width: 768px)" />
-          <MatrixImg srcSet={compltedMatrix} alt="completedMatrix" />
+          <MatrixImg
+            srcSet={compltedMatrix}
+            alt="completedMatrix"
+            loading="lazy"
+          />
         </picture>
         {puzzlesTextPlus.map(
           ({
@@ -47,7 +50,7 @@ export const MatrixPlus = () => {
           }) => (
             <PuzzleTextPlus
               key={text}
-              left={[xm, xt,xd]}
+              left={[xm, xt, xd]}
               top={[ym, yt, yd]}
               maxWidth={[maxWidth, maxWidthTab, maxWidthDesc]}
             >
@@ -56,6 +59,6 @@ export const MatrixPlus = () => {
           )
         )}
       </Box>
-    </motion.div>
+    </MatrixContainer>
   );
 };

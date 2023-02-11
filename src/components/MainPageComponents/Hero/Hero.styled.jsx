@@ -52,6 +52,7 @@ export const MoveText = styled.p`
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     max-width: 419px;
     font-size: 35px;
+    text-align: center;
   }
 `;
 
@@ -76,7 +77,7 @@ export const ServicesLink = styled.a`
   font-family: ${p => p.theme.fonts.main};
   font-style: normal;
   font-weight: 300;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.22;
   letter-spacing: 0.03em;
 
@@ -110,7 +111,7 @@ export const MatrxiLink = styled(Link)`
   font-family: ${p => p.theme.fonts.main};
   font-style: normal;
   font-weight: 300;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.22;
 
   letter-spacing: 0.03em;

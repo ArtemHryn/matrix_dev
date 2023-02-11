@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import { position, layout } from 'styled-system';
+import { motion } from 'framer-motion';
+
 
 export const PuzzleTextPlus = styled.p`
   position: absolute;
@@ -35,3 +37,7 @@ export const MatrixImg = styled.img`
     width: 600px;
   }
 `;
+
+export const MatrixContainer = styled(motion.div)`
+  align-self: center;
+`

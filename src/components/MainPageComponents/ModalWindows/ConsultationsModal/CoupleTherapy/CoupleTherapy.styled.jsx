@@ -64,8 +64,7 @@ export const Warning = styled.p`
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
-  text-transform: lowercase;
-  margin-bottom: 15px;
+  text-transform: uppercase;
 
   color: ${p => p.theme.colors.main};
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {

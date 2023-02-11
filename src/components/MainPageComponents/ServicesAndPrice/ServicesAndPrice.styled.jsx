@@ -19,7 +19,7 @@ export const ServiceAndPriceTitle = styled.h2`
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
     font-size: 90px;
     line-height: 1;
-    margin-bottom: 53px;
+    margin-bottom: 35px;
   }
 `;
 

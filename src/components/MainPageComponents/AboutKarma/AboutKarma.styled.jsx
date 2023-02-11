@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { space, position, layout, flexbox } from 'styled-system';
 import circle from 'images/aboutImages/aboutCircle.png';
-import handsContainerImg from 'images/aboutImages/handsLine.png'
+import handsContainerImg from 'images/aboutImages/handsLine.png';
 
 export const Title = styled.h2`
   font-family: ${p => p.theme.fonts.main};
@@ -19,7 +19,6 @@ export const Title = styled.h2`
     font-size: 90px;
     line-height: 1;
     max-width: 725px;
-    
   }
 `;
 
@@ -123,6 +122,7 @@ export const TextNearHands = styled.p`
   color: ${p => p.theme.colors.third};
   z-index: 10;
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    margin-top: 25px;
     max-width: 385px;
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
@@ -136,6 +136,11 @@ export const HandImg = styled.img`
   position: absolute;
   border-radius: 50%;
   ${position}
+  &.animate__fadeInDown {
+    animation-name: fadeInDown;
+    animation-duration: 1.5s;
+  }
+
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     ${layout}
   }
@@ -147,16 +152,15 @@ export const UnderHandImg = styled.div`
   height: 100px;
   border-radius: 50%;
   backdrop-filter: blur(7px);
-
   ${position}
-
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
     width: 120px;
     height: 120px;
   }
 `;
 
-export const TextUnderHandsContainer = styled.p`
+
+export const TextUnderContainer = styled.p`
   font-family: ${p => p.theme.fonts.main};
   font-style: normal;
   font-weight: 400;

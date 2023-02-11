@@ -4,6 +4,7 @@ import {
   AdditionalInfo,
   ExpressServicesList,
   ExpressServicesTitle,
+  LinkToCert,
 } from './ExpressServices.styled';
 
 import { cards } from './expressServicesInfo';
@@ -14,16 +15,19 @@ export const ExpressServices = () => {
       <ExpressServicesTitle>Экспресс-услуги:</ExpressServicesTitle>
       <ExpressServicesList>
         {cards.map(card => (
-          <ExpressServiceCard
-            key={card.text}
-            card={card}
-
-          />
+          <ExpressServiceCard key={card.text} card={card} />
         ))}
       </ExpressServicesList>
       <AdditionalInfo>
-        Также вы можете подарить трансформации своим близким. Больше о
-        подарочных сертификатах тут.
+        Также вы можете{' '}
+        <LinkToCert
+          href="https://t.me/DariKarma"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          подарить трансформации{' '}
+        </LinkToCert>
+        на любую услугу.
       </AdditionalInfo>
     </Box>
   );

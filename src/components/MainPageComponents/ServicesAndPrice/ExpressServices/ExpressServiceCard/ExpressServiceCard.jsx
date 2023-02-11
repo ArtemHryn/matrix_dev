@@ -16,7 +16,7 @@ export const ExpressServiceCard = ({card:{ img, text, imgTab, imgDesc, price, in
       <picture>
         <source srcSet={imgDesc} media="(min-width: 1440px)" />
         <source srcSet={imgTab} media="(min-width: 768px)" />
-        <Img srcSet={img} alt="card" />
+        <Img srcSet={img} alt="card" loading="lazy" />
       </picture>
 
       <ExpressServiceCardText>{text}</ExpressServiceCardText>

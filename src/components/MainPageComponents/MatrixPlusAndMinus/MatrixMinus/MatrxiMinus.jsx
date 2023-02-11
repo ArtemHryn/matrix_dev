@@ -43,7 +43,7 @@ export const MatrixMinus = () => {
           <picture>
             <source srcSet={matrixPuzzleTab} media="(min-width: 768px)" />
 
-            <Puzzle src={matrixPuzzle} alt="puzzle" />
+            <Puzzle src={matrixPuzzle} alt="puzzle" loading="lazy" />
           </picture>
           <PuzzleText
             top={['55px', '85px', '65px']}

@@ -13,11 +13,12 @@ export const WhatPeopleAsk = () => {
       >
         <Title>Меня часто спрашивают...</Title>
         <List>
-          {questionsAnswers.map(({ question, answer }) => (
+          {questionsAnswers.map(({ question, answer, img }) => (
             <QuestionAnswer
               key={question}
               question={question}
               answer={answer}
+              img={img}
             />
           ))}
         </List>

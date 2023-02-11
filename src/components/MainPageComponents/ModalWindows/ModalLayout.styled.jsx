@@ -23,7 +23,7 @@ export const ModalContainer = styled.div`
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
     max-width: ${p => p.theme.sizes.desktopModal};
     padding: 51px 80px 100px 120px;
-    height: 80%;
+    height: 90%;
     transform: translateY(-5%);
   }
 `;

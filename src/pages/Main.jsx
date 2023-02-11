@@ -34,7 +34,7 @@ const Main = ({ setIsMain }) => {
       <CustomerReviewers />
       <CalculateYourMatrix />
       <WhatPeopleAsk />
-      <Box backgroundImage={imgLink} backgroundSize="100%">
+      <Box backgroundImage={imgLink} backgroundSize="cover">
         <FreeRecommendations />
         <Footer />
       </Box>

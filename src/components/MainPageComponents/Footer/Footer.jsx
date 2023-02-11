@@ -1,6 +1,5 @@
 import { Box } from 'components/Box';
-import logo from 'images/footer/logo.png';
-import { FooterLogo, FooterTitle, NavigationElement, NavigationLink, NavigationList, PoliticsAndDesign } from './Footer.styled';
+import { FooterTitle, NavigationElement, NavigationLink, NavigationList, PoliticsAndDesign } from './Footer.styled';
 
 export const Footer = () => {
   return (
@@ -10,7 +9,6 @@ export const Footer = () => {
         px={['60px', '33px', '100px']}
         m="0 auto"
       >
-        <FooterLogo src={logo} alt="logo" />
         <FooterTitle>Dari.Karma</FooterTitle>
         <Box display={[null, 'flex']} alignItems="center">
           <NavigationList>

@@ -21,6 +21,10 @@ export const AuthorMasterClassTitle = styled.h3`
   }
 `;
 
+export const SecondTitlePart = styled.span`
+font-style: italic;
+`
+
 export const MasterClassList = styled.ul`
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     display: flex;

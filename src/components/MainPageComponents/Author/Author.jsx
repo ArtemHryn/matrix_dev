@@ -35,6 +35,7 @@ export const Author = () => {
           width="460px"
           height="707px"
           mr="75px"
+          loading="lazy"
         />
 
         <Box>
@@ -46,11 +47,16 @@ export const Author = () => {
           <picture>
             <source srcSet={authorPhotoTab} media="(min-width: 768px)" />
             <source srcSet={authorPhoto} />
-            <AuthorImg srcSet={authorPhoto} alt="Darina" />
+            <AuthorImg srcSet={authorPhoto} alt="Darina" loading="lazy" />
           </picture>
           <AboutAuthor>
             <AboutAuthorListElement>
-              <Symbols src={symbol1} alt="moon symbol" width={65} />
+              <Symbols
+                src={symbol1}
+                alt="moon symbol"
+                width={65}
+                loading="lazy"
+              />
               <AboutAuthorWork>
                 Дипломированный менеджер социокультурной деятельности
               </AboutAuthorWork>
@@ -60,7 +66,12 @@ export const Author = () => {
               </AboutAuthorDesc>
             </AboutAuthorListElement>
             <AboutAuthorListElement>
-              <Symbols src={symbol2} alt="sun symbol" width={65} />
+              <Symbols
+                src={symbol2}
+                alt="sun symbol"
+                width={65}
+                loading="lazy"
+              />
               <AboutAuthorWork>
                 Работаю по авторскому методу Наталии Ладини, известного как
                 Матрица Судьбы
@@ -72,14 +83,24 @@ export const Author = () => {
           </AboutAuthor>
           <Box as="ul" display={[null, 'flex']}>
             <AboutAuthorListElement>
-              <Symbols src={symbol3} alt="star symbol" width={65} />
+              <Symbols
+                src={symbol3}
+                alt="star symbol"
+                width={65}
+                loading="lazy"
+              />
               <AboutAuthorDesc>
                 Получила магистрерскую степень по психологии в Таврическом
                 национальном университете имени В. И. Вернадского
               </AboutAuthorDesc>
             </AboutAuthorListElement>
             <AboutAuthorListElement>
-              <Symbols src={symbol4} alt="star symbol" width={65} />
+              <Symbols
+                src={symbol4}
+                alt="star symbol"
+                width={65}
+                loading="lazy"
+              />
               <AboutAuthorDesc>
                 Изучаю кармический менеджмент и причинно-следственные связи в
                 Институте Азиатской Классики

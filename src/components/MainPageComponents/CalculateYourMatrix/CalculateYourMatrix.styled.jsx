@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { space, typography } from 'styled-system';
 
 export const Title = styled.h2`
   max-width: 289px;
@@ -12,7 +13,8 @@ export const Title = styled.h2`
   margin-bottom: 35px;
 
   color: ${p => p.theme.colors.main};
-
+  ${typography}
+  ${space}
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     font-size: 80px;
     line-height: 1.12;
@@ -22,6 +24,29 @@ export const Title = styled.h2`
     font-size: 90px;
     line-height: 1;
     margin-bottom: 40px;
+    max-width: 100%;
+    width: 650px;
+  }
+`;
+
+export const TitleAdditional = styled.span`
+  font-family: ${p => p.theme.fonts.main};
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 1;
+  letter-spacing: 0.01em;
+
+  color: ${p => p.theme.colors.main};
+  ${typography}
+  ${space}
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    font-size: 80px;
+    line-height: 1.12;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    font-size: 90px;
+    line-height: 1;
   }
 `;
 
@@ -54,7 +79,7 @@ export const AboutCalculator = styled.p`
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     font-size: 22px;
     line-height: 1.23;
-    margin-bottom: 141px;
+    margin-bottom: 66px;
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
     margin-bottom: 100px;
@@ -90,7 +115,7 @@ export const LinkToCalculator = styled(Link)`
   }
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     width: 320px;
-    margin-bottom: 11px;
+    margin-bottom: 66px;
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
     font-size: 20px;

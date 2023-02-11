@@ -1,7 +1,7 @@
 import { Box } from 'components/Box';
 import masterClassPlanet from 'images/ServicesAndPrice/masterClassPlanet.png';
 import masterClassPlanet2 from 'images/ServicesAndPrice/masterClassPlanet2.png';
-import { AuthorMasterClassTitle, MasterClassList } from './AuthorMasterClass.styled';
+import { AuthorMasterClassTitle, MasterClassList, SecondTitlePart } from './AuthorMasterClass.styled';
 import { MasterClassCard } from './MasterClassCard/MasterClassCard';
 
 const masterClass = [
@@ -36,7 +36,9 @@ const masterClass = [
 export const AuthorMasterClass = () => {
   return (
     <Box>
-      <AuthorMasterClassTitle>Авторские мастер-классы</AuthorMasterClassTitle>
+      <AuthorMasterClassTitle>
+        Авторские <SecondTitlePart>мастер-классы</SecondTitlePart>
+      </AuthorMasterClassTitle>
       <MasterClassList>
         {masterClass.map(
           ({ title, img, services, format, duration, price }) => (

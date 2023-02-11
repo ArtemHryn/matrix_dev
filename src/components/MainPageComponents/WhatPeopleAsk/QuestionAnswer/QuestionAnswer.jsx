@@ -5,12 +5,13 @@ import { ReactComponent as OpenButton } from 'images/whatPeopleAsk/openButton.sv
 import {
   Answer,
   Button,
+  LittleStar,
   QuestionElement,
   Title,
   TitleContainer,
 } from './QuestionAnswer.styled';
 
-export const QuestionAnswer = ({ question, answer }) => {
+export const QuestionAnswer = ({ question, answer, img }) => {
   const [showAnswer, setShowAnswer] = useState(false);
   return (
     <QuestionElement>
@@ -28,7 +29,9 @@ export const QuestionAnswer = ({ question, answer }) => {
             animate={{ y: 0, opacity: 1, transition: { duration: 0.3 } }}
             exit={{ opacity: 0, y: -30, transition: { duration: 0.3 } }}
           >
-            <Answer>{answer}</Answer>
+            <Answer>
+              {answer} {img && <LittleStar src={img} alt="star" />}
+            </Answer>
           </motion.div>
         )}
       </AnimatePresence>

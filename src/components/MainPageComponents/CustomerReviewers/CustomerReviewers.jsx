@@ -78,57 +78,64 @@ export const CustomerReviewers = () => {
           ваша Дарина <HeardIcon />
         </YourDarina>
 
-        <Swiper
-          slidesPerView={swiperStyleNumber}
-          // spaceBetween={10}
-          autoplay={true}
-          navigation
-          pagination={{ clickable: true }}
-          effect="coverflow"
-          modules={[Thumbs, Navigation, Autoplay, Pagination, EffectCoverflow]}
-        >
-          <SwiperSlide>
-            <Cont src={feedback13} alt="feedback" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Cont src={feedback1} alt="feedback" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Cont src={feedback2} alt="feedback" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Cont src={feedback12} alt="feedback" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Cont src={feedback3} alt="feedback" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Cont src={feedback4} alt="feedback" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Cont src={feedback6} alt="feedback" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Cont src={feedback5} alt="feedback" />
-          </SwiperSlide>
+        <Box width={[null, '550px', '100%']} m='0 auto'>
+          <Swiper
+            slidesPerView={swiperStyleNumber}
+            autoplay={true}
+            navigation
+            pagination={{ clickable: true }}
+            effect="coverflow"
+            modules={[
+              Thumbs,
+              Navigation,
+              Autoplay,
+              Pagination,
+              EffectCoverflow,
+            ]}
+          >
+            <SwiperSlide>
+              <Cont src={feedback13} alt="feedback" loading="lazy" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Cont src={feedback1} alt="feedback" loading="lazy" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Cont src={feedback2} alt="feedback" loading="lazy" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Cont src={feedback12} alt="feedback" loading="lazy" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Cont src={feedback3} alt="feedback" loading="lazy" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Cont src={feedback4} alt="feedback" loading="lazy" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Cont src={feedback6} alt="feedback" loading="lazy" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Cont src={feedback5} alt="feedback" loading="lazy" />
+            </SwiperSlide>
 
-          <SwiperSlide>
-            <Cont src={feedback7} alt="feedback" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Cont src={feedback8} alt="feedback" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Cont src={feedback9} alt="feedback" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Cont src={feedback10} alt="feedback" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Cont src={feedback11} alt="feedback" />
-          </SwiperSlide>
-        </Swiper>
-        <Separator src={goldenSeparator} alt="golden stars" />
+            <SwiperSlide>
+              <Cont src={feedback7} alt="feedback" loading="lazy" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Cont src={feedback8} alt="feedback" loading="lazy" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Cont src={feedback9} alt="feedback" loading="lazy" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Cont src={feedback10} alt="feedback" loading="lazy" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Cont src={feedback11} alt="feedback" loading="lazy" />
+            </SwiperSlide>
+          </Swiper>
+        </Box>
+        <Separator src={goldenSeparator} alt="golden stars" loading="lazy" />
       </Box>
     </Box>
   );

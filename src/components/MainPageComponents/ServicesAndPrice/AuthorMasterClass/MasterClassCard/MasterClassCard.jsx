@@ -15,7 +15,7 @@ export const MasterClassCard = ({
     <MasterClassCardElement>
       <TitleContainer>
         <CardTitle>
-          <Img src={img} alt={title} /> {title}
+          <Img src={img} alt={title} loading="lazy" /> {title}
         </CardTitle>
       </TitleContainer>
 
@@ -45,7 +45,7 @@ export const MasterClassCard = ({
         target="_blank"
         rel="noreferrer noopener"
       >
-        Присоединится
+        Скоро доступно
       </Button>
     </MasterClassCardElement>
   );

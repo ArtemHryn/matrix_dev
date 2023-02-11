@@ -60,6 +60,7 @@ export const YourDarina = styled.h5`
 export const Cont = styled.img`
   border-radius: 10px;
   max-width: 100%;
+
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
     max-width: 390px;
   }

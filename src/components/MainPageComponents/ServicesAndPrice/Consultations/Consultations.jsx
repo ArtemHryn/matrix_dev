@@ -9,7 +9,7 @@ import {
   IndividualRequestTitle,
 } from './Consultations.styled';
 
-import {cards} from './consultationInfo'
+import { cards } from './consultationInfo'
 
 
 
@@ -32,7 +32,7 @@ export const Consultations = () => {
         ))}
         <IndividualRequestElement>
           <IndividualRequestTitle>
-            Также вы можете разобрать вашу проблему по индивидуальному запросу
+            Также вы можете разобрать проблему по индивидуальному запросу
           </IndividualRequestTitle>
           <Box display="flex" justifyContent="center">
             <ContactMeSocial

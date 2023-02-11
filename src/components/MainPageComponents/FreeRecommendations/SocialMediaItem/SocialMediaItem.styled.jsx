@@ -11,8 +11,8 @@ export const SocialMediaItemElement = styled.li`
     flex-direction: column;
     justify-content: space-between;
     margin-bottom: 0;
-    margin-right: 38px;
-    width: calc((100% - 76px) / 3);
+    margin-right: 18px;
+    width: calc((100% - 10px) / 3);
   }
 `;
 export const SocialNameContainer = styled.div`
@@ -68,6 +68,7 @@ export const Description = styled.p`
   font-weight: 400;
   font-size: 18px;
   line-height: 1.22;
+  flex-grow: 1;
 
   color: ${p => p.theme.colors.secondText};
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {

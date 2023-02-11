@@ -32,7 +32,10 @@ export const ModalTeamplate = ({ info, price, title }) => {
           </Requests>
           {textBefore &&
             textBefore.map((text, index) => (
-              <Text key={text} mb={index === textBefore.length - 1 ? '0px' : '15px'}>
+              <Text
+                key={text}
+                mb={index === textBefore.length - 1 ? '0px' : '15px'}
+              >
                 {text}
               </Text>
             ))}
@@ -47,7 +50,10 @@ export const ModalTeamplate = ({ info, price, title }) => {
           )}
           {textAfter &&
             textAfter.map((text, index) => (
-              <Text key={text} mb={index === textAfter.length - 1 ? '0px' : '15px'}>
+              <Text
+                key={text}
+                mb={index === textAfter.length - 1 ? '0px' : '15px'}
+              >
                 {text}
               </Text>
             ))}
@@ -73,18 +79,21 @@ export const ModalTeamplate = ({ info, price, title }) => {
               >
                 <Text
                   mb={additionInfo && ['20px', '0px', '20px']}
-                  width={[null, '420px']}
+                  width={[null, '320px']}
                 >
                   {meeting}
                 </Text>
-                {additionInfo &&
-                  additionInfo.map((info, index) => (
-                    <AdditionalInfo key={info}
-                      mb={index === additionInfo.length - 1 ? '0px' : '15px'}
-                    >
-                      {info}
-                    </AdditionalInfo>
-                  ))}
+                <Box>
+                  {additionInfo &&
+                    additionInfo.map((info, index) => (
+                      <AdditionalInfo
+                        key={info}
+                        mb={index === additionInfo.length - 1 ? '0px' : '15px'}
+                      >
+                        {info}
+                      </AdditionalInfo>
+                    ))}
+                </Box>
               </Box>
             </Box>
           </Box>

@@ -29,7 +29,7 @@ export const ConsultationsList = styled.ul`
     grid-template-columns: repeat(3, calc(100% / 3));
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
-    grid-template-columns: repeat(4, calc((100% - 200px) / 3));
+    grid-template-columns: repeat(4, 310px);
     justify-content: center;
   }
 `;
@@ -48,7 +48,7 @@ export const IndividualRequestElement = styled.li`
     grid-column: 2 /4;
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
-    padding: 130px 35px 79px;
+    padding: 95px 35px 79px;
     grid-column: 3 /5;
   }
 `;

@@ -4,6 +4,9 @@ import starLineTab from 'images/whatIsMatrix/starLineTab.png';
 import deepDrow from 'images/whatIsMatrix/deepDrow.png';
 import saturn from 'images/whatIsMatrix/saturn.png';
 import sun from 'images/whatIsMatrix/sun.png';
+import deepDrowDesk from 'images/whatIsMatrix/deepDrowDesk.png';
+import saturnDesk from 'images/whatIsMatrix/saturnDesk.png';
+import sunDesk from 'images/whatIsMatrix/sunDesk.png';
 import { MatrixFact } from './MatrixFact/MatrixFact';
 import { AboutMethod, LinkToCalculator, MatrixCreator, MethodList, StarLineImg, Title } from './WhatIsMatrix.styled';
 
@@ -11,16 +14,19 @@ const factsAboutMatrix = [
   {
     name: 'Глубокое погружение',
     img: deepDrow,
+    imgDesk: deepDrowDesk,
     text: 'Метод состоит из множества уровней расчётов, большинство которых нет на просторах интернета. Это симбиоз диагностки и трансформационных практик, медитаций, сенсов исцеления, терапии. ',
   },
   {
     name: 'Научный подход',
     img: saturn,
-    text: 'Метод основан на 22 архетипах, которые описывают религии, послания богов, древние цивилизации, теории создания вселенной  и нашего  мира, изучается такими науками как: египтология, археология и востоковедение.',
+    imgDesk: saturnDesk,
+    text: 'Метод основан на 22 архетипах, которые описывают религии, послания богов, древние цивилизации, теории создания вселенной  и нашего  мира. Изучается такими науками как: египтология, археология и востоковедение.',
   },
   {
     name: '“Волшебная таблетка”',
     img: sun,
+    imgDesk: sunDesk,
     text: 'Метод даёт ответы и инструменты для решения практически любых ситуаций, но НЕ решает их по взмаху “волшебной палочки”. Он требует определённых действий и тщательной работы над собой.',
   },
 ];
@@ -58,6 +64,7 @@ export const WhatIsMatrix = () => {
             <MatrixFact
               name={fact.name}
               img={fact.img}
+              imgDesk={fact.imgDesk}
               text={fact.text}
               key={fact.name}
             />
