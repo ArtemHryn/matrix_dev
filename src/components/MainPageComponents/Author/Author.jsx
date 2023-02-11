@@ -2,10 +2,10 @@ import { Box } from 'components/Box';
 import authorPhoto from 'images/author/authorPhoto.jpg';
 import authorPhotoTab from 'images/author/authorTab.jpg';
 import authorPhotoDesc from 'images/author/authorDesc.jpg';
-import symbol1 from 'images/authorSymbols/symbol1.png';
-import symbol2 from 'images/authorSymbols/symbol2.png';
-import symbol3 from 'images/authorSymbols/symbol3.png';
-import symbol4 from 'images/authorSymbols/symbol4.png';
+import symbol1 from 'images/author/symbol1.png';
+import symbol2 from 'images/author/symbol2.png';
+import symbol3 from 'images/author/symbol3.png';
+import symbol4 from 'images/author/symbol4.png';
 import {
   AboutAuthor,
   AboutAuthorWork,
