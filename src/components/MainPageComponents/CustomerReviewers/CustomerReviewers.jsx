@@ -51,7 +51,7 @@ export const CustomerReviewers = () => {
     if (width === 768) {
       setSwiperStyleNumber(1);
     }
-    if (width === 430) {
+    if (width === 400) {
       setSwiperStyleNumber(1);
         }
   }, [width]);
@@ -59,7 +59,7 @@ export const CustomerReviewers = () => {
   return (
     <Box as="section" py={['40px', '40px', '90px']} id="feedback">
       <Box
-        maxWidth={['430px', '768px', '1440px']}
+        maxWidth={['400px', '768px', '1440px']}
         px={['60px', '33px', '100px']}
         m="0 auto"
         ref={ref}

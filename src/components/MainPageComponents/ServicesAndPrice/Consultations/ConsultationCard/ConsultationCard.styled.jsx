@@ -18,7 +18,7 @@ export const ConcultationCardText = styled.p`
   bottom: 16px;
   right: 50%;
   transform: translateX(50%);
-  width: 80%;
+  width: 85%;
 
   font-family: ${p => p.theme.fonts.main};
   font-weight: 400;

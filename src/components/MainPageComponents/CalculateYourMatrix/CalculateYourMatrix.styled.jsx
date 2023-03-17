@@ -90,8 +90,8 @@ export const LinkToCalculator = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 300px;
-  height: 64px;
+  width: 270px;
+  height: 54px;
 
   background-color: ${p => p.theme.colors.main};
   border-radius: 50px;

@@ -13,9 +13,13 @@ export function allData(date, isGenerated) {
   const data = {
     ...date,
   };
-  Object.keys(data).forEach(
-    element => (data[element] = checkNum(data[element]))
-  );
+  Object.keys(data).forEach(element => {
+    if (element === 'year') {
+      data[element] = checkNum(checkNum(data[element]));
+      return;
+    }
+    data[element] = checkNum(data[element]);
+  });
 
   if (!isGenerated) {
     data.bottom1 = checkNum(data.day + data.month + data.year);
@@ -71,7 +75,7 @@ export function allData(date, isGenerated) {
 }
 
 export const assignCalc = info => {
-  info.year = checkNum(info.year)
+  info.year = checkNum(info.year);
   const data = { ...info };
 
   data.sky = checkNum(data.bottom1 + data.month);

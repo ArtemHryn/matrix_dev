@@ -1,25 +1,40 @@
 import { Box } from 'components/Box';
 import compltedMatrix from 'images/matrixPlusAndMinus/pazzlesInPlus.png';
 import compltedMatrixTab from 'images/matrixPlusAndMinus/matrixInPlusTab.png';
-import { MatrixContainer, MatrixImg, PuzzleTextPlus } from './MatrixPlus.styled';
+import {
+  MatrixContainer,
+  MatrixImg,
+  PuzzleTextPlus,
+} from './MatrixPlus.styled';
 import puzzlesTextPlus from './puzzleTextPlus';
 
 export const MatrixPlus = () => {
   return (
     <MatrixContainer
       initial={{
-        x: -300,
+        scale: 0,
         opacity: 0.3,
       }}
       animate={{
-        x: 0,
+        scale: 1,
         opacity: 1,
-        transition: { duration: 0.9, type: 'linear', delayChildren: 0.5 },
+        transition: {
+          duration: 0.7,
+          type: 'linear',
+          delayChildren: 0.5,
+          delay: 0.2,
+        },
       }}
       exit={{
-        x: -300,
-        opacity: 0.3,
-        transition: { duration: 0.9, type: 'linear', delayChildren: 0.5 },
+        scale: [1, 0.8, 0.8, 1, 0],
+        rotate: [0, 0, 90, 90, 0],
+        borderRadius: ['0%', '0%', '50%', '50%', '0%'],
+        transition: {
+          duration: 1.7,
+          ease: 'easeInOut',
+          delay: 0.2,
+          times: [0, 0.2, 0.5, 0.8, 1],
+        },
       }}
     >
       <Box

@@ -25,7 +25,7 @@ export const CalculateYourMatrix = () => {
       backgroundPosition="100px"
     >
       <Box
-        maxWidth={['430px', '768px', '1440px']}
+        maxWidth={['400px', '768px', '1440px']}
         px={['60px', '33px', '100px']}
         m="0 auto"
         position="relative"

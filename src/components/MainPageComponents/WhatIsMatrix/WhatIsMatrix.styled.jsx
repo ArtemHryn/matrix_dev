@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { typography } from 'styled-system';
 
 export const Title = styled.h2`
   font-family: ${p => p.theme.fonts.main};
@@ -13,7 +14,7 @@ export const Title = styled.h2`
 
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     font-size: 80px;
-    max-width: 70vw;
+    max-width: 635px;
     margin-bottom: 30px;
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
@@ -22,6 +23,7 @@ export const Title = styled.h2`
     max-width: 670px;
     margin-bottom: 53px;
   }
+  ${typography}
 `;
 
 export const MatrixCreator = styled.p`

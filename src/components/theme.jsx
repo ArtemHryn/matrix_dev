@@ -31,7 +31,7 @@ export const theme = {
     round: '50%',
   },
   sizes: {
-    mobile: '430px',
+    mobile: '400px',
     tablet: '767.9px',
     desktop: '1440px',
     mobileModal: '380px',

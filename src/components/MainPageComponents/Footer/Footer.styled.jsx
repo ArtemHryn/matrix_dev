@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const FooterTitle = styled.h2`
-  font-family: ${p => p.theme.title};
+  font-family: 'Cormorant SC';
   font-style: normal;
   font-weight: 400;
   font-size: 50px;
@@ -34,17 +34,21 @@ export const NavigationList = styled.ul`
 
 export const NavigationElement = styled.li`
   margin-bottom: 6px;
-  margin-right: 22px;
+  margin-right: 7px;
 `;
 
 export const NavigationLink = styled.a`
+  @media screen and (max-width: ${p => p.theme.sizes.mobile}) {
+    width: 32vw;
+    font-size: 14px;
+  }
   display: block;
-  width: 144px;
+  width: 140px;
 
   font-family: ${p => p.theme.main};
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.22;
   letter-spacing: 0.01em;
 
@@ -60,6 +64,7 @@ export const NavigationLink = styled.a`
 
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     width: 200px;
+    font-size: 18px;
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
     font-size: 30px;

@@ -34,8 +34,6 @@ export const Name = styled.span`
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     font-size: 45px;
   }
-
-
 `;
 
 export const Description = styled.p`
@@ -100,6 +98,7 @@ export const AboutAuthorListElement = styled.li`
 `;
 
 export const Symbols = styled.img`
+  margin-bottom: 12px;
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     margin-bottom: 10px;
     margin-right: auto;
@@ -120,7 +119,6 @@ export const AboutAuthorWork = styled.p`
     margin-bottom: 15px;
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
-
   }
 `;
 

@@ -21,7 +21,7 @@ export const MatrixPlusAndMinus = () => {
   return (
     <Box as="section" py={['40px', '40px', '90px']}>
       <Box
-        maxWidth={['430px', '768px', '1440px']}
+        maxWidth={['400px', '768px', '1440px']}
         px={['60px', '33px', '100px']}
         m="0 auto"
         display={[null, null, 'flex']}

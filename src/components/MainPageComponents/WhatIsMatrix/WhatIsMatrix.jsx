@@ -35,11 +35,13 @@ export const WhatIsMatrix = () => {
   return (
     <Box as="section" py={['40px', '40px', '90px']} id="aboutMatrix">
       <Box
-        maxWidth={['430px', '768px', '1440px']}
+        maxWidth={['400px', '768px', '1440px']}
         px={['60px', '33px', '100px']}
         m="0 auto"
       >
-        <Title>Что такое Матрица Судьбы?</Title>
+        <Title>
+          Что такое <Title fontStyle='italic'>Матрица Судьбы?</Title>
+        </Title>
         <Box
           display={[null, 'flex', 'flex']}
           alignItems="center"

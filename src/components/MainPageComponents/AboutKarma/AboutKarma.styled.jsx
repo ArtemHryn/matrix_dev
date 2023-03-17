@@ -73,12 +73,12 @@ export const AboutDesc = styled.p`
   font-size: 16px;
   line-height: 19px;
 
-  max-width: 195px;
+  max-width: 178px;
 
   color: ${p => p.theme.colors.third};
 
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.24;
     max-width: 240px;
   }
@@ -98,6 +98,7 @@ export const HandsContainer = styled.div`
   width: 100%;
   height: 386px;
   margin-bottom: 36px;
+  background-size: 96%;
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     align-items: flex-start;
     justify-content: flex-end;
@@ -122,13 +123,14 @@ export const TextNearHands = styled.p`
   color: ${p => p.theme.colors.third};
   z-index: 10;
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
-    margin-top: 25px;
-    max-width: 385px;
+    max-width: 335px;
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
     max-width: 435px;
     font-size: 22px;
     line-height: 1.22;
+    max-width: 435px;
+    margin-top: 25px;
   }
 `;
 

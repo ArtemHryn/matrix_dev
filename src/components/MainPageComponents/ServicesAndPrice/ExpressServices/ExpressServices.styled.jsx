@@ -23,7 +23,6 @@ export const ExpressServicesList = styled.ul`
   grid-template-columns: repeat(2, 150px);
 
   margin-bottom: 20px;
-  gap: 2px;
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     margin-bottom: 35px;
     display: flex;

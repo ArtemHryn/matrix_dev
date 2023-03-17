@@ -51,10 +51,12 @@ export const SocialLink = styled.a`
   ${layout}
 
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
   :hover,
   :focus {
     transform: scale(1.05);
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    margin-top: 20px;
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
     width: 52px;

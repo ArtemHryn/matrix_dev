@@ -54,6 +54,9 @@ export const MoveText = styled.p`
     font-size: 35px;
     text-align: center;
   }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    text-align: left;
+  }
 `;
 
 export const Image = styled.img`

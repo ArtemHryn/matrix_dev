@@ -22,8 +22,8 @@ export const ServicesAndPrice = () => {
       id="4methods"
     >
       <Box
-        maxWidth={['430px', '768px', '1440px']}
-        px={['60px', '33px', '100px']}
+        maxWidth={['400px', '768px', '1440px']}
+        px={['40px', '33px', '100px']}
         m="0 auto"
       >
         <ServiceAndPriceTitle>Услуги и прайс</ServiceAndPriceTitle>

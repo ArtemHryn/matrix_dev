@@ -70,7 +70,7 @@ export const AboutKarma = () => {
       backgroundRepeat="no-repeat"
     >
       <Box
-        maxWidth={['430px', '768px', '1440px']}
+        maxWidth={['400px', '768px', '1440px']}
         px={['60px', '33px', '100px']}
         m="0 auto"
       >
@@ -132,8 +132,8 @@ export const AboutKarma = () => {
           </div>
           <div>
             <UnderHandImg
-              bottom={['-10%', '-10%', '60%']}
-              left={['0%', '80%', '86%']}
+              bottom={['5%', '-10%', '60%']}
+              left={['1%', '80%', '86%']}
             ></UnderHandImg>
             <picture>
               <source srcSet={handsDesc} media="(min-width: 1440px)" />
@@ -143,8 +143,8 @@ export const AboutKarma = () => {
                 <HandImg
                   srcSet={hands}
                   alt="Darina"
-                  bottom={['-10%', '-15%', '56%']}
-                  left={['0%', '80%', '83%']}
+                  bottom={['2%', '-15%', '56%']}
+                  left={['4%', '80%', '83%']}
                   width={[null, '137px', '167px']}
                   loading="lazy"
                   className="animate__fadeInDown"
@@ -165,8 +165,8 @@ export const AboutKarma = () => {
                 <HandImg
                   srcSet={plant}
                   alt="Darina"
-                  top={['-5%', '10%', '13%']}
-                  right={['-5%', '42%', '56%']}
+                  top={['-12%', '10%', '13%']}
+                  right={['-8%', '42%', '56%']}
                   width={[null, '207px', '254px']}
                   loading="lazy"
                   className="animate__fadeInDown"
@@ -176,7 +176,7 @@ export const AboutKarma = () => {
           </div>
           <div>
             <UnderHandImg
-              bottom={['10%', '31%', '70%']}
+              bottom={['22%', '31%', '70%']}
               right={['-15%', '22%', '26%']}
             ></UnderHandImg>
             <picture>
@@ -187,8 +187,8 @@ export const AboutKarma = () => {
                 <HandImg
                   srcSet={handWithFlower}
                   alt="Darina"
-                  bottom={['3%', '13%', '57%']}
-                  right={['-15%', '20%', '22%']}
+                  bottom={['13%', '13%', '57%']}
+                  right={['-18%', '20%', '22%']}
                   width={[null, '185px', '226px']}
                   loading="lazy"
                   className="animate__fadeInDown"

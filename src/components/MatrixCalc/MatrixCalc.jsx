@@ -14,7 +14,6 @@ export const MatrixCalc = () => {
   const [isGenerated, setIsGenerated] = useState(false);
   const [matrixType, setMatrixType] = useState('personal');
 
-  console.log(matrixType);
   return (
     <Container ps="62px 0" p="0 108px">
       <Box pb="112px">

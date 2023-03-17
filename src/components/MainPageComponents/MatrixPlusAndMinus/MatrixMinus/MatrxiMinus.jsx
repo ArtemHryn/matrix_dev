@@ -16,18 +16,23 @@ export const MatrixMinus = () => {
   return (
     <motion.div
       initial={{
-        x: 300,
-        opacity: 0.3,
+        scale: 0,
       }}
       animate={{
-        x: 0,
-        opacity: 1,
-        transition: { duration: 0.9, type: 'linear', delayChildren: 0.5 },
+        scale: 1,
+        transition: { duration: 0.7, ease: 'easeInOut', delayChildren: 0.5 },
       }}
       exit={{
-        x: 300,
-        opacity: 0.3,
-        transition: { duration: 0.9, type: 'linear', delayChildren: 0.5 },
+        scale: [1, 0.8, 0.8, 1, 0],
+        rotate: [0, 0, 90, 90, 0],
+        borderRadius: ['0%', '0%', '50%', '50%', '0%'],
+
+        transition: {
+          duration: 1.7,
+          ease: 'easeInOut',
+          delay: 0.2,
+          times: [0, 0.2, 0.5, 0.8, 1],
+        },
       }}
     >
       <Box
