@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/matrix/static/css/main.b6c201a0.css",
-    "main.js": "/matrix/static/js/main.f8802c59.js",
-    "static/js/317.54f55e31.chunk.js": "/matrix/static/js/317.54f55e31.chunk.js",
+    "main.js": "/matrix/static/js/main.28620ffc.js",
+    "static/js/317.426e7f13.chunk.js": "/matrix/static/js/317.426e7f13.chunk.js",
     "static/js/556.e4e43f71.chunk.js": "/matrix/static/js/556.e4e43f71.chunk.js",
     "static/css/404.989800de.chunk.css": "/matrix/static/css/404.989800de.chunk.css",
     "static/js/404.5a5df414.chunk.js": "/matrix/static/js/404.5a5df414.chunk.js",
@@ -20,11 +20,13 @@
     "static/media/personalLife.png": "/matrix/static/media/personalLife.4b54f764376921190292.png",
     "static/media/phonesTab.png": "/matrix/static/media/phonesTab.b666b33e8d360d34c4e2.png",
     "static/media/couplesTherapyCard.png": "/matrix/static/media/couplesTherapyCard.d51987e56424db2ecf13.png",
+    "static/media/authorPhoto.jpg": "/matrix/static/media/authorPhoto.0b6d5ca9f633e9913a88.jpg",
     "static/media/proforientationCard.png": "/matrix/static/media/proforientationCard.10643ba9f2291f7bc68f.png",
     "static/media/11.jpg": "/matrix/static/media/11.90fed449d3a24a708249.jpg",
     "static/media/3.jpg": "/matrix/static/media/3.2fe56ded684fd99e6ec8.jpg",
     "static/media/conscienceCard.png": "/matrix/static/media/conscienceCard.c77142a4f231f71f4042.png",
     "static/media/moneyCard.png": "/matrix/static/media/moneyCard.e6a5af55d555ffa7463f.png",
+    "static/media/personalMatrix.png": "/matrix/static/media/personalMatrix.b185afaad36d119cb697.png",
     "static/media/13.jpg": "/matrix/static/media/13.9e1f044ade75e4163416.jpg",
     "static/media/2.jpg": "/matrix/static/media/2.2e3776cf3356d6ca402f.jpg",
     "static/media/6.jpg": "/matrix/static/media/6.d675b7616a54e461cbfa.jpg",
@@ -33,7 +35,6 @@
     "static/media/5.jpg": "/matrix/static/media/5.9b9a79f541a75dc34aa3.jpg",
     "static/media/10.jpg": "/matrix/static/media/10.80a9dcd25f7474480dc4.jpg",
     "static/media/9.jpg": "/matrix/static/media/9.d93c2e56721a30d297e0.jpg",
-    "static/media/personalMatrix.png": "/matrix/static/media/personalMatrix.f2ed67fb6efb0618f221.png",
     "static/media/familyTree.png": "/matrix/static/media/familyTree.efc8b400aec11393c2a2.png",
     "static/media/12.jpg": "/matrix/static/media/12.8bbce721c4cdfc1cd0a6.jpg",
     "static/media/1.jpg": "/matrix/static/media/1.9ae6b6e7ea939c30cfc6.jpg",
@@ -85,7 +86,6 @@
     "static/media/card4.png": "/matrix/static/media/card4.a0790ced2ab3f109ea75.png",
     "static/media/handWithJelTab.png": "/matrix/static/media/handWithJelTab.6c91e73260d51888d001.png",
     "static/media/handsLineDesc.png": "/matrix/static/media/handsLineDesc.1bc4b90f1ed6e1ec1d36.png",
-    "static/media/authorPhoto.jpg": "/matrix/static/media/authorPhoto.3a4c34f9dbc8374d71c1.jpg",
     "static/media/Intersect.png": "/matrix/static/media/Intersect.b6bd2655ca37910d3940.png",
     "static/media/lock.svg": "/matrix/static/media/lock.0678a81e506412f715303731daf80e77.svg",
     "static/media/openButton.svg": "/matrix/static/media/openButton.6498ca6f83879d2b8c3d3eedc43e5257.svg",
@@ -96,14 +96,14 @@
     "static/media/closeModal.svg": "/matrix/static/media/closeModal.77f566a13863502e75085358a5296aff.svg",
     "static/media/menuButton.svg": "/matrix/static/media/menuButton.6543f21211fdf3fdf52f174cb0d6e241.svg",
     "main.b6c201a0.css.map": "/matrix/static/css/main.b6c201a0.css.map",
-    "main.f8802c59.js.map": "/matrix/static/js/main.f8802c59.js.map",
-    "317.54f55e31.chunk.js.map": "/matrix/static/js/317.54f55e31.chunk.js.map",
+    "main.28620ffc.js.map": "/matrix/static/js/main.28620ffc.js.map",
+    "317.426e7f13.chunk.js.map": "/matrix/static/js/317.426e7f13.chunk.js.map",
     "556.e4e43f71.chunk.js.map": "/matrix/static/js/556.e4e43f71.chunk.js.map",
     "404.989800de.chunk.css.map": "/matrix/static/css/404.989800de.chunk.css.map",
     "404.5a5df414.chunk.js.map": "/matrix/static/js/404.5a5df414.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b6c201a0.css",
-    "static/js/main.f8802c59.js"
+    "static/js/main.28620ffc.js"
   ]
 }
