@@ -13,6 +13,7 @@ export const theme = {
   fonts: {
     main: 'Cormorant',
     title: 'Cormorant SC',
+    button: 'Cormorant Infant',
   },
   fontSizes: {
     xs: '12px',

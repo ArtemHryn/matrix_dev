@@ -1,12 +1,11 @@
 import { Box } from 'components/Box';
 import { HeaderLink, HeaderList, HeaderListItem, Logo } from './Header.styled';
 import { MainPageHeader } from './MobileHeaderMenu/MobileMenu';
-import navigationList from './navigationList';
 
-export const Header = () => {
+export const Header = ({ navigationList }) => {
   return (
-    <Box as="header" borderBottom="1px dotted #422F56">
-      <MainPageHeader />
+    <Box as="header" borderBottom="1px dotted #835dab">
+      <MainPageHeader navigationList={navigationList} />
       <Box
         display={['none', 'flex', 'flex']}
         justifyContent="center"

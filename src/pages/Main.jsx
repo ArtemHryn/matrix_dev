@@ -14,6 +14,7 @@ import { WhatPeopleAsk } from 'components/MainPageComponents/WhatPeopleAsk/WhatP
 import backgroundFooterImage from 'images/backgroundPlanet.png';
 import { MatrixPlusAndMinus } from 'components/MainPageComponents/MatrixPlusAndMinus/MatrixPlusAndMinus';
 import { Header } from 'components/MainPageComponents/Header/Header';
+import navigationList from 'components/MainPageComponents/Header/navigationList';
 
 const imgLink = `url(${backgroundFooterImage})`;
 
@@ -22,7 +23,7 @@ const Main = ({ setIsMain }) => {
   return (
     <>
       <Box backgroundImage="linear-gradient(to bottom,rgba(158, 118, 255, 0.18) 50%,#fff)">
-        <Header />
+        <Header navigationList={navigationList} />
         <MainHero />
       </Box>
       <Author />
@@ -42,4 +43,4 @@ const Main = ({ setIsMain }) => {
   );
 };
 
-export default Main
+export default Main;

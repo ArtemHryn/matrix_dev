@@ -1,19 +1,21 @@
-import { ContactMe } from 'components/ContactMe/ContactMe';
-import { Contacts } from 'components/Contacts/Contacts';
-import { Hero } from 'components/Hero/Hero';
+import { Header } from 'components/MainPageComponents/Header/Header';
 import { useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
+import { Hero } from 'components/CalculatorPageComponents/Hero/Hero';
+import { ChangeYourFate } from 'components/CalculatorPageComponents/ChangeYourFate/ChangeYourFate';
 
- const Calculator = ({ setIsMain }) => {
-  useEffect(() => setIsMain(false), [setIsMain])
+import navigationListCalc from 'components/CalculatorPageComponents/navigationLisCalc';
+
+const Calculator = ({ setIsMain }) => {
+  useEffect(() => setIsMain(false), [setIsMain]);
   return (
     <>
+      <Header navigationList={navigationListCalc} />
       <Hero />
       <Outlet />
-      <ContactMe />
-      <Contacts />
+      <ChangeYourFate />
     </>
   );
 };
 
-export default Calculator
+export default Calculator;

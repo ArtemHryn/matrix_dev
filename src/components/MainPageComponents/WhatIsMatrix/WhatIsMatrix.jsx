@@ -40,7 +40,7 @@ export const WhatIsMatrix = () => {
         m="0 auto"
       >
         <Title>
-          Что такое <Title fontStyle='italic'>Матрица Судьбы?</Title>
+          Что такое <Title as='span' fontStyle='italic'>Матрица Судьбы?</Title>
         </Title>
         <Box
           display={[null, 'flex', 'flex']}

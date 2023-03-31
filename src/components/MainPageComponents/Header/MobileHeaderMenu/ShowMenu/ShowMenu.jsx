@@ -23,16 +23,8 @@ const animation = {
   },
 };
 
-const menu = [
-  { name: 'Автор', href: '#author' },
-  { name: 'О методе', href: '#aboutMatrix' },
-  { name: 'Услуги', href: '#4methods' },
-  { name: 'Отзывы', href: '#feedback' },
-  { name: 'FAQ', href: '#peopleAsk' },
-  { name: 'Калькулятор', href: '#calculateMatrix' },
-];
 
-export const ShowMenu = ({ setShowMenu }) => {
+export const ShowMenu = ({ setShowMenu, navigationList }) => {
   useEffect(() => {
     const onBackdropClick = e => {
       if (e.target.dataset.name !== 'modal') {
@@ -61,7 +53,7 @@ export const ShowMenu = ({ setShowMenu }) => {
             <CloseModal src={closeModal} alt="menu button" />
           </motion.button>
         </MenuItem>
-        {menu.map(({ name, href }) => (
+        {navigationList.map(({ name, href }) => (
           <MenuItem key={name} onClick={() => setShowMenu(false)}>
             <MenuLink href={href}>{name}</MenuLink>
           </MenuItem>

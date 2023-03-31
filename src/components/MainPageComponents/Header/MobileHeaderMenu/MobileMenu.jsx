@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { ShowMenu } from './ShowMenu/ShowMenu';
 import { OpenModalButton } from './MobileMenu.styled';
 
-export const MainPageHeader = () => {
+export const MainPageHeader = ({ navigationList }) => {
   const [showMenu, setShowMenu] = useState(false);
   return (
     <Box
@@ -19,11 +19,15 @@ export const MainPageHeader = () => {
       maxWidth={['430px', '768px', '1440px']}
       m="0 auto"
       height="37px"
-      zIndex='10'
+      zIndex="10"
     >
       <AnimatePresence mode="wait" onExitComplete={() => null}>
         {showMenu ? (
-          <ShowMenu setShowMenu={setShowMenu} key="11" />
+          <ShowMenu
+            setShowMenu={setShowMenu}
+            key="11"
+            navigationList={navigationList}
+          />
         ) : (
           <motion.button
             key="2"
