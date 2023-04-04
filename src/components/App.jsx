@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { Box } from './Box';
 import GlobalStyle from './Global';
 import { Route, Routes } from 'react-router-dom';
-import { MatrixCalc } from './MatrixCalc/MatrixCalc';
+// import { MatrixCalc } from './MatrixCalc/MatrixCalc';
 import React, { lazy, Suspense, useState } from 'react';
 import { Spinner } from './Spinner/Spinner';
 
@@ -27,7 +27,7 @@ export const App = () => {
             path="/calculator"
             element={<Calculator setIsMain={setIsMain} />}
           >
-            <Route path="personal" element={<MatrixCalc />}></Route>
+            {/* <Route path="personal" element={<MatrixCalc />}></Route> */}
           </Route>
         </Routes>
       </Suspense>
