@@ -24,7 +24,7 @@ export const ButtonList = () => {
       {list.map(({ name, to, disabled }) => (
         <ButtonsListItem key={name}>
           <Button to={to} disabled={disabled}>
-            {name} {disabled && <LockInButton />}
+            {name} {disabled && <LockInButton/>}
           </Button>
         </ButtonsListItem>
       ))}

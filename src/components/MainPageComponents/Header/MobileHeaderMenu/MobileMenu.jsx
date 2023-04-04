@@ -1,9 +1,9 @@
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 import { Box } from 'components/Box';
 import menuButton from 'images/menuButton.svg';
 import { useState } from 'react';
 import { ShowMenu } from './ShowMenu/ShowMenu';
-import { OpenModalButton } from './MobileMenu.styled';
+import { OpenBtn, OpenModalButton } from './MobileMenu.styled';
 
 export const MainPageHeader = ({ navigationList }) => {
   const [showMenu, setShowMenu] = useState(false);
@@ -29,14 +29,14 @@ export const MainPageHeader = ({ navigationList }) => {
             navigationList={navigationList}
           />
         ) : (
-          <motion.button
+          <OpenBtn
             key="2"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             onClick={() => setShowMenu(true)}
           >
             <OpenModalButton src={menuButton} alt="menu button" />
-          </motion.button>
+          </OpenBtn>
         )}
       </AnimatePresence>
     </Box>

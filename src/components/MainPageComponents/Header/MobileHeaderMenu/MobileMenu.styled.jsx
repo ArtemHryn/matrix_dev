@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
 export const MenuList = styled.ul`
@@ -40,5 +41,9 @@ export const MenuLink = styled.a`
 `;
 
 export const OpenModalButton = styled.img`
-  background-color: rgba(224, 163, 240, 0.08);
+  background-color: transparent;
 `;
+
+export const OpenBtn = styled(motion.button)`
+  background-color: transparent;
+`

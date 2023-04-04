@@ -4,7 +4,17 @@ import { MainPageHeader } from './MobileHeaderMenu/MobileMenu';
 
 export const Header = ({ navigationList }) => {
   return (
-    <Box as="header" borderBottom="1px dotted #835dab">
+    <Box
+      as="header"
+      backgroundImage="linear-gradient(
+    to right,
+    #9072af 10%,
+    rgba(255, 255, 255, 0) 0%
+  );"
+      backgroundPosition="bottom"
+      backgroundSize="15px 2px"
+      backgroundRepeat="repeat-x"
+    >
       <MainPageHeader navigationList={navigationList} />
       <Box
         display={['none', 'flex', 'flex']}

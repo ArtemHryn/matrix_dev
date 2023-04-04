@@ -14,6 +14,7 @@ export const theme = {
     main: 'Cormorant',
     title: 'Cormorant SC',
     button: 'Cormorant Infant',
+    bona: 'Bona Nova',
   },
   fontSizes: {
     xs: '12px',

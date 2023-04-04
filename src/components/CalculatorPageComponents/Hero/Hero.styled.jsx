@@ -18,7 +18,10 @@ export const Logo = styled.p`
   letter-spacing: 0.01em;
 
   color: ${p => p.theme.colors.main};
-  margin-bottom: 36px;
+  margin-bottom: 45px;
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    font-size: 40px;
+  }
 `;
 
 export const Title = styled.h1`
@@ -26,13 +29,17 @@ export const Title = styled.h1`
   font-style: normal;
   font-weight: 400;
   font-size: 55px;
-  line-height: 0.73;
+  line-height: 1;
 
   text-align: center;
   letter-spacing: 0.01em;
 
   color: ${p => p.theme.colors.main};
   margin-bottom: 35px;
+
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    font-size: 100px;
+  }
 `;
 
 export const SecondTitle = styled.span`
@@ -44,12 +51,20 @@ export const AboutCalc = styled.p`
   font-style: normal;
   font-weight: 400;
   font-size: 17px;
-  line-height: 21px;
+  line-height: 1.24;
   text-align: center;
   letter-spacing: 0.01em;
 
   color: ${p => p.theme.colors.main};
   margin-bottom: 53px;
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    font-size: 28px;
+    line-height: 1.22;
+
+    width: 480px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 `;
 
 export const Authoring = styled.p`
@@ -57,11 +72,16 @@ export const Authoring = styled.p`
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
-  line-height: 15px;
+  line-height: 1.25;
   margin: 0 auto;
   text-align: center;
   letter-spacing: 0.01em;
 
   color: ${p => p.theme.colors.main};
   width: 251px;
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    font-size: 17px;
+    line-height: 1.24;
+    width: 400px;
+  }
 `;

@@ -3,7 +3,14 @@ import React from 'react';
 import img from 'images/Calculator/Hero/img.webp';
 import img2 from 'images/Calculator/Hero/img2.webp';
 import star from 'images/Calculator/Hero/star.webp';
-import { AboutCalc, Authoring, Img, Logo, SecondTitle, Title } from './Hero.styled';
+import {
+  AboutCalc,
+  Authoring,
+  Img,
+  Logo,
+  SecondTitle,
+  Title,
+} from './Hero.styled';
 import { ButtonList } from './ButtonList/ButtonList';
 
 export const Hero = () => {
@@ -12,12 +19,12 @@ export const Hero = () => {
       <Box
         maxWidth={['400px', '768px', '1440px']}
         position="relative"
-        px="15px"
+        px={['15px', '32px', '60px']}
         m="0 auto"
       >
         <Img src={img} alt="img" width="130px" top="-11%" right="0%" />
         <Img src={img2} alt="img" width="130px" top="-80px" />
-        <Img src={star} alt="star" width="20px" top="8%" left='10%' />
+        <Img src={star} alt="star" width="20px" top="8%" left="10%" />
         <Logo>Dari.Karma</Logo>
         <Title>
           Калькулятор <SecondTitle>матрицы судьбы</SecondTitle>

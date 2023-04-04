@@ -1,7 +1,7 @@
 const socialMediaList = [
   {
     name: 'Instagram',
-    link: 'https://instagram.com/dari.karma?igshid=YmMyMTA2M2Y=',
+    link: 'https://www.instagram.com/dari.karma/',
     info: 'Подарки, информационные прямые эфиры, разборы ваших запросов, практики, бонусы.',
   },
   {

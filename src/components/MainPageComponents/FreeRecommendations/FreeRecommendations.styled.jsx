@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import styled from 'styled-components';
+import { typography, space, layout } from 'styled-system';
 
 export const Title = styled.h2`
   font-family: ${p => p.theme.fonts.main};
@@ -21,4 +22,7 @@ export const Title = styled.h2`
     max-width: 1000px;
     margin-bottom: 124px;
   }
+  ${typography}
+  ${space}
+  ${layout}
 `;
