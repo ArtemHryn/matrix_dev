@@ -2,6 +2,7 @@ import { Box } from 'components/Box';
 import React from 'react';
 import img from 'images/Calculator/Hero/img.webp';
 import img2 from 'images/Calculator/Hero/img2.webp';
+import imgDesk from 'images/Calculator/Hero/imgDesk.webp';
 import img2Desk from 'images/Calculator/Hero/img2Desk.webp';
 import star from 'images/Calculator/Hero/star.webp';
 import {
@@ -16,7 +17,7 @@ import { ButtonList } from './ButtonList/ButtonList';
 
 export const Hero = () => {
   return (
-    <Box as="section" py={['40px']}>
+    <Box as="section" py={['40px', null, '35px']}>
       <Box
         maxWidth={['400px', '768px', '1440px']}
         position="relative"
@@ -25,7 +26,7 @@ export const Hero = () => {
       >
         {' '}
         <picture>
-          <source srcSet={img2Desk} media="(min-width: 1440px)" />
+          <source srcSet={imgDesk} media="(min-width: 1440px)" />
           <Img
             src={img}
             alt="img"
@@ -34,13 +35,16 @@ export const Hero = () => {
             right="0%"
           />
         </picture>
-        <Img
-          src={img2}
-          alt="img"
-          width={['130px', '230px', '320px']}
-          top={['-80px', '-90px', '-120px']}
-          left={[null, '-7%', '0%']}
-        />
+        <picture>
+          <source srcSet={img2Desk} media="(min-width: 1440px)" />
+          <Img
+            src={img2}
+            alt="img"
+            width={['130px', '230px', '320px']}
+            top={['-80px', '-90px', '-26%']}
+            left={[null, '-7%', '-5%']}
+          />
+        </picture>
         <Img
           src={star}
           alt="star"

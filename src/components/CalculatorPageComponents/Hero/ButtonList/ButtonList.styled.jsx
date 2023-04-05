@@ -49,6 +49,12 @@ export const Button = styled(NavLink)`
     font-size: 24px;
     line-height: 1.21;
   }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    height: 64px;
+    width: 440px;
+    font-size: 24px;
+    line-height: 1.21;
+  }
 `;
 
 export const LockInButton = styled(Lock)`

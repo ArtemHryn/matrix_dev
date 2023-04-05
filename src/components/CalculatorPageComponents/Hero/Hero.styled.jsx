@@ -33,7 +33,7 @@ export const Title = styled.h1`
   font-style: normal;
   font-weight: 400;
   font-size: 55px;
-  line-height: 1;
+  line-height: 0.8;
 
   text-align: center;
   letter-spacing: 0.01em;
@@ -47,7 +47,7 @@ export const Title = styled.h1`
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
     font-size: 115px;
     width: 1000px;
-    margin: 0 auto 15px;
+    margin: 0 auto 25px;
   }
 `;
 
