@@ -2,6 +2,7 @@ import { Box } from 'components/Box';
 import React from 'react';
 import img from 'images/Calculator/Hero/img.webp';
 import img2 from 'images/Calculator/Hero/img2.webp';
+import img2Desk from 'images/Calculator/Hero/img2Desk.webp';
 import star from 'images/Calculator/Hero/star.webp';
 import {
   AboutCalc,
@@ -22,13 +23,17 @@ export const Hero = () => {
         px={['15px', '32px', '60px']}
         m="0 auto"
       >
-        <Img
-          src={img}
-          alt="img"
-          width={['130px', '220px', '320px']}
-          top="-11%"
-          right="0%"
-        />
+        {' '}
+        <picture>
+          <source srcSet={img2Desk} media="(min-width: 1440px)" />
+          <Img
+            src={img}
+            alt="img"
+            width={['130px', '220px', '450px']}
+            top={['-11%', null, '-18%']}
+            right="0%"
+          />
+        </picture>
         <Img
           src={img2}
           alt="img"
