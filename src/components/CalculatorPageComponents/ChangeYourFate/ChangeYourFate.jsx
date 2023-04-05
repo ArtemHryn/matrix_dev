@@ -12,6 +12,7 @@ import {
 } from './ChangeYourFate.styled';
 import authorMob from 'images/Calculator/ChangeYourFate/AuthorPhoto.webp';
 import authorTab from 'images/Calculator/ChangeYourFate/authorTab.webp'
+import authorDesk from 'images/Calculator/ChangeYourFate/authorDesk.webp'
 
 
 export const ChangeYourFate = () => {
@@ -19,7 +20,7 @@ export const ChangeYourFate = () => {
     <Box id="ChangeYourFate" as="section" py={['40px']}>
       <Box
         maxWidth={['400px', '768px', '1440px']}
-        px={['37px', '32px', '60px']}
+        px={['37px', '32px', '192px']}
         m="0 auto"
       >
         <Box
@@ -28,11 +29,12 @@ export const ChangeYourFate = () => {
           display={[null, 'flex']}
           overflow="hidden"
           mb={['25px', '29px']}
+          
         >
           <Box
             mb={['7px', '0px']}
             py={[null, '42px']}
-            pl={[null, '40px']}
+            pl={[null, '40px', '66px']}
             pr={[null, '11px']}
             maxWidth={[null, '50%']}
           >
@@ -53,7 +55,7 @@ export const ChangeYourFate = () => {
             </ConsultationBtn>
           </Box>
           <picture>
-            <source srcSet={authorMob} media="(min-width: 1440px)" />
+            <source srcSet={authorDesk} media="(min-width: 1440px)" />
             <source srcSet={authorTab} media="(min-width: 768px)" />
             <Image src={authorMob} alt="author" />
           </picture>

@@ -7,7 +7,7 @@ import SocialItem from './SocialItem/SociaIItem';
 
 const Contacts = () => {
   return (
-    <Box as="section" py={['40px']} id="contacts">
+    <Box as="section" py={['40px', null, '80px']} id="contacts">
       <Box
         maxWidth={['400px', '768px', '1440px']}
         position="relative"
@@ -17,11 +17,11 @@ const Contacts = () => {
         <Title
           m={[null, '0 auto 62px']}
           textAlign={[null, 'center']}
-          fontSize={[null, '60px']}
+          fontSize={[null, '60px', '85px']}
         >
           Контакты
         </Title>
-        <Box as="ul" display={[null, 'flex']}>
+        <Box as="ul" display={[null, 'flex']} gridGap={[null, null, '170px']}>
           {socialMediaList.map(media => (
             <SocialItem key={media.name} item={media} />
           ))}

@@ -21,6 +21,10 @@ export const LikeTheProject = styled.h3`
     max-width: 685px;
     margin-bottom: 35px;
   }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    font-size: 50px;
+    max-width: 90%;
+  }
 `;
 
 export const SaveService = styled.p`
@@ -40,6 +44,10 @@ export const SaveService = styled.p`
     line-height: 1.28;
     max-width: 450px;
     margin-bottom: 110px;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    font-size: 22px;
+    max-width: 100%;
   }
 `;
 
@@ -64,6 +72,13 @@ export const DonationLink = styled.a`
     width: 310px;
     height: 85px;
     font-size: 28px;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    width: 340px;
+    height: 95px;
+    font-size: 32px;
+    margin-left: auto;
+    margin-right: 375px;
   }
 `;
 

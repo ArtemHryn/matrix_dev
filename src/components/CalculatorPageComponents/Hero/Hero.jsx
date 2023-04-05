@@ -22,9 +22,27 @@ export const Hero = () => {
         px={['15px', '32px', '60px']}
         m="0 auto"
       >
-        <Img src={img} alt="img" width="130px" top="-11%" right="0%" />
-        <Img src={img2} alt="img" width="130px" top="-80px" />
-        <Img src={star} alt="star" width="20px" top="8%" left="10%" />
+        <Img
+          src={img}
+          alt="img"
+          width={['130px', '220px', '320px']}
+          top="-11%"
+          right="0%"
+        />
+        <Img
+          src={img2}
+          alt="img"
+          width={['130px', '230px', '320px']}
+          top={['-80px', '-90px', '-120px']}
+          left={[null, '-7%', '0%']}
+        />
+        <Img
+          src={star}
+          alt="star"
+          width={['20px', '32px']}
+          top={['8%', null, '37%']}
+          left={['10%', null, '15%']}
+        />
         <Logo>Dari.Karma</Logo>
         <Title>
           Калькулятор <SecondTitle>матрицы судьбы</SecondTitle>

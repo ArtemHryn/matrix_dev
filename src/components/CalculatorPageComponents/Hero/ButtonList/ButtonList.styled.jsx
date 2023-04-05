@@ -12,6 +12,9 @@ export const ButtonsList = styled.ul`
     margin-bottom: 80px;
     gap: 28px;
   }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    margin-bottom: 41px;
+  }
 `;
 
 export const ButtonsListItem = styled.li``;

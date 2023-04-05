@@ -4,6 +4,9 @@ export const LogoImg = styled.img`
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     width: 196px;
   }
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    width: 290px;
+  }
 `;
 
 export const DariLogo = styled.h2`
@@ -36,8 +39,16 @@ export const DariLogo = styled.h2`
 
 export const LogoStar = styled.img`
   position: absolute;
-  left: 70%;
+  left: 90%;
   top: -10%;
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    left: 70%;
+    top: -10%;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    left: 65%;
+    width: 37px;
+  }
 `;
 
 export const NavigationList = styled.ul`
@@ -49,6 +60,9 @@ export const NavigationList = styled.ul`
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     flex-direction: row;
     justify-content: space-between;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    padding: 0 60px;
   }
 `;
 
@@ -79,6 +93,9 @@ export const PoliticList = styled.ul`
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     flex-direction: row;
     justify-content: space-between;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    padding: 0 90px;
   }
 `;
 

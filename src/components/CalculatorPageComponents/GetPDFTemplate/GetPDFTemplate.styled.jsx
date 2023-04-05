@@ -6,6 +6,11 @@ export const Img = styled.img`
     width: 460px;
     margin: 0 auto 186px;
   }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    width: 50%;
+    flex-grow: 1;
+    margin: 0 auto;
+  }
 `;
 
 export const TemplateTitle = styled.h2`
@@ -20,6 +25,11 @@ export const TemplateTitle = styled.h2`
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     font-size: 60px;
     margin-bottom: 37px;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    font-size: 50px;
+    line-height: 1.08;
+    margin-bottom: 22px;
   }
 `;
 
@@ -36,6 +46,9 @@ export const HowToGetTemplate = styled.p`
     font-size: 25px;
     line-height: 1.2;
     max-width: 90%;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    font-style: 18px;
   }
 `;
 

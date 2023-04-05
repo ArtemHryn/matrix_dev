@@ -11,6 +11,10 @@ export const Logo = styled.p`
   letter-spacing: 0.01em;
   text-align: center;
   color: ${p => p.theme.colors.main};
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    font-size: 24px;
+    line-height: 0.8;
+  }
 `;
 
 export const Line = styled.p`
@@ -31,6 +35,9 @@ export const Line = styled.p`
       top: 65%;
     }
   }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    margin-bottom: 50px;
+  }
 `;
 
 export const Karmolog = styled.span`
@@ -49,6 +56,9 @@ export const Karmolog = styled.span`
   margin-top: 5px;
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     background-color: #f6f3fb;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    font-size: 8px;
   }
 `;
 
@@ -69,6 +79,9 @@ export const Title = styled.h2`
     font-size: 28px;
     line-height: 1.21;
   }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    font-size: 33px;
+  }
 `;
 
 export const AssistanseText = styled.p`
@@ -82,6 +95,11 @@ export const AssistanseText = styled.p`
   margin-bottom: 35px;
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     margin-bottom: 30px;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    font-size: 20px;
+    margin-bottom: 49px;
+    max-width: 330px;
   }
 `;
 
@@ -114,10 +132,17 @@ export const ConsultationBtn = styled(Link)`
     width: 250px;
     height: 45px;
   }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    width: 335px;
+    height: 60px;
+  }
 `;
 
 export const Image = styled.img`
-
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    width: 503px;
+    transform: translateX(10%);
+  }
 `;
 
 export const CalcAuthor = styled.p`
@@ -135,5 +160,8 @@ export const CalcAuthor = styled.p`
     line-height: 1.23;
     width: 500px;
     margin: 0 auto;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    width: 100%;
   }
 `;

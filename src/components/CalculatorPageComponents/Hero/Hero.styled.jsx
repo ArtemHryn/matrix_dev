@@ -22,6 +22,10 @@ export const Logo = styled.p`
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     font-size: 40px;
   }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
 `;
 
 export const Title = styled.h1`
@@ -40,10 +44,18 @@ export const Title = styled.h1`
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     font-size: 100px;
   }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    font-size: 115px;
+    width: 1000px;
+    margin: 0 auto 15px;
+  }
 `;
 
 export const SecondTitle = styled.span`
   font-style: italic;
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    font-size: 127px;
+  }
 `;
 
 export const AboutCalc = styled.p`
@@ -65,6 +77,12 @@ export const AboutCalc = styled.p`
     margin-right: auto;
     margin-left: auto;
   }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    font-size: 28px;
+    line-height: 1.21;
+    width: 100%;
+    margin-bottom: 47px;
+  }
 `;
 
 export const Authoring = styled.p`
@@ -84,4 +102,5 @@ export const Authoring = styled.p`
     line-height: 1.24;
     width: 400px;
   }
+
 `;
