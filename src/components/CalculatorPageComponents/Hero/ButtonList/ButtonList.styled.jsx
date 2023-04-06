@@ -41,6 +41,11 @@ export const Button = styled(NavLink)`
   &:hover {
     cursor: pointer;
   }
+  &.active {
+    background: #9071af;
+    box-shadow: inset 0px 26.0026px 43.3377px rgba(0, 0, 0, 0.25);
+    color: #ffffff;
+  }
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     width: 482px;
     height: 74px;

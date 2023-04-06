@@ -19,15 +19,14 @@ import { useLocation } from 'react-router-dom';
 
 const imgLink = `url(${backgroundFooterImage})`;
 
-const Main = ({ setIsMain }) => {
+const Main = () => {
   const location = useLocation();
   useEffect(() => {
-    setIsMain(true);
     if (location.state && location.state.from) {
       const section = document.getElementById(`${location.state.from}`);
       section.scrollIntoView({ behavior: 'smooth' });
     }
-  }, [location, setIsMain]);
+  }, [location]);
   return (
     <>
       <Box backgroundImage="linear-gradient(to bottom,rgba(158, 118, 255, 0.18) 50%,#fff)">

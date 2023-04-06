@@ -41,8 +41,8 @@ export const Hero = () => {
             src={img2}
             alt="img"
             width={['130px', '230px', '320px']}
-            top={['-80px', '-90px', '-26%']}
-            left={[null, '-7%', '-5%']}
+            top={['-80px', '-50px', '-26%']}
+            left={[null, '-11%', '-5%']}
           />
         </picture>
         <Img
