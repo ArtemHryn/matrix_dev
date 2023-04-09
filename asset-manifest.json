@@ -1,14 +1,10 @@
 {
   "files": {
     "main.css": "/matrix/static/css/main.b6c201a0.css",
-    "main.js": "/matrix/static/js/main.5d67e9f6.js",
-    "static/js/210.0d6d0861.chunk.js": "/matrix/static/js/210.0d6d0861.chunk.js",
-    "static/js/895.2ab19d40.chunk.js": "/matrix/static/js/895.2ab19d40.chunk.js",
-    "static/js/191.d4ae79ba.chunk.js": "/matrix/static/js/191.d4ae79ba.chunk.js",
-    "static/js/831.fcfa856b.chunk.js": "/matrix/static/js/831.fcfa856b.chunk.js",
+    "main.js": "/matrix/static/js/main.2c7c92c1.js",
+    "static/js/210.ab506665.chunk.js": "/matrix/static/js/210.ab506665.chunk.js",
     "static/css/207.d6f89cd3.chunk.css": "/matrix/static/css/207.d6f89cd3.chunk.css",
     "static/js/207.8e8d2b87.chunk.js": "/matrix/static/js/207.8e8d2b87.chunk.js",
-    "static/js/259.07f38d15.chunk.js": "/matrix/static/js/259.07f38d15.chunk.js",
     "static/media/backgroundPlanet.png": "/matrix/static/media/backgroundPlanet.8707be58272986280879.png",
     "static/media/heroDariPhoto.png": "/matrix/static/media/heroDariPhoto.fabe32a79c587d184c9d.png",
     "static/media/periodCard.png": "/matrix/static/media/periodCard.152c02d2f01381048d65.png",
@@ -83,6 +79,7 @@
     "static/media/pazzlesInPlus.png": "/matrix/static/media/pazzlesInPlus.baac99c4f89f2ec116da.png",
     "static/media/handWithJelDesc.png": "/matrix/static/media/handWithJelDesc.1a8d57e7f94c7f29ee3c.png",
     "static/media/AuthorPhoto.webp": "/matrix/static/media/AuthorPhoto.2c3e5d6ab5a650dcbe49.webp",
+    "static/media/personalMatrix.svg": "/matrix/static/media/personalMatrix.0645ea35f23b6c849ebdaf2e7fe651f1.svg",
     "static/media/PDFTemplateCircle.webp": "/matrix/static/media/PDFTemplateCircle.2c07ddd851bac8aef60b.webp",
     "static/media/card5.png": "/matrix/static/media/card5.930ce6b9484fbe93436d.png",
     "static/media/logoTab.webp": "/matrix/static/media/logoTab.512ff093c53dae72caf3.webp",
@@ -100,26 +97,22 @@
     "static/media/Intersect.png": "/matrix/static/media/Intersect.b6bd2655ca37910d3940.png",
     "static/media/img2.webp": "/matrix/static/media/img2.24c11763bf66687230ab.webp",
     "static/media/bmc-logo.svg": "/matrix/static/media/bmc-logo.25d9e9faf2cb2905743d13dd44c3ecf9.svg",
-    "static/media/img.webp": "/matrix/static/media/img.b6d124443386690a0333.webp",
     "static/media/star.webp": "/matrix/static/media/star.fd354665f3f8c6ea6cd3.webp",
-    "static/media/openButton.svg": "/matrix/static/media/openButton.6498ca6f83879d2b8c3d3eedc43e5257.svg",
+    "static/media/img.webp": "/matrix/static/media/img.b6d124443386690a0333.webp",
     "index.html": "/matrix/index.html",
+    "static/media/openButton.svg": "/matrix/static/media/openButton.6498ca6f83879d2b8c3d3eedc43e5257.svg",
     "static/media/heard.svg": "/matrix/static/media/heard.238787100108c1e6167a58f247e8cd18.svg",
     "static/media/rightArrow.svg": "/matrix/static/media/rightArrow.084e18e7fb136ece93eab69a8307bb4a.svg",
     "static/media/closeModal.svg": "/matrix/static/media/closeModal.77f566a13863502e75085358a5296aff.svg",
     "static/media/menuButton.svg": "/matrix/static/media/menuButton.6543f21211fdf3fdf52f174cb0d6e241.svg",
     "main.b6c201a0.css.map": "/matrix/static/css/main.b6c201a0.css.map",
-    "main.5d67e9f6.js.map": "/matrix/static/js/main.5d67e9f6.js.map",
-    "210.0d6d0861.chunk.js.map": "/matrix/static/js/210.0d6d0861.chunk.js.map",
-    "895.2ab19d40.chunk.js.map": "/matrix/static/js/895.2ab19d40.chunk.js.map",
-    "191.d4ae79ba.chunk.js.map": "/matrix/static/js/191.d4ae79ba.chunk.js.map",
-    "831.fcfa856b.chunk.js.map": "/matrix/static/js/831.fcfa856b.chunk.js.map",
+    "main.2c7c92c1.js.map": "/matrix/static/js/main.2c7c92c1.js.map",
+    "210.ab506665.chunk.js.map": "/matrix/static/js/210.ab506665.chunk.js.map",
     "207.d6f89cd3.chunk.css.map": "/matrix/static/css/207.d6f89cd3.chunk.css.map",
-    "207.8e8d2b87.chunk.js.map": "/matrix/static/js/207.8e8d2b87.chunk.js.map",
-    "259.07f38d15.chunk.js.map": "/matrix/static/js/259.07f38d15.chunk.js.map"
+    "207.8e8d2b87.chunk.js.map": "/matrix/static/js/207.8e8d2b87.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b6c201a0.css",
-    "static/js/main.5d67e9f6.js"
+    "static/js/main.2c7c92c1.js"
   ]
 }
