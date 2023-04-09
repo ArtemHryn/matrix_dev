@@ -1,4 +1,4 @@
-import { Navigate, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import React, { lazy, Suspense } from 'react';
 import GlobalStyle from './Global';
 
@@ -22,7 +22,6 @@ export const App = () => {
           <Route path="/" element={<Main />} />
           <Route path="/calculator" element={<Calculator />}>
             <Route path="personal" element={<PersonalMatrix />}>
-              <Route index element={<Navigate replace to="fateMatrix" />} />
               <Route path="fateMatrix" element={<FateMatrix />} />
               <Route path="karmaIssues" element={<div></div>} />
               <Route path="healthMatrix" element={<div></div>} />

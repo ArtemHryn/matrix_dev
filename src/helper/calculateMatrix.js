@@ -71,13 +71,6 @@ export function allData(date, isGenerated) {
   data.innerBottom2 = checkNum(data.center + data.bottom3);
   data.innerBottom3 = checkNum(data.bottom3 + data.innerBottomRight);
 
-  return data;
-}
-
-export const assignCalc = info => {
-  info.year = checkNum(info.year);
-  const data = { ...info };
-
   data.sky = checkNum(data.bottom1 + data.month);
   data.earth = checkNum(data.day + data.year);
   data.personal = checkNum(data.sky + data.earth);
@@ -89,5 +82,6 @@ export const assignCalc = info => {
   data.spirit = checkNum(data.personal + data.social);
   data.planet = checkNum(data.social + data.spirit);
   data.insidePower = checkNum(data.center + data.center2);
+
   return data;
-};
+}
