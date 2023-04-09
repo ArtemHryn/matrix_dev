@@ -9,6 +9,14 @@ export const FlipButton = styled(motion.button)`
   position: absolute;
   top: 16px;
   right: 14px;
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    top: 19px;
+    right: 23px;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    top: 18px;
+    right: 22px;
+  }
 `;
 
 export const BoxTitle = styled.p`
@@ -24,13 +32,16 @@ export const BoxTitle = styled.p`
 
   color: ${p => p.theme.colors.text};
   margin-bottom: 15px;
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    font-size: 18px;
+  }
 `;
 
 export const SubmitBtn = styled(motion.button)`
   display: flex;
   width: 196px;
   height: 40px;
-  background: #ffffff;
+  background-color: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   margin: 0 auto;
@@ -46,4 +57,11 @@ export const SubmitBtn = styled(motion.button)`
   text-transform: uppercase;
 
   color: ${p => p.theme.colors.text};
+  cursor: pointer;
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    width: 303px;
+    height: 52px;
+    font-size: 18px;
+    line-height: 1.22;
+  }
 `;

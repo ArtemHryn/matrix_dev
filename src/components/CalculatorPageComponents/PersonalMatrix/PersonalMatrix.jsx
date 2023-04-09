@@ -1,8 +1,13 @@
-import { Box } from 'components/Box';
 import React from 'react';
+import { Outlet } from 'react-router-dom';
+import { Box } from 'components/Box';
 import DataInput from './DataInput/DataInput';
+import MatrixBtn from './MatrixBtn/MatrixBtn';
+import { useMatrix } from 'pages/Calculator';
 
 const PersonalMatrix = () => {
+  const { showMatrix } = useMatrix();
+
   return (
     <Box as="section" py={['40px', null, '35px']}>
       <Box
@@ -12,6 +17,13 @@ const PersonalMatrix = () => {
         m="0 auto"
       >
         <DataInput />
+
+        {showMatrix && (
+          <>
+            <MatrixBtn />
+            <Outlet />
+          </>
+        )}
       </Box>
     </Box>
   );

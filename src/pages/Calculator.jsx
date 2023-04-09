@@ -21,6 +21,8 @@ const Calculator = () => {
   const [showMatrix, setShowMatrix] = useState(false);
   const [date, setDate] = useState({});
   const [isGenerated, setIsGenerated] = useState(false);
+  const [name, setName] = useState('');
+  const [matrixData, setMatrixData] = useState({});
 
   return (
     <MatrixContext.Provider
@@ -31,6 +33,10 @@ const Calculator = () => {
         setDate,
         isGenerated,
         setIsGenerated,
+        name,
+        setName,
+        matrixData,
+        setMatrixData,
       }}
     >
       <Box backgroundImage={calculatorPageGradient}>

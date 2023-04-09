@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { space } from 'styled-system';
 
 export const FrontCard = styled(motion.div)`
+  position: relative;
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0.3) 0%,
@@ -14,6 +15,14 @@ export const FrontCard = styled(motion.div)`
   backface-visibility: hidden;
   margin-bottom: 25px;
   height: 210px;
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    width: 430px;
+    height: 278px;
+    margin: 0 auto 38px;
+    padding: 48px 55px 68px;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+  }
 `;
 
 export const Input = styled.input`
@@ -23,9 +32,23 @@ export const Input = styled.input`
   width: 100%;
   height: 35px;
   padding: 10px 14px;
+
+  font-family: ${p => p.theme.fonts.main};
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.19;
+
+  color: rgba(73, 73, 73, 0.8);
   ${space}
   &:focus-within {
     border: 2px solid rgba(221, 197, 255, 0.8);
     outline: none;
   }
+
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    height: 47px;
+    font-size: 21px;
+  }
+
 `;

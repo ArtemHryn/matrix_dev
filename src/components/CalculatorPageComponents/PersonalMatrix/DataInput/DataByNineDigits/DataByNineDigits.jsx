@@ -14,7 +14,17 @@ const table = [
   { name: 'bottomRight1' },
 ];
 
-const DataByNineDigits = ({ isFlipped, setIsFlipped, register }) => {
+const DataByNineDigits = ({ isFlipped, setIsFlipped, register, setValue }) => {
+  const onChange = e => {
+    const { name, value } = e.target;
+    if (value > 22) {
+      setValue(name, 22);
+      return;
+    }
+    setValue(name, value);
+    return;
+  };
+
   return (
     <BackCard
       initial={{ rotateY: 180 }}
@@ -34,9 +44,15 @@ const DataByNineDigits = ({ isFlipped, setIsFlipped, register }) => {
       )}
       <BoxTitle>Вввод данных</BoxTitle>
       <DataList>
-        {table.map(input => (
-          <li key={input.name}>
-            <DataInput name={input.name} {...register(`${input.name}`)} />
+        {table.map(({ name }) => (
+          <li key={name}>
+            <DataInput
+              type="number"
+              {...register(`${name}`, {
+                max: { value: 22 },
+                onChange: onChange,
+              })}
+            />
           </li>
         ))}
       </DataList>
