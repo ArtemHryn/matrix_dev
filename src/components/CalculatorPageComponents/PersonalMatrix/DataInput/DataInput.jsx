@@ -13,7 +13,6 @@ const DataInput = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
     setValue,
   } = useForm();
 
@@ -37,7 +36,6 @@ const DataInput = () => {
   return (
     <Box mb={['80px']}>
       <Form onSubmit={handleSubmit(onSubmit)}>
-        {errors.date && <p>{errors.date.message}</p>}
         <DataByDate
           isFlipped={isFlipped}
           setIsFlipped={setIsFlipped}

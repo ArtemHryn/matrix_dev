@@ -1,5 +1,5 @@
 import React from 'react';
-import { BoxTitle, FlipButton } from '../DataInput.styled';
+import { BoxTitle, FlipButton, FlipButtonSvg } from '../DataInput.styled';
 import { FrontCard, Input } from './DataByDate.styled';
 
 const DataByDate = ({ isFlipped, setIsFlipped, register, setValue }) => {
@@ -23,7 +23,6 @@ const DataByDate = ({ isFlipped, setIsFlipped, register, setValue }) => {
         initial={{ rotateY: 0 }}
         animate={{ rotateY: isFlipped ? 180 : 0 }}
         transition={{ duration: 0.6 }}
-        
       >
         {!isFlipped && (
           <FlipButton
@@ -33,10 +32,10 @@ const DataByDate = ({ isFlipped, setIsFlipped, register, setValue }) => {
             onClick={() => setIsFlipped(true)}
             type="button"
           >
-            Flip
+            <FlipButtonSvg />
           </FlipButton>
         )}
-        
+
         <BoxTitle>Вввод данных</BoxTitle>
         <Input
           type="text"

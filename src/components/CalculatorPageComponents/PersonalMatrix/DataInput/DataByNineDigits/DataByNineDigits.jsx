@@ -1,6 +1,6 @@
 import React from 'react';
 import { BoxTitle, FlipButton } from '../DataInput.styled';
-import { BackCard, DataInput, DataList } from './DataByNineDigits.styled';
+import { BackCard, DataInput, DataList, FlippToFrontBtn } from './DataByNineDigits.styled';
 
 const table = [
   { name: 'topLeft1' },
@@ -39,7 +39,7 @@ const DataByNineDigits = ({ isFlipped, setIsFlipped, register, setValue }) => {
           onClick={() => setIsFlipped(false)}
           type="button"
         >
-          Flip
+          <FlippToFrontBtn />
         </FlipButton>
       )}
       <BoxTitle>Вввод данных</BoxTitle>

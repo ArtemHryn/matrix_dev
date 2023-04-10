@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
+import { FaRegCalendarAlt } from 'react-icons/fa';
+
 export const BackCard = styled(motion.div)`
   background: linear-gradient(
     180deg,
@@ -22,7 +24,12 @@ export const BackCard = styled(motion.div)`
     left: calc(50% - (430px / 2));
     padding: 48px 55px 68px;
   }
+`;
 
+export const FlippToFrontBtn = styled(FaRegCalendarAlt)`
+  width: 20px;
+  height: 20px;
+  fill: #fff;
 `;
 
 export const DataList = styled.ul`
@@ -56,5 +63,4 @@ export const DataInput = styled.input`
     font-size: 21px;
     line-height: 1.33;
   }
-
 `;
