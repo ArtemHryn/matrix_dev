@@ -3,12 +3,12 @@ import { Box } from 'components/Box';
 import { useMatrix } from 'pages/Calculator';
 
 import FirstTemplate from './TablesTemplates/FirstTemplate/FirstTemplate';
-import SecondsTemplate from './TablesTemplates/SecondsTemplate/SecondsTemplate';
 import {
   Element,
   ElementsList,
   Name,
 } from './TablesTemplates/FirstTemplate/FirstTemplate.styled';
+import SecondsTemplate from './TablesTemplates/SecondsTemplate/SecondsTemplate';
 
 const gradient =
   'linear-gradient(89.9deg, rgba(255, 255, 255, 0.7) 9.56%, rgba(251, 244, 255, 0.7) 85.28%);';
