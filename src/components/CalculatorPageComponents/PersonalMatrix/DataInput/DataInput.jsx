@@ -1,15 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Box } from 'components/Box';
 import DataByDate from './DataByDate/DataByDate';
 import { Form, SubmitBtn } from './DataInput.styled';
 import DataByNineDigits from './DataByNineDigits/DataByNineDigits';
 import { useMatrix } from 'pages/Calculator';
-import { useSearchParams } from 'react-router-dom';
 
 const DataInput = () => {
   const [isFlipped, setIsFlipped] = useState(false);
-  const [searchParams, setSearchParams] = useSearchParams();
   const { setIsGenerated, setDate, setShowMatrix, setName } = useMatrix();
 
   const {
@@ -26,21 +24,15 @@ const DataInput = () => {
       setIsGenerated(isFlipped);
       setDate(data);
       setShowMatrix(true);
-      setSearchParams(data);
       return;
     }
     const [day, month, year] = data.date.split('.');
     setDate({ day, month, year });
     setIsGenerated(isFlipped);
-    setShowMatrix(true);
     setName(data.name);
-    setSearchParams({ day, month, year, name: data.name });
+    setShowMatrix(true);
   };
 
-  useEffect(() => {
-    const params = Object.fromEntries(searchParams.entries());
-    console.log(params);
-  }, [searchParams]);
 
   return (
     <Box mb={['80px']}>

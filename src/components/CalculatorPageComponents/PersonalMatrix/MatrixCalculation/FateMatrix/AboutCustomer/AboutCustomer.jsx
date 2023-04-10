@@ -9,7 +9,7 @@ import { Img, Info, Key, NameDate } from './AboutCustomer.styled';
 const gradient =
   'linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(249, 237, 255, 0.5) 100%);';
 
-const AboutCustomer = ({ display, mb }) => {
+const AboutCustomer = () => {
   const { name, isGenerated, date } = useMatrix();
   const { day, month, year } = date;
   const [age, setAge] = useState(null);
@@ -27,7 +27,7 @@ const AboutCustomer = ({ display, mb }) => {
   }, [date, day, month, year]);
 
   return (
-    <Box display={display} mb={mb}>
+    <Box display={[null, null, 'none']} mb={['50px', '70px']}>
       <Box
         backgroundImage={gradient}
         py={['18px']}

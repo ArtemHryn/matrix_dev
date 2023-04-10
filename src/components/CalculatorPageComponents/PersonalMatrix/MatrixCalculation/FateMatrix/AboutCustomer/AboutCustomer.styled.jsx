@@ -9,12 +9,13 @@ export const NameDate = styled.p`
   text-align: center;
 
   color: #664982;
-  ${space}
-  ${typography}
+
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     font-size: 35px;
     line-height: 1.2;
   }
+  ${typography}
+  ${space}
 `;
 
 export const Key = styled.p`
@@ -25,10 +26,12 @@ export const Key = styled.p`
 
   color: #979797;
   ${space}
+
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     font-size: 27px;
     line-height: 1.19;
   }
+  ${typography}
 `;
 
 export const Info = styled.span`
@@ -42,6 +45,7 @@ export const Info = styled.span`
     font-size: 23px;
     line-height: 1.35;
   }
+  ${typography}
 `;
 
 export const Img = styled.img`

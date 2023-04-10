@@ -9,18 +9,18 @@ const Right = () => {
     <>
       <MatrixElementsItem
         element={year}
-        top={['47.5%', '48.3%']}
-        right={['3%', '3.7%']}
+        top={['47.3%', '48.3%']}
+        right={['2.8%', '3.7%']}
       />
       <MatrixElementsItem
         element={right2}
-        top={['47.5%', '48.3%']}
-        right={['9.3%', '10.1%']}
+        top={['47.3%', '48.3%']}
+        right={['9.4%', '10.1%']}
       />
       <MatrixElementsItem
         element={right3}
-        top={['47.5%', '48.3%']}
-        right={['16%', '16.9%']}
+        top={['47.3%', '48.3%']}
+        right={['15.8%', '16.9%']}
       />
     </>
   );

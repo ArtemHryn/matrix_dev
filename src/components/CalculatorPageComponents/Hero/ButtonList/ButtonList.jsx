@@ -3,7 +3,7 @@ import { Button, ButtonsList, ButtonsListItem, LockInButton } from './ButtonList
 const list = [
   {
     name: 'ЛИЧНАЯ МАТРИЦА',
-    to: 'personal',
+    to: 'personal/fateMatrix',
     disabled: false,
   },
   {

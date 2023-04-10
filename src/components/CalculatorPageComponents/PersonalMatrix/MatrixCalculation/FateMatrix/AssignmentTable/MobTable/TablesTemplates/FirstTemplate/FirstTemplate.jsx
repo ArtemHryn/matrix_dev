@@ -25,13 +25,13 @@ const FirstTemplate = props => {
   return (
     <Box
       backgroundImage={gradient}
-      width={['calc((100% - 4px) / 2 )']}
-      py={['10px']}
-      border={['0.6px solid #72499B']}
-      borderRadius={['7px']}
+      width={['calc((100% - 4px) / 2 )', 'calc((100% - 8px) / 2 )']}
+      py={['10px', '16px']}
+      border={['0.6px solid #72499B', '1px solid #72499B']}
+      borderRadius={['7px', '12px']}
     >
       <Box
-        px={['15px']}
+        px={['15px', '26px']}
         backgroundImage={dotsGradient}
         backgroundPosition="bottom"
         backgroundSize="15px 2px"
@@ -39,7 +39,7 @@ const FirstTemplate = props => {
         display="flex"
         justifyContent="space-between"
         alignItems="center"
-        pb={['6px']}
+        pb={['6px', '15px']}
       >
         <Name>{firstName}</Name>
         <ElementsList>
@@ -55,12 +55,11 @@ const FirstTemplate = props => {
         </ElementsList>
       </Box>
       <Box
-        px={['15px']}
+        px={['15px', '26px']}
         display="flex"
         justifyContent="space-between"
         alignItems="center"
-        pb={['8px']}
-        pt={['6px']}
+        py={['8px', '12px']}
       >
         <Name>{secondName}</Name>
         <ElementsList>
@@ -81,10 +80,10 @@ const FirstTemplate = props => {
         alignItems="center"
         pr={'15px'}
         pt={['12px']}
-        borderTop={['0.6px solid #72499B']}
-        borderRadius={['7px']}
+        borderTop={['0.6px solid #72499B', '1px solid #72499B']}
+        borderRadius={['7px', '12px']}
       >
-        <Name mr={['55px']}>{thrirdName}</Name>
+        <Name mr={['55px', '110px']}>{thrirdName}</Name>
         <Element bg="#F3E8FF">{el7}</Element>
       </Box>
     </Box>

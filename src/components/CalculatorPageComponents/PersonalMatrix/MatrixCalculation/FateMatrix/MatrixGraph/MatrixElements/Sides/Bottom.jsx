@@ -34,13 +34,13 @@ const Bottom = () => {
       />
       <MatrixElementsItem
         element={bottom1}
-        bottom={['4%', '4.5%']}
-        left={['47.8%', '48.7%']}
+        bottom={['4.3%', '4.5%']}
+        left={['47.5%', '48.7%']}
       />
       <MatrixElementsItem
         element={bottom2}
-        bottom={['10.5%', '11.1%']}
-        left={['47.8%', '48.7%']}
+        bottom={['10.7%', '11.1%']}
+        left={['47.5%', '48.7%']}
       />
       <MatrixElementsItem
         element={bottom3}

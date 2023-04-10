@@ -11,12 +11,19 @@ export const Name = styled.p`
   letter-spacing: 0.01em;
 
   color: ${p => p.theme.colors.text};
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    font-size: 26px;
+    line-height: 1.27;
+  }
   ${space}
 `;
 
 export const ElementsList = styled.ul`
   display: flex;
   gap: 4px;
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    gap: 8px;
+  }
 `;
 
 export const Element = styled.span`
@@ -39,4 +46,9 @@ export const Element = styled.span`
   border-radius: 50%;
   background-color: #ffffff;
   ${color}
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    font-size: 21px;
+    width: 39px;
+    height: 39px;
+  }
 `;

@@ -20,7 +20,6 @@ export function allData(date, isGenerated) {
     }
     data[element] = checkNum(data[element]);
   });
-
   if (!isGenerated) {
     data.bottom1 = checkNum(data.day + data.month + data.year);
     data.center = checkNum(data.day + data.month + data.year + data.bottom1);
@@ -29,6 +28,7 @@ export function allData(date, isGenerated) {
     data.bottomLeft1 = checkNum(data.day + data.bottom1);
     data.bottomRight1 = checkNum(data.bottom1 + data.year);
   }
+
   data.bottom3 = checkNum(data.center + data.bottom1);
   data.bottom2 = checkNum(data.bottom3 + data.bottom1);
   data.top3 = checkNum(data.center + data.month);

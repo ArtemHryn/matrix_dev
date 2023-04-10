@@ -8,10 +8,10 @@ const SoulCrystal = () => {
 
   return (
     <>
-      <MatrixElementsItem element={innerTop2} top={['24.7%', '25.5%']} left={['47.8%', '48.6%']} />
-      <MatrixElementsItem element={innerLeft2} top={['47.5%', '48.5%']} left={['24.4%', '25.7%']} />
-      <MatrixElementsItem element={innerRight2} top={['47.5%', '48.5%']} right={['25%', '26%']} />
-      <MatrixElementsItem element={innerBottom2} bottom={['25.5%', '26.3%']} left={['47.8%', '48.6%']} />
+      <MatrixElementsItem element={innerTop2} top={['24.4%', '25.5%']} left={['47.7%', '48.6%']} />
+      <MatrixElementsItem element={innerLeft2} top={['47.2%', '48%']} left={['24.5%', '26%']} />
+      <MatrixElementsItem element={innerRight2} top={['47.2%', '48.5%']} right={['25%', '26%']} />
+      <MatrixElementsItem element={innerBottom2} bottom={['25.7%', '26.3%']} left={['47.7%', '48.6%']} />
     </>
   );
 };
