@@ -1,15 +1,15 @@
-import { Box } from 'components/Box';
-import { useMatrix } from 'pages/Calculator';
 import React from 'react';
-import AssignmentTableDesktop from '../FateMatrix/AssignmentTable/Desktop/AssignmentTableDesktop';
+import { useMatrix } from 'pages/Calculator';
 import AboutCustomer from '../FateMatrix/AboutCustomer/AboutCustomer';
-import AssignmentTabledMobTabled from '../FateMatrix/AssignmentTable/MobTable/AssignmentTabledMobTable';
+import { Box } from 'components/Box';
 import MatrixGraph from '../FateMatrix/MatrixGraph/MatrixGraph';
+import AssignmentTableDesktop from '../FateMatrix/AssignmentTable/Desktop/AssignmentTableDesktop';
+import AssignmentTabledMobTabled from '../FateMatrix/AssignmentTable/MobTable/AssignmentTabledMobTable';
+import { AgeCircle } from './PeriodMatrix.styled';
 
-import { ReactComponent as Matrix } from 'images/Calculator/personalMatrix/karmaMatrix.svg';
+import { ReactComponent as Matrix } from 'images/Calculator/personalMatrix/periodMatrix.svg';
 
-
-const KarmaIssues = () => {
+const PeriodMatrix = () => {
   const { isGenerated } = useMatrix();
 
   return (
@@ -23,8 +23,10 @@ const KarmaIssues = () => {
         display={[null, null, 'flex']}
         alignItems="center"
         justifyContent="space-evenly"
+        position="relative"
       >
-        <MatrixGraph matrix={Matrix} hideSoul={true} />
+        <MatrixGraph matrix={Matrix} />
+        <AgeCircle />
         <AssignmentTableDesktop />
       </Box>
       <AssignmentTabledMobTabled />
@@ -32,4 +34,4 @@ const KarmaIssues = () => {
   );
 };
 
-export default KarmaIssues;
+export default PeriodMatrix;

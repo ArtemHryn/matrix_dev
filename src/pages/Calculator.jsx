@@ -22,6 +22,7 @@ const Calculator = () => {
   const [isGenerated, setIsGenerated] = useState(false);
   const [name, setName] = useState('');
   const [matrixData, setMatrixData] = useState({});
+  const [matrixType, setMatrixType] = useState('fateMatrix');
 
   return (
     <MatrixContext.Provider
@@ -36,6 +37,8 @@ const Calculator = () => {
         setName,
         matrixData,
         setMatrixData,
+        matrixType,
+        setMatrixType,
       }}
     >
       <ScrollToTop />

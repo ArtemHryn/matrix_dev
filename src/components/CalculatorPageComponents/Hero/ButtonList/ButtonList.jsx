@@ -8,7 +8,7 @@ import {
 const list = [
   {
     name: 'ЛИЧНАЯ МАТРИЦА',
-    to: 'personal/fateMatrix',
+    to: 'personal',
     disabled: false,
   },
   {

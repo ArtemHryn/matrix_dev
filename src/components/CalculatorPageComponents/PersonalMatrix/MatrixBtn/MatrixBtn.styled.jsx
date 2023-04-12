@@ -1,4 +1,3 @@
-import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const BtnList = styled.ul`
@@ -27,11 +26,12 @@ export const BtnItem = styled.li`
   }
 `;
 
-export const Link = styled(NavLink)`
+export const Link = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
   height: 44px;
+  width: 100%;
   background: ${p => p.theme.colors.white};
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
   border-radius: 10px;

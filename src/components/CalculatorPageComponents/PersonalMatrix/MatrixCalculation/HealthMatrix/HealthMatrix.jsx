@@ -1,13 +1,15 @@
 import React from 'react';
-import AboutCustomer from './AboutCustomer/AboutCustomer';
 import { Box } from 'components/Box';
-import MatrixGraph from './MatrixGraph/MatrixGraph';
-import AssignmentTabledMobTabled from './AssignmentTable/MobTable/AssignmentTabledMobTable';
-import AssignmentTableDesktop from './AssignmentTable/Desktop/AssignmentTableDesktop';
 import { useMatrix } from 'pages/Calculator';
-import { ReactComponent as Matrix } from 'images/Calculator/personalMatrix/personalMatrix.svg';
+import AboutCustomer from '../FateMatrix/AboutCustomer/AboutCustomer';
+import AssignmentTableDesktop from '../FateMatrix/AssignmentTable/Desktop/AssignmentTableDesktop';
+import MatrixGraph from '../FateMatrix/MatrixGraph/MatrixGraph';
+import AssignmentTabledMobTabled from '../FateMatrix/AssignmentTable/MobTable/AssignmentTabledMobTable';
 
-const FateMatrix = () => {
+import { ReactComponent as Matrix } from 'images/Calculator/personalMatrix/healthMatrix.svg';
+
+
+const HealthMatrix = () => {
   const { isGenerated } = useMatrix();
 
   return (
@@ -22,7 +24,7 @@ const FateMatrix = () => {
         alignItems="center"
         justifyContent="space-evenly"
       >
-        <MatrixGraph matrix={Matrix}  />
+        <MatrixGraph matrix={Matrix} hideInner={true} />
         <AssignmentTableDesktop />
       </Box>
       <AssignmentTabledMobTabled />
@@ -30,4 +32,4 @@ const FateMatrix = () => {
   );
 };
 
-export default FateMatrix;
+export default HealthMatrix;

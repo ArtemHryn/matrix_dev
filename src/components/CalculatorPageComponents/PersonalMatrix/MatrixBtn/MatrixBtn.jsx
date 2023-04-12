@@ -1,5 +1,6 @@
 import React from 'react';
 import { BtnItem, BtnList, Link } from './MatrixBtn.styled';
+import { useMatrix } from 'pages/Calculator';
 
 const btnList = [
   { name: 'Матрица Судьбы', to: 'fateMatrix' },
@@ -9,11 +10,17 @@ const btnList = [
 ];
 
 const MatrixBtn = () => {
+  const { setMatrixType, matrixType } = useMatrix();
   return (
     <BtnList>
       {btnList.map(({ name, to }) => (
         <BtnItem key={name}>
-          <Link to={to}>{name}</Link>
+          <Link
+            className={matrixType === to ? 'active' : null}
+            onClick={() => setMatrixType(to)}
+          >
+            {name}
+          </Link>
         </BtnItem>
       ))}
     </BtnList>

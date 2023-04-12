@@ -22,7 +22,6 @@ const DataByDate = ({
     }
     setValue('date', inputDate);
   };
-  console.log(errors);
   return (
     <>
       <FrontCard
