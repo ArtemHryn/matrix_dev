@@ -40,6 +40,7 @@ export const Input = styled.input`
   line-height: 1.19;
 
   color: rgba(73, 73, 73, 0.8);
+  margin-bottom: 10px;
   ${space}
   &:focus-within {
     border: 2px solid rgba(221, 197, 255, 0.8);
@@ -50,5 +51,10 @@ export const Input = styled.input`
     height: 47px;
     font-size: 21px;
   }
+`;
 
+export const Error = styled.p`
+  text-align: center;
+  color: #a40b8a;
+  font-size: 20px;
 `;

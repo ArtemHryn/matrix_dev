@@ -1,12 +1,9 @@
 import React from 'react';
 import { Box } from 'components/Box';
-import logo from 'images/Calculator/Footer/logo.svg';
-import logoTab from 'images/Calculator/Footer/logoTab.webp';
-import logoDesk from 'images/Calculator/Footer/logoDesk.webp';
 import star from 'images/Calculator/Hero/star.webp';
 import {
   DariLogo,
-  LogoImg,
+  DariLogoImg,
   LogoStar,
   NavigationElement,
   NavigationLink,
@@ -24,17 +21,13 @@ const Footer = () => {
         px="37px"
         m="0 auto"
         display={[null, null, 'flex']}
-        justifyContent='space-between'
-        alignItems='center'
+        justifyContent="space-between"
+        alignItems="center"
       >
-        <Box display="flex" justifyContent="center" flex='1'>
-          <picture>
-            <source srcSet={logoDesk} media="(min-width: 1440px)" />
-            <source srcSet={logoTab} media="(min-width: 768px)" />
-            <LogoImg src={logo} alt="logo" />
-          </picture>
+        <Box display="flex" justifyContent="center" flex="1">
+          <DariLogoImg />
         </Box>
-        <Box flex='2'>
+        <Box flex="2">
           <DariLogo>
             Dari.Karma <LogoStar src={star} alt="star" />
           </DariLogo>

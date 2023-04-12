@@ -51,9 +51,6 @@ const AboutCustomer = () => {
               </NameDate>
             </Box>
             <Box display="flex" justifyContent="center">
-              <Key mr="8px">
-                Период: <Info>10 - 10 - 20</Info>
-              </Key>
               <Key>
                 Возраст: <Info>{age}</Info>
               </Key>

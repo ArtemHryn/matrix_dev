@@ -56,9 +56,6 @@ const AboutCustomerDesk = () => {
         </NameDate>
       </Box>
       <Box display="flex" justifyContent="center">
-        <Key mr={[null, null, '8px']} fontSize={[null, null, '20px']}>
-          Период: <Info fontSize={[null, null, '17px']}>10 - 10 - 20</Info>
-        </Key>
         <Key fontSize={[null, null, '20px']}>
           Возраст: <Info fontSize={[null, null, '17px']}>{age}</Info>
         </Key>

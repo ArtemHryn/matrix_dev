@@ -14,6 +14,7 @@ const DataInput = () => {
     register,
     handleSubmit,
     setValue,
+    formState: { errors },
   } = useForm();
 
   const onSubmit = data => {
@@ -32,7 +33,6 @@ const DataInput = () => {
     setShowMatrix(true);
   };
 
-
   return (
     <Box mb={['80px']}>
       <Form onSubmit={handleSubmit(onSubmit)}>
@@ -41,6 +41,7 @@ const DataInput = () => {
           setIsFlipped={setIsFlipped}
           register={register}
           setValue={setValue}
+          errors={errors}
         />
         <DataByNineDigits
           isFlipped={isFlipped}

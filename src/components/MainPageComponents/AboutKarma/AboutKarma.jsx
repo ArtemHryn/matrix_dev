@@ -91,7 +91,7 @@ export const AboutKarma = () => {
             <AboutDesc>Учениям о карме более 2,5 тыс. лет</AboutDesc>
           </AboutReasonContainer>
           <AboutReasonContainer
-            p="18px 5px 18px 32px"
+            p={['18px 5px 18px 32px', null, '18px 35px 18px 1px']}
             flexDirection="row-reverse"
           >
             <AboutDesc>

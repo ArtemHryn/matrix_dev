@@ -1,5 +1,16 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { layout } from 'styled-system';
+
+const gradientAnimation = keyframes`
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }`;
 
 export const ScrollToTopBtn = styled.button`
   position: fixed;
@@ -25,4 +36,22 @@ export const ScrollToTopBtn = styled.button`
     width: 52px;
     height: 52px;
   }
+`;
+
+export const CalcContainer = styled.div`
+  background-image: linear-gradient(
+    90deg,
+    #fdfcfe 0%,
+    #e7e0f3 13.01%,
+    #ece6f6 25.18%,
+    #ede1f4 36.71%,
+    #f5e8f3 47.22%,
+    #f6ecf5 54.89%,
+    #f4ecfa 71.18%,
+    #f4ebf9 79.3%,
+    #f7edf8 88.76%,
+    #f7ebf6 100%
+  );
+  background-size: 400% 400%;
+  animation: ${gradientAnimation} 5s ease infinite;
 `;

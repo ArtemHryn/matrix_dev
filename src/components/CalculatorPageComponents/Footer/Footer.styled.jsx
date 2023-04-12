@@ -1,11 +1,18 @@
 import styled from 'styled-components';
 
-export const LogoImg = styled.img`
+import { ReactComponent as Logo } from 'images/Calculator/Footer/DariLogo.svg';
+
+export const DariLogoImg = styled(Logo)`
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
-    width: 196px;
+    width: 150px;
+    height: 150px;
   }
-  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
-    width: 290px;
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    width: 200px;
+    height: 200px;
   }
 `;
 

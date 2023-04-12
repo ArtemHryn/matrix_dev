@@ -1,8 +1,14 @@
 import React from 'react';
 import { BoxTitle, FlipButton, FlipButtonSvg } from '../DataInput.styled';
-import { FrontCard, Input } from './DataByDate.styled';
+import { Error, FrontCard, Input } from './DataByDate.styled';
 
-const DataByDate = ({ isFlipped, setIsFlipped, register, setValue }) => {
+const DataByDate = ({
+  isFlipped,
+  setIsFlipped,
+  register,
+  setValue,
+  errors,
+}) => {
   const onChange = e => {
     let inputDate = e.target.value.replace(/\D/g, '');
     if (inputDate.length > 8) {
@@ -16,7 +22,7 @@ const DataByDate = ({ isFlipped, setIsFlipped, register, setValue }) => {
     }
     setValue('date', inputDate);
   };
-
+  console.log(errors);
   return (
     <>
       <FrontCard
@@ -49,12 +55,14 @@ const DataByDate = ({ isFlipped, setIsFlipped, register, setValue }) => {
           placeholder="Дата  (10.02.2000)"
           {...register('date', {
             onChange: onChange,
+            required: { value: true, message: 'Введите дату' },
             pattern: {
               value: /^\d{2}\.\d{2}\.\d{4}$/,
-              message: 'Please enter a valid date in dd.mm.yyyy format',
+              message: 'Введите дату в формате dd.mm.yyyy',
             },
           })}
         />
+        {errors.date && <Error>{errors.date.message}</Error>}
       </FrontCard>
     </>
   );

@@ -56,4 +56,5 @@ export const InstaLink = styled.a`
   font-weight: 400;
   text-decoration: underline;
   cursor: pointer;
+  font-style: italic;
 `;

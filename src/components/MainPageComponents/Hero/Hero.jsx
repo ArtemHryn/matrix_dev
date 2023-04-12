@@ -1,7 +1,7 @@
 import { Box } from 'components/Box';
-import dariPhoto from 'images//hero/dariPhoto.png';
-import dariPhotoTab from 'images/hero/DarinaInHero.png';
-import dariPhotoDesk from 'images/hero/heroDariPhoto.png';
+import dariPhoto from 'images//hero/dariPhoto.webp';
+import dariPhotoTab from 'images/hero/DarinaInHero.webp';
+import dariPhotoDesk from 'images/hero/heroDariPhoto.webp';
 import heroStar from 'images//hero/hero_star.png';
 import {
   Image,
@@ -41,7 +41,7 @@ export const MainHero = () => {
           <picture>
             <source srcSet={dariPhotoTab} media="(min-width: 768px)" />
             <source srcSet={dariPhoto} />
-            <Image srcSet={dariPhoto} alt="Darina" loading="lazy" />
+            <Image srcSet={dariPhoto} alt="Darina" />
           </picture>
           <Box display={[null, 'flex', 'flex']}>
             <ServicesLink
@@ -60,7 +60,6 @@ export const MainHero = () => {
           alt="Darina"
           width="624"
           display={['none', 'none', 'block']}
-          loading="lazy"
         />
         <ImgStar src={heroStar} alt="star" loading="lazy" />
       </Box>
