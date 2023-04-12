@@ -107,7 +107,7 @@ export const cards = [
     text: 'Матрица периода',
     imgtab: periodCardTab,
     imgDesc: periodCardDesc,
-    price: '$30',
+    price: '$28',
     info: {
       textBefore: [periodCardText1, periodCardText2],
       meeting: 'Видеовстреча до 60 минут + трансформация ',
@@ -118,7 +118,7 @@ export const cards = [
     text: 'Осознанность',
     imgtab: conscienceCardTab,
     imgDesc: conscienceCardDesc,
-    price: '$70',
+    price: '$100',
     component: Conscience,
   },
   {
@@ -126,7 +126,7 @@ export const cards = [
     text: 'Парная терапия',
     imgtab: couplesTherapyCardTab,
     imgDesc: couplesTherapyCardDesc,
-    price: '$70',
+    price: '$150',
     component: CoupleTherapy,
   },
   {
@@ -142,7 +142,7 @@ export const cards = [
     text: 'Матрица “Демон-Жертва”',
     imgtab: demonOfferingCardTab,
     imgDesc: demonOfferingCardDesc,
-    price: '$70',
+    price: '$100',
     info: {
       textBefore: [demonOffering1, 'Данная консультация:'],
       list: [
@@ -163,7 +163,7 @@ export const cards = [
     text: ' Прогноз на год ',
     imgtab: yearCardTab,
     imgDesc: yearCardDesc,
-    price: '$70',
+    price: '$42',
     component: YearModal,
   },
   {
@@ -171,7 +171,7 @@ export const cards = [
     text: 'Игра“Кармические Путешествия”',
     imgtab: gameCardTab,
     imgDesc: gameCardDesc,
-    price: '$70',
     component: GameModal,
+    isHideStar: true,
   },
 ];

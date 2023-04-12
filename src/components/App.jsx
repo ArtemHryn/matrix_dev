@@ -16,12 +16,13 @@ export const App = () => {
 
   return (
     <Box m="0 auto">
+
       <GlobalStyle />
       <Suspense fallback={<Spinner />}>
         <Routes key={location.pathname} location={location}>
           <Route path="/" element={<Main />} />
           <Route path="/calculator" element={<Calculator />}>
-            <Route path="personal" element={<PersonalMatrix />}>       
+            <Route path="personal" element={<PersonalMatrix />}>
               <Route path="fateMatrix" element={<FateMatrix />} />
               <Route path="karmaIssues" element={<div></div>} />
               <Route path="healthMatrix" element={<div></div>} />

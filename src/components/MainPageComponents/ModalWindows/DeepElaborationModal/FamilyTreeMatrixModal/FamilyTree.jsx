@@ -90,7 +90,7 @@ export const FamilyTree = () => {
             justifyContent={['space-between', 'flex-start']}
             pt={['25px', '40px']}
           >
-            <Price>$117</Price>
+            <Price>$150</Price>
             <BuyButton href="https://t.me/DariKarma">Купить</BuyButton>
           </Box>
         </Box>

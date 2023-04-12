@@ -15,18 +15,18 @@ const Balances = () => {
       />
       <MatrixElementsItem
         element={innerTopRight}
-        top={['31%', '32%']}
-        right={['31.8%', '32.6%']}
+        top={['31%', '32.1%']}
+        right={['31.4%', '32.3%']}
       />
       <MatrixElementsItem
         element={innerBottomLeft}
-        bottom={['32.2%', '33%']}
-        left={['31.3%', '32.3%']}
+        bottom={['31.8%', '32.7%']}
+        left={['31.6%', '32.7%']}
       />
       <MatrixElementsItem
         element={innerBottomRight}
-        bottom={['32.3%', '33%']}
-        right={['31.5%', '32.5%']}
+        bottom={['32.4%', '33%']}
+        right={['31.7%', '32.7%']}
       />
     </>
   );

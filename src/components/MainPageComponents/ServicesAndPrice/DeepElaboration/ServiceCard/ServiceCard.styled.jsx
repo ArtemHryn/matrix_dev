@@ -57,6 +57,14 @@ export const CardTitle = styled.h4`
   background-position: bottom;
   background-size: 15px 2px;
   background-repeat: repeat-x;
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    height: 280px;
+    padding: 185px 27px 20px 32px;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    height: 250px;
+    padding: 160px 27px 20px 32px;
+  }
 `;
 
 export const CardDescription = styled.p`
@@ -70,7 +78,11 @@ export const CardDescription = styled.p`
   line-height: 1.24;
 
   color: ${p => p.theme.colors.third};
-
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    height: 80px;
+  }
 `;
 
 export const Price = styled.p`
@@ -115,28 +127,11 @@ export const Button = styled.button`
 
     font-size: 18px;
     line-height: 1.22;
-    li:last-child & {
-      transform: translate(0%, 110%);
-    }
-    li:last-child &:hover,
-    li:last-child &:focus {
-      transform: translate(0%, 110%) scale(1.05);
-    }
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
-    transform: translate(0%, 86%);
+    transform: translate(0%, 50%);
     :hover,
     :focus {
-      transform: translate(0%, 86%) scale(1.05);
-    }
-    li:last-child &,
-    li:nth-child(2) & {
-      transform: translate(0%, 50%);
-    }
-    li:last-child &:hover,
-    li:last-child &:focus,
-    li:nth-child(2) &:hover,
-    li:nth-child(2) &:focus {
       transform: translate(0%, 50%) scale(1.05);
     }
   }

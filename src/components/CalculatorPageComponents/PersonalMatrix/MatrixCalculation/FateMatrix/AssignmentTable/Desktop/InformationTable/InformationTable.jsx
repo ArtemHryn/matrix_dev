@@ -43,8 +43,8 @@ const InformationTable = () => {
         name1={'Личное предназначение'}
         name2={'Небо'}
         name3={'Земля'}
-        el1={bottom1}
-        el2={month}
+        el1={month}
+        el2={bottom1}
         el3={sky}
         el4={day}
         el5={year}

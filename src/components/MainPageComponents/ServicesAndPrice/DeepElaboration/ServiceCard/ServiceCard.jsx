@@ -1,5 +1,4 @@
 import starInCircle from 'images/ServicesAndPrice/starInCircle.png';
-import lock from 'images/ServicesAndPrice/lock.svg';
 import {
   Button,
   CardDescription,
@@ -13,7 +12,7 @@ import { useState } from 'react';
 import { ModalLayout } from 'components/MainPageComponents/ModalWindows/ModalLayout';
 import { AnimatePresence } from 'framer-motion';
 
-export const ServiceCard = ({ name, img, text, component: Component }) => {
+export const ServiceCard = ({ name, img, text, price, component: Component }) => {
   const [showModal, setShowModal] = useState(false);
   return (
     <CardElement>
@@ -21,9 +20,9 @@ export const ServiceCard = ({ name, img, text, component: Component }) => {
       <StarImg src={starInCircle} alt="star" />
       <CardTitle>{name}</CardTitle>
       <CardDescription>{text}</CardDescription>
-      <Price>$117</Price>
+      <Price>{price}$</Price>
       <Button onClick={() => setShowModal(true)}>
-        Подробнее <img src={lock} alt="lock" />
+        Подробнее
       </Button>
       <AnimatePresence mode="wait" onExitComplete={() => null}>
         {showModal && (

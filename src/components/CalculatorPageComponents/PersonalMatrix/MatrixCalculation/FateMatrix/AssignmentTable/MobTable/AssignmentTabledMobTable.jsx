@@ -44,8 +44,8 @@ const AssignmentTabledMobTabled = () => {
           firstName={'Небо'}
           secondName={'Земля'}
           thrirdName={'Личное'}
-          el1={bottom1}
-          el2={month}
+          el1={month}
+          el2={bottom1}
           el3={sky}
           el4={day}
           el5={year}

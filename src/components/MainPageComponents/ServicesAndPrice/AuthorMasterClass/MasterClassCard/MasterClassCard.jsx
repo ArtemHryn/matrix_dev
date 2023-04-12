@@ -13,31 +13,33 @@ export const MasterClassCard = ({
 }) => {
   return (
     <MasterClassCardElement>
-      <TitleContainer>
-        <CardTitle>
-          <Img src={img} alt={title} loading="lazy" /> {title}
-        </CardTitle>
-      </TitleContainer>
+      <Box>
+        <TitleContainer>
+          <CardTitle>
+            <Img src={img} alt={title} loading="lazy" /> {title}
+          </CardTitle>
+        </TitleContainer>
 
-      <ServiceList>
-        {services.map(service => (
-          <li key={service}>
-            <ServiceText>{service}</ServiceText>
-          </li>
-        ))}
-      </ServiceList>
-      <Box
-        mb={['34px', '34px', '50px']}
-        display={[null, null, 'flex']}
-        backgroundImage={[null, null, backgroundGradient]}
-        backgroundPosition={[null, null, 'bottom']}
-        backgroundSize={[null, null, '15px 2px']}
-        backgroundRepeat={[null, null, 'repeat-x']}
-      >
-        <ServiceFormat>{format}</ServiceFormat>
-        <Box display={[null, null, 'flex']} flexDirection="column">
-          <ServiceDuration>{duration}</ServiceDuration>
-          <ServicePrice>Стоимость {price}$</ServicePrice>
+        <ServiceList>
+          {services.map(service => (
+            <li key={service}>
+              <ServiceText>{service}</ServiceText>
+            </li>
+          ))}
+        </ServiceList>
+        <Box
+          mb={['34px', '34px', '50px']}
+          display={[null, null, 'flex']}
+          backgroundImage={[null, null, backgroundGradient]}
+          backgroundPosition={[null, null, 'bottom']}
+          backgroundSize={[null, null, '15px 2px']}
+          backgroundRepeat={[null, null, 'repeat-x']}
+        >
+          <ServiceFormat>{format}</ServiceFormat>
+          <Box display={[null, null, 'flex']} flexDirection="column">
+            <ServiceDuration>{duration}</ServiceDuration>
+            {price && <ServicePrice>Стоимость {price}$</ServicePrice>}
+          </Box>
         </Box>
       </Box>
       <Button

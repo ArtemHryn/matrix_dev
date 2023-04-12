@@ -10,6 +10,7 @@ import Contacts from 'components/CalculatorPageComponents/Contacts/Contacts';
 import GetPDFTemplate from 'components/CalculatorPageComponents/GetPDFTemplate/GetPDFTemplate';
 import Footer from 'components/CalculatorPageComponents/Footer/Footer';
 import { Box } from 'components/Box';
+import ScrollToTop from 'components/Common/ScrollToTop';
 
 const MatrixContext = createContext();
 export const useMatrix = () => useContext(MatrixContext);
@@ -39,6 +40,7 @@ const Calculator = () => {
         setMatrixData,
       }}
     >
+      <ScrollToTop />
       <Box backgroundImage={calculatorPageGradient}>
         <Header navigationList={navigationListCalc} />
         <Hero />

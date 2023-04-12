@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { layout, space } from 'styled-system';
+import { layout, space, typography } from 'styled-system';
 
 export const MainTitle = styled.h3`
   font-family: ${p => p.theme.fonts.main};
@@ -60,12 +60,12 @@ export const Text = styled.p`
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     font-size: 17px;
     line-height: 1.23;
-
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
     font-size: 18px;
     max-width: 100%;
   }
+  ${typography}
 `;
 
 export const HowIsGoingConsultation = styled.h4`
@@ -133,7 +133,6 @@ export const BuyButton = styled.a`
     height: 48px;
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
-
     font-size: 18px;
     line-height: 1.22;
   }

@@ -10,7 +10,16 @@ import { ModalLayout } from 'components/MainPageComponents/ModalWindows/ModalLay
 import { ModalTeamplate } from 'components/MainPageComponents/ModalWindows/ModalTemplate/ModalTemplate';
 
 export const ConsultaionCard = ({
-  card: { img, text, imgtab, imgDesc, price, component: Component, info },
+  card: {
+    img,
+    text,
+    imgtab,
+    imgDesc,
+    price,
+    isHideStar,
+    component: Component,
+    info,
+  },
 }) => {
   const [showDetails, setShowDetails] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -46,6 +55,7 @@ export const ConsultaionCard = ({
         {showModal && (
           <ModalLayout
             key={text}
+            isHideStar={isHideStar}
             setShowModal={setShowModal}
             boxShadow="0px 0px 30px rgba(190, 148, 232, 0.3);"
             backgroundColor="rgba(255, 255, 255, 0.95);"

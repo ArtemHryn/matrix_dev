@@ -5,6 +5,9 @@ export const MasterClassCardElement = styled.li`
   border: 1px solid #72499b;
   border-radius: 30px;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   @media screen and (max-width: ${p => p.theme.sizes.tablet}) {
     :first-child {
       margin-bottom: 10px;
@@ -74,7 +77,7 @@ export const Img = styled.img`
   background-color: #ffffff;
   border-radius: 50%;
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
-   width: 64px;
+    width: 64px;
   }
 `;
 

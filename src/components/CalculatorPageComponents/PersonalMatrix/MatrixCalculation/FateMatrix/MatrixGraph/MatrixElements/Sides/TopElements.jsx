@@ -20,48 +20,48 @@ const TopElements = () => {
     <>
       <MatrixElementsItem
         element={topLeft1}
-        top={['16.2%', '17.5%']}
-        left={['16.2%', '17%']}
+        top={['16.2%', '17.3%', '17%']}
+        left={['16.3%', '17.4%', '17.1%']}
       />
       <MatrixElementsItem
         element={topLeft2}
-        top={['21%', '21.8%']}
-        left={['20.5%', '21.5%']}
+        top={['20.8%', '21.8%']}
+        left={['21%', '22%', '21.8%']}
       />
       <MatrixElementsItem
         element={topLeft3}
-        top={['25.5%', '26.4%']}
-        left={['25.5%', '26.5%']}
+        top={['25.4%', '26.4%']}
+        left={['25.6%', '26.5%']}
       />
       <MatrixElementsItem
         element={month}
-        top={['3%', '3.5%']}
-        left={['47.8%', '48.6%']}
+        top={['2.5%', '3.5%']}
+        left={['47.5%', '48.5%']}
       />
       <MatrixElementsItem
         element={top2}
-        top={['9.3%', '10.2%']}
-        left={['47.8%', '48.5%']}
+        top={['9.2%', '10%']}
+        left={['47.5%', '48.5%']}
       />
       <MatrixElementsItem
         element={top3}
         top={['15.5%', '16.5%']}
-        left={['47.8%', '48.7%']}
+        left={['47.5%', '48.5%']}
       />
       <MatrixElementsItem
         element={topRight1}
-        top={['16.2%', '17.3%']}
-        right={['16.3%', '17.4%']}
+        top={['16.2%', '17.3%', '17%']}
+        right={['16.4%', '17.4%']}
       />
       <MatrixElementsItem
         element={topRight2}
-        top={['21%', '21.9%']}
-        right={['21%', '22.1%']}
+        top={['20.8%', '21.9%']}
+        right={['21%', '21.8%', '22%']}
       />
       <MatrixElementsItem
         element={topRight3}
-        top={['25.5%', '26.5%']}
-        right={['25.5%', '26.5%']}
+        top={['25.4%', '26.5%']}
+        right={['25.6%', '26.5%', '26.7%']}
       />
     </>
   );

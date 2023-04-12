@@ -52,7 +52,7 @@ export const cards = [
     text: 'Диагностика состояния матрицы',
     imgTab: card1Tab,
     imgDesc: card1Desc,
-    price: '$30',
+    price: '$21',
     info: {
       textBefore: [textBeforeCard1a, textBeforeCard1b],
       meeting: 'Видеовстреча или аудиосообщения в телеграмм',
@@ -67,7 +67,7 @@ export const cards = [
     text: 'Подбор благоприятной даты, периода',
     imgTab: card3Tab,
     imgDesc: card3Desc,
-    price: '$30',
+    price: '$17',
     info: {
       textBefore: [textBeforeCard3a, textBeforeCard3b, textBeforeCard3c],
       meeting: 'Видеовстреча 30 минут',
@@ -78,7 +78,7 @@ export const cards = [
     text: 'Совместимость',
     imgTab: card2Tab,
     imgDesc: card2Desc,
-    price: '$30',
+    price: '$21',
     info: {
       textBefore: [textBeforeCard2a],
       list: [
@@ -97,7 +97,7 @@ export const cards = [
     text: 'Энергии длительного действия',
     imgTab: card4Tab,
     imgDesc: card4Desc,
-    price: '$30',
+    price: '$7',
     info: {
       textBefore: [textBeforeCard4a, textBeforeCard4b],
       meeting: 'видеовстреча или аудиосообщения в телеграмм',
@@ -108,7 +108,7 @@ export const cards = [
     text: 'SOS - помощь',
     imgTab: card5Tab,
     imgDesc: card5Desc,
-    price: '$30',
+    price: '$28',
     info: {
       textBefore: [textBeforeCard5a, textBeforeCard5b, textBeforeCard5c],
       list: [

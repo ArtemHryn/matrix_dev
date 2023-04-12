@@ -16,6 +16,7 @@ export const ModalLayout = ({
   setShowModal,
   children,
   boxShadow,
+  isHideStar,
   backgroundColor,
 }) => {
   const [ref, { width }] = useMeasure();
@@ -27,7 +28,7 @@ export const ModalLayout = ({
       }
     };
     window.addEventListener('keydown', onCloseByEscape);
-    console.log()
+    console.log();
     if (width >= 1440) {
       disableBodyScroll(modalRoot);
     }
@@ -67,22 +68,25 @@ export const ModalLayout = ({
           <Button onClick={() => setShowModal(false)}>
             <CloseModal />
           </Button>
-          <Box
-            position="absolute"
-            backgroundColor="#FFFFFF"
-            border="1px solid #C8B3E6;"
-            borderRadius="50%"
-            top={['15px', '26px', '36px']}
-            right={['15px', '26px', '36px']}
-            width={['40px', '49px']}
-            height={['40px', '49px']}
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
-            p="5px"
-          >
-            <img src={star} alt="star" />
-          </Box>
+          {!isHideStar && (
+            <Box
+              position="absolute"
+              backgroundColor="#FFFFFF"
+              border="1px solid #C8B3E6;"
+              borderRadius="50%"
+              top={['15px', '26px', '36px']}
+              right={['15px', '26px', '36px']}
+              width={['40px', '49px']}
+              height={['40px', '49px']}
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+              p="5px"
+            >
+              <img src={star} alt="star" />
+            </Box>
+          )}
+
           {children}
         </ModalContainer>
       </Box>

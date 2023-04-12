@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { grid } from 'styled-system';
 
 export const Name = styled.p`
   font-family: ${p => p.theme.fonts.main};
@@ -16,4 +17,5 @@ export const ElementsList = styled.ul`
   align-items: center;
   display: flex;
   gap: 16px;
+  ${grid}
 `;

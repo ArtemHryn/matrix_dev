@@ -20,7 +20,7 @@ const SecondTemplate = ({ name, el1, el2, el3, isKey, ...props }) => {
       {...props}
     >
       <Name>{name}</Name>
-      <ElementsList>
+      <ElementsList gridGap={isKey ? '21px' : null}>
         <li>
           <Element>{el1}</Element>
         </li>

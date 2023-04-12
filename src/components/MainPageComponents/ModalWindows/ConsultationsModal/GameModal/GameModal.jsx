@@ -4,7 +4,6 @@ import {
   HowIsGoingConsultation,
   List,
   MainTitle,
-  Price,
   Requests,
   Text,
 } from './GameModal.styled';
@@ -100,11 +99,19 @@ export const GameModal = () => {
               <List>
                 <li>
                   <Text maxWidth={['125px']}>
-                    Групповая игра (2-4 человека)
+                    Групповая игра (2-4 человека) -{' '}
+                    <Text as="span" fontWeight="700">
+                      14$/чел
+                    </Text>
                   </Text>
                 </li>
                 <li>
-                  <Text>Индивидульная игра</Text>
+                  <Text>
+                    Индивидульная игра -{' '}
+                    <Text as="span" fontWeight="700">
+                      21$/чел
+                    </Text>
+                  </Text>
                 </li>
               </List>
               <Box
@@ -113,7 +120,6 @@ export const GameModal = () => {
                 justifyContent={['space-between', 'flex-start']}
                 flexDirection={[null, null, 'column']}
               >
-                <Price>$14/чел.</Price>
                 <BuyButton href="https://t.me/DariKarma">Купить</BuyButton>
               </Box>
             </Box>
@@ -122,11 +128,19 @@ export const GameModal = () => {
               <List>
                 <li>
                   <Text maxWidth={['125px']}>
-                    Групповая игра (2-4 человека)
+                    Групповая игра (2-4 человека) -{' '}
+                    <Text as="span" fontWeight="700">
+                      18$/чел
+                    </Text>
                   </Text>
                 </li>
                 <li>
-                  <Text>Индивидульная игра</Text>
+                  <Text>
+                    Индивидульная игра -
+                    <Text as="span" fontWeight="700">
+                      28$/чел
+                    </Text>
+                  </Text>
                 </li>
               </List>
               <Box
@@ -135,7 +149,6 @@ export const GameModal = () => {
                 justifyContent={['space-between', 'flex-start']}
                 flexDirection={[null, null, 'column']}
               >
-                <Price>$18/чел.</Price>
                 <BuyButton href="https://t.me/DariKarma">Купить</BuyButton>
               </Box>
             </Box>

@@ -9,14 +9,14 @@ const Center = () => {
     <>
       <MatrixElementsItem
         element={center}
-        top={['47.5%', '48.8%']}
-        left={['47.5%', '48.6%']}
+        top={['47.3%', '48.2%']}
+        left={['47.6%', '48.6%']}
         fontSize={['18px', '33px']}
       />
       <MatrixElementsItem
         element={center2}
-        top={['50.8%', '52%']}
-        left={['51%', '51.9%']}
+        top={['50.9%', '52%']}
+        left={['51%', '52%']}
         fontSize={['9px', '18px']}
       />
     </>
