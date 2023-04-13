@@ -20,6 +20,7 @@ export const App = () => {
           <Route path="/calculator" element={<Calculator />}>
             <Route path="personal" element={<PersonalMatrix />}/>
           </Route>
+          <Route path="*" element={<Navigate replace to="calculator" />} />
         </Routes>
       </Suspense>
     </Box>
