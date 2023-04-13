@@ -9,12 +9,10 @@ import navigationListCalc from 'components/CalculatorPageComponents/navigationLi
 import Contacts from 'components/CalculatorPageComponents/Contacts/Contacts';
 import GetPDFTemplate from 'components/CalculatorPageComponents/GetPDFTemplate/GetPDFTemplate';
 import Footer from 'components/CalculatorPageComponents/Footer/Footer';
-import ScrollToTop from 'components/Common/ScrollToTop';
 import { CalcContainer } from 'components/Common/Common.styled';
 
 const MatrixContext = createContext();
 export const useMatrix = () => useContext(MatrixContext);
-
 
 const Calculator = () => {
   const [showMatrix, setShowMatrix] = useState(false);
@@ -41,7 +39,6 @@ const Calculator = () => {
         setMatrixType,
       }}
     >
-      <ScrollToTop />
       <CalcContainer>
         <Header navigationList={navigationListCalc} />
         <Hero />
