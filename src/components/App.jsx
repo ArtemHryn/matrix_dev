@@ -1,4 +1,4 @@
-import { Navigate, Outlet, useLocation } from 'react-router-dom';
+import { Navigate, useLocation } from 'react-router-dom';
 import React, { lazy, Suspense } from 'react';
 
 import { Box } from './Box';
@@ -16,17 +16,14 @@ export const App = () => {
     <Box m="0 auto">
       <ScrollToTop />
       <Suspense fallback={<Spinner />}>
-        <Routes key={location.pathname} location={location}>
-          <Route path="/" element={<Outlet />}>
+        <Routes basename="/matrix" key={location.pathname} location={location}>
+          <Route path="/">
             <Route index element={<Main />} />
             <Route path="calculator" element={<Calculator />}>
               <Route path="personal" element={<PersonalMatrix />} />
             </Route>
           </Route>
-          <Route
-            path="*"
-            element={<Navigate replace to="/calculator" />}
-          />
+          <Route path="*" element={<Navigate to="/calculator" />} />
         </Routes>
       </Suspense>
     </Box>
