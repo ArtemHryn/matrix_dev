@@ -18,7 +18,7 @@ export const App = () => {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/calculator" element={<Calculator />}>
-            <Route path="personal" element={<PersonalMatrix />}></Route>
+            <Route path="personal" element={<PersonalMatrix />}/>
           </Route>
         </Routes>
       </Suspense>
