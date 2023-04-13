@@ -18,14 +18,7 @@ export const App = () => {
       <GlobalStyle />
       <Suspense fallback={<Spinner />}>
         <Routes key={location.pathname} location={location}>
-          <Route
-            path="/"
-            element={
-              <div>
-                <Outlet />
-              </div>
-            }
-          >
+          <Route path="/">
             <Route index element={<Main />} />
             <Route path="calculator" element={<Calculator />}>
               <Route path="personal" element={<PersonalMatrix />} />
