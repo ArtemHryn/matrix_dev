@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/matrix/static/css/main.b6c201a0.css",
-    "main.js": "/matrix/static/js/main.cf6bfc9a.js",
+    "main.js": "/matrix/static/js/main.25bd68e6.js",
     "static/js/412.d8c34cfe.chunk.js": "/matrix/static/js/412.d8c34cfe.chunk.js",
     "static/css/207.d6f89cd3.chunk.css": "/matrix/static/css/207.d6f89cd3.chunk.css",
     "static/js/207.8e8d2b87.chunk.js": "/matrix/static/js/207.8e8d2b87.chunk.js",
@@ -13,7 +13,7 @@
     "static/media/parentsChildrenCard.png": "/matrix/static/media/parentsChildrenCard.be6b3f5623139213c19b.png",
     "static/media/deamonOfferingCard.png": "/matrix/static/media/deamonOfferingCard.c5a3e6aa7cc03894afc6.png",
     "static/media/yearCard.png": "/matrix/static/media/yearCard.8c3374c16b91d19c0d5d.png",
-    "static/media/periodCircle.svg": "/matrix/static/media/periodCircle.0dcce6d5b993e2f3c075fd6732d1db45.svg",
+    "static/media/periodCircle.svg": "/matrix/static/media/periodCircle.715ff6db724d54bf2a079b1359dbf764.svg",
     "static/media/personalLife.png": "/matrix/static/media/personalLife.4b54f764376921190292.png",
     "static/media/phonesTab.png": "/matrix/static/media/phonesTab.b666b33e8d360d34c4e2.png",
     "static/media/couplesTherapyCard.png": "/matrix/static/media/couplesTherapyCard.d51987e56424db2ecf13.png",
@@ -58,7 +58,7 @@
     "static/media/authorTab.jpg": "/matrix/static/media/authorTab.aa7e309c5e1901c83f97.jpg",
     "static/media/pazzlesTab.png": "/matrix/static/media/pazzlesTab.c839700817c32e248524.png",
     "static/media/img2Desk.webp": "/matrix/static/media/img2Desk.ff3d8c89f8f0c407a4f8.webp",
-    "static/media/periodMatrix.svg": "/matrix/static/media/periodMatrix.fb49a33b7d4a00238d6b7afc0434597d.svg",
+    "static/media/periodMatrix.svg": "/matrix/static/media/periodMatrix.9aab1795eb68c0967ec8628b744ccdb4.svg",
     "static/media/handsTab.png": "/matrix/static/media/handsTab.d3aa903d7ed4e7056101.png",
     "static/media/handWithFlowerDesc.png": "/matrix/static/media/handWithFlowerDesc.a1073d74965daa598bd0.png",
     "static/media/plantDesc.png": "/matrix/static/media/plantDesc.951716d4b966088077ff.png",
@@ -109,13 +109,13 @@
     "static/media/closeModal.svg": "/matrix/static/media/closeModal.77f566a13863502e75085358a5296aff.svg",
     "static/media/menuButton.svg": "/matrix/static/media/menuButton.6543f21211fdf3fdf52f174cb0d6e241.svg",
     "main.b6c201a0.css.map": "/matrix/static/css/main.b6c201a0.css.map",
-    "main.cf6bfc9a.js.map": "/matrix/static/js/main.cf6bfc9a.js.map",
+    "main.25bd68e6.js.map": "/matrix/static/js/main.25bd68e6.js.map",
     "412.d8c34cfe.chunk.js.map": "/matrix/static/js/412.d8c34cfe.chunk.js.map",
     "207.d6f89cd3.chunk.css.map": "/matrix/static/css/207.d6f89cd3.chunk.css.map",
     "207.8e8d2b87.chunk.js.map": "/matrix/static/js/207.8e8d2b87.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b6c201a0.css",
-    "static/js/main.cf6bfc9a.js"
+    "static/js/main.25bd68e6.js"
   ]
 }
