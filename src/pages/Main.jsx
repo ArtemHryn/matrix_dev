@@ -30,9 +30,9 @@ const Main = () => {
       navigate('/', { replace: true });
     }
   }, [location, navigate]);
+
   return (
     <>
-
       <Box backgroundImage="linear-gradient(to bottom,rgba(158, 118, 255, 0.18) 50%,#fff)">
         <Header navigationList={navigationList} />
         <MainHero />
