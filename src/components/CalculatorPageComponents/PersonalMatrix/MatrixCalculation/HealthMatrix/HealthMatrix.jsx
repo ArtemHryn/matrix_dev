@@ -27,7 +27,7 @@ const HealthMatrix = () => {
         <MatrixGraph matrix={Matrix} hideInner={true} />
         <AssignmentTableDesktop />
       </Box>
-      <AssignmentTabledMobTabled />
+      <AssignmentTabledMobTabled mb={['90px']} />
     </>
   );
 };

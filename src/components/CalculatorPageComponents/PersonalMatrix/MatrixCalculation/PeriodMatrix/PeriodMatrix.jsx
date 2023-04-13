@@ -29,7 +29,7 @@ const PeriodMatrix = () => {
         <AgeCircle />
         <AssignmentTableDesktop />
       </Box>
-      <AssignmentTabledMobTabled />
+      <AssignmentTabledMobTabled mb={['90px']} />
     </>
   );
 };

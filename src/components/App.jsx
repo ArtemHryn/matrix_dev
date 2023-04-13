@@ -1,4 +1,4 @@
-import { useLocation } from 'react-router-dom';
+import { Navigate, useLocation } from 'react-router-dom';
 import React, { lazy, Suspense } from 'react';
 import GlobalStyle from './Global';
 
@@ -18,10 +18,12 @@ export const App = () => {
       <GlobalStyle />
       <Suspense fallback={<Spinner />}>
         <Routes key={location.pathname} location={location}>
+          <Route></Route>
           <Route path="/" element={<Main />} />
           <Route path="/calculator" element={<Calculator />}>
-            <Route path="personal" element={<PersonalMatrix />}></Route>
+            <Route path="personal" element={<PersonalMatrix />} />
           </Route>
+          <Route path="*" element={<Navigate replace to="calculator" />} />
         </Routes>
       </Suspense>
     </Box>

@@ -13,7 +13,7 @@ import SecondsTemplate from './TablesTemplates/SecondsTemplate/SecondsTemplate';
 const gradient =
   'linear-gradient(89.9deg, rgba(255, 255, 255, 0.7) 9.56%, rgba(251, 244, 255, 0.7) 85.28%);';
 
-const AssignmentTabledMobTabled = () => {
+const AssignmentTabledMobTabled = ({ mb }) => {
   const { matrixData } = useMatrix();
   const {
     bottom1,
@@ -38,7 +38,7 @@ const AssignmentTabledMobTabled = () => {
   } = matrixData;
 
   return (
-    <Box display={[null, null, 'none']}>
+    <Box display={[null, null, 'none']} mb={mb ? mb : null}>
       <Box display="flex" gridGap={['4px', '8px']} mb={['2px', '4px']}>
         <FirstTemplate
           firstName={'Небо'}

@@ -7,7 +7,56 @@ import AssignmentTabledMobTabled from '../FateMatrix/AssignmentTable/MobTable/As
 import MatrixGraph from '../FateMatrix/MatrixGraph/MatrixGraph';
 
 import { ReactComponent as Matrix } from 'images/Calculator/personalMatrix/karmaMatrix.svg';
+import KarmaList from './KarmaList/KarmaList';
 
+const list = [
+  {
+    karmaName: 'Some name',
+    info: [
+      {
+        type: 'Pers',
+        energyInfo: [
+          { name: 'karma1', energy: '20' },
+          { name: 'karma2', energy: '2' },
+          { name: 'karm3', energy: '21' },
+          { name: 'karm4', energy: '22' },
+        ],
+      },
+      {
+        type: 'Fam',
+        energyInfo: [
+          { name: 'karma1', energy: '20' },
+          { name: 'karma2', energy: '2' },
+          { name: 'karma3', energy: '21' },
+          { name: 'karma4', energy: '22' },
+        ],
+      },
+    ],
+  },
+  {
+    karmaName: 'Some name2',
+    info: [
+      {
+        type: 'Pers',
+        energyInfo: [
+          { name: 'karma1', energy: '20' },
+          { name: 'karma2', energy: '2' },
+          { name: 'karm3', energy: '21' },
+          { name: 'karm4', energy: '22' },
+        ],
+      },
+      {
+        type: 'Fam',
+        energyInfo: [
+          { name: 'karma1', energy: '20' },
+          { name: 'karma2', energy: '2' },
+          { name: 'karma3', energy: '21' },
+          { name: 'karma4', energy: '22' },
+        ],
+      },
+    ],
+  },
+];
 
 const KarmaIssues = () => {
   const { isGenerated } = useMatrix();
@@ -27,7 +76,9 @@ const KarmaIssues = () => {
         <MatrixGraph matrix={Matrix} hideSoul={true} />
         <AssignmentTableDesktop />
       </Box>
-      <AssignmentTabledMobTabled />
+
+      <AssignmentTabledMobTabled mb={['90px']} />
+      <KarmaList list={list} />
     </>
   );
 };
