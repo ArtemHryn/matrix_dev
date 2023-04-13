@@ -12,17 +12,19 @@ const Calculator = lazy(() => import('pages/Calculator'));
 
 export const App = () => {
   const location = useLocation();
-
+  console.log(location);
   return (
     <Box m="0 auto">
       <GlobalStyle />
       <Suspense fallback={<Spinner />}>
         <Routes key={location.pathname} location={location}>
-          <Route></Route>
-          <Route path="/" element={<Main />} />
-          <Route path="/calculator" element={<Calculator />}>
-            <Route path="personal" element={<PersonalMatrix />} />
+          <Route path="/" element={<></>}>
+            <Route index element={<Main />} />
+            <Route path="calculator" element={<Calculator />}>
+              <Route path="personal" element={<PersonalMatrix />} />
+            </Route>
           </Route>
+
           <Route path="*" element={<Navigate replace to="calculator" />} />
         </Routes>
       </Suspense>
