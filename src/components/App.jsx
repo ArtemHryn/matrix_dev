@@ -12,7 +12,6 @@ const Calculator = lazy(() => import('pages/Calculator'));
 
 export const App = () => {
   const location = useLocation();
-  console.log(location);
   return (
     <Box m="0 auto">
       <GlobalStyle />

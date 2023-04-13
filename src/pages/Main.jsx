@@ -15,22 +15,20 @@ import backgroundFooterImage from 'images/backgroundPlanet.png';
 import { MatrixPlusAndMinus } from 'components/MainPageComponents/MatrixPlusAndMinus/MatrixPlusAndMinus';
 import { Header } from 'components/MainPageComponents/Header/Header';
 import navigationList from 'components/MainPageComponents/Header/navigationList';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import ScrollToTop from 'components/Common/ScrollToTop';
 
 const imgLink = `url(${backgroundFooterImage})`;
 
 const Main = () => {
   const location = useLocation();
-  const navigate = useNavigate();
 
   useEffect(() => {
     if (location.state && location.state.from) {
       const section = document.getElementById(`${location.state.from}`);
       section.scrollIntoView({ behavior: 'smooth' });
-      navigate('/', { replace: true });
     }
-  }, [location, navigate]);
+  }, [location]);
   return (
     <>
       <ScrollToTop />
