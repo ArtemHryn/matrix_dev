@@ -21,7 +21,7 @@ const MatrixGraph = ({ matrix: Matrix, hideSoul, hideInner }) => {
 
   return (
     <Box>
-      <Box position="relative" width={['100%', '667px']} m="0 auto">
+      <Box position="relative" width={['100%', '667px']} m="0 auto" zIndex='20'>
         <MatrixImg as={Matrix} />
         <TopElements />
         <Left />
