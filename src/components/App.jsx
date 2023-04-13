@@ -1,4 +1,4 @@
-import { Navigate, Outlet, useLocation } from 'react-router-dom';
+import { Navigate, useLocation } from 'react-router-dom';
 import React, { lazy, Suspense } from 'react';
 import GlobalStyle from './Global';
 
