@@ -20,7 +20,7 @@ export const App = () => {
         <Routes key={location.pathname} location={location}>
           <Route></Route>
           <Route path="/" element={<Main />} />
-          <Route path="/calculator" element={<Calculator />}>
+          <Route path="calculator" element={<Calculator />}>
             <Route path="personal" element={<PersonalMatrix />} />
           </Route>
           <Route path="*" element={<Navigate replace to="calculator" />} />
