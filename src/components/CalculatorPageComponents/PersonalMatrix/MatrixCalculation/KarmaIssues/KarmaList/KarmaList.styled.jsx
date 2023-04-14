@@ -13,26 +13,38 @@ export const SectionName = styled.p`
     rgba(255, 255, 255, 0.7) 0%,
     rgba(249, 237, 255, 0.7) 100%
   );
-  border: 0.7px solid #72499b;
+  border: 0.7px solid ${p => p.theme.colors.text};
   border-radius: 7px;
 
-  font-family: 'Cormorant';
+  font-family: ${p => p.theme.fonts.main};
   font-style: italic;
   font-weight: 400;
   font-size: 15px;
   line-height: 1.57;
   letter-spacing: 0.01em;
 
-  color: #72499b;
+  color: ${p => p.theme.colors.text};
 
   margin-bottom: 3px;
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    height: 78px;
+    font-size: 29px;
+    margin-bottom: 6px;
+    border: 1px solid ${p => p.theme.colors.text};
+    border-radius: 13px;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    height: 75px;
+    font-size: 30px;
+    line-height: 1.13;
+  }
 `;
 
 export const KarmaElementInfoTitle = styled.p`
   display: flex;
   align-items: center;
 
-  font-family: 'Cormorant';
+  font-family: ${p => p.theme.fonts.main};
   font-style: italic;
   font-weight: 400;
   font-size: 15px;
@@ -40,8 +52,15 @@ export const KarmaElementInfoTitle = styled.p`
 
   letter-spacing: 0.01em;
 
-  color: #72499b;
+  color: ${p => p.theme.colors.text};
   height: 100%;
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    font-size: 29px;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    font-size: 26px;
+    line-height: 1.12;
+  }
   ${flexbox}
   ${border}
   ${space}
@@ -53,17 +72,34 @@ export const ElemenInfoList = styled.ul`
   border: 0.5px solid rgba(114, 73, 155, 0.7);
   border-radius: 12px;
   margin-bottom: 4px;
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    border: 1px solid rgba(114, 73, 155, 0.7);
+    border-radius: 23px;
+    margin-bottom: 7px;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    border-radius: 17px;
+    margin-bottom: 0px;
+  }
 `;
+
 export const ElemenInfoItem = styled.li`
   display: flex;
   align-items: center;
   height: 28px;
   border-bottom: 0.6px solid rgba(144, 113, 175, 0.7);
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    height: 52px;
+    border-bottom: 1px solid rgba(144, 113, 175, 0.7);
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    height: 42px;
+  }
   ${border}
 `;
 
 export const KarmaListInfoText = styled(KarmaElementInfoTitle)`
-  font-family: 'Bona Nova';
+  font-family: ${p => p.theme.fonts.bona};
   font-style: normal;
   font-weight: 400;
   font-size: 11px;
@@ -71,7 +107,13 @@ export const KarmaListInfoText = styled(KarmaElementInfoTitle)`
 
   letter-spacing: 0.01em;
 
-  color: #000000;
-
+  color: ${p => p.theme.colors.secondText};
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    font-size: 22px;
+    line-height: 1.18;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    font-size: 16px;
+  }
   ${typography}
 `;

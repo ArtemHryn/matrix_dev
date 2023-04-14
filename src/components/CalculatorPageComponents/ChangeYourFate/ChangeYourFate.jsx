@@ -48,7 +48,7 @@ export const ChangeYourFate = () => {
             </Title>
             <AssistanseText>
               Я буду рада стать твоим проводником на прекрасном пути
-              транформации.
+              трансформации.
             </AssistanseText>
             <ConsultationBtn to="/" state={{ from: '4methods' }}>
               Записаться на консультацию

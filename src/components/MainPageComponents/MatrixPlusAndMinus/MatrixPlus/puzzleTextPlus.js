@@ -60,7 +60,7 @@ const puzzlesTextPlus = [
     maxWidthDesc: '160px',
   },
   {
-    text: 'выстраиваешь гаромничные отношения',
+    text: 'выстраиваешь гармоничные отношения',
     xm: '188px',
     ym: '346px',
     xt: '288px',

@@ -14,7 +14,7 @@ export const ConsultationWay = () => {
         <ConsultationList>
           <li>
             <ConsultationText>
-              Индивидуальный подход к каждой душе и её жизенным проблемам
+              Индивидуальный подход к каждой душе и её жизненным проблемам
             </ConsultationText>
           </li>
           <li>

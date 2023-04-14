@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import { Header } from 'components/MainPageComponents/Header/Header';
 import { Hero } from 'components/CalculatorPageComponents/Hero/Hero';
@@ -21,6 +21,10 @@ const Calculator = () => {
   const [name, setName] = useState('');
   const [matrixData, setMatrixData] = useState({});
   const [matrixType, setMatrixType] = useState('fateMatrix');
+
+  useEffect(() => {
+    document.title = 'Calculator';
+  }, []);
 
   return (
     <MatrixContext.Provider

@@ -90,7 +90,7 @@ export const Author = () => {
                 loading="lazy"
               />
               <AboutAuthorDesc>
-                Получила магистрерскую степень по психологии в Таврическом
+                Получила магистерскую степень по психологии в Таврическом
                 национальном университете имени В. И. Вернадского
               </AboutAuthorDesc>
             </AboutAuthorListElement>

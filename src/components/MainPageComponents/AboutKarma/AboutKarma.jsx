@@ -104,7 +104,7 @@ export const AboutKarma = () => {
         </Box>
         <HandsContainer ref={ref}>
           <TextNearHands>
-            Мысли, слова, поступки - это всё действия, которые мы совершам
+            Мысли, слова, поступки - это всё действия, которые мы совершаем
             ежедневно.
           </TextNearHands>
 

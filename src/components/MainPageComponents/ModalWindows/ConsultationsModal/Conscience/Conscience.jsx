@@ -38,9 +38,7 @@ export const Conscience = ({ price }) => {
           <Text mb="25px">
             Данный расчёт показывает полный сценарий ситуаций в жизни человека и
             кармические истории, которые прорабатываются. В итоге человек
-            получает алмазную огранку матрицы, то есть защиту судьбы. Включает в
-            себя большое количество практической и ритуальной работы. Процесс
-            исцеления может проходить через обострение.
+            получает алмазную огранку матрицы, то есть защиту судьбы.
           </Text>
           <Text>Входят расчет таких матриц:</Text>
           <List>
@@ -74,16 +72,16 @@ export const Conscience = ({ price }) => {
                 Как проходит консультация?
               </HowIsGoingConsultation>
               <Text mb={['20px', '0px']} width={[null, '320px']}>
-                видеовстреча 90 минут + трансформация
+                Видеовстреча 90 минут + трансформация
               </Text>
             </Box>
-            <Box display={[null, null, 'flex']} flexDirection='column'>
-              <AdditionalInfo mb='15px'>
+            <Box display={[null, null, 'flex']} flexDirection="column">
+              <AdditionalInfo mb="15px" fontSize={[null, null, '14px']}>
                 Требует минимального знакомства с базовым уровнем собственной
                 матрицы!
               </AdditionalInfo>
               <AdditionalInfo>
-                <AdditionalInfo>
+                <AdditionalInfo fontSize={[null, null, '14px']}>
                   !Включает в себя большое количество практической и ритуальной
                   работы. Процесс исцеления может проходить через обострение.
                 </AdditionalInfo>

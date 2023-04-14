@@ -19,14 +19,14 @@ export const ExpressServices = () => {
         ))}
       </ExpressServicesList>
       <AdditionalInfo>
-        Также вы можете{' '}
+        Также вы можете подарить своим близким{' '}
         <LinkToCert
           href="https://t.me/DariKarma"
           target="_blank"
           rel="noreferrer noopener"
         >
-          подарить трансформации{' '}
-        </LinkToCert>
+          сертификат
+        </LinkToCert>{' '}
         на любую услугу.
       </AdditionalInfo>
     </Box>

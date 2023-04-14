@@ -93,7 +93,7 @@ export const Awareness = () => {
                 Как проходит консультация?
               </HowIsGoingConsultation>
               <Text mb={['20px', '0px', '20px']} width={[null, '220px']}>
-                видеовстреча 2 - 3 часа + трансформация от 60 дней
+                Видеовстреча 2 - 3 часа + трансформация от 60 дней
               </Text>
             </Box>
             <AdditionalInfo>

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { layout, space } from 'styled-system';
+import { layout, space, typography } from 'styled-system';
 
 export const MainTitle = styled.h3`
   font-family: ${p => p.theme.fonts.main};
@@ -90,7 +90,8 @@ export const AdditionalInfo = styled.p`
   letter-spacing: 0.03em;
 
   color: rgba(0, 0, 0, 0.8);
-${space}
+  ${space}
+  ${typography}
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     max-width: 325px;
   }

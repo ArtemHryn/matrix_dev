@@ -41,7 +41,7 @@ const DataByDate = ({
           </FlipButton>
         )}
 
-        <BoxTitle>Вввод данных</BoxTitle>
+        <BoxTitle>Ввод данных</BoxTitle>
         <Input
           type="text"
           name="name"

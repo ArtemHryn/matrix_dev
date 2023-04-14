@@ -37,7 +37,7 @@ export const MatrixPlusAndMinus = () => {
           pt={[null, null, '30px']}
           flexDirection={[null, null, 'column']}
         >
-          <Title>Матрица в минусе</Title>
+          <Title>{isChecked ? 'Матрица в плюсе' : 'Матрица в минусе'}</Title>
           <Box
             display={['none', 'flex']}
             alignItems={[null, 'center', 'flex-start']}

@@ -7,23 +7,23 @@ import {
   KarmaListInfoText,
 } from '../../KarmaList.styled';
 
-const KarmaElementInfo = ({ infoEl }) => {
+const KarmaElementInfo = ({ infoEl, mr }) => {
   const { type, energyInfo } = infoEl;
   return (
-    <li>
+    <Box as="li" flex="2" mr={mr}>
       <Box
         display="flex"
         bg="rgba(255, 255, 255, 0.3)"
-        border={['0.5px solid #72499B']}
-        borderRadius={['7px']}
-        height="35px"
+        border={['0.5px solid #72499B', '1px solid #72499B']}
+        borderRadius={['7px', '14px']}
+        height={['35px', '67px']}
         alignItems="center"
-        mb={['3px']}
+        mb={['3px', '5px']}
       >
         <KarmaElementInfoTitle
           flex="3"
-          borderRight={['0.5px solid #72499B']}
-          pl={['15px']}
+          borderRight={['0.5px solid #72499B', '1px solid #72499B']}
+          pl={['15px', '25px']}
         >
           {type}
         </KarmaElementInfoTitle>
@@ -35,28 +35,29 @@ const KarmaElementInfo = ({ infoEl }) => {
         {energyInfo.map((el, index) => (
           <ElemenInfoItem
             key={el.name}
-            border={index === energyInfo.length - 1 ? 'none' : null}
+            border={
+              index === energyInfo.length - 1 ? ['none', 'none', 'none'] : null
+            }
           >
             <KarmaListInfoText
               flex="3"
-              borderRight={['0.5px solid #72499B']}
-              pl={['15px']}
+              borderRight={['0.5px solid #72499B', '1px solid #72499B']}
+              pl={['15px', '25px']}
             >
               {el.name}
             </KarmaListInfoText>
             <KarmaListInfoText
               flex="1"
               justifyContent="center"
-              fontWeight="700"
               fontFamily="digits"
-              fontSize="10px"
+              fontSize={['12px', '26px', '18px']}
             >
               {el.energy}
             </KarmaListInfoText>
           </ElemenInfoItem>
         ))}
       </ElemenInfoList>
-    </li>
+    </Box>
   );
 };
 

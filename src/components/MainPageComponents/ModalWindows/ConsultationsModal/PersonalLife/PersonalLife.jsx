@@ -65,7 +65,7 @@ export const PersonalLife = ({ price }) => {
                 Как проходит консультация?
               </HowIsGoingConsultation>
               <Text mb={['20px', '0px']} width={[null, '420px']}>
-                видеовстреча 60 минут + трансформация 1 блок
+                Видеовстреча 60 минут + трансформация 1 блок
               </Text>
             </Box>
           </Box>
