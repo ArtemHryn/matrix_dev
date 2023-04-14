@@ -1,5 +1,5 @@
-import { Navigate, useLocation, useNavigate } from 'react-router-dom';
-import React, { lazy, Suspense, useEffect } from 'react';
+import { Navigate, useLocation } from 'react-router-dom';
+import React, { lazy, Suspense } from 'react';
 
 import { Box } from './Box';
 import { Route, Routes } from 'react-router-dom';
@@ -12,10 +12,7 @@ const Calculator = lazy(() => import('pages/Calculator'));
 
 export const App = () => {
   const location = useLocation();
-  const navigation = useNavigate();
-  useEffect(() => {
-    navigation(location.pathname);
-  }, [location.pathname, navigation]);
+
   return (
     <Box m="0 auto">
       <ScrollToTop />
