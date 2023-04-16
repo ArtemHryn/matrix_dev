@@ -16,19 +16,19 @@ import {
   YourDarina,
 } from './CustomerReviewers.styled';
 import { Box } from 'components/Box';
-import feedback1 from 'images/customerReviewers/1.jpg';
-import feedback2 from 'images/customerReviewers/2.jpg';
-import feedback3 from 'images/customerReviewers/3.jpg';
-import feedback4 from 'images/customerReviewers/4.jpg';
-import feedback5 from 'images/customerReviewers/5.jpg';
-import feedback6 from 'images/customerReviewers/6.jpg';
-import feedback7 from 'images/customerReviewers/7.jpg';
-import feedback8 from 'images/customerReviewers/8.jpg';
-import feedback9 from 'images/customerReviewers/9.jpg';
-import feedback10 from 'images/customerReviewers/10.jpg';
-import feedback11 from 'images/customerReviewers/11.jpg';
-import feedback12 from 'images/customerReviewers/12.jpg';
-import feedback13 from 'images/customerReviewers/13.jpg';
+import feedback1 from 'images/customerReviewers/1.webp';
+import feedback2 from 'images/customerReviewers/2.webp';
+import feedback3 from 'images/customerReviewers/3.webp';
+import feedback4 from 'images/customerReviewers/4.webp';
+import feedback5 from 'images/customerReviewers/5.webp';
+import feedback6 from 'images/customerReviewers/6.webp';
+import feedback7 from 'images/customerReviewers/7.webp';
+import feedback8 from 'images/customerReviewers/8.webp';
+import feedback9 from 'images/customerReviewers/9.webp';
+import feedback10 from 'images/customerReviewers/10.webp';
+import feedback11 from 'images/customerReviewers/11.webp';
+import feedback12 from 'images/customerReviewers/12.webp';
+import feedback13 from 'images/customerReviewers/13.webp';
 import goldenSeparator from 'images/customerReviewers/goldenSeparator.png';
 import { ReactComponent as HeardIcon } from 'images/customerReviewers/heard.svg';
 
@@ -57,15 +57,15 @@ export const CustomerReviewers = () => {
   }, [width]);
 
   return (
-    <Box as="section" py={['40px', '40px', '90px']} id="feedback">
+    <Box as="section" py={["40px", "40px", "90px"]} id="feedback">
       <Box
-        maxWidth={['400px', '768px', '1440px']}
-        px={['60px', '33px', '100px']}
+        maxWidth={["400px", "768px", "1440px"]}
+        px={["60px", "33px", "100px"]}
         m="0 auto"
         ref={ref}
       >
         <Box
-          display={[null, 'flex', 'flex']}
+          display={[null, "flex", "flex"]}
           alignItems="center"
           justifyContent="space-between"
         >
@@ -78,7 +78,7 @@ export const CustomerReviewers = () => {
           ваша Дарина <HeardIcon />
         </YourDarina>
 
-        <Box width={[null, '550px', '100%']} m='0 auto'>
+        <Box width={[null, "550px", "100%"]} m="0 auto">
           <Swiper
             slidesPerView={swiperStyleNumber}
             autoplay={true}
@@ -94,44 +94,44 @@ export const CustomerReviewers = () => {
             ]}
           >
             <SwiperSlide>
-              <Cont src={feedback13} alt="feedback" loading="lazy" />
+              <Cont src={feedback13} alt="Отзыв Дарина Дупак" loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <Cont src={feedback1} alt="feedback" loading="lazy" />
+              <Cont src={feedback1} alt="Отзыв Дарина Дупак" loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <Cont src={feedback2} alt="feedback" loading="lazy" />
+              <Cont src={feedback2} alt="Отзыв Дарина Дупак" loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <Cont src={feedback12} alt="feedback" loading="lazy" />
+              <Cont src={feedback12} alt="Отзыв Дарина Дупак" loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <Cont src={feedback3} alt="feedback" loading="lazy" />
+              <Cont src={feedback3} alt="Отзыв Дарина Дупак" loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <Cont src={feedback4} alt="feedback" loading="lazy" />
+              <Cont src={feedback4} alt="Отзыв Дарина Дупак" loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <Cont src={feedback6} alt="feedback" loading="lazy" />
+              <Cont src={feedback6} alt="Отзыв Дарина Дупак" loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <Cont src={feedback5} alt="feedback" loading="lazy" />
+              <Cont src={feedback5} alt="Отзыв Дарина Дупак" loading="lazy" />
             </SwiperSlide>
 
             <SwiperSlide>
-              <Cont src={feedback7} alt="feedback" loading="lazy" />
+              <Cont src={feedback7} alt="Отзыв Дарина Дупак" loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <Cont src={feedback8} alt="feedback" loading="lazy" />
+              <Cont src={feedback8} alt="Отзыв Дарина Дупак" loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <Cont src={feedback9} alt="feedback" loading="lazy" />
+              <Cont src={feedback9} alt="Отзыв Дарина Дупак" loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <Cont src={feedback10} alt="feedback" loading="lazy" />
+              <Cont src={feedback10} alt="Отзыв Дарина Дупак" loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <Cont src={feedback11} alt="feedback" loading="lazy" />
+              <Cont src={feedback11} alt="Отзыв Дарина Дупак" loading="lazy" />
             </SwiperSlide>
           </Swiper>
         </Box>

@@ -4,12 +4,14 @@ import { Header } from 'components/MainPageComponents/Header/Header';
 import { Hero } from 'components/CalculatorPageComponents/Hero/Hero';
 import { ChangeYourFate } from 'components/CalculatorPageComponents/ChangeYourFate/ChangeYourFate';
 import Donation from 'components/CalculatorPageComponents/Donation/Donation';
-
-import navigationListCalc from 'components/CalculatorPageComponents/navigationLisCalc';
 import Contacts from 'components/CalculatorPageComponents/Contacts/Contacts';
 import GetPDFTemplate from 'components/CalculatorPageComponents/GetPDFTemplate/GetPDFTemplate';
 import Footer from 'components/CalculatorPageComponents/Footer/Footer';
+
 import { CalcContainer } from 'components/Common/Common.styled';
+
+import navigationListCalc from 'components/CalculatorPageComponents/navigationLisCalc';
+import { content } from 'helper/content';
 
 const MatrixContext = createContext();
 export const useMatrix = () => useContext(MatrixContext);
@@ -23,7 +25,9 @@ const Calculator = () => {
   const [matrixType, setMatrixType] = useState('fateMatrix');
 
   useEffect(() => {
-    document.title = 'Calculator';
+    const metaTag = document.querySelector('meta[name="description"]');
+    document.title = 'Dari.Karma | Калькулятор Матрицы Судьбы';
+    metaTag.setAttribute('content', content);
   }, []);
 
   return (
