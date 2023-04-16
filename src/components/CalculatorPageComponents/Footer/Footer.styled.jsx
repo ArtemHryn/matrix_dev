@@ -87,6 +87,12 @@ export const NavigationLink = styled.a`
   text-transform: uppercase;
 
   color: ${p => p.theme.colors.secondText};
+  transition: all 250ms ease-in-out;
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+    color: ${p => p.theme.colors.main};
+  }
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     font-size: 18px;
     line-height: 1.22;

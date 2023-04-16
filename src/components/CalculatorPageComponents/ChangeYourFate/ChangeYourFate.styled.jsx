@@ -120,9 +120,12 @@ export const ConsultationBtn = styled(Link)`
   border-radius: 10px;
 
   color: ${p => p.theme.colors.white};
+  transition: all 250ms ease-in-out;
   &:hover {
     cursor: pointer;
+    transform: scale(1.05);
   }
+
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     margin-bottom: 30px;
     font-weight: 300;

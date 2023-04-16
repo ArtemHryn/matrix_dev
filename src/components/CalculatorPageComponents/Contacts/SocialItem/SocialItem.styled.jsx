@@ -11,6 +11,11 @@ export const SocialLink = styled.a`
   width: 66px;
   height: 39px;
   ${layout}
+  transition: all 250ms ease-in-out;
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+  }
 `;
 
 export const Info = styled.p`

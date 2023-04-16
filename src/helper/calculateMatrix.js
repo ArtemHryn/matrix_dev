@@ -83,6 +83,11 @@ export function allData(date, isGenerated) {
   data.planet = checkNum(data.social + data.spirit);
   data.insidePower = checkNum(data.center + data.center2);
 
+  data.healthTopLeft = checkNum(data.center2 + data.topLeft1);
+  data.healthTopRight = checkNum(data.center2 + data.topRight1);
+  data.healthBottomRight = checkNum(data.center2 + data.bottomRight1);
+  data.healthBottomLeft = checkNum(data.center2 + data.bottomLeft1);
+
   return data;
 }
 
@@ -198,4 +203,161 @@ export const getKarmaIssueData = info => {
     },
   ];
   return data;
+};
+
+export const getHealthInfo = info => {
+  const {
+    day,
+    month,
+    year,
+    left2,
+    left3,
+    innerLeft2,
+    center,
+    right3,
+    top2,
+    top3,
+    innerTop2,
+    bottom3,
+    bottom1,
+    topLeft1,
+    topRight1,
+    topLeft2,
+    topRight2,
+    topLeft3,
+    topRight3,
+    healthTopLeft,
+    healthTopRight,
+    center2,
+    bottomLeft3,
+    bottomRight3,
+    bottomLeft1,
+    bottomRight1,
+  } = info;
+  const personalEmotionList = [
+    checkNum(day + month),
+    checkNum(left2 + top2),
+    checkNum(left3 + top3),
+    checkNum(innerLeft2 + innerTop2),
+    checkNum(center + center),
+    checkNum(right3 + bottom3),
+    checkNum(year + bottom1),
+  ];
+
+  const integralEmotionList = [
+    checkNum(topLeft1 + topRight1),
+    checkNum(topLeft2 + topRight2),
+    checkNum(topLeft3 + topRight3),
+    checkNum(healthTopLeft + healthTopRight),
+    checkNum(center2 + center2),
+    checkNum(bottomLeft3 + bottomRight3),
+    checkNum(bottomLeft1 + bottomRight1),
+  ];
+
+  const totalPers = personalEmotionList.reduce((accum, key) => {
+    return accum + key;
+  }, 0);
+  const list = [
+    {
+      cardName: 'Личная карта здоровья',
+      columnName: ['Физика', 'Энергия', 'Эмоции'],
+      chakraList: [
+        {
+          chakraName: 'Сахасрара',
+          physics: day,
+          energy: month,
+          emotions: '20',
+          color: '#DCB9FF',
+        },
+        {
+          chakraName: 'Аджна',
+          physics: left2,
+          energy: top2,
+          emotions: '20',
+          color: '#B9C0FF',
+        },
+        {
+          chakraName: 'Вишудха',
+          physics: left3,
+          energy: top3,
+          emotions: '20',
+          color: '#C1F4FF',
+        },
+        {
+          chakraName: 'Анахата',
+          physics: innerLeft2,
+          energy: innerTop2,
+          emotions: '20',
+          color: '#C5F1D7',
+        },
+        {
+          chakraName: 'Манипура',
+          physics: center,
+          energy: center,
+          emotions: '20',
+          color: '#F7F9A1',
+        },
+        {
+          chakraName: 'Свадхистана',
+          physics: right3,
+          energy: bottom3,
+          emotions: '20',
+          color: '#FCDCAC',
+        },
+        {
+          chakraName: 'Муладхара',
+          physics: year,
+          energy: bottom1,
+          emotions: '20',
+          color: '#FFB7B7',
+        },
+      ],
+      total: checkNum(totalPers),
+    },
+    {
+      cardName: 'Целостная карта здоровья',
+      columnName: ['Личный', 'Родовой', 'Исцеляющий'],
+      chakraList: [
+        {
+          chakraName: 'Сахасрара',
+          color: '#DCB9FF',
+        },
+        {
+          chakraName: 'Аджна',
+          color: '#B9C0FF',
+        },
+        {
+          chakraName: 'Вишудха',
+          color: '#C1F4FF',
+        },
+        {
+          chakraName: 'Анахата',
+          color: '#C5F1D7',
+        },
+        {
+          chakraName: 'Манипура',
+          color: '#F7F9A1',
+        },
+        {
+          chakraName: 'Свадхистана',
+          color: '#FCDCAC',
+        },
+        {
+          chakraName: 'Муладхара',
+          color: '#FFB7B7',
+        },
+      ],
+    },
+  ];
+  personalEmotionList.forEach((element, index) => {
+    list[0].chakraList[index].emotions = element;
+  });
+  list[0].chakraList.forEach((element, index) => {
+    list[1].chakraList[index].physics = element.emotions;
+    list[1].chakraList[index].energy = integralEmotionList[index];
+    list[1].chakraList[index].emotions = checkNum(
+      list[1].chakraList[index].physics + list[1].chakraList[index].energy
+    );
+  });
+  return list;
 };

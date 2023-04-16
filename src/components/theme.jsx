@@ -8,6 +8,7 @@ export const theme = {
     motivationText: '#161616',
     white: '#fff',
     third: '#494949',
+    activeBtn: '#765d90',
   },
   space: [142],
   fonts: {
@@ -15,7 +16,7 @@ export const theme = {
     title: 'Cormorant SC',
     button: 'Cormorant Infant',
     bona: 'Bona Nova',
-    digits: 'Cardo'
+    digits: 'Cardo',
   },
   fontSizes: {
     xs: '12px',
@@ -40,5 +41,8 @@ export const theme = {
     mobileModal: '380px',
     tabletModal: '718px',
     desktopModal: '1240px',
+  },
+  shadows: {
+    activeBtn: 'inset 0px 3.39488px 3.39488px rgba(0, 0, 0, 0.25)',
   },
 };

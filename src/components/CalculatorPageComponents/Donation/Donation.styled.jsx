@@ -68,6 +68,10 @@ export const DonationLink = styled.a`
   line-height: 1.23;
 
   color: ${p => p.theme.colors.main};
+  transition: all 250ms ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     width: 310px;
     height: 85px;

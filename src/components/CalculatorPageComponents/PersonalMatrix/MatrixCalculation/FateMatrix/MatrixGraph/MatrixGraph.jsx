@@ -11,8 +11,9 @@ import Right from './MatrixElements/Sides/Right';
 import Bottom from './MatrixElements/Sides/Bottom';
 import Center from './MatrixElements/Sides/Center';
 import InnerBox from './MatrixElements/Sides/InnerBox';
+import Health from './MatrixElements/Sides/Health';
 
-const MatrixGraph = ({ matrix: Matrix, hideSoul, hideInner }) => {
+const MatrixGraph = ({ matrix: Matrix, hideSoul, hideInner, hideBalance }) => {
   const { setMatrixData, isGenerated, date } = useMatrix();
   useEffect(() => {
     const result = allData(date, isGenerated);
@@ -21,7 +22,7 @@ const MatrixGraph = ({ matrix: Matrix, hideSoul, hideInner }) => {
 
   return (
     <Box>
-      <Box position="relative" width={['100%', '667px']} m="0 auto" zIndex='20'>
+      <Box position="relative" width={['100%', '667px']} m="0 auto" zIndex="20">
         <MatrixImg as={Matrix} />
         <TopElements />
         <Left />
@@ -30,8 +31,9 @@ const MatrixGraph = ({ matrix: Matrix, hideSoul, hideInner }) => {
         <Center />
 
         {!hideSoul && <SoulCrystal />}
-        <Balances />
 
+        {!hideBalance && <Balances />}
+        {hideBalance && <Health />}
         {!hideInner && <InnerBox />}
       </Box>
     </Box>
