@@ -53,7 +53,7 @@ export const SaveService = styled.p`
 
 export const DonationLink = styled.a`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   width: 200px;
   height: 50px;
@@ -66,8 +66,10 @@ export const DonationLink = styled.a`
   font-weight: 600;
   font-size: 22px;
   line-height: 1.23;
+  gap: 6px;
 
   color: ${p => p.theme.colors.main};
+  margin-bottom: 10px;
   transition: all 250ms ease-in-out;
   &:hover {
     transform: scale(1.05);
@@ -78,11 +80,10 @@ export const DonationLink = styled.a`
     font-size: 28px;
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
-    width: 340px;
-    height: 95px;
+    width: 280px;
+    height: 75px;
     font-size: 32px;
-    margin-left: auto;
-    margin-right: 375px;
+    margin: 0;
   }
 `;
 

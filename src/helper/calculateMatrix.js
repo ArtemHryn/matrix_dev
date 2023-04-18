@@ -1,3 +1,5 @@
+import { ageArcanesList } from './positionLists';
+
 export function checkNum(num) {
   if (+num > 22) {
     return String(num)
@@ -360,4 +362,93 @@ export const getHealthInfo = info => {
     );
   });
   return list;
+};
+
+export const getPeriod = info => {
+  const {
+    day,
+    topLeft1,
+    month,
+    topRight1,
+    year,
+    bottomRight1,
+    bottom1,
+    bottomLeft1,
+  } = info;
+  const elements = [];
+  const arcanes = [
+    day,
+    topLeft1,
+    month,
+    topRight1,
+    year,
+    bottomRight1,
+    bottom1,
+    bottomLeft1,
+  ];
+  let arcaneIndex = 0;
+  for (let i = 0; i < 80; i += 1.25) {
+    if (i === 0 || i % 10 === 0) {
+      elements.push({ age: i, arcane: arcanes[arcaneIndex] });
+      arcaneIndex++;
+      continue;
+    }
+    elements.push({ age: i });
+  }
+
+  elements.forEach((element, index, array) => {
+    try {
+      if (index === 60) {
+        element.arcane = checkNum(array[index - 4].arcane + array[0].arcane);
+        return;
+      }
+      if (element.age % 5 === 0 && element.age % 10 !== 0) {
+        element.arcane = checkNum(
+          array[index - 4].arcane + array[index + 4].arcane
+        );
+      }
+    } catch (error) {
+      console.log(index);
+    }
+  });
+
+  elements.forEach((element, index, array) => {
+    try {
+      if (index === 62) {
+        element.arcane = checkNum(array[index - 2].arcane + array[0].arcane);
+        return;
+      }
+      if (element.age % 2.5 === 0 && element.age % 5 !== 0) {
+        element.arcane = checkNum(
+          array[index - 2].arcane + array[index + 2].arcane
+        );
+      }
+    } catch (error) {
+      console.log(index);
+    }
+  });
+
+  elements.forEach((element, index, array) => {
+    try {
+      if (index === 63) {
+        element.arcane = checkNum(array[index - 1].arcane + array[0].arcane);
+        return;
+      }
+      if (element.age % 1.25 === 0 && element.age % 2.5 !== 0) {
+        element.arcane = checkNum(
+          array[index - 1].arcane + array[index + 1].arcane
+        );
+      }
+    } catch (error) {
+      console.log(index);
+    }
+  });
+  const ageList = elements.map((element, index) => ({
+    ...element,
+    ...ageArcanesList[index],
+    display:
+      element.age % 10 === 0 || index === 0 ? ['none', 'none', 'none'] : null,
+  }));
+
+  return ageList;
 };

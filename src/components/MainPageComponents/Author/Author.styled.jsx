@@ -134,4 +134,8 @@ export const AboutAuthorDesc = styled.p`
     font-size: 20px;
     line-height: 1.2;
   }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    width: 330px;
+    font-size: 21px;
+  }
 `;

@@ -1,7 +1,6 @@
 import { Box } from 'components/Box';
-import { intervalToDuration } from 'date-fns';
 import { useMatrix } from 'pages/Calculator';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import {
   Info,
   Key,
@@ -12,21 +11,16 @@ const gradient =
   'linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(249, 237, 255, 0.5) 100%)';
 
 const AboutCustomerDesk = () => {
-  const { name, isGenerated, date } = useMatrix();
-  const { day, month, year } = date;
-  const [age, setAge] = useState(null);
+  const {
+    name,
+    isGenerated,
+    date,
+    age: { years },
+    currentKey,
+  } = useMatrix();
 
-  useEffect(() => {
-    if (date.day && date.month && date.year) {
-      (() => {
-        const { years } = intervalToDuration({
-          start: new Date(),
-          end: new Date(year, month - 1, day),
-        });
-        setAge(years);
-      })();
-    }
-  }, [date, day, month, year]);
+  const { day, month, year } = date;
+
   return (
     <Box
       mb="10px"
@@ -55,9 +49,12 @@ const AboutCustomerDesk = () => {
           {day}.{month}.{year}
         </NameDate>
       </Box>
-      <Box display="flex" justifyContent="center">
-        <Key fontSize={[null, null, '20px']}>
-          Возраст: <Info fontSize={[null, null, '17px']}>{age}</Info>
+      <Box display="flex" justifyContent="space-evenly">
+        <Key>
+          Возраст: <Info fontSize={[null, null, '17px']}>{years}</Info>
+        </Key>
+        <Key>
+          Период: <Info fontSize={[null, null, '17px']}>{currentKey}</Info>
         </Key>
       </Box>
     </Box>

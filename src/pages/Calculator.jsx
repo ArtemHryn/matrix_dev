@@ -23,6 +23,9 @@ const Calculator = () => {
   const [name, setName] = useState('');
   const [matrixData, setMatrixData] = useState({});
   const [matrixType, setMatrixType] = useState('fateMatrix');
+  const [ageList, setAgeList] = useState(null);
+  const [age, setAge] = useState({});
+  const [currentKey, setCurrentKey] = useState('');
 
   useEffect(() => {
     const metaTag = document.querySelector('meta[name="description"]');
@@ -45,6 +48,12 @@ const Calculator = () => {
         setMatrixData,
         matrixType,
         setMatrixType,
+        ageList,
+        setAgeList,
+        age,
+        setAge,
+        currentKey,
+        setCurrentKey,
       }}
     >
       <CalcContainer>

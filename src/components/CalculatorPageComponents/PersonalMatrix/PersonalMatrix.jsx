@@ -7,14 +7,28 @@ import FateMatrix from './MatrixCalculation/FateMatrix/FateMatrix';
 import KarmaIssues from './MatrixCalculation/KarmaIssues/KarmaIssues';
 import HealthMatrix from './MatrixCalculation/HealthMatrix/HealthMatrix';
 import PeriodMatrix from './MatrixCalculation/PeriodMatrix/PeriodMatrix';
+import { intervalToDuration } from 'date-fns';
 
 const PersonalMatrix = () => {
-  const { showMatrix, matrixType } = useMatrix();
+  const { showMatrix, matrixType, date, setAge } = useMatrix();
+  const { day, month, year } = date;
 
   useEffect(() => {
     const section = document.getElementById(`personal`);
     section.scrollIntoView({ behavior: 'smooth' });
   }, []);
+
+  useEffect(() => {
+    if (date.day && date.month && date.year) {
+      (() => {
+        const { years, months } = intervalToDuration({
+          start: new Date(),
+          end: new Date(year, month - 1, day),
+        });
+        setAge({ years, months });
+      })();
+    }
+  }, [date, day, month, setAge, year]);
 
   const getMatrixComponent = () => {
     switch (matrixType) {

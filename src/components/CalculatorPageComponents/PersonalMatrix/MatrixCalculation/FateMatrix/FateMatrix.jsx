@@ -12,9 +12,7 @@ const FateMatrix = () => {
 
   return (
     <>
-      {!isGenerated && (
-        <AboutCustomer display={[null, null, 'none']} mb={['50px', '70px']} />
-      )}
+      {!isGenerated && <AboutCustomer />}
       <Box
         m="0 auto"
         mb={['50px', '70px', '0px']}
@@ -22,7 +20,7 @@ const FateMatrix = () => {
         alignItems="center"
         justifyContent="space-evenly"
       >
-        <MatrixGraph matrix={Matrix}  />
+        <MatrixGraph matrix={Matrix} />
         <AssignmentTableDesktop />
       </Box>
       <AssignmentTabledMobTabled />

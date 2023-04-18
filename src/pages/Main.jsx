@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Box } from 'components/Box';
 import { AboutKarma } from 'components/MainPageComponents/AboutKarma/AboutKarma';
 import { Author } from 'components/MainPageComponents/Author/Author';
@@ -11,11 +12,10 @@ import { ServicesAndPrice } from 'components/MainPageComponents/ServicesAndPrice
 import { WaysToTransformation } from 'components/MainPageComponents/WaysToTransformation/WaysToTransformation';
 import { WhatIsMatrix } from 'components/MainPageComponents/WhatIsMatrix/WhatIsMatrix';
 import { WhatPeopleAsk } from 'components/MainPageComponents/WhatPeopleAsk/WhatPeopleAsk';
-import backgroundFooterImage from 'images/backgroundPlanet.png';
+import backgroundFooterImage from 'images/backgroundPlanet.webp';
 import { MatrixPlusAndMinus } from 'components/MainPageComponents/MatrixPlusAndMinus/MatrixPlusAndMinus';
 import { Header } from 'components/MainPageComponents/Header/Header';
 import navigationList from 'components/MainPageComponents/Header/navigationList';
-import { useLocation, useNavigate } from 'react-router-dom';
 
 const imgLink = `url(${backgroundFooterImage})`;
 

@@ -1,7 +1,7 @@
-import personalMatrix from 'images/ServicesAndPrice/personalMatrix.png';
-import awareness from 'images/ServicesAndPrice/awareness.png';
-import prosperity from 'images/ServicesAndPrice/prosperity.png';
-import familyTree from 'images/ServicesAndPrice/familyTree.png';
+import personalMatrix from 'images/ServicesAndPrice/personalMatrix.webp';
+import awareness from 'images/ServicesAndPrice/awareness.webp';
+import prosperity from 'images/ServicesAndPrice/prosperity.webp';
+import familyTree from 'images/ServicesAndPrice/familyTree.webp';
 import { ServiceCard } from './ServiceCard/ServiceCard';
 import { CardList } from './DeepElaboration.styled';
 import {

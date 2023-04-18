@@ -31,6 +31,10 @@ export const Key = styled.p`
     font-size: 27px;
     line-height: 1.19;
   }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    font-size: 19px;
+
+  }
   ${typography}
 `;
 

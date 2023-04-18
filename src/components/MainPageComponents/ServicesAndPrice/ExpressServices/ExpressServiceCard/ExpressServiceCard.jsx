@@ -1,10 +1,18 @@
-import { ModalLayout } from "components/MainPageComponents/ModalWindows/ModalLayout";
-import { ModalTeamplate } from "components/MainPageComponents/ModalWindows/ModalTemplate/ModalTemplate";
-import { AnimatePresence } from "framer-motion";
-import { useState } from "react";
-import { DetailsContainer, ExpressServiceCardElement, ExpressServiceCardText, Img, ShowDetailsButton } from "./ExpressServiceCard.styled"
+import { ModalLayout } from 'components/MainPageComponents/ModalWindows/ModalLayout';
+import { ModalTeamplate } from 'components/MainPageComponents/ModalWindows/ModalTemplate/ModalTemplate';
+import { AnimatePresence } from 'framer-motion';
+import { useState } from 'react';
+import {
+  DetailsContainer,
+  ExpressServiceCardElement,
+  ExpressServiceCardText,
+  Img,
+  ShowDetailsButton,
+} from './ExpressServiceCard.styled';
 
-export const ExpressServiceCard = ({card:{ img, text, imgTab, imgDesc, price, info }}) => {
+export const ExpressServiceCard = ({
+  card: { img, text, imgTab, imgDesc, price, info },
+}) => {
   const [showDetails, setShowDetails] = useState(false);
   const [showModal, setShowModal] = useState(false);
 
@@ -16,7 +24,7 @@ export const ExpressServiceCard = ({card:{ img, text, imgTab, imgDesc, price, in
       <picture>
         <source srcSet={imgDesc} media="(min-width: 1440px)" />
         <source srcSet={imgTab} media="(min-width: 768px)" />
-        <Img srcSet={img} alt="card" loading="lazy" />
+        <Img srcSet={img} alt={text} loading="lazy" />
       </picture>
 
       <ExpressServiceCardText>{text}</ExpressServiceCardText>

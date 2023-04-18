@@ -42,7 +42,7 @@ const DataByNineDigits = ({ isFlipped, setIsFlipped, register, setValue }) => {
           <FlippToFrontBtn />
         </FlipButton>
       )}
-      <BoxTitle>Вввод данных</BoxTitle>
+      <BoxTitle>Ввод данных</BoxTitle>
       <DataList>
         {table.map(({ name }) => (
           <li key={name}>

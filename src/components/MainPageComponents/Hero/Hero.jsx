@@ -41,7 +41,7 @@ export const MainHero = () => {
           <picture>
             <source srcSet={dariPhotoTab} media="(min-width: 768px)" />
             <source srcSet={dariPhoto} />
-            <Image srcSet={dariPhoto} alt="Darina" />
+            <Image srcSet={dariPhoto} alt="Дарина Дупак" />
           </picture>
           <Box display={[null, 'flex', 'flex']}>
             <ServicesLink
@@ -57,7 +57,7 @@ export const MainHero = () => {
         <Box
           as="img"
           src={dariPhotoDesk}
-          alt="Darina"
+          alt="Дарина Дупак"
           width="624"
           display={['none', 'none', 'block']}
         />

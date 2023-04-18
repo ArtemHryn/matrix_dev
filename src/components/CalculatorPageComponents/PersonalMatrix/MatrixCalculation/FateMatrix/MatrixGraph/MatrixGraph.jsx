@@ -3,7 +3,7 @@ import { Box } from 'components/Box';
 import { MatrixImg } from './MatrixGraph.styled';
 import TopElements from './MatrixElements/Sides/TopElements';
 import { useMatrix } from 'pages/Calculator';
-import { allData } from 'helper/calculateMatrix';
+import { allData, getPeriod } from 'helper/calculateMatrix';
 import SoulCrystal from './MatrixElements/Sides/SoulCrystal';
 import Balances from './MatrixElements/Sides/Balances';
 import Left from './MatrixElements/Sides/Left';
@@ -12,13 +12,22 @@ import Bottom from './MatrixElements/Sides/Bottom';
 import Center from './MatrixElements/Sides/Center';
 import InnerBox from './MatrixElements/Sides/InnerBox';
 import Health from './MatrixElements/Sides/Health';
+import PeriodCircle from '../../PeriodMatrix/PeriodCircle/PeriodCircle';
 
-const MatrixGraph = ({ matrix: Matrix, hideSoul, hideInner, hideBalance }) => {
-  const { setMatrixData, isGenerated, date } = useMatrix();
+const MatrixGraph = ({
+  matrix: Matrix,
+  hideSoul,
+  hideInner,
+  hideBalance,
+  showPeriodCircle,
+}) => {
+  const { setMatrixData, isGenerated, date, setAgeList } = useMatrix();
   useEffect(() => {
     const result = allData(date, isGenerated);
+    const ageResult = getPeriod(result);
     setMatrixData(result);
-  }, [date, isGenerated, setMatrixData]);
+    setAgeList(ageResult);
+  }, [date, isGenerated, setAgeList, setMatrixData]);
 
   return (
     <Box>
@@ -35,6 +44,7 @@ const MatrixGraph = ({ matrix: Matrix, hideSoul, hideInner, hideBalance }) => {
         {!hideBalance && <Balances />}
         {hideBalance && <Health />}
         {!hideInner && <InnerBox />}
+        {showPeriodCircle && <PeriodCircle />}
       </Box>
     </Box>
   );

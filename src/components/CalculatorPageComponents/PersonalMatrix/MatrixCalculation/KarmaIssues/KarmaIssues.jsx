@@ -15,15 +15,13 @@ const KarmaIssues = () => {
   const [list, setList] = useState([]);
 
   useEffect(() => {
-    const result = getKarmaIssueData(matrixData);
-    setList(result);
+    const karmaIssueResult = getKarmaIssueData(matrixData);
+    setList(karmaIssueResult);
   }, [matrixData]);
 
   return (
     <>
-      {!isGenerated && (
-        <AboutCustomer display={[null, null, 'none']} mb={['50px', '70px']} />
-      )}
+      {!isGenerated && <AboutCustomer />}
       <Box
         m="0 auto"
         mb={['50px', '70px', '68px']}

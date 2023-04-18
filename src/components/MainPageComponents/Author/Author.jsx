@@ -30,7 +30,7 @@ export const Author = () => {
         <Box
           as="img"
           src={authorPhotoDesc}
-          alt="Author"
+          alt="Дарина Дупак"
           display={['none', 'none', 'block']}
           width="460px"
           height="707px"
@@ -47,7 +47,7 @@ export const Author = () => {
           <picture>
             <source srcSet={authorPhotoTab} media="(min-width: 768px)" />
             <source srcSet={authorPhoto} />
-            <AuthorImg srcSet={authorPhoto} alt="Darina" loading="lazy" />
+            <AuthorImg srcSet={authorPhoto} alt="Дарина Дупак" loading="lazy" />
           </picture>
           <AboutAuthor>
             <AboutAuthorListElement>

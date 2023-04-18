@@ -37,7 +37,7 @@ export const ConsultaionCard = ({
         <source srcSet={imgDesc} media="(min-width: 1440px)" />
         <source srcSet={imgtab} media="(min-width: 768px)" />
         <source srcSet={img} />
-        <img src={img} alt="consultation card" loading="lazy" />
+        <img src={img} alt={text} loading="lazy" />
         <ConcultationCardText>{text}</ConcultationCardText>
       </picture>
       <AnimatePresence onExitComplete={() => null}>

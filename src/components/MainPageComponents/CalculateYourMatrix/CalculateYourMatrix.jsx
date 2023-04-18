@@ -1,7 +1,7 @@
 import { Box } from 'components/Box';
-import phones from 'images/CalculateYourMatrix/Phones.png';
-import phonesTab from 'images/CalculateYourMatrix/phonesTab.png';
-import phonesDesc from 'images/CalculateYourMatrix/desktopPhone.png';
+import phones from 'images/CalculateYourMatrix/Phones.webp';
+import phonesTab from 'images/CalculateYourMatrix/phonesTab.webp';
+import phonesDesc from 'images/CalculateYourMatrix/desktopPhone.webp';
 import {
   AboutCalculator,
   DescTopImg,

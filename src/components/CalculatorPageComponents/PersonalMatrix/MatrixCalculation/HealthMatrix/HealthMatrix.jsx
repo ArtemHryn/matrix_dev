@@ -15,7 +15,7 @@ const HealthMatrix = () => {
   return (
     <>
       {!isGenerated && (
-        <AboutCustomer display={[null, null, 'none']} mb={['50px', '70px']} />
+        <AboutCustomer  />
       )}
       <Box
         m="0 auto"
