@@ -11,10 +11,13 @@ const TableTemplate = ({ main, additional, age: customerAge }) => {
   const [currentArcane, setCurrentArcane] = useState(null);
 
   useEffect(() => {
-    const result = main.findIndex(
-      element => element.age > customerAge.years + customerAge.months / 12
-    );
-    setCurrentArcane(result);
+    const fullAge = customerAge.years + customerAge.months / 12;
+    if (fullAge > 39 && fullAge < 40) {
+      setCurrentArcane(main.length - 1);
+      return;
+    }
+    const result = main.findIndex(element => element.age > fullAge);
+    setCurrentArcane(result - 1);
   }, [customerAge, main]);
 
   return (
@@ -24,7 +27,7 @@ const TableTemplate = ({ main, additional, age: customerAge }) => {
           if (index < 16) {
             return (
               <AgeColumnItem
-                className={index === currentArcane - 1 && 'active'}
+                className={index === currentArcane && 'active'}
                 bg={index % 2 === 0 && '#b49bd145'}
                 key={age}
               >
@@ -51,7 +54,7 @@ const TableTemplate = ({ main, additional, age: customerAge }) => {
             return (
               <AgeColumnItem
                 key={age}
-                className={index === currentArcane - 1 && 'active'}
+                className={index === currentArcane && 'active'}
                 bg={index % 2 === 0 && '#b49bd145'}
               >
                 <AgeElement

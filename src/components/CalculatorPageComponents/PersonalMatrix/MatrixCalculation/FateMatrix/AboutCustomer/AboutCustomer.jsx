@@ -28,15 +28,20 @@ const AboutCustomer = () => {
     const result = ageList.findIndex(
       element => element.age > years + months / 12
     );
-    if (result < 32) {
+    const firstKey = ageList[result - 1].arcane;
+    if (result <= 32) {
       setCurrentKey(
-        `${ageList[result - 1].arcane} - ${
-          ageList[result + 31].arcane
-        } - ${checkNum(
-          ageList[result - 1].arcane + ageList[result + 31].arcane
+        `${firstKey} - ${ageList[result + 31].arcane} - ${checkNum(
+          firstKey + ageList[result + 31].arcane
         )}`
       );
+      return;
     }
+    setCurrentKey(
+      `${firstKey} - ${ageList[result - 33].arcane} - ${checkNum(
+        firstKey + ageList[result - 33].arcane
+      )}`
+    );
   }, [ageList, months, setCurrentKey, years]);
 
   return (
