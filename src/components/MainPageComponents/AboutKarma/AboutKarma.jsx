@@ -123,7 +123,7 @@ export const AboutKarma = () => {
                   alt="Darina"
                   top={['10%', '15%', '74%']}
                   left={['-20%', '10%', '8%']}
-                  width={[null, '148px', '212px']}
+                  width={['149px', '148px', '212px']}
                   loading="lazy"
                   className="animate__fadeInDown"
                 />
@@ -143,9 +143,9 @@ export const AboutKarma = () => {
                 <HandImg
                   srcSet={hands}
                   alt="Darina"
-                  bottom={['2%', '-15%', '56%']}
-                  left={['4%', '80%', '83%']}
-                  width={[null, '137px', '167px']}
+                  bottom={['3%', '-15%', '56%']}
+                  left={['0%', '80%', '83%']}
+                  width={['109px', '137px', '167px']}
                   loading="lazy"
                   className="animate__fadeInDown"
                 />
@@ -167,7 +167,7 @@ export const AboutKarma = () => {
                   alt="Darina"
                   top={['-12%', '10%', '13%']}
                   right={['-8%', '42%', '56%']}
-                  width={[null, '207px', '254px']}
+                  width={['164px', '207px', '254px']}
                   loading="lazy"
                   className="animate__fadeInDown"
                 />
@@ -189,7 +189,7 @@ export const AboutKarma = () => {
                   alt="Darina"
                   bottom={['13%', '13%', '57%']}
                   right={['-18%', '20%', '22%']}
-                  width={[null, '185px', '226px']}
+                  width={['168px', '185px', '226px']}
                   loading="lazy"
                   className="animate__fadeInDown"
                 />

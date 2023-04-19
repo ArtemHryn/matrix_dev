@@ -31,7 +31,7 @@ const Calculator = () => {
     const metaTag = document.querySelector('meta[name="description"]');
     document.title = 'Dari.Karma | Калькулятор Матрицы Судьбы';
     metaTag.setAttribute('content', content);
-  }, []);
+  }, [date]);
 
   return (
     <MatrixContext.Provider

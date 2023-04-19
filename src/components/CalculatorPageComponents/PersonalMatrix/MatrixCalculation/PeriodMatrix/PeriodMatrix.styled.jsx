@@ -50,6 +50,7 @@ export const ChangePageBtn = styled.button`
   background-color: #fff;
   border-radius: 50%;
   transition: all 250ms ease-in-out;
+  cursor: pointer;
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     width: 36px;
     height: 36px;

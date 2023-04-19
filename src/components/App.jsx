@@ -6,6 +6,7 @@ import { Route, Routes } from 'react-router-dom';
 import { Spinner } from './Spinner/Spinner';
 import PersonalMatrix from './CalculatorPageComponents/PersonalMatrix/PersonalMatrix';
 import ScrollToTop from './Common/ScrollToTop';
+import CompatibilityMatrix from './CalculatorPageComponents/CompatibilityMatrix/CompatibilityMatrix';
 
 const Main = lazy(() => import('pages/Main'));
 const Calculator = lazy(() => import('pages/Calculator'));
@@ -21,6 +22,7 @@ export const App = () => {
           <Route path="/" element={<Main />} />
           <Route path="calculator" element={<Calculator />}>
             <Route path="personal" element={<PersonalMatrix />} />
+            <Route path="compatibility" element={<CompatibilityMatrix />} />
           </Route>
           <Route path="*" element={<Navigate to="calculator" />} />
         </Routes>

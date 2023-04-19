@@ -318,7 +318,7 @@ export const getHealthInfo = info => {
     },
     {
       cardName: 'Целостная карта здоровья',
-      columnName: ['Личный', 'Родовой', 'Исцеляющий'],
+      columnName: ['Личная', 'Родовая', 'Исцеляющая'],
       chakraList: [
         {
           chakraName: 'Сахасрара',

@@ -29,6 +29,11 @@ export const SetCardTypeBtn = styled.button`
   box-shadow: 0px 3.4px 3.4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   transition: all 250ms ease-in-out;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    transform: scale(1.03);
+  }
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     width: calc((100% - 10px) / 2);
     height: 34px;
