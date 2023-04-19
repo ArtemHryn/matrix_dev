@@ -12,7 +12,8 @@ const TableTemplate = ({ main, additional, age: customerAge }) => {
 
   useEffect(() => {
     const fullAge = customerAge.years + customerAge.months / 12;
-    if (fullAge > 39 && fullAge < 40) {
+
+    if (fullAge > 38.75 && fullAge < 40 && main[main.length - 1].age < 40) {
       setCurrentArcane(main.length - 1);
       return;
     }
