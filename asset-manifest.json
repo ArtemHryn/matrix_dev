@@ -1,14 +1,15 @@
 {
   "files": {
     "main.css": "/matrix/static/css/main.b6c201a0.css",
-    "main.js": "/matrix/static/js/main.4e13184b.js",
-    "static/js/412.97b392af.chunk.js": "/matrix/static/js/412.97b392af.chunk.js",
+    "main.js": "/matrix/static/js/main.f5ff3a9e.js",
+    "static/js/412.9fcc711f.chunk.js": "/matrix/static/js/412.9fcc711f.chunk.js",
     "static/css/207.d6f89cd3.chunk.css": "/matrix/static/css/207.d6f89cd3.chunk.css",
     "static/js/207.8e8d2b87.chunk.js": "/matrix/static/js/207.8e8d2b87.chunk.js",
     "static/media/backgroundPlanet.webp": "/matrix/static/media/backgroundPlanet.57cb30f1c3380a009aa1.webp",
     "static/media/periodCircle.svg": "/matrix/static/media/periodCircle.715ff6db724d54bf2a079b1359dbf764.svg",
     "static/media/periodCard.webp": "/matrix/static/media/periodCard.3c3218af74149e957b07.webp",
     "static/media/authorPhoto.jpg": "/matrix/static/media/authorPhoto.0b6d5ca9f633e9913a88.jpg",
+    "static/media/compatibilityMatrix.svg": "/matrix/static/media/compatibilityMatrix.b126a8fa7f0e57b47dbddfc31afa5019.svg",
     "static/media/karmaMatrix.svg": "/matrix/static/media/karmaMatrix.855a33713246121beaf7585133a198d8.svg",
     "static/media/deepDrowDesk.png": "/matrix/static/media/deepDrowDesk.f5ccc383d551b3edeba1.png",
     "static/media/gameCard.webp": "/matrix/static/media/gameCard.57bd2e499fb1e41da420.webp",
@@ -122,13 +123,13 @@
     "static/media/closeModal.svg": "/matrix/static/media/closeModal.77f566a13863502e75085358a5296aff.svg",
     "static/media/menuButton.svg": "/matrix/static/media/menuButton.6543f21211fdf3fdf52f174cb0d6e241.svg",
     "main.b6c201a0.css.map": "/matrix/static/css/main.b6c201a0.css.map",
-    "main.4e13184b.js.map": "/matrix/static/js/main.4e13184b.js.map",
-    "412.97b392af.chunk.js.map": "/matrix/static/js/412.97b392af.chunk.js.map",
+    "main.f5ff3a9e.js.map": "/matrix/static/js/main.f5ff3a9e.js.map",
+    "412.9fcc711f.chunk.js.map": "/matrix/static/js/412.9fcc711f.chunk.js.map",
     "207.d6f89cd3.chunk.css.map": "/matrix/static/css/207.d6f89cd3.chunk.css.map",
     "207.8e8d2b87.chunk.js.map": "/matrix/static/js/207.8e8d2b87.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b6c201a0.css",
-    "static/js/main.4e13184b.js"
+    "static/js/main.f5ff3a9e.js"
   ]
 }
