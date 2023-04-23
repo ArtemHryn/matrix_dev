@@ -1,17 +1,19 @@
 import React, { useEffect } from 'react';
 import { Box } from 'components/Box';
 import { MatrixImg } from './MatrixGraph.styled';
-import TopElements from './MatrixElements/Sides/TopElements';
 import { useMatrix } from 'pages/Calculator';
 import { allData, getPeriod } from 'helper/calculateMatrix';
-import SoulCrystal from './MatrixElements/Sides/SoulCrystal';
-import Balances from './MatrixElements/Sides/Balances';
-import Left from './MatrixElements/Sides/Left';
-import Right from './MatrixElements/Sides/Right';
-import Bottom from './MatrixElements/Sides/Bottom';
-import Center from './MatrixElements/Sides/Center';
-import InnerBox from './MatrixElements/Sides/InnerBox';
-import Health from './MatrixElements/Sides/Health';
+import {
+  SoulCrystal,
+  Balances,
+  Left,
+  Right,
+  Bottom,
+  Center,
+  InnerBox,
+  Health,
+  TopElements,
+} from './MatrixElements/Sides';
 import PeriodCircle from '../../PeriodMatrix/PeriodCircle/PeriodCircle';
 
 const MatrixGraph = ({
@@ -21,7 +23,8 @@ const MatrixGraph = ({
   hideBalance,
   showPeriodCircle,
 }) => {
-  const { setMatrixData, isGenerated, date, setAgeList } = useMatrix();
+  const { setMatrixData, isGenerated, date, setAgeList, matrixData } =
+    useMatrix();
   useEffect(() => {
     const result = allData(date, isGenerated);
     const ageResult = getPeriod(result);
@@ -33,18 +36,18 @@ const MatrixGraph = ({
     <Box>
       <Box position="relative" width={['100%', '667px']} m="0 auto" zIndex="20">
         <MatrixImg as={Matrix} />
-        <TopElements />
-        <Left />
-        <Right />
-        <Bottom />
-        <Center />
+        <TopElements matrixData={matrixData} />
+        <Left matrixData={matrixData} />
+        <Right matrixData={matrixData} />
+        <Bottom matrixData={matrixData} />
+        <Center matrixData={matrixData} />
 
-        {!hideSoul && <SoulCrystal />}
+        {!hideSoul && <SoulCrystal matrixData={matrixData} />}
 
-        {!hideBalance && <Balances />}
-        {hideBalance && <Health />}
-        {!hideInner && <InnerBox />}
-        {showPeriodCircle && <PeriodCircle />}
+        {!hideBalance && <Balances matrixData={matrixData} />}
+        {hideBalance && <Health matrixData={matrixData} />}
+        {!hideInner && <InnerBox matrixData={matrixData} />}
+        {showPeriodCircle && <PeriodCircle matrixData={matrixData} />}
       </Box>
     </Box>
   );

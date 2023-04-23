@@ -1,10 +1,8 @@
-import { useMatrix } from 'pages/Calculator';
 import React from 'react'
 import MatrixElementsItem from '../MatrixElementsItem';
 
-const Right = () => {
-    const { matrixData } = useMatrix();
-    const { year, right2, right3 } = matrixData;
+const Right = ({ matrixData }) => {
+  const { year, right2, right3 } = matrixData;
   return (
     <>
       <MatrixElementsItem
@@ -24,6 +22,6 @@ const Right = () => {
       />
     </>
   );
-}
+};
 
 export default Right

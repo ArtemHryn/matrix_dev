@@ -1,10 +1,8 @@
-import React from 'react';
 import { Box } from 'components/Box';
 import { Element, ElementsList, Name } from './FirstTemplate.styled';
 
 const gradient =
   'linear-gradient(89.9deg, rgba(255, 255, 255, 0.7) 9.56%, rgba(251, 244, 255, 0.7) 85.28%);';
-
 
 const dotsGradient =
   'linear-gradient(to right,#9072af 10%, rgba(255, 255, 255, 0) 0%);';
@@ -22,6 +20,7 @@ const FirstTemplate = props => {
     el6,
     el7,
   } = props;
+
   return (
     <Box
       backgroundImage={gradient}

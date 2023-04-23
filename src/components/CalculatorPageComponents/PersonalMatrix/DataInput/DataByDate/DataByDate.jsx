@@ -8,6 +8,8 @@ const DataByDate = ({
   register,
   setValue,
   errors,
+  index,
+  infoErrors,
 }) => {
   const onChange = e => {
     let inputDate = e.target.value.replace(/\D/g, '');
@@ -20,8 +22,13 @@ const DataByDate = ({
     if (inputDate.length > 2) {
       inputDate = inputDate.substr(0, 2) + '.' + inputDate.substr(2);
     }
-    setValue('date', inputDate);
+    setValue(
+      `${index || index === 0 ? `info.${index}.date` : 'date'}`,
+      inputDate
+    );
   };
+  const showError = !!infoErrors && !!infoErrors[index];
+
   return (
     <>
       <FrontCard
@@ -44,24 +51,29 @@ const DataByDate = ({
         <BoxTitle>Ввод данных</BoxTitle>
         <Input
           type="text"
-          name="name"
           placeholder="Имя"
           mb={['5px']}
-          {...register('name')}
+          {...register(
+            `${index || index === 0 ? `info.${index}.name` : 'name'}`
+          )}
         />
         <Input
           type="text"
           placeholder="Дата  (10.02.2000)"
-          {...register('date', {
-            onChange: onChange,
-            required: { value: true, message: 'Введите дату' },
-            pattern: {
-              value: /^\d{2}\.\d{2}\.\d{4}$/,
-              message: 'Введите дату в формате dd.mm.yyyy',
-            },
-          })}
+          {...register(
+            `${index || index === 0 ? `info.${index}.date` : 'date'}`,
+            {
+              onChange: onChange,
+              required: { value: !isFlipped, message: 'Введите дату' },
+              pattern: {
+                value: /^\d{2}\.\d{2}\.\d{4}$/,
+                message: 'Введите дату в формате dd.mm.yyyy',
+              },
+            }
+          )}
         />
         {errors.date && <Error>{errors.date.message}</Error>}
+        {showError && <Error>{infoErrors[index].date.message}</Error>}
       </FrontCard>
     </>
   );

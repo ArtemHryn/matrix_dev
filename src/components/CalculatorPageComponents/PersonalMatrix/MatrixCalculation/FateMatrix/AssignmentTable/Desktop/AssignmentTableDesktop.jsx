@@ -4,12 +4,12 @@ import InformationTable from './InformationTable/InformationTable';
 import { useMatrix } from 'pages/Calculator';
 
 const AssignmentTableDesktop = () => {
-  const { isGenerated } = useMatrix();
+  const { isGenerated, matrixData } = useMatrix();
 
   return (
     <Box display={['none', 'none', 'block']} width="337px">
       {!isGenerated && <AboutCustomerDesk />}
-      <InformationTable />
+      <InformationTable matrixData={matrixData} />
     </Box>
   );
 };

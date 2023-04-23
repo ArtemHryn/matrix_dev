@@ -39,7 +39,7 @@ export const Input = styled.input`
   font-size: 16px;
   line-height: 1.19;
 
-  color: rgba(73, 73, 73, 0.8);
+  color: ${p => p.theme.colors.secondText};
   margin-bottom: 10px;
   ${space}
   &:focus-within {

@@ -1,9 +1,7 @@
 import React from 'react';
-import { useMatrix } from 'pages/Calculator';
 import MatrixElementsItem from '../MatrixElementsItem';
 
-const Bottom = () => {
-  const { matrixData } = useMatrix();
+const Bottom = ({ matrixData }) => {
   const {
     bottomLeft1,
     bottomLeft2,

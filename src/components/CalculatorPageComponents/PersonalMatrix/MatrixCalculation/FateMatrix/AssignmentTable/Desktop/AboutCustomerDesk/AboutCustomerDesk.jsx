@@ -53,9 +53,11 @@ const AboutCustomerDesk = () => {
         <Key>
           Возраст: <Info fontSize={[null, null, '17px']}>{years}</Info>
         </Key>
-        <Key>
-          Период: <Info fontSize={[null, null, '17px']}>{currentKey}</Info>
-        </Key>
+        {currentKey && (
+          <Key>
+            Период: <Info fontSize={[null, null, '17px']}>{currentKey}</Info>
+          </Key>
+        )}
       </Box>
     </Box>
   );

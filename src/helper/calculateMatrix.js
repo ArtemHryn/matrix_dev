@@ -136,11 +136,11 @@ export const getKarmaIssueData = info => {
             { name: 'Духовная карма рода матери', energy: topRight1 },
             {
               name: 'Сакрально-генетическая карма рода матери',
-              energy: bottomRight1,
+              energy: bottomLeft1,
             },
             {
               name: 'Сакрально-генетическая карма рода отца',
-              energy: bottomLeft1,
+              energy: bottomRight1,
             },
           ],
         },
@@ -451,4 +451,14 @@ export const getPeriod = info => {
   }));
 
   return ageList;
+};
+
+export const getCompatData = partners => {
+  const result = partners.reduce((acc, partner) => {
+    Object.entries(partner).forEach(([key, value]) => {
+      acc[key] = (acc[key] || 0) + value;
+    });
+    return acc;
+  }, {});
+  return allData(result, true);
 };

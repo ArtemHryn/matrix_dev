@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const BtnList = styled.ul`
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 8px;
   margin-bottom: 46px;
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
@@ -54,6 +55,12 @@ export const Link = styled.button`
   &:hover {
     transform: scale(1.05);
     box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+  }
+  &:disabled {
+    opacity: 0.5;
+  }
+  &:disabled:hover {
+    transform: none;
   }
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     height: 46px;

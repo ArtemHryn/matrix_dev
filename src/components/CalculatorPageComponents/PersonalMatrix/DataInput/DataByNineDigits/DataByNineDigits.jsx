@@ -1,6 +1,11 @@
 import React from 'react';
 import { BoxTitle, FlipButton } from '../DataInput.styled';
-import { BackCard, DataInput, DataList, FlippToFrontBtn } from './DataByNineDigits.styled';
+import {
+  BackCard,
+  DataInput,
+  DataList,
+  FlippToFrontBtn,
+} from './DataByNineDigits.styled';
 
 const table = [
   { name: 'topLeft1' },
@@ -14,7 +19,13 @@ const table = [
   { name: 'bottomRight1' },
 ];
 
-const DataByNineDigits = ({ isFlipped, setIsFlipped, register, setValue }) => {
+const DataByNineDigits = ({
+  isFlipped,
+  setIsFlipped,
+  register,
+  setValue,
+  index,
+}) => {
   const onChange = e => {
     const { name, value } = e.target;
     if (value > 22) {
@@ -48,10 +59,13 @@ const DataByNineDigits = ({ isFlipped, setIsFlipped, register, setValue }) => {
           <li key={name}>
             <DataInput
               type="number"
-              {...register(`${name}`, {
-                max: { value: 22 },
-                onChange: onChange,
-              })}
+              {...register(
+                `${index || index === 0 ? `info.${index}.${name}` : name}`,
+                {
+                  max: { value: 22 },
+                  onChange: onChange,
+                }
+              )}
             />
           </li>
         ))}

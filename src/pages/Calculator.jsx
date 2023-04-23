@@ -26,6 +26,7 @@ const Calculator = () => {
   const [ageList, setAgeList] = useState(null);
   const [age, setAge] = useState({});
   const [currentKey, setCurrentKey] = useState('');
+  const [partnersDate, setPartnersDate] = useState([]);
 
   useEffect(() => {
     const metaTag = document.querySelector('meta[name="description"]');
@@ -54,6 +55,8 @@ const Calculator = () => {
         setAge,
         currentKey,
         setCurrentKey,
+        partnersDate,
+        setPartnersDate,
       }}
     >
       <CalcContainer>

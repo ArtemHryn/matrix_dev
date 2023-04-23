@@ -28,7 +28,6 @@ export const ModalLayout = ({
       }
     };
     window.addEventListener('keydown', onCloseByEscape);
-    console.log();
     if (width >= 1440) {
       disableBodyScroll(modalRoot);
     }

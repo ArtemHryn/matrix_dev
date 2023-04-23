@@ -1,9 +1,7 @@
 import React from 'react';
 import MatrixElementsItem from '../MatrixElementsItem';
-import { useMatrix } from 'pages/Calculator';
 
-const Center = () => {
-  const { matrixData } = useMatrix();
+const Center = ({ matrixData }) => {
   const { center, center2 } = matrixData;
   return (
     <>

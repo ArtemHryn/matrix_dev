@@ -25,9 +25,22 @@ const AboutCustomer = () => {
     if (!ageList) {
       return;
     }
+    const totalAge = years + months / 12;
+    if (totalAge > 78.5 && totalAge <= 80) {
+      setCurrentKey(
+        `${ageList[63].arcane} - ${ageList[31].arcane} - ${checkNum(
+          ageList[63].arcane + ageList[31].arcane
+        )}`
+      );
+      return;
+    }
     const result = ageList.findIndex(
-      element => element.age > years + months / 12
+      element => element.age > totalAge
     );
+    if (result === -1) {
+      setCurrentKey(null);
+      return;
+    }
     const firstKey = ageList[result - 1].arcane;
     if (result <= 32) {
       setCurrentKey(
@@ -72,10 +85,11 @@ const AboutCustomer = () => {
               <Key>
                 Возраст: <Info>{years}</Info>{' '}
               </Key>
-
-              <Key>
-                Период: <Info>{currentKey}</Info>
-              </Key>
+              {currentKey && (
+                <Key>
+                  Период: <Info>{currentKey}</Info>
+                </Key>
+              )}
             </Box>
           </>
         )}

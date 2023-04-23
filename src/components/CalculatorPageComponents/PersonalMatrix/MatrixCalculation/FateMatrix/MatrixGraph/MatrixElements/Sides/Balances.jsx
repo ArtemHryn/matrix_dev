@@ -1,9 +1,7 @@
 import React from 'react';
 import MatrixElementsItem from '../MatrixElementsItem';
-import { useMatrix } from 'pages/Calculator';
 
-const Balances = () => {
-  const { matrixData } = useMatrix();
+const Balances = ({ matrixData }) => {
   const { innerTopLeft, innerTopRight, innerBottomLeft, innerBottomRight } =
     matrixData;
   return (

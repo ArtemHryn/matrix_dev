@@ -1,15 +1,9 @@
 import React from 'react'
-import { useMatrix } from 'pages/Calculator';
 import MatrixElementsItem from '../MatrixElementsItem';
 
-const Health = () => {
-      const { matrixData } = useMatrix();
-      const {
-        healthTopLeft,
-        healthTopRight,
-        healthBottomRight,
-        healthBottomLeft,
-      } = matrixData;
+const Health = ({ matrixData }) => {
+  const { healthTopLeft, healthTopRight, healthBottomRight, healthBottomLeft } =
+    matrixData;
   return (
     <>
       <MatrixElementsItem
@@ -34,6 +28,6 @@ const Health = () => {
       />
     </>
   );
-}
+};
 
 export default Health

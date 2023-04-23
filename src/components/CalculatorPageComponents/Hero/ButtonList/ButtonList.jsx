@@ -14,7 +14,7 @@ const list = [
   {
     name: 'СОВМЕСТИМОСТЬ',
     to: 'compatibility',
-    disabled: true,
+    disabled: false,
   },
   {
     name: 'ГЛУБИННЫЕ РАСЧЕТЫ',

@@ -1,14 +1,12 @@
-import React from 'react';
 import { Box } from 'components/Box';
 import FirstTemplate from './FirstTemplate/FirstTemplate';
-import { useMatrix } from 'pages/Calculator';
 import SecondTemplate from './SecondTemplate/SecondTemplate';
+import { InformationTableTitle } from './InformationTable.styled';
 
 const gradient =
   'linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(249, 237, 255, 0.5) 100%)';
 
-const InformationTable = () => {
-  const { matrixData } = useMatrix();
+const InformationTable = ({ matrixData, title = null, display = null }) => {
   const {
     bottom1,
     month,
@@ -31,6 +29,10 @@ const InformationTable = () => {
     insidePower,
   } = matrixData;
 
+
+  if (isNaN(center) || topLeft1) {
+    return null;
+  }
   return (
     <Box
       px="35px"
@@ -38,7 +40,10 @@ const InformationTable = () => {
       backgroundImage={gradient}
       border="0.6px solid #72499B"
       borderRadius="18px"
+      display={display}
+      minWidth="337px"
     >
+      {title && <InformationTableTitle>{title}</InformationTableTitle>}
       <FirstTemplate
         name1={'Личное предназначение'}
         name2={'Небо'}
