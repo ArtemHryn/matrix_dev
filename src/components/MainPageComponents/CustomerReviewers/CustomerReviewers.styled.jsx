@@ -59,10 +59,14 @@ export const YourDarina = styled.h5`
 
 export const Cont = styled.img`
   border-radius: 10px;
-  max-width: 100%;
-
+  width: 270px;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    width: 450px;
+  }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
-    max-width: 390px;
+    width: 390px;
   }
 `;
 
@@ -73,4 +77,3 @@ export const Separator = styled.img`
     margin-top: 60px;
   }
 `;
-

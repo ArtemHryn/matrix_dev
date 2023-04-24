@@ -29,8 +29,7 @@ const InformationTable = ({ matrixData, title = null, display = null }) => {
     insidePower,
   } = matrixData;
 
-
-  if (isNaN(center) || topLeft1) {
+  if (isNaN(center) || !topLeft1) {
     return null;
   }
   return (

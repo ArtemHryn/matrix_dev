@@ -29,7 +29,6 @@ export const ChangeYourFate = () => {
           display={[null, 'flex']}
           overflow="hidden"
           mb={['25px', '29px']}
-          
         >
           <Box
             mb={['7px', '0px']}

@@ -1,7 +1,7 @@
 import { Box } from 'components/Box';
-import authorPhoto from 'images/author/authorPhoto.jpg';
-import authorPhotoTab from 'images/author/authorTab.jpg';
-import authorPhotoDesc from 'images/author/authorDesc.jpg';
+import authorPhoto from 'images/author/authorPhoto.webp';
+import authorPhotoTab from 'images/author/authorTab.webp';
+import authorPhotoDesc from 'images/author/authorDesc.webp';
 import symbol1 from 'images/author/symbol1.webp';
 import symbol2 from 'images/author/symbol2.webp';
 import symbol3 from 'images/author/symbol3.webp';

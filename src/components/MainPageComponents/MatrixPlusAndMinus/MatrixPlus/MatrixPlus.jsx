@@ -1,6 +1,6 @@
 import { Box } from 'components/Box';
-import compltedMatrix from 'images/matrixPlusAndMinus/pazzlesInPlus.png';
-import compltedMatrixTab from 'images/matrixPlusAndMinus/matrixInPlusTab.png';
+import compltedMatrix from 'images/matrixPlusAndMinus/pazzlesInPlus.webp';
+import compltedMatrixTab from 'images/matrixPlusAndMinus/matrixInPlusTab.webp';
 import {
   MatrixContainer,
   MatrixImg,

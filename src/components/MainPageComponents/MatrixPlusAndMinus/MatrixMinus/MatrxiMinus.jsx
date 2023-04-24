@@ -7,10 +7,10 @@ import {
   PuzzleText,
 } from './MatrixMinus.styled';
 import puzzlesText from './puzzlesText';
-import matrixMinus from 'images/matrixPlusAndMinus/pazzles.png';
-import matrixMinusTab from 'images/matrixPlusAndMinus/pazzlesTab.png';
-import matrixPuzzle from 'images/matrixPlusAndMinus/animatedPuzzle.png';
-import matrixPuzzleTab from 'images/matrixPlusAndMinus/animatedPuzzleTab.png';
+import matrixMinus from 'images/matrixPlusAndMinus/pazzles.webp';
+import matrixMinusTab from 'images/matrixPlusAndMinus/pazzlesTab.webp';
+import matrixPuzzle from 'images/matrixPlusAndMinus/animatedPuzzle.webp';
+import matrixPuzzleTab from 'images/matrixPlusAndMinus/animatedPuzzleTab.webp';
 
 export const MatrixMinus = () => {
   return (

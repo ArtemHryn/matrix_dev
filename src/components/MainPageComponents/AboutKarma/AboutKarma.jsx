@@ -86,7 +86,7 @@ export const AboutKarma = () => {
             justifyContent={[null, null, 'flex-start']}
           >
             <CrystalContainer mr={['5px', '5px', '50px']}>
-              <CrystalImg src={crystal} alt="crystal" left="40%" />
+              <CrystalImg src={crystal} alt="crystal" left="40%" width="55" />
             </CrystalContainer>
             <AboutDesc>Учениям о карме более 2,5 тыс. лет</AboutDesc>
           </AboutReasonContainer>
@@ -98,7 +98,12 @@ export const AboutKarma = () => {
               “Карма” с санскрита переводится, как «действие, деятельность»
             </AboutDesc>
             <CrystalContainer ml="5px" mr={[null, null, '15px']}>
-              <CrystalImg src={mirrorCrystal} alt="crystal" left="60%" />
+              <CrystalImg
+                src={mirrorCrystal}
+                alt="crystal"
+                left="60%"
+                width="55"
+              />
             </CrystalContainer>
           </AboutReasonContainer>
         </Box>

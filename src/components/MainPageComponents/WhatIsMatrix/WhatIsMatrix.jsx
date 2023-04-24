@@ -1,12 +1,12 @@
 import { Box } from 'components/Box';
 import starLine from 'images/whatIsMatrix/starLine.png';
 import starLineTab from 'images/whatIsMatrix/starLineTab.png';
-import deepDrow from 'images/whatIsMatrix/deepDrow.png';
-import saturn from 'images/whatIsMatrix/saturn.png';
-import sun from 'images/whatIsMatrix/sun.png';
-import deepDrowDesk from 'images/whatIsMatrix/deepDrowDesk.png';
-import saturnDesk from 'images/whatIsMatrix/saturnDesk.png';
-import sunDesk from 'images/whatIsMatrix/sunDesk.png';
+import deepDrow from 'images/whatIsMatrix/deepDrow.webp';
+import saturn from 'images/whatIsMatrix/saturn.webp';
+import sun from 'images/whatIsMatrix/sun.webp';
+import deepDrowDesk from 'images/whatIsMatrix/deepDrowDesk.webp';
+import saturnDesk from 'images/whatIsMatrix/saturnDesk.webp';
+import sunDesk from 'images/whatIsMatrix/sunDesk.webp';
 import { MatrixFact } from './MatrixFact/MatrixFact';
 import { AboutMethod, LinkToCalculator, MatrixCreator, MethodList, StarLineImg, Title } from './WhatIsMatrix.styled';
 

@@ -4,12 +4,16 @@ import React, { lazy, Suspense } from 'react';
 import { Box } from './Box';
 import { Route, Routes } from 'react-router-dom';
 import { Spinner } from './Spinner/Spinner';
-import PersonalMatrix from './CalculatorPageComponents/PersonalMatrix/PersonalMatrix';
 import ScrollToTop from './Common/ScrollToTop';
-import CompatibilityMatrix from './CalculatorPageComponents/CompatibilityMatrix/CompatibilityMatrix';
 
 const Main = lazy(() => import('pages/Main'));
 const Calculator = lazy(() => import('pages/Calculator'));
+const PersonalMatrix = lazy(() =>
+  import('./CalculatorPageComponents/PersonalMatrix/PersonalMatrix')
+);
+const CompatibilityMatrix = lazy(() =>
+  import('./CalculatorPageComponents/CompatibilityMatrix/CompatibilityMatrix')
+);
 
 export const App = () => {
   const location = useLocation();
