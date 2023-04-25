@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/matrix/static/css/main.b6c201a0.css",
-    "main.js": "/matrix/static/js/main.570d7a0d.js",
+    "main.js": "/matrix/static/js/main.d11ca290.js",
     "static/js/412.ad1396b7.chunk.js": "/matrix/static/js/412.ad1396b7.chunk.js",
     "static/js/353.1a02897e.chunk.js": "/matrix/static/js/353.1a02897e.chunk.js",
-    "static/js/854.a062c60d.chunk.js": "/matrix/static/js/854.a062c60d.chunk.js",
-    "static/js/872.a4cc665c.chunk.js": "/matrix/static/js/872.a4cc665c.chunk.js",
+    "static/js/854.7ce193e8.chunk.js": "/matrix/static/js/854.7ce193e8.chunk.js",
+    "static/js/872.e3cca6d1.chunk.js": "/matrix/static/js/872.e3cca6d1.chunk.js",
     "static/js/831.fcfa856b.chunk.js": "/matrix/static/js/831.fcfa856b.chunk.js",
     "static/js/84.6d5bba77.chunk.js": "/matrix/static/js/84.6d5bba77.chunk.js",
     "static/css/207.d6f89cd3.chunk.css": "/matrix/static/css/207.d6f89cd3.chunk.css",
@@ -131,11 +131,11 @@
     "static/media/closeModal.svg": "/matrix/static/media/closeModal.77f566a13863502e75085358a5296aff.svg",
     "static/media/menuButton.svg": "/matrix/static/media/menuButton.6543f21211fdf3fdf52f174cb0d6e241.svg",
     "main.b6c201a0.css.map": "/matrix/static/css/main.b6c201a0.css.map",
-    "main.570d7a0d.js.map": "/matrix/static/js/main.570d7a0d.js.map",
+    "main.d11ca290.js.map": "/matrix/static/js/main.d11ca290.js.map",
     "412.ad1396b7.chunk.js.map": "/matrix/static/js/412.ad1396b7.chunk.js.map",
     "353.1a02897e.chunk.js.map": "/matrix/static/js/353.1a02897e.chunk.js.map",
-    "854.a062c60d.chunk.js.map": "/matrix/static/js/854.a062c60d.chunk.js.map",
-    "872.a4cc665c.chunk.js.map": "/matrix/static/js/872.a4cc665c.chunk.js.map",
+    "854.7ce193e8.chunk.js.map": "/matrix/static/js/854.7ce193e8.chunk.js.map",
+    "872.e3cca6d1.chunk.js.map": "/matrix/static/js/872.e3cca6d1.chunk.js.map",
     "831.fcfa856b.chunk.js.map": "/matrix/static/js/831.fcfa856b.chunk.js.map",
     "84.6d5bba77.chunk.js.map": "/matrix/static/js/84.6d5bba77.chunk.js.map",
     "207.d6f89cd3.chunk.css.map": "/matrix/static/css/207.d6f89cd3.chunk.css.map",
@@ -145,6 +145,6 @@
   },
   "entrypoints": [
     "static/css/main.b6c201a0.css",
-    "static/js/main.570d7a0d.js"
+    "static/js/main.d11ca290.js"
   ]
 }
