@@ -142,6 +142,10 @@ export const ConsultationBtn = styled(Link)`
 `;
 
 export const Image = styled.img`
+  width: 326px;
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    width: 352px;
+  }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
     width: 503px;
     transform: translateX(10%);

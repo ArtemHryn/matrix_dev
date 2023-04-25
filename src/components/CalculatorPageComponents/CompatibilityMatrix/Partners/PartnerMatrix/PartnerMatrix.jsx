@@ -7,9 +7,15 @@ import PurposeTable from '../PurposeTable/PurposeTable';
 
 const PartnerMatrix = ({ partner, date, lastIndex }) => {
   return (
-    <Box flex="1" mb={lastIndex ? '0px' : ['50px', '110px', '0px']}>
+    <Box
+      flex="1"
+      mb={lastIndex ? '0px' : ['50px', '110px', '0px']}
+      display="flex"
+      flexDirection="column"
+      justifyContent="space-between"
+    >
       <MatrixNumber mb={['21px']}>{partner.order}</MatrixNumber>
-      <PartnerInfo date={date} />
+      <PartnerInfo date={date} hideInfo={!partner.isGenerated} />
       <PartnerGraph partnerMatrix={partner} />
       <PurposeTable partnerMatrix={partner} />
     </Box>

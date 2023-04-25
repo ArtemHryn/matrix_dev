@@ -14,7 +14,7 @@ import { PartnerMatrixImg } from './PartnerGraph.styled';
 
 const PartnerGraph = ({ partnerMatrix, matrix: Matrix, ...props }) => {
   return (
-    <Box position="relative" mb={['50px', '70px', '0px']} mx="auto" {...props}>
+    <Box position="relative" mb={['50px', '70px', '0px']} {...props}>
       <PartnerMatrixImg as={Matrix} />
       <TopElements matrixData={partnerMatrix} />
       <Left matrixData={partnerMatrix} />

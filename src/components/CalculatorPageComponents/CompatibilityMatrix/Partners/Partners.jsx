@@ -9,6 +9,7 @@ import ResultMatrix from './ResultMatrix/ResultMatrix';
 const Partners = () => {
   const [resultData, setResultData] = useState();
   const [partnersMatrixData, setPartnersMatrixData] = useState([]);
+
   const { partnersDate, showMatrix } = useMatrix();
 
   useEffect(() => {
@@ -33,11 +34,12 @@ const Partners = () => {
       <DataInput />
       {showMatrix && (
         <>
+          <ResultMatrix resultData={resultData} />
           <Box
             display={[null, null, 'flex']}
             justifyContent="space-between"
             gridGap="40px"
-            mb={['40px', '60px', '80px']}
+          
           >
             {partnersMatrixData.map((partner, index) => (
               <PartnerMatrix
@@ -50,7 +52,6 @@ const Partners = () => {
               />
             ))}
           </Box>
-          <ResultMatrix resultData={resultData} />
         </>
       )}
     </>

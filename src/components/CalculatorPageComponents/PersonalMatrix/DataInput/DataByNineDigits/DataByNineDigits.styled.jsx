@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
-import { FaRegCalendarAlt } from 'react-icons/fa';
+import { ReactComponent as Calendar } from 'images/Calculator/personalMatrix/calendar.svg'
 
 export const BackCard = styled(motion.div)`
   background: linear-gradient(
@@ -26,7 +26,7 @@ export const BackCard = styled(motion.div)`
   }
 `;
 
-export const FlippToFrontBtn = styled(FaRegCalendarAlt)`
+export const FlippToFrontBtn = styled(Calendar)`
   width: 20px;
   height: 20px;
   fill: #fff;

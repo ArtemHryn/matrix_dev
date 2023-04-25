@@ -3,7 +3,7 @@ import PartnerGraph from '../PartnerMatrix/PartnerGraph/PartnerGraph';
 import { NameDate, StarImg } from '../Partners.styled';
 
 import star from 'images/Calculator/personalMatrix/star.webp';
-import { ReactComponent as Matrix } from 'images/Calculator/personalMatrix/compatibilityMatrix.svg';
+import { ReactComponent as Matrix } from 'images/Calculator/personalMatrix/personalMatrix.svg';
 import PurposeTable from '../PurposeTable/PurposeTable';
 import InformationTable from 'components/CalculatorPageComponents/PersonalMatrix/MatrixCalculation/FateMatrix/AssignmentTable/Desktop/InformationTable/InformationTable';
 
@@ -13,7 +13,7 @@ const ResultMatrix = ({ resultData }) => {
   }
 
   return (
-    <Box>
+    <Box mb={['40px', '70px', '110px']}>
       <Box
         position="relative"
         height={['75px', '100px']}
@@ -31,11 +31,10 @@ const ResultMatrix = ({ resultData }) => {
         </NameDate>
         <StarImg src={star} alt="star" />
       </Box>
-      <Box display={[null, null, 'flex']} justifyContent="space-between">
+      <Box display={[null, null, 'flex']} justifyContent="center" gridGap='120px' alignItems='center'>
         <PartnerGraph
           partnerMatrix={resultData}
           matrix={Matrix}
-          mx="auto"
           width={[null, null, '50%']}
         />
         <PurposeTable

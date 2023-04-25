@@ -8,13 +8,13 @@ import { Age, NameDate, StarImg } from '../../Partners.styled';
 const gradient =
   'linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(249, 237, 255, 0.5) 100%);';
 
-const PartnerInfo = ({ date }) => {
+const PartnerInfo = ({ date, hideInfo }) => {
   const [age, setAge] = useState(null);
   const { day, month, year, name } = date;
 
   useEffect(() => {
     setAge(ageCalculator(day, month, year));
-  }, [day, month, year]);
+  }, [day, hideInfo, month, year]);
 
   return (
     <Box
@@ -28,7 +28,7 @@ const PartnerInfo = ({ date }) => {
       alignItems="center"
       justifyContent="center"
       mb={['50px', '40px']}
-      maxWidth={['100%', '70%', '60%']}
+      width={['100%', '70%', '60%']}
       mx="auto"
     >
       <NameDate>
@@ -39,12 +39,14 @@ const PartnerInfo = ({ date }) => {
         )}
         {`${day}.${month}.${year}`}
       </NameDate>
-      <Age>
-        Возраст:{' '}
-        <Age as="span" color="secondText">
-          {age}
+      {hideInfo && (
+        <Age>
+          Возраст:{' '}
+          <Age as="span" color="secondText">
+            {age}
+          </Age>
         </Age>
-      </Age>
+      )}
       <StarImg src={star} alt="star" />
     </Box>
   );

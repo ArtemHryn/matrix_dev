@@ -15,6 +15,7 @@ const btnList = [
 
 const CompatibilityMatrix = () => {
   const [compatibilityType, setCompatibilityType] = useState('partners');
+
   useEffect(() => {
     const section = document.getElementById(`compatibility`);
     section.scrollIntoView({ behavior: 'smooth' });
