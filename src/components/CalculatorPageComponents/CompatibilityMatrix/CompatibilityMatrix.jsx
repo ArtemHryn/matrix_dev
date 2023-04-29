@@ -6,10 +6,11 @@ import {
   Link,
 } from '../PersonalMatrix/MatrixBtn/MatrixBtn.styled';
 import Partners from './Partners/Partners';
+import Team from './Team/Team';
 
 const btnList = [
   { name: 'ПАРТНЕРЫ', type: 'partners', disabled: false },
-  { name: 'КОЛЛЕКТИВ', type: 'team', disabled: true },
+  { name: 'КОЛЛЕКТИВ', type: 'team', disabled: false },
   { name: 'Матрица ГОДА', type: 'year_matrix', disabled: true },
 ];
 
@@ -25,8 +26,8 @@ const CompatibilityMatrix = () => {
     switch (compatibilityType) {
       case 'partners':
         return <Partners />;
-      case 'karmaIssues':
-        return null;
+      case 'team':
+        return <Team />;
       case 'healthMatrix':
         return null;
       default:

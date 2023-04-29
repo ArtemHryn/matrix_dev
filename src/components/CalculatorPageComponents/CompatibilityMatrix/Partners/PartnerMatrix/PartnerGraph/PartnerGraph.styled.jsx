@@ -11,6 +11,6 @@ export const PartnerMatrixImg = styled(Matrix)`
     width: 704px;
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
-    width: 660px;
+    width: 640px;
   }
 `;

@@ -31,12 +31,13 @@ const ResultMatrix = ({ resultData }) => {
         </NameDate>
         <StarImg src={star} alt="star" />
       </Box>
-      <Box display={[null, null, 'flex']} justifyContent="center" gridGap='120px' alignItems='center'>
-        <PartnerGraph
-          partnerMatrix={resultData}
-          matrix={Matrix}
-          width={[null, null, '50%']}
-        />
+      <Box
+        display={[null, null, 'flex']}
+        justifyContent="center"
+        gridGap="120px"
+        alignItems="center"
+      >
+        <PartnerGraph partnerMatrix={resultData} matrix={Matrix} />
         <PurposeTable
           partnerMatrix={resultData}
           display={[null, null, 'none']}

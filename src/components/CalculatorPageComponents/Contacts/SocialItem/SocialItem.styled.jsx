@@ -19,9 +19,6 @@ export const SocialLink = styled.a`
 `;
 
 export const Info = styled.p`
-  font-family: 'Cormorant';
-  font-style: normal;
-  font-weight: 400;
   font-size: 18px;
   line-height: 22px;
 

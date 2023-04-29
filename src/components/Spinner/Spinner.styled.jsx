@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+import { ReactComponent as MatrixLoader } from 'images/matrixLoader.svg';
 
 const uiverse723 = keyframes`
 0%, 100% {
@@ -10,6 +11,15 @@ const uiverse723 = keyframes`
      51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
   }
   `;
+
+const infinityRotate = keyframes`
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+`;
 
 export const MainSpinnerPart = styled.span`
   top: 50%;
@@ -47,5 +57,13 @@ export const AdditionalSpinnerPart = styled.span`
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
     font-size: 150px;
+  }
+`;
+
+export const MatrixLoaderImg = styled(MatrixLoader)`
+  width: 50%;
+  animation: ${infinityRotate} 3s linear infinite;
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    width: 20%;
   }
 `;

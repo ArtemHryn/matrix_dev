@@ -4,7 +4,6 @@ import { ReactComponent as BkmLogo } from 'images/Calculator/Donation/bmc-logo.s
 
 export const LikeTheProject = styled.h3`
   max-width: 340px;
-  font-family: ${p => p.theme.fonts.main};
   font-style: italic;
   font-weight: 400;
   font-size: 35px;
@@ -29,9 +28,6 @@ export const LikeTheProject = styled.h3`
 
 export const SaveService = styled.p`
   max-width: 230px;
-  font-family: ${p => p.theme.fonts.main};
-  font-style: normal;
-  font-weight: 400;
   font-size: 18px;
   line-height: 1.27;
 
@@ -61,7 +57,6 @@ export const DonationLink = styled.a`
   box-shadow: 0px 4px 10px rgba(144, 114, 175, 0.28);
   border-radius: 9px;
 
-  font-family: 'Cormorant';
   font-style: italic;
   font-weight: 600;
   font-size: 22px;

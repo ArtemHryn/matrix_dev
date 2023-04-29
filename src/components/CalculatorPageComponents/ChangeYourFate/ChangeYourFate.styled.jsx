@@ -63,9 +63,7 @@ export const Karmolog = styled.span`
 `;
 
 export const Title = styled.h2`
-  font-family: ${p => p.theme.fonts.main};
   font-style: italic;
-  font-weight: 400;
   font-size: 40px;
   line-height: 1.08;
 
@@ -85,9 +83,6 @@ export const Title = styled.h2`
 `;
 
 export const AssistanseText = styled.p`
-  font-family: ${p => p.theme.fonts.main};
-  font-style: normal;
-  font-weight: 400;
   font-size: 18px;
   line-height: 22px;
 
@@ -104,8 +99,6 @@ export const AssistanseText = styled.p`
 `;
 
 export const ConsultationBtn = styled(Link)`
-  font-family: ${p => p.theme.fonts.main};
-  font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -153,8 +146,6 @@ export const Image = styled.img`
 `;
 
 export const CalcAuthor = styled.p`
-  font-family: ${p => p.theme.fonts.main};
-  font-weight: 400;
   text-align: center;
   letter-spacing: 0.01em;
   font-size: 20px;

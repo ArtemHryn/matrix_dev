@@ -14,7 +14,6 @@ export const Img = styled.img`
 `;
 
 export const TemplateTitle = styled.h2`
-  font-family: ${p => p.theme.fonts.main};
   font-style: italic;
   font-weight: 400;
   font-size: 40px;
@@ -34,9 +33,6 @@ export const TemplateTitle = styled.h2`
 `;
 
 export const HowToGetTemplate = styled.p`
-  font-family: ${p => p.theme.fonts.main};
-  font-style: normal;
-  font-weight: 400;
   font-size: 18px;
   line-height: 1.22;
 

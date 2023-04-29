@@ -13,6 +13,7 @@ const PartnerMatrix = ({ partner, date, lastIndex }) => {
       display="flex"
       flexDirection="column"
       justifyContent="space-between"
+      maxWidth={[null, null, 'calc((100% - 40px) / 2)']}
     >
       <MatrixNumber mb={['21px']}>{partner.order}</MatrixNumber>
       <PartnerInfo date={date} hideInfo={!partner.isGenerated} />

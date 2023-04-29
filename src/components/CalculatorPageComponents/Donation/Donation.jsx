@@ -92,7 +92,7 @@ const Donation = () => {
           alt="asterism"
           width={['240px', '340px', '450px']}
           bottom={['13%', '15%', '-20%']}
-          right={['-5%', '10%', '5%']}
+          right={['-1%', '10%', '5%']}
         />
       </Box>
     </Box>

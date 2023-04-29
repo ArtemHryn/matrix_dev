@@ -18,7 +18,7 @@ import { CalcContainer } from 'components/Common/Common.styled';
 
 import navigationListCalc from 'components/CalculatorPageComponents/navigationLisCalc';
 import { content } from 'helper/content';
-import { Spinner } from 'components/Spinner/Spinner';
+import MatrixLoader from 'components/Spinner/MatrixLoader';
 
 const MatrixContext = createContext();
 export const useMatrix = () => useContext(MatrixContext);
@@ -69,7 +69,7 @@ const Calculator = () => {
       <CalcContainer>
         <Header navigationList={navigationListCalc} />
         <Hero />
-        <Suspense fallback={<Spinner />}>
+        <Suspense fallback={<MatrixLoader />}>
           <Outlet />
         </Suspense>
         <ChangeYourFate />

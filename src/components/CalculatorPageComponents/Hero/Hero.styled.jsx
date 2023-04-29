@@ -9,8 +9,6 @@ export const Img = styled.img`
 
 export const Logo = styled.p`
   font-family: ${p => p.theme.fonts.title};
-  font-style: normal;
-  font-weight: 400;
   font-size: 26px;
   line-height: 0.66;
   text-align: center;
@@ -29,8 +27,6 @@ export const Logo = styled.p`
 `;
 
 export const Title = styled.h1`
-  font-family: ${p => p.theme.fonts.main};
-  font-style: normal;
   font-weight: 400;
   font-size: 55px;
   line-height: 0.8;
@@ -59,9 +55,6 @@ export const SecondTitle = styled.span`
 `;
 
 export const AboutCalc = styled.p`
-  font-family: ${p => p.theme.fonts.main};
-  font-style: normal;
-  font-weight: 400;
   font-size: 17px;
   line-height: 1.24;
   text-align: center;
@@ -86,9 +79,6 @@ export const AboutCalc = styled.p`
 `;
 
 export const Authoring = styled.p`
-  font-family: ${p => p.theme.fonts.main};
-  font-style: normal;
-  font-weight: 400;
   font-size: 12px;
   line-height: 1.25;
   margin: 0 auto;
