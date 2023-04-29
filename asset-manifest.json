@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/matrix/static/css/main.b6c201a0.css",
-    "main.js": "/matrix/static/js/main.d11ca290.js",
+    "main.js": "/matrix/static/js/main.81326932.js",
     "static/js/412.ad1396b7.chunk.js": "/matrix/static/js/412.ad1396b7.chunk.js",
-    "static/js/353.1a02897e.chunk.js": "/matrix/static/js/353.1a02897e.chunk.js",
-    "static/js/854.7ce193e8.chunk.js": "/matrix/static/js/854.7ce193e8.chunk.js",
-    "static/js/872.e3cca6d1.chunk.js": "/matrix/static/js/872.e3cca6d1.chunk.js",
+    "static/js/380.5f1a8d67.chunk.js": "/matrix/static/js/380.5f1a8d67.chunk.js",
+    "static/js/854.3bbe81ab.chunk.js": "/matrix/static/js/854.3bbe81ab.chunk.js",
+    "static/js/26.41500c6c.chunk.js": "/matrix/static/js/26.41500c6c.chunk.js",
     "static/js/831.fcfa856b.chunk.js": "/matrix/static/js/831.fcfa856b.chunk.js",
     "static/js/84.6d5bba77.chunk.js": "/matrix/static/js/84.6d5bba77.chunk.js",
     "static/css/207.d6f89cd3.chunk.css": "/matrix/static/css/207.d6f89cd3.chunk.css",
@@ -113,6 +113,7 @@
     "static/media/plant.webp": "/matrix/static/media/plant.55c0c7fd8ffa756d8978.webp",
     "static/media/animatedPuzzleTab.webp": "/matrix/static/media/animatedPuzzleTab.98e8ec9222794c15f4c1.webp",
     "static/media/saturn.webp": "/matrix/static/media/saturn.42dce53fad8f01705eda.webp",
+    "static/media/matrixLoader.svg": "/matrix/static/media/matrixLoader.cecf555ff353f8faa3ae288609545036.svg",
     "static/media/mirrorCrystal.webp": "/matrix/static/media/mirrorCrystal.0f30e0bbfc5ede34f1ed.webp",
     "static/media/crystal.webp": "/matrix/static/media/crystal.80da753a13d83e94892c.webp",
     "static/media/monoText.svg": "/matrix/static/media/monoText.90a58512a90b9698a5298038a02dd813.svg",
@@ -130,12 +131,13 @@
     "static/media/rightArrow.svg": "/matrix/static/media/rightArrow.084e18e7fb136ece93eab69a8307bb4a.svg",
     "static/media/closeModal.svg": "/matrix/static/media/closeModal.77f566a13863502e75085358a5296aff.svg",
     "static/media/menuButton.svg": "/matrix/static/media/menuButton.6543f21211fdf3fdf52f174cb0d6e241.svg",
+    "static/media/plus.svg": "/matrix/static/media/plus.8d6f5f239025f72163429b7dffd2d420.svg",
     "main.b6c201a0.css.map": "/matrix/static/css/main.b6c201a0.css.map",
-    "main.d11ca290.js.map": "/matrix/static/js/main.d11ca290.js.map",
+    "main.81326932.js.map": "/matrix/static/js/main.81326932.js.map",
     "412.ad1396b7.chunk.js.map": "/matrix/static/js/412.ad1396b7.chunk.js.map",
-    "353.1a02897e.chunk.js.map": "/matrix/static/js/353.1a02897e.chunk.js.map",
-    "854.7ce193e8.chunk.js.map": "/matrix/static/js/854.7ce193e8.chunk.js.map",
-    "872.e3cca6d1.chunk.js.map": "/matrix/static/js/872.e3cca6d1.chunk.js.map",
+    "380.5f1a8d67.chunk.js.map": "/matrix/static/js/380.5f1a8d67.chunk.js.map",
+    "854.3bbe81ab.chunk.js.map": "/matrix/static/js/854.3bbe81ab.chunk.js.map",
+    "26.41500c6c.chunk.js.map": "/matrix/static/js/26.41500c6c.chunk.js.map",
     "831.fcfa856b.chunk.js.map": "/matrix/static/js/831.fcfa856b.chunk.js.map",
     "84.6d5bba77.chunk.js.map": "/matrix/static/js/84.6d5bba77.chunk.js.map",
     "207.d6f89cd3.chunk.css.map": "/matrix/static/css/207.d6f89cd3.chunk.css.map",
@@ -145,6 +147,6 @@
   },
   "entrypoints": [
     "static/css/main.b6c201a0.css",
-    "static/js/main.d11ca290.js"
+    "static/js/main.81326932.js"
   ]
 }
