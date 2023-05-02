@@ -36,6 +36,7 @@ const DataInput = () => {
     });
     setPartnersDate(teamInfo);
     setShowMatrix(true);
+    document.activeElement.blur();
   };
 
   const isHidenButton = fields.length >= 6;

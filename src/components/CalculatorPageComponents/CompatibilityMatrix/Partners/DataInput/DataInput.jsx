@@ -47,6 +47,7 @@ const DataInput = () => {
 
     setPartnersDate(partnersInfo);
     setShowMatrix(true);
+    document.activeElement.blur();
   };
 
   return (

@@ -24,6 +24,7 @@ const DataInput = () => {
       setIsGenerated(isFlipped);
       setDate(data);
       setShowMatrix(true);
+      document.activeElement.blur();
       return;
     }
     const [day, month, year] = data.date.split('.');
@@ -31,6 +32,7 @@ const DataInput = () => {
     setIsGenerated(isFlipped);
     setName(data.name);
     setShowMatrix(true);
+    document.activeElement.blur();
   };
 
   return (

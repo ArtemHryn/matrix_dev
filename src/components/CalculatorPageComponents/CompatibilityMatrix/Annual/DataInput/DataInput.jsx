@@ -40,6 +40,7 @@ const DataInput = () => {
       { day: 1, month: 1, year: data.year, name: 'Матрица года' },
     ]);
     setShowMatrix(true);
+    document.activeElement.blur();
   };
 
   return (
