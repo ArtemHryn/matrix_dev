@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
 export const AuthorTitle = styled.h2`
-  font-family: ${p => p.theme.fonts.main};
-  font-style: normal;
   font-weight: 400;
   font-size: 48px;
   line-height: 58px;
@@ -24,7 +22,6 @@ export const AuthorTitle = styled.h2`
 
 export const Name = styled.span`
   font-style: italic;
-  font-weight: 400;
   font-size: 30px;
   line-height: 0.8;
   letter-spacing: 0.01em;
@@ -37,9 +34,6 @@ export const Name = styled.span`
 `;
 
 export const Description = styled.p`
-  font-family: ${p => p.theme.fonts.main};
-  font-style: normal;
-  font-weight: 400;
   font-size: 18px;
   line-height: 1.36;
   letter-spacing: 0.01em;
@@ -49,7 +43,6 @@ export const Description = styled.p`
   color: ${p => p.theme.colors.secondText};
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     margin-bottom: 50px;
-    font-weight: 400;
     font-size: 20px;
     line-height: 1.3;
 
@@ -106,7 +99,6 @@ export const Symbols = styled.img`
 `;
 
 export const AboutAuthorWork = styled.p`
-  font-family: ${p => p.theme.fonts.main};
   font-weight: 600;
   font-size: 23px;
   line-height: 1.22;
@@ -123,8 +115,6 @@ export const AboutAuthorWork = styled.p`
 `;
 
 export const AboutAuthorDesc = styled.p`
-  font-family: ${p => p.theme.fonts.main};
-  font-weight: 400;
   font-size: 18px;
   line-height: 1.22;
 

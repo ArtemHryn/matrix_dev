@@ -4,7 +4,6 @@ import circle from 'images/aboutImages/aboutCircle.png';
 import handsContainerImg from 'images/aboutImages/handsLine.png';
 
 export const Title = styled.h2`
-  font-family: ${p => p.theme.fonts.main};
   font-weight: 400;
   font-size: 48px;
   line-height: 0.96;
@@ -67,9 +66,6 @@ export const CrystalImg = styled.img`
 `;
 
 export const AboutDesc = styled.p`
-  font-family: ${p => p.theme.fonts.main};
-  font-style: normal;
-  font-weight: 400;
   font-size: 16px;
   line-height: 19px;
 
@@ -114,9 +110,6 @@ export const HandsContainer = styled.div`
 export const TextNearHands = styled.p`
   position: relative;
   max-width: 200px;
-  font-family: ${p => p.theme.fonts.main};
-  font-style: normal;
-  font-weight: 400;
   font-size: 18px;
   line-height: 22px;
 
@@ -163,9 +156,6 @@ export const UnderHandImg = styled.div`
 
 
 export const TextUnderContainer = styled.p`
-  font-family: ${p => p.theme.fonts.main};
-  font-style: normal;
-  font-weight: 400;
   font-size: 18px;
   line-height: 1.22;
   padding: 31px 0;
@@ -196,9 +186,7 @@ export const TextUnderContainer = styled.p`
 `;
 
 export const AboutResultText = styled.p`
-  font-family: ${p => p.theme.fonts.main};
   font-style: italic;
-  font-weight: 400;
   font-size: 30px;
   line-height: 1.2;
 

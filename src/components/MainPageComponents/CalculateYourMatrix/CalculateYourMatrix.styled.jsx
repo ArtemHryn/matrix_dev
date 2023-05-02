@@ -4,7 +4,6 @@ import { space, typography } from 'styled-system';
 
 export const Title = styled.h2`
   max-width: 289px;
-  font-family: ${p => p.theme.fonts.main};
   font-style: italic;
   font-weight: 400;
   font-size: 48px;
@@ -30,9 +29,6 @@ export const Title = styled.h2`
 `;
 
 export const TitleAdditional = styled.span`
-  font-family: ${p => p.theme.fonts.main};
-  font-style: normal;
-  font-weight: 400;
   font-size: 48px;
   line-height: 1;
   letter-spacing: 0.01em;
@@ -68,8 +64,6 @@ export const ImgPhones = styled.img`
 `;
 
 export const AboutCalculator = styled.p`
-  font-family: ${p => p.theme.fonts.main};
-  font-weight: 400;
   font-size: 18px;
   line-height: 1.33;
   margin-bottom: 30px;
@@ -96,8 +90,6 @@ export const LinkToCalculator = styled(Link)`
   background-color: ${p => p.theme.colors.main};
   border-radius: 50px;
 
-  font-family: ${p => p.theme.fonts.main};
-  font-style: normal;
   font-weight: 300;
   font-size: 18px;
   line-height: 1.22;
@@ -123,9 +115,6 @@ export const LinkToCalculator = styled(Link)`
 `;
 
 export const Info = styled.p`
-  font-family: ${p => p.theme.fonts.main};
-  font-style: normal;
-  font-weight: 400;
   font-size: 17px;
   line-height: 1.24;
 

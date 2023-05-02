@@ -21,14 +21,10 @@ export const SocialNameContainer = styled.div`
   margin-bottom: 12px;
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     flex-direction: column;
-    margin-bottom: 0;
   }
-  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
-    margin-bottom: 12px;
-  }
+
 `;
 export const SocialName = styled.h4`
-  font-family: ${p => p.theme.fonts.main};
   font-style: italic;
   font-weight: 400;
   font-size: 40px;
@@ -65,9 +61,6 @@ export const SocialLink = styled.a`
 `;
 
 export const Description = styled.p`
-  font-family: ${p => p.theme.fonts.main};
-  font-style: normal;
-  font-weight: 400;
   font-size: 18px;
   line-height: 1.22;
   flex-grow: 1;

@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { golderBorder } from '.';
 
 export const ConsultationsTitle = styled.h3`
-  font-family: ${p => p.theme.fonts.main};
   font-weight: 400;
   font-size: 30px;
   line-height: 1;
@@ -54,8 +53,6 @@ export const IndividualRequestElement = styled.li`
 `;
 
 export const IndividualRequestTitle = styled.h3`
-  font-family: ${p => p.theme.fonts.main};
-  font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
@@ -84,8 +81,6 @@ export const ContactMeSocial = styled.a`
   background-color: #9071af;
   border-radius: 50px;
 
-  font-family: ${p => p.theme.fonts.main};
-  font-style: normal;
   font-weight: 300;
   font-size: 10px;
   line-height: 1.1;

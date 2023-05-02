@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { layout, space, typography } from 'styled-system';
 
 export const MainTitle = styled.h3`
-  font-family: ${p => p.theme.fonts.main};
   font-weight: 400;
   font-size: 25px;
   line-height: 1.6;
@@ -24,8 +23,6 @@ export const MainTitle = styled.h3`
 `;
 
 export const Requests = styled.p`
-  font-family: ${p => p.theme.fonts.main};
-  font-weight: 400;
   font-size: 20px;
   line-height: 1.2;
 
@@ -47,8 +44,6 @@ export const List = styled.ul`
 `;
 
 export const Text = styled.p`
-  font-family: ${p => p.theme.fonts.main};
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
 
@@ -69,8 +64,6 @@ export const Text = styled.p`
 `;
 
 export const HowIsGoingConsultation = styled.h4`
-  font-family: ${p => p.theme.fonts.main};
-  font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 1.2;
@@ -84,8 +77,6 @@ export const HowIsGoingConsultation = styled.h4`
 `;
 
 export const AdditionalInfo = styled.p`
-  font-family: ${p => p.theme.fonts.main};
-  font-style: normal;
   font-weight: 300;
   font-size: 13px;
   line-height: 1.23;
@@ -99,7 +90,6 @@ export const AdditionalInfo = styled.p`
 `;
 
 export const Price = styled.p`
-  font-weight: 400;
   font-size: 30px;
   line-height: 1.2;
 

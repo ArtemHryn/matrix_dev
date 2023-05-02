@@ -6,8 +6,6 @@ import { motion } from 'framer-motion';
 export const PuzzleTextPlus = styled.p`
   position: absolute;
 
-  font-family: ${p => p.theme.fonts.main};
-  font-weight: 400;
   font-size: 17px;
   line-height: 1.24;
   text-align: center;

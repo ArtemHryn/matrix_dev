@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
 export const Title = styled.h2`
-  font-family: ${p => p.theme.main};
-  font-style: normal;
   font-weight: 400;
   font-size: 48px;
   line-height: 1;
@@ -24,9 +22,7 @@ export const Title = styled.h2`
 export const CheckBoxText = styled.p`
   max-width: 184px;
 
-  font-family: ${p => p.theme.main};
   font-style: italic;
-  font-weight: 400;
   font-size: 25px;
   line-height: 1.04;
   color: ${p => p.theme.colors.main};

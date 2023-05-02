@@ -17,7 +17,11 @@ export const QuestionAnswer = ({ question, answer, img }) => {
     <QuestionElement>
       <TitleContainer>
         <Title>{question}</Title>
-        <Button type="button" onClick={() => setShowAnswer(prev => !prev)}>
+        <Button
+          aria-label="Open"
+          type="button"
+          onClick={() => setShowAnswer(prev => !prev)}
+        >
           <OpenButton />
         </Button>
       </TitleContainer>

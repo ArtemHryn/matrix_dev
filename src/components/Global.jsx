@@ -3,6 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyle = createGlobalStyle`
     html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -48,6 +49,13 @@ button {
 a {
   text-decoration: none;
 }
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  color: #9072af;
+}
 `;
+
+
 
 export default GlobalStyle;

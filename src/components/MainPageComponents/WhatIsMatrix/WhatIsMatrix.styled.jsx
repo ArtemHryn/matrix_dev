@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { typography } from 'styled-system';
 
 export const Title = styled.h2`
-  font-family: ${p => p.theme.fonts.main};
   font-weight: 400;
   font-size: 47px;
   line-height: 1.02;
@@ -27,27 +26,20 @@ export const Title = styled.h2`
 `;
 
 export const MatrixCreator = styled.p`
-  font-family: ${p => p.theme.fonts.main};
-  font-weight: 400;
   font-size: 18px;
   line-height: 22px;
 
   color: ${p => p.theme.colors.third};
   margin-bottom: 12px;
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
-    font-weight: 400;
     font-size: 20px;
     line-height: 1.2;
     margin: 0;
     width: 540px;
   }
-
 `;
 
 export const AboutMethod = styled.p`
-  font-family: ${p => p.theme.fonts.main};
-  font-style: normal;
-  font-weight: 400;
   font-size: 18px;
   line-height: 22px;
   margin: 0;
@@ -59,7 +51,7 @@ export const AboutMethod = styled.p`
     margin-left: 20px;
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
-   max-width: 640px;
+    max-width: 640px;
   }
 `;
 
@@ -93,8 +85,6 @@ export const LinkToCalculator = styled(Link)`
   background-color: ${p => p.theme.colors.main};
   border-radius: 50px;
 
-  font-family: ${p => p.theme.fonts.main};
-  font-style: normal;
   font-weight: 300;
   font-size: 18px;
   line-height: 1.22;

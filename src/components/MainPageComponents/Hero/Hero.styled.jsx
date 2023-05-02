@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const ProjectText = styled.p`
-  font-family: ${p => p.theme.fonts.main};
   font-weight: 300;
   font-size: 16px;
   line-height: 1.19;
@@ -40,9 +39,7 @@ export const Title = styled.h1`
 
 export const MoveText = styled.p`
   max-width: 302px;
-  font-family: ${p => p.theme.main};
   font-style: italic;
-  font-weight: 400;
   font-size: 25px;
   line-height: 1.2;
   letter-spacing: 0.01em;
@@ -77,8 +74,6 @@ export const ServicesLink = styled.a`
 
   background: ${p => p.theme.colors.main};
   border-radius: 50px;
-  font-family: ${p => p.theme.fonts.main};
-  font-style: normal;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.22;
@@ -111,8 +106,6 @@ export const MatrxiLink = styled(Link)`
   border: 1px solid ${p => p.theme.colors.main};
   border-radius: 80px;
 
-  font-family: ${p => p.theme.fonts.main};
-  font-style: normal;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.22;

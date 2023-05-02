@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const ExpressServicesTitle = styled.h3`
-  font-family: ${p => p.theme.fonts.main};
   font-weight: 400;
   font-size: 40px;
   line-height: 1.2;
@@ -36,8 +35,6 @@ export const ExpressServicesList = styled.ul`
 `;
 
 export const AdditionalInfo = styled.p`
-  font-family: ${p => p.theme.fonts.main};
-  font-weight: 400;
   font-size: 14px;
   line-height: 1.21;
   text-align: center;

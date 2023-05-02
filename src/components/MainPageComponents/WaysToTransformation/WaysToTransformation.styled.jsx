@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import titleLine from 'images/WaysToTransformation/titleLine.png';
 
 export const Title = styled.h2`
-  font-family: ${p => p.theme.fonts.main};
   font-weight: 400;
   font-size: 48px;
   line-height: 0.96;
@@ -28,9 +27,6 @@ export const Title = styled.h2`
 `;
 
 export const About = styled.p`
-  font-family: ${p => p.theme.fonts.main};
-  font-style: normal;
-  font-weight: 400;
   font-size: 18px;
   line-height: 1.22;
 
@@ -50,9 +46,6 @@ export const About = styled.p`
 `;
 
 export const TransformationWarning = styled.p`
-  font-family: ${p => p.theme.fonts.main};
-  font-style: normal;
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.18;
 

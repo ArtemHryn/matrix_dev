@@ -26,7 +26,6 @@ export const TitleContainer = styled.div`
 `;
 export const Title = styled.h4`
   max-width: 250px;
-  font-family: ${p => p.theme.fonts.main};
   font-weight: 400;
   font-size: 18px;
   line-height: 1.22;
@@ -46,8 +45,7 @@ export const Button = styled.button`
 `;
 
 export const Answer = styled.p`
-  font-family: ${p => p.theme.fonts.main};
-  font-weight: 400;
+
   font-size: 15px;
   line-height: 1.2;
 

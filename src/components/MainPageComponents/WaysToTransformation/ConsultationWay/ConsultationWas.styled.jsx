@@ -5,7 +5,6 @@ export const ConsultationTitlte = styled.h4`
   display: flex;
   align-items: center;
 
-  font-family: ${p => p.theme.fonts.main};
   font-style: italic;
   font-weight: 500;
   font-size: 26px;

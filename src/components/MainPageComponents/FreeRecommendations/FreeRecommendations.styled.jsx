@@ -2,8 +2,6 @@ import styled from 'styled-components';
 import { typography, space, layout } from 'styled-system';
 
 export const Title = styled.h2`
-  font-family: ${p => p.theme.fonts.main};
-  font-style: normal;
   font-weight: 400;
   font-size: 48px;
   line-height: 1;

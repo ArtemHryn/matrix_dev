@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 export const FooterTitle = styled.h2`
-  font-family: 'Cormorant SC';
-  font-style: normal;
+  font-family: ${p => p.theme.title};
   font-weight: 400;
   font-size: 50px;
   line-height: 1.22;
@@ -45,8 +44,6 @@ export const NavigationLink = styled.a`
   display: block;
   width: 140px;
 
-  font-family: ${p => p.theme.main};
-  font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.22;
@@ -73,9 +70,6 @@ export const NavigationLink = styled.a`
 `;
 
 export const PoliticsAndDesign = styled.p`
-  font-family: ${p => p.theme.main};
-  font-style: normal;
-  font-weight: 400;
   font-size: 16px;
   line-height: 19px;
   text-align: center;

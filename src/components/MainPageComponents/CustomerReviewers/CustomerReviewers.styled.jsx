@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const FeedbackTitle = styled.h3`
-  font-family: ${p => p.theme.fonts.main};
   font-weight: 400;
   font-size: 48px;
   line-height: 1;
@@ -24,8 +23,6 @@ export const FeedbackTitle = styled.h3`
 `;
 
 export const FeedbackDescription = styled.p`
-  font-family: ${p => p.theme.fonts.main};
-  font-weight: 400;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.01em;
@@ -45,7 +42,6 @@ export const FeedbackDescription = styled.p`
 `;
 
 export const YourDarina = styled.h5`
-  font-family: ${p => p.theme.fonts.main};
   font-style: italic;
   font-weight: 400;
   font-size: 20px;

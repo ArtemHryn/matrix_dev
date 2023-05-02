@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const ServiceAndPriceTitle = styled.h2`
-  font-family: ${p => p.theme.fonts.main};
   font-weight: 400;
   font-size: 48px;
   line-height: 1.88;
@@ -24,8 +23,6 @@ export const ServiceAndPriceTitle = styled.h2`
 `;
 
 export const FourStagesTitle = styled.h3`
-  font-family: ${p => p.theme.fonts.main};
-  font-style: normal;
   font-weight: 400;
   font-size: 30px;
   line-height: 1;
@@ -51,9 +48,6 @@ export const FourStagesTitle = styled.h3`
 
 
 export const ServiceWarning = styled.p`
-  font-family: ${p => p.theme.fonts.main};
-  font-style: normal;
-  font-weight: 400;
   font-size: 14px;
   line-height: 1.21;
   text-align: center;
