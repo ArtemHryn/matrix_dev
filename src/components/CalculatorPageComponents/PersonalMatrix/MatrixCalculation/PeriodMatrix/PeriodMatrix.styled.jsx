@@ -87,7 +87,7 @@ export const AgeColumnNameText = styled.p`
   color: #72499b;
 
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
-    font-size: 20px;
+    font-size: 26px;
   }
 `;
 

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 import { ReactComponent as FlipToBack } from 'images/Calculator/personalMatrix/flipToBack.svg';
-
+import { layout, typography } from 'styled-system';
 
 export const Form = styled.form`
   position: relative;
@@ -32,7 +32,7 @@ export const FlipButton = styled(motion.button)`
 export const FlipButtonSvg = styled(FlipToBack)`
   width: 20px;
   height: 20px;
-`
+`;
 
 export const BoxTitle = styled.p`
   font-family: ${p => p.theme.fonts.main};
@@ -50,6 +50,8 @@ export const BoxTitle = styled.p`
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     font-size: 18px;
   }
+  ${typography}
+  ${layout}
 `;
 
 export const SubmitBtn = styled(motion.button)`

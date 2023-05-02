@@ -5,14 +5,13 @@ import {
   CardElement,
   CardTitle,
   MainImg,
-  Price,
   StarImg,
 } from './ServiceCard.styled';
 import { useState } from 'react';
 import { ModalLayout } from 'components/MainPageComponents/ModalWindows/ModalLayout';
 import { AnimatePresence } from 'framer-motion';
 
-export const ServiceCard = ({ name, img, text, price, component: Component }) => {
+export const ServiceCard = ({ name, img, text, component: Component }) => {
   const [showModal, setShowModal] = useState(false);
   return (
     <CardElement>
@@ -20,7 +19,6 @@ export const ServiceCard = ({ name, img, text, price, component: Component }) =>
       <StarImg src={starInCircle} alt="star" />
       <CardTitle>{name}</CardTitle>
       <CardDescription>{text}</CardDescription>
-      <Price>{price}$</Price>
       <Button onClick={() => setShowModal(true)}>
         Подробнее
       </Button>

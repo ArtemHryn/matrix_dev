@@ -1,7 +1,7 @@
 import React from 'react';
 import MatrixElementsItem from '../MatrixElementsItem';
 
-const TopElements = ({ matrixData }) => {
+const TopElements = ({ matrixData, hideDigitsForResult }) => {
   const {
     topLeft1,
     topLeft2,
@@ -16,11 +16,7 @@ const TopElements = ({ matrixData }) => {
 
   return (
     <>
-      <MatrixElementsItem
-        element={topLeft1}
-        top={['16.2%', '17.3%', '17%']}
-        left={['16.3%', '17.4%', '17.1%']}
-      />
+      {!hideDigitsForResult && <>
       <MatrixElementsItem
         element={topLeft2}
         top={['20.8%', '21.8%']}
@@ -30,6 +26,24 @@ const TopElements = ({ matrixData }) => {
         element={topLeft3}
         top={['25.4%', '26.4%']}
         left={['25.6%', '26.5%']}
+      />
+      
+      
+      <MatrixElementsItem
+        element={topRight2}
+        top={['20.8%', '21.9%']}
+        right={['21%', '21.8%', '22%']}
+      />
+      <MatrixElementsItem
+        element={topRight3}
+        top={['25.4%', '26.5%']}
+        right={['25.6%', '26.5%', '26.7%']}
+      />
+      </>}
+      <MatrixElementsItem
+        element={topLeft1}
+        top={['16.2%', '17.3%', '17%']}
+        left={['16.3%', '17.4%', '17.1%']}
       />
       <MatrixElementsItem
         element={month}
@@ -50,16 +64,6 @@ const TopElements = ({ matrixData }) => {
         element={topRight1}
         top={['16.2%', '17.3%', '17%']}
         right={['16.4%', '17.4%']}
-      />
-      <MatrixElementsItem
-        element={topRight2}
-        top={['20.8%', '21.9%']}
-        right={['21%', '21.8%', '22%']}
-      />
-      <MatrixElementsItem
-        element={topRight3}
-        top={['25.4%', '26.5%']}
-        right={['25.6%', '26.5%', '26.7%']}
       />
     </>
   );

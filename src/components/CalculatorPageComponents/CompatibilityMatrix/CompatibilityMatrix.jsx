@@ -7,15 +7,24 @@ import {
 } from '../PersonalMatrix/MatrixBtn/MatrixBtn.styled';
 import Partners from './Partners/Partners';
 import Team from './Team/Team';
+import { useMatrix } from 'pages/Calculator';
+import Annual from './Annual/Annual';
 
 const btnList = [
-  { name: 'ПАРТНЕРЫ', type: 'partners', disabled: false },
-  { name: 'КОЛЛЕКТИВ', type: 'team', disabled: false },
-  { name: 'Матрица ГОДА', type: 'year_matrix', disabled: true },
+  { name: 'ПАРТНЕРЫ', type: 'partners' },
+  { name: 'КОЛЛЕКТИВ', type: 'team' },
+  { name: 'Матрица ГОДА', type: 'year_matrix' },
 ];
 
 const CompatibilityMatrix = () => {
   const [compatibilityType, setCompatibilityType] = useState('partners');
+  const { setShowMatrix, setPartnersDate } = useMatrix();
+
+  const onChangeCal = type => {
+    setCompatibilityType(type);
+    setShowMatrix(false);
+    setPartnersDate([]);
+  };
 
   useEffect(() => {
     const section = document.getElementById(`compatibility`);
@@ -28,8 +37,8 @@ const CompatibilityMatrix = () => {
         return <Partners />;
       case 'team':
         return <Team />;
-      case 'healthMatrix':
-        return null;
+      case 'year_matrix':
+        return <Annual />;
       default:
         break;
     }
@@ -43,13 +52,14 @@ const CompatibilityMatrix = () => {
         m="0 auto"
       >
         <BtnList>
-          {btnList.map(({ name, type, disabled }) => (
+          {btnList.map(({ name, type }) => (
             <BtnItem key={name}>
               {' '}
               <Link
                 className={compatibilityType === type ? 'active' : null}
-                onClick={() => setCompatibilityType(type)}
-                disabled={disabled}
+                onClick={() => {
+                  onChangeCal(type);
+                }}
               >
                 {name}
               </Link>

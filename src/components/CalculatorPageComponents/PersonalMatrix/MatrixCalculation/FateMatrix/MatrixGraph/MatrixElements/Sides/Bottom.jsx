@@ -1,7 +1,7 @@
 import React from 'react';
 import MatrixElementsItem from '../MatrixElementsItem';
 
-const Bottom = ({ matrixData }) => {
+const Bottom = ({ matrixData, hideDigitsForResult }) => {
   const {
     bottomLeft1,
     bottomLeft2,
@@ -15,21 +15,36 @@ const Bottom = ({ matrixData }) => {
   } = matrixData;
   return (
     <>
+      {!hideDigitsForResult && (
+        <>
+          <MatrixElementsItem
+            element={bottomLeft2}
+            bottom={['21.6%', '22.3%']}
+            left={['21.2%', '22.3%']}
+          />
+          <MatrixElementsItem
+            element={bottomLeft3}
+            bottom={['26.2%', '27%']}
+            left={['25.8%', '27%', '26.7%']}
+          />
+          <MatrixElementsItem
+            element={bottomRight2}
+            bottom={['21.6%', '22.3%']}
+            right={['21.1%', '22%']}
+          />
+          <MatrixElementsItem
+            element={bottomRight3}
+            bottom={['26.2%', '27%']}
+            right={['25.7%', '26.4%', '26.6%']}
+          />
+        </>
+      )}
       <MatrixElementsItem
         element={bottomLeft1}
         bottom={['17%', '17.6%']}
         left={['16.5%', '17.5%']}
       />
-      <MatrixElementsItem
-        element={bottomLeft2}
-        bottom={['21.6%', '22.3%']}
-        left={['21.2%', '22.3%']}
-      />
-      <MatrixElementsItem
-        element={bottomLeft3}
-        bottom={['26.2%', '27%']}
-        left={['25.8%', '27%', '26.7%']}
-      />
+
       <MatrixElementsItem
         element={bottom1}
         bottom={['4.3%', '4.8%', '4.8%']}
@@ -49,16 +64,6 @@ const Bottom = ({ matrixData }) => {
         element={bottomRight1}
         bottom={['17%', '17.6%']}
         right={['16.5%', '17.4%', '17.5%']}
-      />
-      <MatrixElementsItem
-        element={bottomRight2}
-        bottom={['21.6%', '22.3%']}
-        right={['21.1%', '22%']}
-      />
-      <MatrixElementsItem
-        element={bottomRight3}
-        bottom={['26.2%', '27%']}
-        right={['25.7%', '26.4%', '26.6%']}
       />
     </>
   );

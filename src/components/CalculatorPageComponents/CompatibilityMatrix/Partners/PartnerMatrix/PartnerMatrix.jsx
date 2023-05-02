@@ -5,7 +5,13 @@ import { MatrixNumber } from '../Partners.styled';
 import PartnerGraph from './PartnerGraph/PartnerGraph';
 import PurposeTable from '../PurposeTable/PurposeTable';
 
-const PartnerMatrix = ({ partner, date, lastIndex }) => {
+const PartnerMatrix = ({
+  partner,
+  date,
+  lastIndex,
+  matrix: Matrix,
+  isAnual = false,
+}) => {
   return (
     <Box
       flex="1"
@@ -17,7 +23,12 @@ const PartnerMatrix = ({ partner, date, lastIndex }) => {
     >
       <MatrixNumber mb={['21px']}>{partner.order}</MatrixNumber>
       <PartnerInfo date={date} hideInfo={!partner.isGenerated} />
-      <PartnerGraph partnerMatrix={partner} />
+      <PartnerGraph
+        partnerMatrix={partner}
+        matrix={lastIndex ? Matrix : null}
+        hideDigitsForResult={lastIndex && isAnual}
+        isAnual={lastIndex && isAnual}
+      />
       <PurposeTable partnerMatrix={partner} />
     </Box>
   );

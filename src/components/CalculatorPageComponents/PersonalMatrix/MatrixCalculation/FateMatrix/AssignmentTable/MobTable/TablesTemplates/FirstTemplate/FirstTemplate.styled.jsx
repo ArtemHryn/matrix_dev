@@ -15,6 +15,9 @@ export const Name = styled.p`
     font-size: 26px;
     line-height: 1.27;
   }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    font-size: 24px;
+  }
   ${space}
 `;
 

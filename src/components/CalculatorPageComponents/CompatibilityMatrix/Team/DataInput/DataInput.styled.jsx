@@ -9,6 +9,13 @@ export const AddBtn = styled.button`
   border-radius: 50%;
   width: 26px;
   height: 26px;
+  &:is(:hover, :focus) {
+    transform: scale(1.05);
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    width: 32px;
+    height: 32px;
+  }
 `;
 
 export const AddBtnText = styled.p`
@@ -16,4 +23,7 @@ export const AddBtnText = styled.p`
   line-height: 18px;
 
   color: rgba(73, 73, 73, 0.8);
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    font-size: 22px;
+  }
 `;

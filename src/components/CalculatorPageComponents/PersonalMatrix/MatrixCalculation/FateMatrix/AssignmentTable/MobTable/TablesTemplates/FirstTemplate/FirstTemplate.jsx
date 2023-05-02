@@ -77,7 +77,7 @@ const FirstTemplate = props => {
         display="flex"
         justifyContent="flex-end"
         alignItems="center"
-        pr={'15px'}
+        pr={['15px', '26px']}
         pt={['12px']}
         borderTop={['0.6px solid #72499B', '1px solid #72499B']}
         borderRadius={['7px', '12px']}

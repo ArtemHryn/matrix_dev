@@ -20,14 +20,14 @@ const InputLine = ({ index, register, remove, setValue }) => {
   };
 
   return (
-    <Box display="flex" gridGap="5px" mb="8px" alignItems="center">
+    <Box display="flex" gridGap={["5px", null, '8px']} mb="8px" alignItems="center">
       <Input
         type="text"
         {...register(`info.${index}.name`)}
         placeholder="Имя"
       />
       <Input
-        width="135px"
+        width={["135px", null, '240px']}
         type="text"
         placeholder="Дата  (10.02.2000)"
         {...register(`info.${index}.date`, {

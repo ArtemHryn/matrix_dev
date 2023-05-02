@@ -11,6 +11,10 @@ export const Input = styled.input`
   padding: 11px;
   color: rgba(38, 38, 38, 0.9);
   width: 110px;
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    width: 130px;
+    height: 47px;
+  }
   ${layout}
 `;
 
@@ -26,5 +30,9 @@ export const RemoveBtn = styled.button`
   cursor: pointer;
   &:is(:hover, :focus) {
     transform: scale(1.05);
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    width: 32px;
+    height: 32px;
   }
 `;

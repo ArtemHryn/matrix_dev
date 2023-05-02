@@ -45,7 +45,7 @@ const DataInput = () => {
       as="form"
       onSubmit={handleSubmit(onFormSubmit)}
       m={['0 auto 40px', ' 0 auto 60px']}
-      maxWidth="370px"
+      maxWidth={["370px", null, '500px']}
     >
       <Box
         backgroundImage={gradient}

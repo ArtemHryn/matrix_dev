@@ -39,7 +39,6 @@ const Partners = () => {
             display={[null, null, 'flex']}
             justifyContent="space-between"
             gridGap="40px"
-          
           >
             {partnersMatrixData.map((partner, index) => (
               <PartnerMatrix

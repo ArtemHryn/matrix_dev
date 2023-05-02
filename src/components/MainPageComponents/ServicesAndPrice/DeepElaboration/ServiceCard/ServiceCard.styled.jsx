@@ -85,17 +85,6 @@ export const CardDescription = styled.p`
   }
 `;
 
-export const Price = styled.p`
-  padding: 0 22px 0 32px;
-  font-family: ${p => p.theme.fonts.main};
-  font-style: normal;
-  font-weight: 400;
-  font-size: 25px;
-  line-height: 1.2;
-
-  color: ${p => p.theme.colors.secondText};
-`;
-
 export const Button = styled.button`
   display: flex;
   align-items: center;

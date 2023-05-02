@@ -3,15 +3,19 @@ import PartnerGraph from '../PartnerMatrix/PartnerGraph/PartnerGraph';
 import { NameDate, StarImg } from '../Partners.styled';
 
 import star from 'images/Calculator/personalMatrix/star.webp';
-import { ReactComponent as Matrix } from 'images/Calculator/personalMatrix/personalMatrix.svg';
+import { ReactComponent as Matrix } from 'images/Calculator/CompatibilityMatrix/resultMatrix.svg';
 import PurposeTable from '../PurposeTable/PurposeTable';
 import InformationTable from 'components/CalculatorPageComponents/PersonalMatrix/MatrixCalculation/FateMatrix/AssignmentTable/Desktop/InformationTable/InformationTable';
 
-const ResultMatrix = ({ resultData }) => {
+const ResultMatrix = ({
+  resultData,
+  matrix: MatrixChange,
+  isAnual = false,
+  yearArcanes,
+}) => {
   if (!resultData) {
     return null;
   }
-
   return (
     <Box mb={['40px', '70px', '110px']}>
       <Box
@@ -37,7 +41,15 @@ const ResultMatrix = ({ resultData }) => {
         gridGap="120px"
         alignItems="center"
       >
-        <PartnerGraph partnerMatrix={resultData} matrix={Matrix} />
+        <PartnerGraph
+          partnerMatrix={resultData}
+          matrix={MatrixChange ? MatrixChange : Matrix}
+          hideDigitsForResult={true}
+          isAnual={isAnual}
+          yearArcanes={
+            yearArcanes && yearArcanes.map(element => element.arcane)
+          }
+        />
         <PurposeTable
           partnerMatrix={resultData}
           display={[null, null, 'none']}
