@@ -1,5 +1,4 @@
 import { Box } from 'components/Box';
-import React from 'react';
 import { Element, ElementsList, Name } from '../FirstTemplate/FirstTemplate.styled';
 
 const gradient =

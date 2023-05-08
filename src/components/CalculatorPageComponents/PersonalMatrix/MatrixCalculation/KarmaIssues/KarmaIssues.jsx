@@ -1,6 +1,6 @@
 import { Box } from 'components/Box';
 import { useMatrix } from 'pages/Calculator';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import AssignmentTableDesktop from '../FateMatrix/AssignmentTable/Desktop/AssignmentTableDesktop';
 import AboutCustomer from '../FateMatrix/AboutCustomer/AboutCustomer';
 import AssignmentTabledMobTabled from '../FateMatrix/AssignmentTable/MobTable/AssignmentTabledMobTable';

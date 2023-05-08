@@ -1,6 +1,6 @@
 import { Box } from 'components/Box';
 import { ageCalculator } from 'helper/ageCalculator';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import star from 'images/Calculator/personalMatrix/star.webp';
 import { Age, NameDate, StarImg } from '../../Partners.styled';

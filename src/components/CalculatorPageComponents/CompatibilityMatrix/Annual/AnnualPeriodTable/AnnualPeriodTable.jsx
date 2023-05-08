@@ -1,6 +1,6 @@
 import { Box } from 'components/Box';
 import { getAnnualPeriodData } from 'helper/calculateMatrix';
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { KeyText, PeriodCircle, TableTitle } from './AnnualPeriodTable.styled';
 import {
   AgeColumnName,

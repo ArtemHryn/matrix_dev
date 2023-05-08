@@ -1,6 +1,5 @@
 import { Box } from 'components/Box';
 import { useMatrix } from 'pages/Calculator';
-import React from 'react';
 import {
   Info,
   Key,

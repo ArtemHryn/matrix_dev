@@ -1,4 +1,3 @@
-import React from 'react';
 import { MatrixKey } from './MatrixElementItem.styled';
 
 const MatrixElementsItem = ({ element, ...props }) => {

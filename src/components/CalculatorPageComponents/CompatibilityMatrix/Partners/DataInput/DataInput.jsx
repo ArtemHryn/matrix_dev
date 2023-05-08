@@ -1,5 +1,4 @@
 import { Box } from 'components/Box';
-import React from 'react';
 import { useFieldArray, useForm } from 'react-hook-form';
 import PartnerData from './PartnerData';
 import { SubmitBtn } from 'components/CalculatorPageComponents/PersonalMatrix/DataInput/DataInput.styled';

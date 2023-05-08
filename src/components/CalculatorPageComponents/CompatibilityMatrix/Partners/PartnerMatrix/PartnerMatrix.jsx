@@ -1,5 +1,4 @@
 import { Box } from 'components/Box';
-import React from 'react';
 import PartnerInfo from './PartnerInfo/PartnerInfo';
 import { MatrixNumber } from '../Partners.styled';
 import PartnerGraph from './PartnerGraph/PartnerGraph';

@@ -1,5 +1,4 @@
 import { Box } from 'components/Box';
-import React from 'react';
 import { Input, RemoveBtn } from './InputLine.styled';
 
 import { ReactComponent as Plus } from 'images/Calculator/CompatibilityMatrix/plus.svg';

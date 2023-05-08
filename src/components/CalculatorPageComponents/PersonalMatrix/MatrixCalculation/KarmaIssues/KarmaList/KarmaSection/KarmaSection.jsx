@@ -1,5 +1,4 @@
 import { Box } from 'components/Box';
-import React from 'react';
 import KarmaElementInfo from './KarmaElementInfo/KarmaElementInfo';
 import { SectionName } from '../KarmaList.styled';
 

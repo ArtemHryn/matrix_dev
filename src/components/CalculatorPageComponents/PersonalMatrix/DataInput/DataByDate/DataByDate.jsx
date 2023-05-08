@@ -1,4 +1,3 @@
-import React from 'react';
 import { BoxTitle, FlipButton, FlipButtonSvg } from '../DataInput.styled';
 import { Error, FrontCard, Input } from './DataByDate.styled';
 

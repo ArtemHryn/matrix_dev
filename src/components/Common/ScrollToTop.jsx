@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ScrollToTopBtn } from './Common.styled';
 import { ReactComponent as Arrow } from 'images/FreeRecommendations/rightArrow.svg';
 

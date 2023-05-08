@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { Box } from 'components/Box';
 import DataInput from './DataInput/DataInput';
 import MatrixBtn from './MatrixBtn/MatrixBtn';

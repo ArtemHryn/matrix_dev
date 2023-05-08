@@ -1,4 +1,3 @@
-import React from 'react';
 import { BoxTitle, FlipButton } from '../DataInput.styled';
 import {
   BackCard,

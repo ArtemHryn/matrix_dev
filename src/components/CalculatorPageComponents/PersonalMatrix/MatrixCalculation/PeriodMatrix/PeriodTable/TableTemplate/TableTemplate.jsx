@@ -9,10 +9,8 @@ import { useEffect, useState } from 'react';
 
 const TableTemplate = ({ main, additional, age: customerAge }) => {
   const [currentArcane, setCurrentArcane] = useState(null);
-
   useEffect(() => {
     const fullAge = customerAge.years + customerAge.months / 12;
-
     if (fullAge > 38.75 && fullAge < 40 && main[main.length - 1].age < 40) {
       setCurrentArcane(main.length - 1);
       return;

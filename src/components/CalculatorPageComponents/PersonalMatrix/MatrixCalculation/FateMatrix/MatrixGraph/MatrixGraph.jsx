@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { Box } from 'components/Box';
 import { MatrixImg } from './MatrixGraph.styled';
 import { useMatrix } from 'pages/Calculator';

@@ -1,4 +1,3 @@
-import React from 'react';
 import { BtnItem, BtnList, Link } from './MatrixBtn.styled';
 import { useMatrix } from 'pages/Calculator';
 

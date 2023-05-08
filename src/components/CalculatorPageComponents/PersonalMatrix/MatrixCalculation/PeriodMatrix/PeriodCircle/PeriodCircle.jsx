@@ -1,4 +1,3 @@
-import React from 'react';
 import { useMatrix } from 'pages/Calculator';
 import { AgeArcane } from '../PeriodMatrix.styled';
 

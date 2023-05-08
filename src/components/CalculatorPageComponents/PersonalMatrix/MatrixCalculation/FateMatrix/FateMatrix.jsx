@@ -1,4 +1,3 @@
-import React from 'react';
 import AboutCustomer from './AboutCustomer/AboutCustomer';
 import { Box } from 'components/Box';
 import MatrixGraph from './MatrixGraph/MatrixGraph';

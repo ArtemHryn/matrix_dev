@@ -1,5 +1,5 @@
 import { Box } from 'components/Box';
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import HealthCard from './HealthCard/HealthCard';
 import { SetCardTypeBtn } from '../HealthMatrix.styled';
 import { useMatrix } from 'pages/Calculator';

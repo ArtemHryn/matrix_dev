@@ -1,4 +1,3 @@
-import React from 'react';
 import { Box } from 'components/Box';
 import { ElementsList, Name } from './SecondTemplate.styled';
 import { Element, MainElement } from '../FirstTemplate/FirstTemplate.styled';

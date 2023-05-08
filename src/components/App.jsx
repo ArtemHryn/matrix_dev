@@ -1,5 +1,5 @@
 import { Navigate, useLocation } from 'react-router-dom';
-import React, { lazy, Suspense } from 'react';
+import { lazy, Suspense } from 'react';
 
 import { Box } from './Box';
 import { Route, Routes } from 'react-router-dom';

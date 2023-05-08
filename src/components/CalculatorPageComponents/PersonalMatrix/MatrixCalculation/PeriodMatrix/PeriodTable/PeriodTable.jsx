@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Box } from 'components/Box';
 import {
   AgeColumnName,
@@ -20,9 +20,15 @@ const PeriodTable = () => {
     if (!ageList) {
       return;
     }
+
     setFirstPart(ageList.filter(({ age }) => age < 40));
     setSecondPart(ageList.filter(({ age }) => age >= 40));
   }, [ageList]);
+
+  if (firstPart.length === 0 || secondPart.length === 0) {
+    return null;
+  }
+  
   return (
     <Box maxWidth="900px" margin="0 auto">
       <Box

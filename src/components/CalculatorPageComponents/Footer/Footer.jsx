@@ -1,4 +1,3 @@
-import React from 'react';
 import { Box } from 'components/Box';
 import star from 'images/Calculator/Hero/star.webp';
 import {

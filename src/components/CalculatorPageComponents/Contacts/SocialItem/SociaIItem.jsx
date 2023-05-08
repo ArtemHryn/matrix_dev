@@ -1,4 +1,3 @@
-import React from 'react';
 import { ReactComponent as Arrow } from 'images/FreeRecommendations/rightArrow.svg';
 import {
   SocialMediaItemElement,

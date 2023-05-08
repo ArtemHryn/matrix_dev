@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Box } from 'components/Box';
 import DataByDate from './DataByDate/DataByDate';

@@ -1,4 +1,3 @@
-import React from 'react';
 import MatrixElementsItem from '../MatrixElementsItem';
 
 const Center = ({ matrixData }) => {

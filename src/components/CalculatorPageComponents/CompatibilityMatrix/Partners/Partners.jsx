@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import DataInput from './DataInput/DataInput';
 import { useMatrix } from 'pages/Calculator';
 import { allData, getCompatData } from 'helper/calculateMatrix';

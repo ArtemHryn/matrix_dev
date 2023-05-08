@@ -1,6 +1,6 @@
 import { allData, getCompatData } from 'helper/calculateMatrix';
 import { useMatrix } from 'pages/Calculator';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import DataInput from './DataInput/DataInput';
 import { Box } from 'components/Box';
 import ResultMatrix from '../Partners/ResultMatrix/ResultMatrix';

@@ -4,7 +4,7 @@ export const navigationList = [
   { name: 'Услуги', href: '#4methods' },
   { name: 'Отзывы', href: '#feedback' },
   { name: 'FAQ', href: '#peopleAsk' },
-  { name: 'Калькулятор', href: '/matrix/calculator' },
+  { name: 'Калькулятор', href: '/calculator' },
 ];
 
 export default navigationList

@@ -1,7 +1,7 @@
 import { Box } from 'components/Box';
 import DataByDate from 'components/CalculatorPageComponents/PersonalMatrix/DataInput/DataByDate/DataByDate';
 import DataByNineDigits from 'components/CalculatorPageComponents/PersonalMatrix/DataInput/DataByNineDigits/DataByNineDigits';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const PartnerData = ({ register, setValue, errors, infoErrors, index }) => {
   const [isFlipped, setIsFlipped] = useState(false);

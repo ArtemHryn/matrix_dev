@@ -1,5 +1,4 @@
 import { Box } from 'components/Box';
-import React from 'react';
 import img from 'images/Calculator/Hero/img.webp';
 import img2 from 'images/Calculator/Hero/img2.webp';
 import imgDesk from 'images/Calculator/Hero/imgDesk.webp';
