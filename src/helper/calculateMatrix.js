@@ -88,10 +88,10 @@ export function allData(date, isGenerated, calCanter2 = true) {
   data.planet = checkNum(data.social + data.spirit);
   data.insidePower = checkNum(data.center + data.center2);
 
-  data.healthTopLeft = checkNum(data.center2 + data.topLeft1);
-  data.healthTopRight = checkNum(data.center2 + data.topRight1);
-  data.healthBottomRight = checkNum(data.center2 + data.bottomRight1);
-  data.healthBottomLeft = checkNum(data.center2 + data.bottomLeft1);
+  data.healthTopLeft = checkNum(data.center2 + data.topLeft3);
+  data.healthTopRight = checkNum(data.center2 + data.topRight3);
+  data.healthBottomRight = checkNum(data.center2 + data.bottomRight3);
+  data.healthBottomLeft = checkNum(data.center2 + data.bottomLeft3);
 
   return data;
 }
