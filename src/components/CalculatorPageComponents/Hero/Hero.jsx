@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { Box } from 'components/Box';
 import img from 'images/Calculator/Hero/img.webp';
 import img2 from 'images/Calculator/Hero/img2.webp';
@@ -15,6 +16,7 @@ import {
 import { ButtonList } from './ButtonList/ButtonList';
 
 export const Hero = () => {
+  const {t} = useTranslation()
   return (
     <Box as="section" py={['40px', null, '35px']}>
       <Box
@@ -53,7 +55,7 @@ export const Hero = () => {
         />
         <Logo>Dari.Karma</Logo>
         <Title>
-          Калькулятор <SecondTitle>матрицы судьбы</SecondTitle>
+          Калькулятор <SecondTitle>{t('about')}</SecondTitle>
         </Title>
         <AboutCalc>
           Продвинутый калькулятор для быстрого и профессионального расчета.

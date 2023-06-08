@@ -10,9 +10,8 @@ import {
   Title,
 } from './ChangeYourFate.styled';
 import authorMob from 'images/Calculator/ChangeYourFate/AuthorPhoto.webp';
-import authorTab from 'images/Calculator/ChangeYourFate/authorTab.webp'
-import authorDesk from 'images/Calculator/ChangeYourFate/authorDesk.webp'
-
+import authorTab from 'images/Calculator/ChangeYourFate/authorTab.webp';
+import authorDesk from 'images/Calculator/ChangeYourFate/authorDesk.webp';
 
 export const ChangeYourFate = () => {
   return (

@@ -49,6 +49,7 @@ export const Title = styled.h1`
 
 export const SecondTitle = styled.span`
   font-style: italic;
+  display: block;
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
     font-size: 127px;
   }
