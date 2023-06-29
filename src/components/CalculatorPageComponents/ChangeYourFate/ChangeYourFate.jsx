@@ -27,19 +27,22 @@ export const ChangeYourFate = () => {
           display={[null, 'flex']}
           overflow="hidden"
           mb={['25px', '29px']}
+          justifyContent={[null, 'space-between']}
         >
           <Box
             mb={['7px', '0px']}
             py={[null, '42px']}
             pl={[null, '40px', '66px']}
             pr={[null, '11px']}
-            maxWidth={[null, '50%']}
+            maxWidth={[null, '60%', '65%']}
           >
             {' '}
-            <Logo>Dari.Karma</Logo>
-            <Line>
-              <Karmolog>Кармолог</Karmolog>
-            </Line>
+            <Box ml={[null, 'auto']}>
+              <Logo>Dari.Karma</Logo>
+              <Line>
+                <Karmolog>Кармолог</Karmolog>
+              </Line>
+            </Box>
             <Title>
               Хочешь больше узнать о своей судьбе и изменить её к лучшему?
             </Title>

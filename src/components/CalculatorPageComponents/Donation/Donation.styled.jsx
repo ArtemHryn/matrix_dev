@@ -1,49 +1,42 @@
 import styled from 'styled-components';
-import { typography, layout, position } from 'styled-system';
+import { layout, flexbox } from 'styled-system';
+import { motion } from 'framer-motion';
 import { ReactComponent as BkmLogo } from 'images/Calculator/Donation/bmc-logo.svg';
 
 export const LikeTheProject = styled.h3`
   max-width: 340px;
-  font-style: italic;
-  font-weight: 400;
-  font-size: 35px;
-  line-height: 1.45;
-
-  letter-spacing: 0.01em;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: 0.02em;
 
   color: ${p => p.theme.colors.main};
   margin-bottom: 25px;
-  ${typography}
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
-    font-size: 45px;
-    line-height: 1.57;
+    font-size: 40px;
+    line-height: 1.1;
     max-width: 685px;
-    margin-bottom: 35px;
+    margin-bottom: 31px;
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
     font-size: 50px;
-    max-width: 90%;
+    max-width: 60%;
   }
 `;
 
 export const SaveService = styled.p`
-  max-width: 230px;
   font-size: 18px;
   line-height: 1.27;
-
   letter-spacing: 0.01em;
-
-  color: #424242;
+  color: ${p => p.theme.colors.main};
   margin-bottom: 67px;
+
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
-    font-size: 25px;
+    font-size: 23px;
+    font-weight: 600;
     line-height: 1.28;
-    max-width: 450px;
-    margin-bottom: 110px;
-  }
-  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
-    font-size: 22px;
-    max-width: 100%;
+    max-width: 430px;
+    margin-bottom: 57px;
   }
 `;
 
@@ -51,10 +44,9 @@ export const DonationLink = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 200px;
-  height: 50px;
+  width: 143px;
+  height: 43px;
   background-color: ${p => p.theme.colors.white};
-  box-shadow: 0px 4px 10px rgba(144, 114, 175, 0.28);
   border-radius: 9px;
 
   font-style: italic;
@@ -66,27 +58,23 @@ export const DonationLink = styled.a`
   color: ${p => p.theme.colors.main};
   margin-bottom: 10px;
   transition: all 250ms ease-in-out;
+
+  ${flexbox}
   &:hover {
     transform: scale(1.05);
   }
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
-    width: 310px;
-    height: 85px;
-    font-size: 28px;
+    width: 257px;
+    height: 77px;
+    font-size: 41px;
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
-    width: 280px;
-    height: 75px;
-    font-size: 32px;
+    width: 300px;
+    height: 90px;
+    font-size: 41px;
     margin: 0;
   }
-`;
-
-export const Img = styled.img`
-  position: absolute;
-  overflow: hidden;
   ${layout}
-  ${position}
 `;
 
 export const BkCoffeeLogo = styled(BkmLogo)`
@@ -95,5 +83,25 @@ export const BkCoffeeLogo = styled(BkmLogo)`
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     width: 35px;
     height: 50px;
+  }
+`;
+
+export const MoonContainer = styled(motion.div)`
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  top: 62%;
+  right: 15%;
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    width: 250px;
+    top: 45%;
+    right: 5%;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    width: 400px;
+    top: 10%;
+    right: 10%;
   }
 `;

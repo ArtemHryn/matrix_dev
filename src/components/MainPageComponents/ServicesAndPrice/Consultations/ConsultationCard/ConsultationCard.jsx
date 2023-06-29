@@ -8,6 +8,7 @@ import {
 } from './ConsultationCard.styled';
 import { ModalLayout } from 'components/MainPageComponents/ModalWindows/ModalLayout';
 import { ModalTeamplate } from 'components/MainPageComponents/ModalWindows/ModalTemplate/ModalTemplate';
+import { useTranslation } from 'react-i18next';
 
 export const ConsultaionCard = ({
   card: {
@@ -23,6 +24,7 @@ export const ConsultaionCard = ({
 }) => {
   const [showDetails, setShowDetails] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const {t} = useTranslation()
 
   const onOpenModal = () => {
     setShowModal(true);
@@ -48,7 +50,7 @@ export const ConsultaionCard = ({
             exit={{ opacity: 0, transition: { duration: 0.3 } }}
           >
             <ShowDetailsButton onClick={onOpenModal}>
-              Подробнее
+              {t('ServicesAndPriceDetail')}
             </ShowDetailsButton>
           </DetailsContainer>
         )}

@@ -26,7 +26,6 @@ export const SetCardTypeBtn = styled.button`
   color: ${p => p.theme.colors.activeBtn};
 
   background-color: ${p => p.theme.colors.white};
-  box-shadow: 0px 3.4px 3.4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   transition: all 250ms ease-in-out;
   cursor: pointer;
@@ -40,7 +39,6 @@ export const SetCardTypeBtn = styled.button`
     font-size: 20px;
     line-height: 1.2;
     height: 48px;
-    box-shadow: 0px 5.4px 5.4px rgba(0, 0, 0, 0.25);
   }
   ${space}
   ${color}

@@ -14,19 +14,19 @@ export const Img = styled.img`
 `;
 
 export const TemplateTitle = styled.h2`
-  font-style: italic;
-  font-weight: 400;
-  font-size: 40px;
+  font-weight: 600;
+  font-size: 32px;
   line-height: 1.08;
-
+  max-width: 290px;
   color: ${p => p.theme.colors.main};
   margin-bottom: 16px;
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     font-size: 60px;
-    margin-bottom: 37px;
+    margin-bottom: 28px;
+    max-width: 100%;
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
-    font-size: 50px;
+    font-size: 40px;
     line-height: 1.08;
     margin-bottom: 22px;
   }
@@ -35,16 +35,13 @@ export const TemplateTitle = styled.h2`
 export const HowToGetTemplate = styled.p`
   font-size: 18px;
   line-height: 1.22;
-
-  color: #000000;
+  font-weight: 600;
+  color: ${p => p.theme.colors.main};
   max-width: 280px;
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
-    font-size: 25px;
+    font-size: 23px;
     line-height: 1.2;
-    max-width: 90%;
-  }
-  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
-    font-style: 18px;
+    max-width: 70%;
   }
 `;
 

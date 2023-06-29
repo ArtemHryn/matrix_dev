@@ -5,9 +5,11 @@ import { About, Title, TransformationWarning } from './WaysToTransformation.styl
 
 import line from 'images/WaysToTransformation/line.png';
 import titleLineDesc from 'images/WaysToTransformation/titleLineDesc.png';
+import { useTranslation } from 'react-i18next';
 
 
 export const WaysToTransformation = () => {
+  const {t} = useTranslation()
   return (
     <Box
       as="section"
@@ -22,11 +24,8 @@ export const WaysToTransformation = () => {
         px={['60px', '33px', '100px']}
         m="0 auto"
       >
-        <Title>Я проведу тебя к истинным желаниям твоей души</Title>
-        <About>
-          Ты не останешься один с багажом новой информации о себе - так как я
-          гарантирую:
-        </About>
+        <Title>{t('waysToTransformationTitle')}</Title>
+        <About>{t('waysToTransformationAbout')}</About>
         <Box display={[null, 'flex', 'flex']}>
           <ConsultationWay />
           <TransformationWay />

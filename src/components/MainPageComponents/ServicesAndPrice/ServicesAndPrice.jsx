@@ -9,11 +9,13 @@ import { Consultations } from './Consultations/Consultations';
 import { ExpressServices } from './ExpressServices/ExpressServices';
 import { AuthorMasterClass } from './AuthorMasterClass/AuthorMasterClass';
 import { DeepElaboration } from './DeepElaboration/DeepElaboration';
+import { useTranslation } from 'react-i18next';
 
 const sectionGradient =
   'linear-gradient(to bottom,#fff,rgba(158, 118, 255, 0.1) 16%,rgba(158, 118, 255, 0.1) 26%,#fff 100%)';
 
 export const ServicesAndPrice = () => {
+  const {t} = useTranslation()
   return (
     <Box
       as="section"
@@ -26,14 +28,12 @@ export const ServicesAndPrice = () => {
         px={['40px', '33px', '100px']}
         m="0 auto"
       >
-        <ServiceAndPriceTitle>Услуги и прайс</ServiceAndPriceTitle>
-        <FourStagesTitle>
-          Глубинные проработки: 4 уровня матрицы
-        </FourStagesTitle>
+        <ServiceAndPriceTitle>
+          {t('ServicesAndPriceTitle')}
+        </ServiceAndPriceTitle>
+        <FourStagesTitle>{t('ServicesAndPriceFourStages')}</FourStagesTitle>
         <DeepElaboration />
-        <ServiceWarning>
-          *Каждый уровень прорабатывается последовательно
-        </ServiceWarning>
+        <ServiceWarning>{t('ServicesAndPriceWarning')}</ServiceWarning>
         <Consultations />
 
         <ExpressServices />

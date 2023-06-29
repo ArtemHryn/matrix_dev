@@ -11,9 +11,11 @@ import {
 
 import { MatrixMinus } from './MatrixMinus/MatrxiMinus';
 import { MatrixPlus } from './MatrixPlus/MatrixPlus';
+import { useTranslation } from 'react-i18next';
 
 export const MatrixPlusAndMinus = () => {
   const [isChecked, setIsChecked] = useState(false);
+  const { t } = useTranslation();
 
   const onChangeStatus = e => {
     setIsChecked(e.target.checked);
@@ -37,13 +39,19 @@ export const MatrixPlusAndMinus = () => {
           pt={[null, null, '30px']}
           flexDirection={[null, null, 'column']}
         >
-          <Title>{isChecked ? 'Матрица в плюсе' : 'Матрица в минусе'}</Title>
+          <Title>
+            {isChecked
+              ? t('matrixMinusAndPlusTitle2')
+              : t('matrixMinusAndPlusTitle1')}
+          </Title>
           <Box
             display={['none', 'flex']}
             alignItems={[null, 'center', 'flex-start']}
             flexDirection={[null, null, 'column']}
           >
-            <CheckBoxText op={isChecked}>Проработать матрицу</CheckBoxText>
+            <CheckBoxText op={isChecked}>
+              {t('matrixMinusAndPlusCheckboxText')}
+            </CheckBoxText>
             <Label>
               <Input
                 type="checkbox"
@@ -65,7 +73,9 @@ export const MatrixPlusAndMinus = () => {
           alignItems="center"
         >
           <Box display={['flex', 'none']} justifyContent="space-between">
-            <CheckBoxText op={isChecked}>Проработать матрицу</CheckBoxText>
+            <CheckBoxText op={isChecked}>
+              {t('matrixMinusAndPlusCheckboxText')}
+            </CheckBoxText>
             <Label>
               <Input
                 type="checkbox"

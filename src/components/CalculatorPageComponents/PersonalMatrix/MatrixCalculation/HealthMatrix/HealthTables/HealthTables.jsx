@@ -22,7 +22,6 @@ const HealthTables = () => {
         <SetCardTypeBtn
           color={cardType === personal ? 'white' : null}
           bg={cardType === personal ? '#765D90' : null}
-          boxShadow={cardType === personal ? 'activeBtn' : null}
           onClick={() => setCardType('Личная карта здоровья')}
           mr={['5px', '10px']}
         >
@@ -31,7 +30,7 @@ const HealthTables = () => {
         <SetCardTypeBtn
           color={cardType === integral ? 'white' : null}
           bg={cardType === integral ? '#765D90' : null}
-          boxShadow={cardType === integral ? 'activeBtn' : null}
+          
           onClick={() => setCardType('Целостная карта здоровья')}
         >
           Целостная

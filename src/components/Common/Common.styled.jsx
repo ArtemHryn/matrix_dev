@@ -69,4 +69,5 @@ export const CalcContainer = styled.div`
   }
   background-size: 400% 400%;
   animation: ${gradientAnimation} 5s ease infinite;
+  overflow: hidden;
 `;

@@ -1,6 +1,7 @@
 import { Box } from "components/Box"
 import { TransformationList, TransformationText, TransformationTitle } from "./TransformationWay.styled";
 import littleStar from 'images/WaysToTransformation/littleStar.png'
+import { t } from "i18next";
 
 export const TransformationWay = () => {
     return (
@@ -17,7 +18,9 @@ export const TransformationWay = () => {
           pl={['26px', '26px', '57px']}
           pr="10px"
         >
-          <TransformationTitle>На Трансформации</TransformationTitle>
+          <TransformationTitle>
+            {t('waysToTransformationTransformationWayTitle')}
+          </TransformationTitle>
           <Box
             width="43px"
             height="43px"
@@ -27,31 +30,29 @@ export const TransformationWay = () => {
             alignItems="center"
             justifyContent="center"
           >
-            <img src={littleStar} alt="star" loading="lazy"/>
+            <img src={littleStar} alt="star" loading="lazy" />
           </Box>
         </Box>
 
         <TransformationList>
           <li>
             <TransformationText>
-              Энергетическую и информационную поддержку.{' '}
+              {t('waysToTransformationTransformationWayText1')}
             </TransformationText>
           </li>
           <li>
             <TransformationText>
-              Предоставление комплекса рекомендаций и материалов - кармический
-              рецепт
+              {t('waysToTransformationTransformationWayText2')}
             </TransformationText>
           </li>
           <li>
             <TransformationText>
-              Разноплановые методики и практики для проработки
+              {t('waysToTransformationTransformationWayText3')}
             </TransformationText>
           </li>
           <li>
             <TransformationText>
-              Отслеживание процесса трансформации с помощью точек контроля между
-              этапами в формате созвонов.
+              {t('waysToTransformationTransformationWayText4')}
             </TransformationText>
           </li>
         </TransformationList>

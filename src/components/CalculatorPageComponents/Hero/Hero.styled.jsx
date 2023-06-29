@@ -1,8 +1,20 @@
 import styled from 'styled-components';
-import { position, layout } from 'styled-system';
+import { motion } from 'framer-motion';
+import { layout, position } from 'styled-system';
 
-export const Img = styled.img`
+export const HeroStar = styled(motion.div)`
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72vw;
+  height: 50px;
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    width: 62vw;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    height: 500px;
+  }
   ${position}
   ${layout}
 `;
@@ -50,6 +62,7 @@ export const Title = styled.h1`
 export const SecondTitle = styled.span`
   font-style: italic;
   display: block;
+  margin-top: 7px;
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
     font-size: 127px;
   }
@@ -60,7 +73,7 @@ export const AboutCalc = styled.p`
   line-height: 1.24;
   text-align: center;
   letter-spacing: 0.01em;
-
+  font-weight: 600;
   color: ${p => p.theme.colors.main};
   margin-bottom: 53px;
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
@@ -91,7 +104,6 @@ export const Authoring = styled.p`
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     font-size: 17px;
     line-height: 1.24;
-    width: 400px;
+    width: 365px;
   }
-
 `;

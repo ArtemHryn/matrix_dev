@@ -6,13 +6,16 @@ import {
   Puzzle,
   PuzzleText,
 } from './MatrixMinus.styled';
-import puzzlesText from './puzzlesText';
+import puzzlesTextMinus from './puzzlesText';
 import matrixMinus from 'images/matrixPlusAndMinus/pazzles.webp';
 import matrixMinusTab from 'images/matrixPlusAndMinus/pazzlesTab.webp';
 import matrixPuzzle from 'images/matrixPlusAndMinus/animatedPuzzle.webp';
 import matrixPuzzleTab from 'images/matrixPlusAndMinus/animatedPuzzleTab.webp';
+import { useTranslation } from 'react-i18next';
 
 export const MatrixMinus = () => {
+  const { t, i18n } = useTranslation();
+
   return (
     <motion.div
       initial={{
@@ -57,11 +60,11 @@ export const MatrixMinus = () => {
             rotate="-9deg"
             display="block"
           >
-            испытываешь финансовые трудности
+            {t('matrxiMinusPuzzle')}
           </PuzzleText>
         </AnimatedPuzzle>
 
-        {puzzlesText.map(
+        {puzzlesTextMinus(i18n.language).map(
           ({
             text,
             xm,

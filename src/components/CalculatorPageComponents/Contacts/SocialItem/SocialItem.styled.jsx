@@ -6,8 +6,7 @@ export const SocialLink = styled.a`
   justify-content: center;
   align-items: center;
   background-color: #ffffff;
-  box-shadow: 0px 3.23967px 3.23967px rgba(0, 0, 0, 0.25);
-  border-radius: 40px;
+  border-radius: 6px;
   width: 66px;
   height: 39px;
   ${layout}
@@ -16,12 +15,16 @@ export const SocialLink = styled.a`
   &:focus {
     transform: scale(1.05);
   }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    width: 97px;
+  }
 `;
 
 export const Info = styled.p`
   font-size: 18px;
   line-height: 22px;
+  font-weight: 600;
 
-  color: #000000;
+  color: ${p => p.theme.colors.main};
   margin: 10px 0;
 `;

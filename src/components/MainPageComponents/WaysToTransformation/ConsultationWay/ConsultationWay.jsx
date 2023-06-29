@@ -1,7 +1,9 @@
 import { Box } from 'components/Box';
 import { ConsultationList, ConsultationText, ConsultationTitlte } from './ConsultationWas.styled';
+import { useTranslation } from 'react-i18next';
 
 export const ConsultationWay = () => {
+  const {t} = useTranslation()
   return (
     <Box
       id="consultations"
@@ -9,25 +11,27 @@ export const ConsultationWay = () => {
       width={[null, null, '385px']}
     >
       <Box>
-        <ConsultationTitlte>На Консультации</ConsultationTitlte>
+        <ConsultationTitlte>
+          {t('waysToTransformationConsultationTitle')}
+        </ConsultationTitlte>
       </Box>
-        <ConsultationList>
-          <li>
-            <ConsultationText>
-              Индивидуальный подход к каждой душе и её жизненным проблемам
-            </ConsultationText>
-          </li>
-          <li>
-            <ConsultationText>
-              Уникальные трактовки соединений энергий в твоей матрице
-            </ConsultationText>
-          </li>
-          <li>
-            <ConsultationText>
-              Информацию, которая со временем раскроется в новом, глубинном ключе
-            </ConsultationText>
-          </li>
-        </ConsultationList>
+      <ConsultationList>
+        <li>
+          <ConsultationText>
+            {t('waysToTransformationConsultationText1')}
+          </ConsultationText>
+        </li>
+        <li>
+          <ConsultationText>
+            {t('waysToTransformationConsultationText2')}
+          </ConsultationText>
+        </li>
+        <li>
+          <ConsultationText>
+            {t('waysToTransformationConsultationText3')}
+          </ConsultationText>
+        </li>
+      </ConsultationList>
     </Box>
   );
 };

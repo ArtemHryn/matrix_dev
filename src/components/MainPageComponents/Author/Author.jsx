@@ -17,8 +17,10 @@ import {
   AboutAuthorDesc,
   Symbols,
 } from './Author.styled';
+import { Trans, useTranslation } from 'react-i18next';
 
 export const Author = () => {
+  const {t} =useTranslation()
   return (
     <Box as="section" py={['40px', '40px', '90px']} id="author">
       <Box
@@ -39,10 +41,12 @@ export const Author = () => {
         />
 
         <Box>
-          <AuthorTitle>Автор проекта</AuthorTitle>
+          <AuthorTitle>{t('projectAuthor')}</AuthorTitle>
           <Description>
-            <Name>Дарина Дупак — </Name>профессиональный инициированный
-            консультант по предназначению, диагностике и коррекции судьбы
+            <Trans i18nKey="authroDesc">
+              <Name>Дарина Дупак — </Name>профессиональный инициированный
+              консультант по предназначению, диагностике и коррекции судьбы
+            </Trans>
           </Description>
           <picture>
             <source srcSet={authorPhotoTab} media="(min-width: 768px)" />
@@ -57,13 +61,8 @@ export const Author = () => {
                 width={65}
                 loading="lazy"
               />
-              <AboutAuthorWork>
-                Дипломированный менеджер социокультурной деятельности
-              </AboutAuthorWork>
-              <AboutAuthorDesc>
-                Работаю над созданием личностных брендов, провожу
-                трансформационные ивенты.
-              </AboutAuthorDesc>
+              <AboutAuthorWork>{t('aboutAuthorWork1')}</AboutAuthorWork>
+              <AboutAuthorDesc>{t('aboutAuthorWork2')}</AboutAuthorDesc>
             </AboutAuthorListElement>
             <AboutAuthorListElement>
               <Symbols
@@ -72,13 +71,8 @@ export const Author = () => {
                 width={65}
                 loading="lazy"
               />
-              <AboutAuthorWork>
-                Работаю по авторскому методу Наталии Ладини, известного как
-                Матрица Судьбы
-              </AboutAuthorWork>
-              <AboutAuthorDesc>
-                Владею углублёнными расчётами метода и техниками исцеления.
-              </AboutAuthorDesc>
+              <AboutAuthorWork>{t('aboutAuthorWork3')}</AboutAuthorWork>
+              <AboutAuthorDesc>{t('aboutAuthorWork4')}</AboutAuthorDesc>
             </AboutAuthorListElement>
           </AboutAuthor>
           <Box as="ul" display={[null, 'flex']}>
@@ -89,10 +83,7 @@ export const Author = () => {
                 width={65}
                 loading="lazy"
               />
-              <AboutAuthorDesc>
-                Получила магистерскую степень по психологии в Таврическом
-                национальном университете имени В. И. Вернадского
-              </AboutAuthorDesc>
+              <AboutAuthorDesc>{t('aboutAuthorWork5')}</AboutAuthorDesc>
             </AboutAuthorListElement>
             <AboutAuthorListElement>
               <Symbols
@@ -101,10 +92,7 @@ export const Author = () => {
                 width={65}
                 loading="lazy"
               />
-              <AboutAuthorDesc>
-                Изучаю кармический менеджмент и причинно-следственные связи в
-                Институте Азиатской Классики
-              </AboutAuthorDesc>
+              <AboutAuthorDesc>{t('aboutAuthorWork6')}</AboutAuthorDesc>
             </AboutAuthorListElement>
           </Box>
         </Box>

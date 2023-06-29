@@ -15,13 +15,21 @@ import { WhatPeopleAsk } from 'components/MainPageComponents/WhatPeopleAsk/WhatP
 import backgroundFooterImage from 'images/backgroundPlanet.webp';
 import { MatrixPlusAndMinus } from 'components/MainPageComponents/MatrixPlusAndMinus/MatrixPlusAndMinus';
 import { Header } from 'components/MainPageComponents/Header/Header';
-import navigationList from 'components/MainPageComponents/Header/navigationList';
+import { useTranslation } from 'react-i18next';
+import getNavList from 'components/MainPageComponents/Header/navigationList';
 
 const imgLink = `url(${backgroundFooterImage})`;
 
 const Main = () => {
   const location = useLocation();
   const navigate = useNavigate();
+    const { i18n } = useTranslation();
+
+
+  const getNavCalList = () => {
+    const lng = i18n.language;
+    return getNavList(lng);
+  };
 
   useEffect(() => {
     if (location.state && location.state.from) {
@@ -34,7 +42,7 @@ const Main = () => {
   return (
     <>
       <Box backgroundImage="linear-gradient(to bottom,rgba(158, 118, 255, 0.18) 50%,#fff)">
-        <Header navigationList={navigationList} />
+        <Header navigationList={getNavCalList()} />
         <MainHero />
       </Box>
       <Author />

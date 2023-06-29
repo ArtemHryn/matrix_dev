@@ -39,7 +39,7 @@ const GetPDFTemplate = () => {
           <Img src={template} alt="PDF template" />
         </picture>
         <Box
-          maxWidth={[null, null, '50%']}
+          maxWidth={[null, null, '40%']}
           display={[null, null, 'flex']}
           flexDirection="column"
           justifyContent="center"

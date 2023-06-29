@@ -13,9 +13,11 @@ import {
   Title,
 } from './Hero.styled';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export const MainHero = () => {
   const [clicked, setClicked] = useState(false);
+  const { t } = useTranslation();
   return (
     <Box as="section" py={['40px']}>
       <Box
@@ -32,11 +34,9 @@ export const MainHero = () => {
             alignItems={['center', 'center', 'flex-start']}
             mb={[null, null, '80px']}
           >
-            <ProjectText>Проект трансформации сознания</ProjectText>
+            <ProjectText>{t('projectText')}</ProjectText>
             <Title>Dari.Karma</Title>
-            <MoveText>
-              Выбери своё действие, которое изменит тебя и весь мир!
-            </MoveText>
+            <MoveText>{t('heroChoose')}</MoveText>
           </Box>
           <picture>
             <source srcSet={dariPhotoTab} media="(min-width: 768px)" />
@@ -49,9 +49,9 @@ export const MainHero = () => {
               onMouseEnter={() => setClicked(true)}
               clicked={clicked}
             >
-              Перейти к услугам
+              {t('heroButton1')}
             </ServicesLink>
-            <MatrxiLink to="calculator">Калькулятор матрицы</MatrxiLink>
+            <MatrxiLink to="calculator"> {t('heroButton2')}</MatrxiLink>
           </Box>
         </Box>
         <Box

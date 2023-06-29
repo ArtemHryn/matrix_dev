@@ -10,9 +10,11 @@ import {
 import { useState } from 'react';
 import { ModalLayout } from 'components/MainPageComponents/ModalWindows/ModalLayout';
 import { AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 export const ServiceCard = ({ name, img, text, component: Component }) => {
   const [showModal, setShowModal] = useState(false);
+  const {t} = useTranslation()
   return (
     <CardElement>
       <MainImg src={img} alt={name} />
@@ -20,7 +22,7 @@ export const ServiceCard = ({ name, img, text, component: Component }) => {
       <CardTitle>{name}</CardTitle>
       <CardDescription>{text}</CardDescription>
       <Button onClick={() => setShowModal(true)}>
-        Подробнее
+        {t('ServicesAndPriceDetail')}
       </Button>
       <AnimatePresence mode="wait" onExitComplete={() => null}>
         {showModal && (

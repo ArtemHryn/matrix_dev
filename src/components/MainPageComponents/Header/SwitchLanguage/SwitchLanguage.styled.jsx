@@ -1,18 +1,17 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const SwitchButton = styled.div`
-  /* background: rgba(255, 255, 255, 0.56); */
   border-radius: 30px;
   overflow: hidden;
   width: 100px;
   text-align: center;
   font-size: 12px;
   letter-spacing: 1px;
-  color: #155fff;
   position: relative;
   padding-right: 50px;
   position: relative;
   margin-left: 20px;
+  z-index: 20;
 
   &:before {
     content: 'RU';
@@ -26,6 +25,8 @@ export const SwitchButton = styled.div`
     justify-content: center;
     z-index: 3;
     pointer-events: none;
+    z-index: 20;
+    color: ${p => (p.checked ? '#fff' : '$000')};
   }
 
   & input {
@@ -37,7 +38,7 @@ export const SwitchButton = styled.div`
     width: 100%;
     height: 100%;
     opacity: 0;
-    z-index: 2;
+    z-index: 21;
 
     &:checked + label:before {
       transform: translateX(50px);
@@ -53,7 +54,7 @@ export const SwitchButton = styled.div`
 
       &:before {
         content: '';
-        background: #fff;
+        background: ${p => p.theme.colors.main};
         height: 100%;
         width: 100%;
         position: absolute;
@@ -65,7 +66,9 @@ export const SwitchButton = styled.div`
       }
 
       span {
+        font-size: 14px;
         position: relative;
+        color: ${p => (p.checked ? '#000' : '#fff')};
       }
     }
   }

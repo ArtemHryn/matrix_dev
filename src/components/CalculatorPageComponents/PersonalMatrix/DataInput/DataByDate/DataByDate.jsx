@@ -58,7 +58,7 @@ const DataByDate = ({
         />
         <Input
           type="text"
-          placeholder="Дата  (10.02.2000)"
+          placeholder="Дата рождения"
           {...register(
             `${index || index === 0 ? `info.${index}.date` : 'date'}`,
             {

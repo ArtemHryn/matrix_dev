@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { typography } from 'styled-system';
+import { layout, typography } from 'styled-system';
 
 export const Title = styled.h2`
   font-weight: 400;
@@ -23,6 +23,7 @@ export const Title = styled.h2`
     margin-bottom: 53px;
   }
   ${typography}
+  ${layout}
 `;
 
 export const MatrixCreator = styled.p`

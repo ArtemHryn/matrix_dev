@@ -34,7 +34,6 @@ export const Link = styled.button`
   height: 44px;
   width: 100%;
   background: ${p => p.theme.colors.white};
-  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
 
   font-family: ${p => p.theme.fonts.main};
@@ -49,7 +48,6 @@ export const Link = styled.button`
   cursor: pointer;
   &.active {
     background-color: ${p => p.theme.colors.main};
-    box-shadow: inset 0px 26px 43px rgba(0, 0, 0, 0.25);
     color: ${p => p.theme.colors.white};
   }
   &:hover {

@@ -17,7 +17,7 @@ const SocialItem = ({ item: { name, link, info } }) => {
       </SocialNameContainer>
       <Info>{info}</Info>
       <SocialLink href={link} target="_blank" rel="noreferrer noopener" display={['none', 'flex']}>
-        <Arrow stroke="#9071AF" />
+        <Arrow stroke="#9071AF"/>
       </SocialLink>
     </SocialMediaItemElement>
   );

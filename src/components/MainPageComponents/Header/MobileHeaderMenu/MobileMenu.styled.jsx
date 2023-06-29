@@ -10,7 +10,7 @@ export const MenuList = styled.ul`
   flex-direction: column;
   align-items: center;
   width: 300px;
-  height: 342px;
+  min-height: 342px;
   background-color: rgba(255, 255, 255, 0.93);
   border-radius: 30px;
   padding: 30px;

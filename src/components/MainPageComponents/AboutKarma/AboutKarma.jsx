@@ -35,6 +35,7 @@ import {
   TextUnderContainer,
   AboutResultText,
 } from './AboutKarma.styled';
+import { useTranslation } from 'react-i18next';
 
 const sectionGradient =
   'linear-gradient(to bottom,#fff,rgba(158, 118, 255, 0.23) 26%,rgba(158, 118, 255, 0.23) 81%,#fff 100%)';
@@ -44,6 +45,7 @@ export const AboutKarma = () => {
   const [showPlant, setShowplant] = useState(false);
   const [showHandWithFlower, setShowHandWithFlower] = useState(false);
   const [showHands, setShowHands] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     if (!inView) {
@@ -75,7 +77,7 @@ export const AboutKarma = () => {
         m="0 auto"
       >
         <Box position="relative" mb="39px">
-          <Title>Что такое карма и как она работает?</Title>
+          <Title>{t('aboutKarmaTitle')}</Title>
           <TitleStarImg src={smallStar} alt="star" />
         </Box>
         <Box display={[null, 'flex', 'flex']} mb="45px">
@@ -88,15 +90,13 @@ export const AboutKarma = () => {
             <CrystalContainer mr={['5px', '5px', '50px']}>
               <CrystalImg src={crystal} alt="crystal" left="40%" width="55" />
             </CrystalContainer>
-            <AboutDesc>Учениям о карме более 2,5 тыс. лет</AboutDesc>
+            <AboutDesc>{t('aboutKarmaDesc1')}</AboutDesc>
           </AboutReasonContainer>
           <AboutReasonContainer
             p={['18px 5px 18px 32px', null, '18px 35px 18px 1px']}
             flexDirection="row-reverse"
           >
-            <AboutDesc>
-              “Карма” с санскрита переводится, как «действие, деятельность»
-            </AboutDesc>
+            <AboutDesc>{t('aboutKarmaDesc2')}</AboutDesc>
             <CrystalContainer ml="5px" mr={[null, null, '15px']}>
               <CrystalImg
                 src={mirrorCrystal}
@@ -108,10 +108,7 @@ export const AboutKarma = () => {
           </AboutReasonContainer>
         </Box>
         <HandsContainer ref={ref}>
-          <TextNearHands>
-            Мысли, слова, поступки - это всё действия, которые мы совершаем
-            ежедневно.
-          </TextNearHands>
+          <TextNearHands>{t('aboutKarmaNearHands')}</TextNearHands>
 
           <div>
             <UnderHandImg
@@ -203,10 +200,9 @@ export const AboutKarma = () => {
           </div>
         </HandsContainer>
         <TextUnderContainer>
-          Каждое из них всегда несёт за собой определённое последствие или
-          результат. Эти результаты формируют наш дальнейший путь и судьбу.
+          {t('aboutKarmaTextUnderContainer')}
         </TextUnderContainer>
-        <AboutResultText>Всё дает свои плоды!</AboutResultText>
+        <AboutResultText>{t('aboutKarmaResultText')}</AboutResultText>
       </Box>
     </Box>
   );

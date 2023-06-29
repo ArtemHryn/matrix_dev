@@ -26,7 +26,7 @@ export const SocialNameContainer = styled.div`
 `;
 export const SocialName = styled.h4`
   font-style: italic;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 40px;
   line-height: 1.2;
 

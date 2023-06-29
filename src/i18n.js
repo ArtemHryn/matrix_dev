@@ -1,6 +1,8 @@
 import i18next from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import LanguageDetector from 'i18next-browser-languagedetector'
+import LanguageDetector from 'i18next-browser-languagedetector';
+import mainUa from 'locales/ua/main.js';
+import mainRu from 'locales/ru/main';
 
 i18next
   .use(initReactI18next)
@@ -8,17 +10,9 @@ i18next
   .init({
     fallbackLng: 'ru',
     resources: {
-      ua: {
-        translation: {
-          about: 'матрці долі',
-          main: 'Головна',
-        },
-      },
+      ua: { translation: mainUa },
       ru: {
-        translation: {
-          about: 'матрицы судьбы',
-          main: 'Главная',
-        },
+        translation: mainRu,
       },
     },
   });

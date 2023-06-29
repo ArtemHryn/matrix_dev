@@ -20,6 +20,7 @@ import { content } from 'helper/content';
 import MatrixLoader from 'components/Spinner/MatrixLoader';
 import { useTranslation } from 'react-i18next';
 import getNavList from 'components/CalculatorPageComponents/navigationLisCalc';
+import { Box } from 'components/Box';
 
 const MatrixContext = createContext();
 export const useMatrix = () => useContext(MatrixContext);
@@ -75,14 +76,16 @@ const Calculator = () => {
     >
       <CalcContainer>
         <Header navigationList={getNavCalList()} />
-        <Hero />
-        <Suspense fallback={<MatrixLoader />}>
-          <Outlet />
-        </Suspense>
-        <ChangeYourFate />
-        <Donation />
-        <Contacts />
-        <GetPDFTemplate />
+        <Box as='main'>
+          <Hero />
+          <Suspense fallback={<MatrixLoader />}>
+            <Outlet />
+          </Suspense>
+          <ChangeYourFate />
+          <Donation />
+          <Contacts />
+          <GetPDFTemplate />
+        </Box>
         <Footer />
       </CalcContainer>
     </MatrixContext.Provider>

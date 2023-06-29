@@ -1,5 +1,5 @@
+import { useTranslation } from 'react-i18next';
 import { Box } from 'components/Box';
-
 import { ConsultaionCard } from './ConsultationCard/ConsultationCard';
 import {
   ConsultationsList,
@@ -9,11 +9,10 @@ import {
   IndividualRequestTitle,
 } from './Consultations.styled';
 
-import { cards } from './consultationInfo'
-
-
+import { getConsultationCardsList } from './consultationInfo';
 
 export const Consultations = () => {
+  const { i18n, t } = useTranslation();
   return (
     <Box mb={'68px'}>
       <Box
@@ -21,18 +20,17 @@ export const Consultations = () => {
         alignItems={[null, 'center']}
         justifyContent={[null, 'space-between', 'space-between']}
       >
-        <ConsultationsTitle>Консультации:</ConsultationsTitle>
+        <ConsultationsTitle>
+          {t('ServicesAndPriceConsultationsTitle')}:
+        </ConsultationsTitle>
       </Box>
       <ConsultationsList>
-        {cards.map(card => (
-          <ConsultaionCard
-            key={card.text}
-            card={card}
-          />
+        {getConsultationCardsList(i18n.language).map(card => (
+          <ConsultaionCard key={card.text} card={card} />
         ))}
         <IndividualRequestElement>
           <IndividualRequestTitle>
-            Также вы можете разобрать проблему по индивидуальному запросу
+            {t('ServicesAndPriceConsultationsIndividualRequest')}
           </IndividualRequestTitle>
           <Box display="flex" justifyContent="center">
             <ContactMeSocial

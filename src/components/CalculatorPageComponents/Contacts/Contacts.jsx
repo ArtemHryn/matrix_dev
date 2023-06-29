@@ -16,7 +16,7 @@ const Contacts = () => {
         <Title
           m={[null, '0 auto 62px']}
           textAlign={[null, 'center']}
-          fontSize={[null, '60px', '85px']}
+          fontSize={[null, '100px', '115px']}
         >
           Контакты
         </Title>

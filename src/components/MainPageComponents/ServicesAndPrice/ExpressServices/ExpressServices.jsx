@@ -7,27 +7,31 @@ import {
   LinkToCert,
 } from './ExpressServices.styled';
 
-import { cards } from './expressServicesInfo';
+import { getExpressServiceCards } from './expressServicesInfo';
+import { useTranslation } from 'react-i18next';
 
 export const ExpressServices = () => {
+  const { i18n, t } = useTranslation();
   return (
     <Box mb="80px">
-      <ExpressServicesTitle>Экспресс-услуги:</ExpressServicesTitle>
+      <ExpressServicesTitle>
+        {t('ServicesAndPriceExpressServicesTitle')}:
+      </ExpressServicesTitle>
       <ExpressServicesList>
-        {cards.map(card => (
+        {getExpressServiceCards(i18n.language).map(card => (
           <ExpressServiceCard key={card.text} card={card} />
         ))}
       </ExpressServicesList>
       <AdditionalInfo>
-        Также вы можете подарить своим близким{' '}
+        {t('ServicesAndPriceExpressServicesAdditionalInfo1')}{' '}
         <LinkToCert
           href="https://t.me/DariKarma"
           target="_blank"
           rel="noreferrer noopener"
         >
-          сертификат
+          {t('ServicesAndPriceExpressServicesCert')}
         </LinkToCert>{' '}
-        на любую услугу.
+        {t('ServicesAndPriceExpressServicesAdditionalInfo2')}
       </AdditionalInfo>
     </Box>
   );

@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { CloseModal, MenuItem, MenuLink, MenuList } from '../MobileMenu.styled';
 import closeModal from 'images/Header/closeModal.png';
 import { useEffect } from 'react';
+import SwitchLanguage from '../../SwitchLanguage/SwitchLanguage';
 
 const animation = {
   initial: {
@@ -58,6 +59,7 @@ export const ShowMenu = ({ setShowMenu, navigationList }) => {
             <MenuLink href={href}>{name}</MenuLink>
           </MenuItem>
         ))}
+        <SwitchLanguage />
       </MenuList>
     </motion.div>
   );

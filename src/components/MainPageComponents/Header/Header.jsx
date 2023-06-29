@@ -24,6 +24,7 @@ export const Header = ({ navigationList }) => {
         maxWidth={['400px', '768px', '1440px']}
         px={['60px', '33px', '100px']}
         m="0 auto"
+        as='nav'
       >
         <Logo href="/">Dari.Karma</Logo>
         <Box as="nav" display="flex" alignItems="center">

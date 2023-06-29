@@ -36,20 +36,17 @@ export const Button = styled(NavLink)`
 
   color: #9072af;
   background-color: #ffffff;
-  box-shadow: 0px 4px 6.7px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   &:hover {
     cursor: pointer;
   }
   &.active {
     background: #9071af;
-    box-shadow: inset 0px 26.0026px 43.3377px rgba(0, 0, 0, 0.25);
     color: #ffffff;
   }
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     width: 482px;
     height: 74px;
-    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
     font-size: 24px;
     line-height: 1.21;

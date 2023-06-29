@@ -23,6 +23,9 @@ export const HeaderList = styled.ul`
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     min-width: 580px;
   }
+    @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    min-width: 635px;
+  }
 `;
 
 export const HeaderListItem = styled.li`

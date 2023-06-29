@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { Box } from 'components/Box';
 import compltedMatrix from 'images/matrixPlusAndMinus/pazzlesInPlus.webp';
 import compltedMatrixTab from 'images/matrixPlusAndMinus/matrixInPlusTab.webp';
@@ -9,6 +10,12 @@ import {
 import puzzlesTextPlus from './puzzleTextPlus';
 
 export const MatrixPlus = () => {
+  const { i18n } = useTranslation();
+
+  const getMatrixPlusList = () => {
+    const lng = i18n.language;
+    return puzzlesTextPlus(lng);
+  };
   return (
     <MatrixContainer
       initial={{
@@ -50,7 +57,7 @@ export const MatrixPlus = () => {
             loading="lazy"
           />
         </picture>
-        {puzzlesTextPlus.map(
+        {getMatrixPlusList().map(
           ({
             text,
             xm,

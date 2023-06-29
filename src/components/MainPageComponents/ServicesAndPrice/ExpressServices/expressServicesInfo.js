@@ -46,77 +46,86 @@ const textBeforeCard5b =
   'Поможет вам рассмотреть ситуацию с нескольких сторон, понять причинно-следственные связи и принять верное решение.';
 const textBeforeCard5c = 'Включает в себя:';
 
-export const cards = [
-  {
-    img: card1,
-    text: 'Диагностика состояния матрицы',
-    imgTab: card1Tab,
-    imgDesc: card1Desc,
-    price: '$21',
-    info: {
-      textBefore: [textBeforeCard1a, textBeforeCard1b],
-      meeting: 'Видеовстреча или аудиосообщения в телеграм',
-      additionInfo: [
-        '*Данная консультация не подразумевает трактовку вашей матрицы и энергий в ней.',
-        '*Проводится с помощью карт Метода или карт Таро.',
-      ],
+export const getExpressServiceCards = lng => {
+  return [
+    {
+      img: card1,
+      text:
+        lng === 'ua'
+          ? 'Діагностика стану матриці'
+          : 'Диагностика состояния матрицы',
+      imgTab: card1Tab,
+      imgDesc: card1Desc,
+      price: '$21',
+      info: {
+        textBefore: [textBeforeCard1a, textBeforeCard1b],
+        meeting: 'Видеовстреча или аудиосообщения в телеграм',
+        additionInfo: [
+          '*Данная консультация не подразумевает трактовку вашей матрицы и энергий в ней.',
+          '*Проводится с помощью карт Метода или карт Таро.',
+        ],
+      },
     },
-  },
-  {
-    img: card3,
-    text: 'Подбор благоприятной даты, периода',
-    imgTab: card3Tab,
-    imgDesc: card3Desc,
-    price: '$17',
-    info: {
-      textBefore: [textBeforeCard3a, textBeforeCard3b, textBeforeCard3c],
-      meeting: 'Видеовстреча 30 минут',
+    {
+      img: card3,
+      text:
+        lng === 'ua'
+          ? 'Підбір сприятливої дати або періоду'
+          : 'Подбор благоприятной даты, периода',
+      imgTab: card3Tab,
+      imgDesc: card3Desc,
+      price: '$17',
+      info: {
+        textBefore: [textBeforeCard3a, textBeforeCard3b, textBeforeCard3c],
+        meeting: 'Видеовстреча 30 минут',
+      },
     },
-  },
-  {
-    img: card2,
-    text: 'Совместимость',
-    imgTab: card2Tab,
-    imgDesc: card2Desc,
-    price: '$21',
-    info: {
-      textBefore: [textBeforeCard2a],
-      list: [
-        'задач в паре;',
-        'формата связи в партнёрстве;',
-        'что ожидать от партнёра и как с ним правильно взаимодействовать;',
-        'из-за чего чаще всего могут возникать конфликты и как их решать эффективно; ',
-        'как вывести данное партнёрство в плюс и получить нужные результаты.',
-      ],
-      textAfter: [textBeforeCard2b],
-      meeting: 'Видеовстреча 30 минут',
+    {
+      img: card2,
+      text: lng === 'ua' ? 'Сумісність' : 'Совместимость',
+      imgTab: card2Tab,
+      imgDesc: card2Desc,
+      price: '$21',
+      info: {
+        textBefore: [textBeforeCard2a],
+        list: [
+          'задач в паре;',
+          'формата связи в партнёрстве;',
+          'что ожидать от партнёра и как с ним правильно взаимодействовать;',
+          'из-за чего чаще всего могут возникать конфликты и как их решать эффективно; ',
+          'как вывести данное партнёрство в плюс и получить нужные результаты.',
+        ],
+        textAfter: [textBeforeCard2b],
+        meeting: 'Видеовстреча 30 минут',
+      },
     },
-  },
 
-  {
-    img: card4,
-    text: 'Энергии длительного действия',
-    imgTab: card4Tab,
-    imgDesc: card4Desc,
-    price: '$7',
-    info: {
-      textBefore: [textBeforeCard4a, textBeforeCard4b],
-      meeting: 'Видеовстреча или аудиосообщения в телеграм',
+    {
+      img: card4,
+      text:
+        lng === 'ua' ? 'Енергії тривалої дії' : 'Энергии длительного действия',
+      imgTab: card4Tab,
+      imgDesc: card4Desc,
+      price: '$7',
+      info: {
+        textBefore: [textBeforeCard4a, textBeforeCard4b],
+        meeting: 'Видеовстреча или аудиосообщения в телеграм',
+      },
     },
-  },
-  {
-    img: card5,
-    text: 'SOS - помощь',
-    imgTab: card5Tab,
-    imgDesc: card5Desc,
-    price: '$28',
-    info: {
-      textBefore: [textBeforeCard5a, textBeforeCard5b, textBeforeCard5c],
-      list: [
-        'экспресс-разбор матрицы',
-        'дополнительную консультацию таролога по ситуации на данный момент.',
-      ],
-      meeting: 'Видеовстреча с 2 мастерами',
+    {
+      img: card5,
+      text: lng === 'ua' ? 'SOS-допомога' : 'SOS - помощь',
+      imgTab: card5Tab,
+      imgDesc: card5Desc,
+      price: '$28',
+      info: {
+        textBefore: [textBeforeCard5a, textBeforeCard5b, textBeforeCard5c],
+        list: [
+          'экспресс-разбор матрицы',
+          'дополнительную консультацию таролога по ситуации на данный момент.',
+        ],
+        meeting: 'Видеовстреча с 2 мастерами',
+      },
     },
-  },
-];
+  ];
+};

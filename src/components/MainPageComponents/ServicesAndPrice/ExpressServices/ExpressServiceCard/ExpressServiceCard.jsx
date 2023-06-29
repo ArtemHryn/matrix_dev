@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { ModalLayout } from 'components/MainPageComponents/ModalWindows/ModalLayout';
 import { ModalTeamplate } from 'components/MainPageComponents/ModalWindows/ModalTemplate/ModalTemplate';
 import { AnimatePresence } from 'framer-motion';
@@ -15,6 +16,7 @@ export const ExpressServiceCard = ({
 }) => {
   const [showDetails, setShowDetails] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const {t} = useTranslation()
 
   return (
     <ExpressServiceCardElement
@@ -36,7 +38,7 @@ export const ExpressServiceCard = ({
             exit={{ opacity: 0, transition: { duration: 0.3 } }}
           >
             <ShowDetailsButton onClick={() => setShowModal(true)}>
-              Подробнее
+              {t('ServicesAndPriceDetail')}
             </ShowDetailsButton>
           </DetailsContainer>
         )}

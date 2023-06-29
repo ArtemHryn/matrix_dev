@@ -11,6 +11,10 @@ export const Logo = styled.p`
   letter-spacing: 0.01em;
   text-align: center;
   color: ${p => p.theme.colors.main};
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    text-align: left;
+    font-size: 22px;
+  }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
     font-size: 24px;
     line-height: 0.8;
@@ -35,6 +39,10 @@ export const Line = styled.p`
       top: 65%;
     }
   }
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    margin: 0 auto 21px 0;
+    width: 115px;
+  }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
     margin-bottom: 50px;
   }
@@ -56,6 +64,7 @@ export const Karmolog = styled.span`
   margin-top: 5px;
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     background-color: #f6f3fb;
+    font-size: 8px;
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
     font-size: 8px;
@@ -63,8 +72,7 @@ export const Karmolog = styled.span`
 `;
 
 export const Title = styled.h2`
-  font-style: italic;
-  font-size: 40px;
+  font-size: 32px;
   line-height: 1.08;
 
   letter-spacing: 0.01em;
@@ -72,13 +80,15 @@ export const Title = styled.h2`
   color: ${p => p.theme.colors.main};
   margin-bottom: 16px;
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
-    margin-bottom: 26px;
+    max-width: 80%;
+    margin-bottom: 22px;
     font-weight: 600;
     font-size: 28px;
     line-height: 1.21;
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
-    font-size: 33px;
+    font-size: 40px;
+    max-width: 90%;
   }
 `;
 
@@ -86,31 +96,34 @@ export const AssistanseText = styled.p`
   font-size: 18px;
   line-height: 22px;
 
-  color: ${p => p.theme.colors.third};
+  color: ${p => p.theme.colors.main};
   margin-bottom: 35px;
+  font-weight: 600;
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     margin-bottom: 30px;
+    font-size: 21px;
+    max-width: 95%;
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
-    font-size: 20px;
-    margin-bottom: 49px;
-    max-width: 330px;
+    font-size: 23px;
+    margin-bottom: 39px;
+    max-width: 400px;
   }
 `;
 
 export const ConsultationBtn = styled(Link)`
   font-weight: 500;
-  font-size: 20px;
+  font-size: 15px;
   line-height: 1.2;
+  font-family: ${p => p.theme.fonts.button};
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: ${p => p.theme.colors.main};
   width: 100%;
   height: 50px;
-
-  box-shadow: 0px 4.01496px 11px rgba(144, 114, 175, 0.28);
-  border-radius: 10px;
+  text-transform: uppercase;
+  border-radius: 8px;
 
   color: ${p => p.theme.colors.white};
   transition: all 250ms ease-in-out;
@@ -120,16 +133,15 @@ export const ConsultationBtn = styled(Link)`
   }
 
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
-    margin-bottom: 30px;
-    font-weight: 300;
+    font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
     letter-spacing: 0.03em;
-    width: 250px;
-    height: 45px;
+    width: 336px;
+    height: 56px;
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
-    width: 335px;
+    width: 409px;
     height: 60px;
   }
 `;
@@ -137,11 +149,14 @@ export const ConsultationBtn = styled(Link)`
 export const Image = styled.img`
   width: 326px;
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
-    width: 352px;
+    height: 405px;
+    margin-right: auto;
+    object-fit: contain;
+    object-position: 130%;
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
-    width: 503px;
-    transform: translateX(10%);
+    width: 100%;
+    height: 441px;
   }
 `;
 
