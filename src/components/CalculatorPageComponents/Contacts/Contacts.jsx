@@ -3,8 +3,10 @@ import { Title } from 'components/MainPageComponents/FreeRecommendations/FreeRec
 
 import socialMediaList from 'components/MainPageComponents/FreeRecommendations/socialMediaList';
 import SocialItem from './SocialItem/SociaIItem';
+import { useTranslation } from 'react-i18next';
 
 const Contacts = () => {
+  const { t, i18n } = useTranslation('calc');
   return (
     <Box as="section" py={['40px', null, '80px']} id="contacts">
       <Box
@@ -18,10 +20,10 @@ const Contacts = () => {
           textAlign={[null, 'center']}
           fontSize={[null, '100px', '115px']}
         >
-          Контакты
+          {t('contactsTitle')}
         </Title>
         <Box as="ul" display={[null, 'flex']} gridGap={[null, null, '170px']}>
-          {socialMediaList.map(media => (
+          {socialMediaList(i18n.language).map(media => (
             <SocialItem key={media.name} item={media} />
           ))}
         </Box>

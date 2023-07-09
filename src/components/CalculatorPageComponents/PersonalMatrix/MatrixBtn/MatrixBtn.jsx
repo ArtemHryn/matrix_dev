@@ -1,18 +1,30 @@
+import { useTranslation } from 'react-i18next';
 import { BtnItem, BtnList, Link } from './MatrixBtn.styled';
 import { useMatrix } from 'pages/Calculator';
 
-const btnList = [
-  { name: 'Матрица Судьбы', to: 'fateMatrix' },
-  { name: 'кармические задачи', to: 'karmaIssues' },
-  { name: 'Матрица Здоровья', to: 'healthMatrix' },
-  { name: 'Прогностика', to: 'prognosis' },
-];
-
 const MatrixBtn = () => {
   const { setMatrixType, matrixType } = useMatrix();
+  const { i18n } = useTranslation();
+  const btnList = lng => {
+    return [
+      {
+        name: lng === 'ua' ? 'Матриця долі' : 'Матрица Судьбы',
+        to: 'fateMatrix',
+      },
+      {
+        name: lng === 'ua' ? 'Кармичні задачі' : 'кармические задачи',
+        to: 'karmaIssues',
+      },
+      {
+        name: lng === 'ua' ? 'Матриця Здоров’я' : 'Матрица Здоровья',
+        to: 'healthMatrix',
+      },
+      { name: lng === 'ua' ? 'Прогностика' : 'Прогностика', to: 'prognosis' },
+    ];
+  };
   return (
     <BtnList>
-      {btnList.map(({ name, to }) => (
+      {btnList(i18n.language).map(({ name, to }) => (
         <BtnItem key={name}>
           <Link
             className={matrixType === to ? 'active' : null}

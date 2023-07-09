@@ -1,5 +1,5 @@
+import { useTranslation } from 'react-i18next';
 import { Box } from 'components/Box';
-
 import {
   HowToGetTemplate,
   Img,
@@ -12,6 +12,7 @@ import tempalteDesk from 'images/Calculator/PDFTemplate/templateDesk.webp';
 import image from 'images/Calculator/PDFTemplate/PDFTemplateCircle.webp';
 
 const GetPDFTemplate = () => {
+  const { t } = useTranslation('calc');
   return (
     <Box
       as="section"
@@ -31,7 +32,7 @@ const GetPDFTemplate = () => {
         backgroundImage={['none', null, `url('${image}')`]}
         backgroundSize={'550px'}
         backgroundRepeat="no-repeat"
-        backgroundPosition='16%'
+        backgroundPosition="16%"
       >
         <picture>
           <source srcSet={tempalteDesk} media="(min-width: 1440px)" />
@@ -44,11 +45,9 @@ const GetPDFTemplate = () => {
           flexDirection="column"
           justifyContent="center"
         >
-          <TemplateTitle>
-            Получи PDF-шаблон для расчета Матрицы Судьбы!
-          </TemplateTitle>
+          <TemplateTitle>{t('getPDFTemplateTitle')}</TemplateTitle>
           <HowToGetTemplate>
-            Подписывайся на{' '}
+            {t('getPDFTemplateHowTo1')}{' '}
             <InstaLink
               href="https://www.instagram.com/dari.karma/"
               target="_blank"
@@ -56,7 +55,7 @@ const GetPDFTemplate = () => {
             >
               Instagram
             </InstaLink>{' '}
-            и пиши в личные сообщения кодовую фразу “Хочу Шаблоны”
+            {t('getPDFTemplateHowTo2')}
           </HowToGetTemplate>
         </Box>
       </Box>

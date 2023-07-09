@@ -3,7 +3,7 @@ return lng === 'ua'
   ? [
       { name: 'Головна', href: '/matrix' },
       { name: 'Запис', href: '#ChangeYourFate' },
-      { name: 'подякувати розробникам', href: '#donation' },
+      { name: 'Подякувати розробникам', href: '#donation' },
       { name: 'Контакти', href: '#contacts' },
     ]
   : [

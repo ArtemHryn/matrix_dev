@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { Box } from 'components/Box';
 import {
   AssistanseText,
@@ -14,6 +15,7 @@ import authorTab from 'images/Calculator/ChangeYourFate/authorTab.webp';
 import authorDesk from 'images/Calculator/ChangeYourFate/authorDesk.webp';
 
 export const ChangeYourFate = () => {
+  const {t} =  useTranslation('calc')
   return (
     <Box id="ChangeYourFate" as="section" py={['40px']}>
       <Box
@@ -43,15 +45,10 @@ export const ChangeYourFate = () => {
                 <Karmolog>Кармолог</Karmolog>
               </Line>
             </Box>
-            <Title>
-              Хочешь больше узнать о своей судьбе и изменить её к лучшему?
-            </Title>
-            <AssistanseText>
-              Я буду рада стать твоим проводником на прекрасном пути
-              трансформации.
-            </AssistanseText>
+            <Title>{t('changeYourFateTitle')}</Title>
+            <AssistanseText>{t('changeYourFateAssistanseText')}</AssistanseText>
             <ConsultationBtn to="/" state={{ from: '4methods' }}>
-              Записаться на консультацию
+              {t('changeYourFateConsultationBtn')}
             </ConsultationBtn>
           </Box>
           <picture>
@@ -61,13 +58,13 @@ export const ChangeYourFate = () => {
           </picture>
         </Box>
         <CalcAuthor>
-          Обучиться всем профессиональным расчётам можно у{' '}
+          {t('changeYourFateCalcAuthor1')}{' '}
           <CalcAuthor as="span" fontWeight="700" fontStyle="italic">
-            Наталии Ладини
+            {t('changeYourFateCalcAuthor2')}
           </CalcAuthor>{' '}
-          и{' '}
+          {t('changeYourFateCalcAuthor3')}{' '}
           <CalcAuthor as="span" fontWeight="700" fontStyle="italic">
-            Сергея Скляренко
+            {t('changeYourFateCalcAuthor4')}
           </CalcAuthor>
         </CalcAuthor>
       </Box>

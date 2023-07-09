@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+import getCalcButtonList from 'helper/calcButtonList';
 import {
   Button,
   ButtonsList,
@@ -5,28 +7,11 @@ import {
   LockInButton,
 } from './ButtonList.styled';
 
-const list = [
-  {
-    name: 'ЛИЧНАЯ МАТРИЦА',
-    to: 'personal',
-    disabled: false,
-  },
-  {
-    name: 'СОВМЕСТИМОСТЬ',
-    to: 'compatibility',
-    disabled: false,
-  },
-  {
-    name: 'ГЛУБИННЫЕ РАСЧЕТЫ',
-    to: 'deep_calc',
-    disabled: true,
-  },
-];
-
 export const ButtonList = () => {
+  const { i18n } = useTranslation();
   return (
     <ButtonsList>
-      {list.map(({ name, to, disabled }) => (
+      {getCalcButtonList(i18n.language).map(({ name, to, disabled }) => (
         <ButtonsListItem key={name}>
           <Button as={disabled ? 'button' : null} to={to} disabled={disabled}>
             {name} {disabled && <LockInButton />}

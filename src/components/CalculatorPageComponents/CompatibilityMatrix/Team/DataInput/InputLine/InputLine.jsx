@@ -1,9 +1,11 @@
+import { useTranslation } from 'react-i18next';
 import { Box } from 'components/Box';
 import { Input, RemoveBtn } from './InputLine.styled';
 
 import { ReactComponent as Plus } from 'images/Calculator/CompatibilityMatrix/plus.svg';
 
 const InputLine = ({ index, register, remove, setValue }) => {
+  const { t } = useTranslation('calc');
   const onChange = e => {
     let inputDate = e.target.value.replace(/\D/g, '');
     if (inputDate.length > 8) {
@@ -19,22 +21,27 @@ const InputLine = ({ index, register, remove, setValue }) => {
   };
 
   return (
-    <Box display="flex" gridGap={["5px", null, '8px']} mb="8px" alignItems="center">
+    <Box
+      display="flex"
+      gridGap={['5px', null, '8px']}
+      mb="8px"
+      alignItems="center"
+    >
       <Input
         type="text"
         {...register(`info.${index}.name`)}
-        placeholder="Имя"
+        placeholder={t('personalMatrixNamePlaceholder')}
       />
       <Input
-        width={["135px", null, '240px']}
+        width={['135px', null, '240px']}
         type="text"
-        placeholder="Дата  (10.02.2000)"
+        placeholder={t('personalMatrixDatePlaceholder')}
         {...register(`info.${index}.date`, {
           onChange: onChange,
-          required: { value: true, message: 'Введите дату' },
+          required: { value: true, message: t('personalMatrixDateRequired') },
           pattern: {
             value: /^\d{2}\.\d{2}\.\d{4}$/,
-            message: 'Введите дату в формате dd.mm.yyyy',
+            message: t('personalMatrixDatePattern'),
           },
         })}
       />

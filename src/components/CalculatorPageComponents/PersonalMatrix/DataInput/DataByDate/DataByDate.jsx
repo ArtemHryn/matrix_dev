@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { BoxTitle, FlipButton, FlipButtonSvg } from '../DataInput.styled';
 import { Error, FrontCard, Input } from './DataByDate.styled';
 
@@ -10,6 +11,7 @@ const DataByDate = ({
   index,
   infoErrors,
 }) => {
+  const { t } = useTranslation('calc');
   const onChange = e => {
     let inputDate = e.target.value.replace(/\D/g, '');
     if (inputDate.length > 8) {
@@ -47,10 +49,10 @@ const DataByDate = ({
           </FlipButton>
         )}
 
-        <BoxTitle>Ввод данных</BoxTitle>
+        <BoxTitle>{t('personalMatrixBoxTitle')}</BoxTitle>
         <Input
           type="text"
-          placeholder="Имя"
+          placeholder={t('personalMatrixNamePlaceholder')}
           mb={['5px']}
           {...register(
             `${index || index === 0 ? `info.${index}.name` : 'name'}`
@@ -58,15 +60,18 @@ const DataByDate = ({
         />
         <Input
           type="text"
-          placeholder="Дата рождения"
+          placeholder={t('personalMatrixDatePlaceholder')}
           {...register(
             `${index || index === 0 ? `info.${index}.date` : 'date'}`,
             {
               onChange: onChange,
-              required: { value: !isFlipped, message: 'Введите дату' },
+              required: {
+                value: !isFlipped,
+                message: t('personalMatrixDateRequired'),
+              },
               pattern: {
                 value: /^\d{2}\.\d{2}\.\d{4}$/,
-                message: 'Введите дату в формате dd.mm.yyyy',
+                message: t('personalMatrixDatePattern'),
               },
             }
           )}

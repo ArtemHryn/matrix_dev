@@ -1,4 +1,5 @@
 import { Box } from 'components/Box';
+import { useTranslation } from 'react-i18next';
 import {
   CardName,
   ChakraElement,
@@ -9,10 +10,11 @@ import {
 } from '../../HealthMatrix.styled';
 
 const HealthCard = ({ card, cardType }) => {
-  const { cardName, columnName, chakraList, total } = card;
+  const { t } = useTranslation('calc');
+  const { cardName, columnName, chakraList, total, id } = card;
   return (
     <>
-      {cardType === cardName && (
+      {cardType === id && (
         <Box as="li">
           <CardName>{cardName}</CardName>
           <Box
@@ -66,7 +68,7 @@ const HealthCard = ({ card, cardType }) => {
             )}
             {total && (
               <ChakraElement border={['none', 'none', 'none']}>
-                <ChakraText fontFamily="bona">Итог</ChakraText>
+                <ChakraText fontFamily="bona">{t('result')}</ChakraText>
                 <ChakraText
                   border={['none', 'none', 'none']}
                   minWidth={['225px', '423px', '570px']}

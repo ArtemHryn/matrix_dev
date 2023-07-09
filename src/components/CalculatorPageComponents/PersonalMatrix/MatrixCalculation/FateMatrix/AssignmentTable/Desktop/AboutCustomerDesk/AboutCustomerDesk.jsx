@@ -5,11 +5,13 @@ import {
   Key,
   NameDate,
 } from '../../../AboutCustomer/AboutCustomer.styled';
+import { useTranslation } from 'react-i18next';
 
 const gradient =
   'linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(249, 237, 255, 0.5) 100%)';
 
 const AboutCustomerDesk = () => {
+  const {t} = useTranslation('calc')
   const {
     name,
     isGenerated,
@@ -50,11 +52,13 @@ const AboutCustomerDesk = () => {
       </Box>
       <Box display="flex" justifyContent="space-evenly">
         <Key>
-          Возраст: <Info fontSize={[null, null, '17px']}>{years}</Info>
+          {t('aboutCustomerAge')}:{' '}
+          <Info fontSize={[null, null, '17px']}>{years}</Info>
         </Key>
         {currentKey && (
           <Key>
-            Период: <Info fontSize={[null, null, '17px']}>{currentKey}</Info>
+            {t('aboutCustomerPeriod')}:{' '}
+            <Info fontSize={[null, null, '17px']}>{currentKey}</Info>
           </Key>
         )}
       </Box>

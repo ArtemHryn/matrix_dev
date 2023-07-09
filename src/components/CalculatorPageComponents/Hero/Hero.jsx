@@ -1,4 +1,4 @@
-import { useTranslation } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 import { Box } from 'components/Box';
 import {
   AboutCalc,
@@ -13,7 +13,7 @@ import { ReactComponent as HeroStar1 } from '../../../images/Calculator/Hero/her
 import { ButtonList } from './ButtonList/ButtonList';
 
 export const Hero = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('calc');
   return (
     <Box as="section" py={['40px', null, '35px']} position="relative">
       <HeroStar
@@ -44,16 +44,13 @@ export const Hero = () => {
       >
         <Logo>Dari.Karma</Logo>
         <Title>
-          Калькулятор <SecondTitle>{t('about')}</SecondTitle>
+          <Trans i18nKey="heroTitle" ns="calc">
+            Калькулятор <SecondTitle>матрицы судьбы</SecondTitle>
+          </Trans>
         </Title>
-        <AboutCalc>
-          Продвинутый калькулятор для быстрого и профессионального расчета.
-        </AboutCalc>
+        <AboutCalc>{t('heroAboutCalc')}</AboutCalc>
         <ButtonList />
-        <Authoring>
-          Калькулятор на 100% соответствует классическому вычислению «Матрицы
-          Судьбы» Наталии Ладини
-        </Authoring>
+        <Authoring>{t('heroAuthoring')}</Authoring>
       </Box>
     </Box>
   );

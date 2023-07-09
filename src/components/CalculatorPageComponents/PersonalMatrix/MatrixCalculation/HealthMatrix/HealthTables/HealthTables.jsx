@@ -1,39 +1,38 @@
+import { useTranslation } from 'react-i18next';
+import { useEffect, useState } from 'react';
 import { Box } from 'components/Box';
-import  { useEffect, useState } from 'react';
 import HealthCard from './HealthCard/HealthCard';
 import { SetCardTypeBtn } from '../HealthMatrix.styled';
 import { useMatrix } from 'pages/Calculator';
 import { getHealthInfo } from 'helper/calculateMatrix';
 
 const HealthTables = () => {
-  const { matrixData } = useMatrix();
-  const [cardType, setCardType] = useState('Личная карта здоровья');
+  const { i18n, t } = useTranslation('calc');
+  const [cardType, setCardType] = useState(1);
   const [list, setList] = useState([]);
-  const personal = 'Личная карта здоровья';
-  const integral = 'Целостная карта здоровья';
+  const { matrixData } = useMatrix();
 
   useEffect(() => {
-    const result = getHealthInfo(matrixData);
+    const result = getHealthInfo(matrixData, i18n.language);
     setList(result);
-  }, [matrixData]);
+  }, [i18n.language, matrixData]);
   return (
     <Box width={[null, null, '900px']} m={'0 auto'}>
       <Box display="flex" mb={['12px', '28px']} justifyContent="space-between">
         <SetCardTypeBtn
-          color={cardType === personal ? 'white' : null}
-          bg={cardType === personal ? '#765D90' : null}
-          onClick={() => setCardType('Личная карта здоровья')}
+          color={cardType === 1 ? 'white' : null}
+          bg={cardType === 1 ? '#765D90' : null}
+          onClick={() => setCardType(1)}
           mr={['5px', '10px']}
         >
-          Личная
+          {t('healthCardTypePersonal')}
         </SetCardTypeBtn>
         <SetCardTypeBtn
-          color={cardType === integral ? 'white' : null}
-          bg={cardType === integral ? '#765D90' : null}
-          
-          onClick={() => setCardType('Целостная карта здоровья')}
+          color={cardType === 2 ? 'white' : null}
+          bg={cardType === 2 ? '#765D90' : null}
+          onClick={() => setCardType(2)}
         >
-          Целостная
+          {t('healthCardTypeHolistic')}
         </SetCardTypeBtn>
       </Box>
       <ul>

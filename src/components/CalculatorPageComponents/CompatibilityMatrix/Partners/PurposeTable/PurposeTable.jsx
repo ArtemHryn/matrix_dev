@@ -6,11 +6,13 @@ import {
   Element,
   ElementsList,
 } from 'components/CalculatorPageComponents/PersonalMatrix/MatrixCalculation/FateMatrix/AssignmentTable/MobTable/TablesTemplates/FirstTemplate/FirstTemplate.styled';
+import { useTranslation } from 'react-i18next';
 
 const gradient =
   'linear-gradient(89.9deg, rgba(255, 255, 255, 0.7) 9.56%, rgba(251, 244, 255, 0.7) 85.28%);';
 
 const PurposeTable = ({ partnerMatrix, display = null }) => {
+  const { t } = useTranslation('calc');
   const {
     bottom1,
     month,
@@ -41,9 +43,9 @@ const PurposeTable = ({ partnerMatrix, display = null }) => {
     <Box display={display}>
       <Box display="flex" gridGap={['4px', '8px']} mb={['2px', '4px']}>
         <FirstTemplate
-          firstName={'Небо'}
-          secondName={'Земля'}
-          thrirdName={'Личное'}
+          firstName={t('assignmentTabledfirstName1')}
+          secondName={t('assignmentTabledsecondName1')}
+          thrirdName={t('assignmentTabledthrirdName1')}
           el1={month}
           el2={bottom1}
           el3={sky}
@@ -53,9 +55,9 @@ const PurposeTable = ({ partnerMatrix, display = null }) => {
           el7={personal}
         />
         <FirstTemplate
-          firstName={'Отец'}
-          secondName={'Мать'}
-          thrirdName={'Социальное'}
+          firstName={t('assignmentTabledfirstName2')}
+          secondName={t('assignmentTabledsecondName2')}
+          thrirdName={t('assignmentTabledthrirdName2')}
           el1={topLeft1}
           el2={bottomRight1}
           el3={father}
@@ -67,13 +69,13 @@ const PurposeTable = ({ partnerMatrix, display = null }) => {
       </Box>
       <Box display="flex" gridGap={['4px', '8px']} mb={['2px', '4px']}>
         <SecondsTemplate
-          name={'Духовное'}
+          name={t('assignmentTabledname1')}
           el1={personal}
           el2={social}
           el3={spirit}
         />
         <SecondsTemplate
-          name={'Планетарное'}
+          name={t('assignmentTabledname2')}
           el1={social}
           el2={spirit}
           el3={planet}
@@ -89,7 +91,7 @@ const PurposeTable = ({ partnerMatrix, display = null }) => {
         pl={['15px', '30px']}
         pr={['50px', '119px']}
       >
-        <Name>Ключ силы</Name>
+        <Name>{t('assignmentTabledkey')}</Name>
         <ElementsList>
           <li>
             <Element>{center}</Element>

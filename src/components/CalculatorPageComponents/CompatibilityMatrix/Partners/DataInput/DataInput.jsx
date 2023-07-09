@@ -4,9 +4,11 @@ import PartnerData from './PartnerData';
 import { SubmitBtn } from 'components/CalculatorPageComponents/PersonalMatrix/DataInput/DataInput.styled';
 import { useMatrix } from 'pages/Calculator';
 import { MatrixNumber } from '../Partners.styled';
+import { useTranslation } from 'react-i18next';
 
 const DataInput = () => {
   const { setPartnersDate, setShowMatrix } = useMatrix();
+  const { t } = useTranslation('calc');
   const {
     register,
     control,
@@ -51,10 +53,12 @@ const DataInput = () => {
 
   return (
     <Box as="form" mb={['87px']} onSubmit={handleSubmit(onSubmit)}>
-      <Box display={[null, null, 'flex']} justifyContent='space-evenly'>
+      <Box display={[null, null, 'flex']} justifyContent="space-evenly">
         {fields.map((field, index) => (
           <Box key={field.id}>
-            <MatrixNumber>МАТРИЦА {index + 1}</MatrixNumber>
+            <MatrixNumber>
+              {t('tableMatrix')} {index + 1}
+            </MatrixNumber>
             <PartnerData
               register={register}
               setValue={setValue}
@@ -71,7 +75,7 @@ const DataInput = () => {
         whileFocus={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
-        Рассчитать
+        {t('personalMatrixCalc')}
       </SubmitBtn>
     </Box>
   );

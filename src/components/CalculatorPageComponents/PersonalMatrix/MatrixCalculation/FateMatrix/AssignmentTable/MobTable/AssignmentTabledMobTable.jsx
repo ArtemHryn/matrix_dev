@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { Box } from 'components/Box';
 import { useMatrix } from 'pages/Calculator';
 
@@ -14,6 +15,7 @@ const gradient =
 
 const AssignmentTabledMobTabled = ({ mb }) => {
   const { matrixData } = useMatrix();
+  const {t} = useTranslation('calc')
   const {
     bottom1,
     month,
@@ -40,9 +42,9 @@ const AssignmentTabledMobTabled = ({ mb }) => {
     <Box display={[null, null, 'none']} mb={mb ? mb : null}>
       <Box display="flex" gridGap={['4px', '8px']} mb={['2px', '4px']}>
         <FirstTemplate
-          firstName={'Небо'}
-          secondName={'Земля'}
-          thrirdName={'Личное'}
+          firstName={t('assignmentTabledfirstName1')}
+          secondName={t('assignmentTabledsecondName1')}
+          thrirdName={t('assignmentTabledthrirdName1')}
           el1={month}
           el2={bottom1}
           el3={sky}
@@ -52,9 +54,9 @@ const AssignmentTabledMobTabled = ({ mb }) => {
           el7={personal}
         />
         <FirstTemplate
-          firstName={'Отец'}
-          secondName={'Мать'}
-          thrirdName={'Социальное'}
+          firstName={t('assignmentTabledfirstName2')}
+          secondName={t('assignmentTabledsecondName2')}
+          thrirdName={t('assignmentTabledthrirdName2')}
           el1={topLeft1}
           el2={bottomRight1}
           el3={father}
@@ -66,13 +68,13 @@ const AssignmentTabledMobTabled = ({ mb }) => {
       </Box>
       <Box display="flex" gridGap={['4px', '8px']} mb={['2px', '4px']}>
         <SecondsTemplate
-          name={'Духовное'}
+          name={t('assignmentTabledname1')}
           el1={personal}
           el2={social}
           el3={spirit}
         />
         <SecondsTemplate
-          name={'Планетарное'}
+          name={t('assignmentTabledname2')}
           el1={social}
           el2={spirit}
           el3={planet}
@@ -88,7 +90,7 @@ const AssignmentTabledMobTabled = ({ mb }) => {
         pl={['15px', '30px']}
         pr={['50px', '119px']}
       >
-        <Name>Ключ силы</Name>
+        <Name>{t('assignmentTabledkey')}</Name>
         <ElementsList>
           <li>
             <Element>{center}</Element>

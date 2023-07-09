@@ -61,9 +61,12 @@ export const AdditionalSpinnerPart = styled.span`
 `;
 
 export const MatrixLoaderImg = styled(MatrixLoader)`
-  width: 50%;
+  width: 100%;
   animation: ${infinityRotate} 3s linear infinite;
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    width: 60%;
+  }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
-    width: 20%;
+    width: 40%;
   }
 `;

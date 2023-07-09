@@ -9,12 +9,14 @@ import {
 } from '../PeriodMatrix.styled';
 import { useMatrix } from 'pages/Calculator';
 import TableTemplate from './TableTemplate/TableTemplate';
+import { useTranslation } from 'react-i18next';
 
 const PeriodTable = () => {
-  const { ageList, age } = useMatrix();
   const [firstPart, setFirstPart] = useState([]);
   const [secondPart, setSecondPart] = useState([]);
   const [isFirstPage, setIsFirstPage] = useState(true);
+  const {t} = useTranslation('calc')
+  const { ageList, age } = useMatrix();
 
   useEffect(() => {
     if (!ageList) {
@@ -45,7 +47,7 @@ const PeriodTable = () => {
         <ChangePageBtn onClick={() => setIsFirstPage(prev => !prev)}>
           <Arrow />
         </ChangePageBtn>
-        <TableHeader>Энергии покровители по годам</TableHeader>
+        <TableHeader>{t('periodMatrixHeader')}</TableHeader>
         <ChangePageBtn onClick={() => setIsFirstPage(prev => !prev)}>
           <Arrow rotate={'180deg'} />
         </ChangePageBtn>
@@ -63,13 +65,13 @@ const PeriodTable = () => {
         mb={['4px']}
       >
         <AgeColumnName>
-          <AgeColumnNameText>Возраст</AgeColumnNameText>
+          <AgeColumnNameText>{t('aboutCustomerAge')}</AgeColumnNameText>
         </AgeColumnName>
         <AgeColumnName flex="3">
           <AgeColumnNameText>Ключ</AgeColumnNameText>
         </AgeColumnName>
         <AgeColumnName>
-          <AgeColumnNameText>Возраст</AgeColumnNameText>
+          <AgeColumnNameText>{t('aboutCustomerAge')}</AgeColumnNameText>
         </AgeColumnName>
         <AgeColumnName flex="3" border={['none', 'none', 'none']}>
           <AgeColumnNameText>Ключ</AgeColumnNameText>

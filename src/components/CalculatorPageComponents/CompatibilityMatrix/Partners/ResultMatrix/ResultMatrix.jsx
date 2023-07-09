@@ -6,6 +6,7 @@ import star from 'images/Calculator/personalMatrix/star.webp';
 import { ReactComponent as Matrix } from 'images/Calculator/CompatibilityMatrix/resultMatrix.svg';
 import PurposeTable from '../PurposeTable/PurposeTable';
 import InformationTable from 'components/CalculatorPageComponents/PersonalMatrix/MatrixCalculation/FateMatrix/AssignmentTable/Desktop/InformationTable/InformationTable';
+import { useTranslation } from 'react-i18next';
 
 const ResultMatrix = ({
   resultData,
@@ -13,6 +14,7 @@ const ResultMatrix = ({
   isAnual = false,
   yearArcanes,
 }) => {
+  const { t } = useTranslation('calc');
   if (!resultData) {
     return null;
   }
@@ -31,7 +33,7 @@ const ResultMatrix = ({
         mb={['50px', '70px']}
       >
         <NameDate fontFamily={'main'} fontSize={['24px', '36px']}>
-          Совместимость
+          {t('compatibility')}
         </NameDate>
         <StarImg src={star} alt="star" />
       </Box>
@@ -56,7 +58,7 @@ const ResultMatrix = ({
         />
         <InformationTable
           matrixData={resultData}
-          title="МАТРИЦА СОВМЕСТИМОСТИ"
+          title={t('compatibilityMatrix')}
           display={['none', 'none', 'block']}
         />
       </Box>

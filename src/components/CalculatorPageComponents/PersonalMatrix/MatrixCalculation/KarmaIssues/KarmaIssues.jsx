@@ -9,15 +9,17 @@ import MatrixGraph from '../FateMatrix/MatrixGraph/MatrixGraph';
 import { ReactComponent as Matrix } from 'images/Calculator/personalMatrix/karmaMatrix.svg';
 import KarmaList from './KarmaList/KarmaList';
 import { getKarmaIssueData } from 'helper/calculateMatrix';
+import { useTranslation } from 'react-i18next';
 
 const KarmaIssues = () => {
   const { isGenerated, matrixData } = useMatrix();
   const [list, setList] = useState([]);
+  const { i18n } = useTranslation();
 
   useEffect(() => {
-    const karmaIssueResult = getKarmaIssueData(matrixData);
+    const karmaIssueResult = getKarmaIssueData(matrixData, i18n.language);
     setList(karmaIssueResult);
-  }, [matrixData]);
+  }, [i18n.language, matrixData]);
 
   return (
     <>

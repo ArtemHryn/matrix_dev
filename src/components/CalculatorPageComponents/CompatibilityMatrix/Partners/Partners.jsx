@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import DataInput from './DataInput/DataInput';
 import { useMatrix } from 'pages/Calculator';
 import { allData, getCompatData } from 'helper/calculateMatrix';
@@ -9,6 +10,7 @@ import ResultMatrix from './ResultMatrix/ResultMatrix';
 const Partners = () => {
   const [resultData, setResultData] = useState([]);
   const [partnersMatrixData, setPartnersMatrixData] = useState([]);
+  const { t } = useTranslation('calc');
 
   const { partnersDate, showMatrix } = useMatrix();
 
@@ -19,11 +21,11 @@ const Partners = () => {
     const partners = [];
     partnersDate.forEach((element, index) => {
       const partnerInfo = allData(element, element.isGenerated);
-      partnerInfo.order = `МАТРИЦА ${index + 1}`;
+      partnerInfo.order = `${t('tableMatrix')} ${index + 1}`;
       partners.push(partnerInfo);
     });
     setPartnersMatrixData(partners);
-  }, [partnersDate, showMatrix]);
+  }, [partnersDate, showMatrix, t]);
 
   useEffect(() => {
     setResultData(getCompatData(partnersMatrixData));

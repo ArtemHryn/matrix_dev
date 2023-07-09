@@ -1,24 +1,27 @@
+import { useForm } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
 import { Box } from 'components/Box';
 import { useMatrix } from 'pages/Calculator';
 import {
   BoxTitle,
   SubmitBtn,
 } from 'components/CalculatorPageComponents/PersonalMatrix/DataInput/DataInput.styled';
-import { useForm } from 'react-hook-form';
 import { Input } from '../../Team/DataInput/InputLine/InputLine.styled';
 import { Error } from 'components/CalculatorPageComponents/PersonalMatrix/DataInput/DataByDate/DataByDate.styled';
+import { format } from 'date-fns';
 
 const gradient =
   'linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(249, 237, 255, 0.3) 100%)';
 
 const DataInput = () => {
+  const { t } = useTranslation('calc');
   const { setPartnersDate, setShowMatrix } = useMatrix();
   const {
     register,
     handleSubmit,
     setValue,
     formState: { errors },
-  } = useForm();
+  } = useForm({ defaultValues: { year: format(new Date(), 'yyyy') } });
   const onChange = e => {
     let inputDate = e.target.value.replace(/\D/g, '');
     if (inputDate.length > 8) {
@@ -37,7 +40,7 @@ const DataInput = () => {
     const [day, month, year] = data.date.split('.');
     setPartnersDate([
       { day, month, year, name: data.name },
-      { day: 1, month: 1, year: data.year, name: 'Матрица года' },
+      { day: 1, month: 1, year: data.year, name: t('annualMatrix') },
     ]);
     setShowMatrix(true);
     document.activeElement.blur();
@@ -54,39 +57,44 @@ const DataInput = () => {
         py="36px"
         m={['0 auto 40px', '0 auto 60px']}
       >
-        <BoxTitle width="100%">Ввод данных</BoxTitle>
+        <BoxTitle width="100%">{t('personalMatrixBoxTitle')}</BoxTitle>
         <Box display="flex" flexWrap="wrap" gridGap={['6px']}>
           <Input
             type="text"
-            placeholder="Имя"
+            width={['calc((100% - 12px) / 2)', null, 'calc((100% - 12px) / 2)']}
+            placeholder={t('personalMatrixNamePlaceholder')}
             mb={['5px']}
             {...register('name')}
           />
           <Input
-            width={['155px', null, '240px']}
-            type="text"
-            placeholder="Дата  (10.02.2000)"
-            {...register('date', {
-              onChange: onChange,
-              required: { value: true, message: 'Введите дату' },
-              pattern: {
-                value: /^\d{2}\.\d{2}\.\d{4}$/,
-                message: 'Введите дату в формате dd.mm.yyyy',
-              },
-            })}
-          />
-          <Input
             type="number"
-            placeholder="Год"
+            width={['calc((100% - 12px) / 2)', null, 'calc((100% - 12px) / 2)']}
+            placeholder={t('year')}
             mb={['5px']}
             onInput={event => {
               event.target.value = event.target.value.slice(0, 4);
             }}
             {...register('year', {
-              required: { value: true, message: 'Введите год' },
+              required: { value: true, message: t('yearEnterError') },
               pattern: {
                 value: /^[2][0][0-9]{2}$/,
-                message: 'Введите 4-значный год от 2000 до 2100',
+                message: t('yearPatternError'),
+              },
+            })}
+          />
+          <Input
+            width={['100%', null, '100%']}
+            type="text"
+            placeholder={t('personalMatrixDatePlaceholder')}
+            {...register('date', {
+              onChange: onChange,
+              required: {
+                value: true,
+                message: t('personalMatrixDateRequired'),
+              },
+              pattern: {
+                value: /^\d{2}\.\d{2}\.\d{4}$/,
+                message: t('personalMatrixDatePattern'),
               },
             })}
           />
@@ -100,7 +108,7 @@ const DataInput = () => {
         whileFocus={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
-        Рассчитать
+        {t('personalMatrixCalc')}
       </SubmitBtn>
     </Box>
   );

@@ -15,6 +15,8 @@ export const Header = ({ navigationList }) => {
       backgroundPosition="bottom"
       backgroundSize="15px 2px"
       backgroundRepeat="repeat-x"
+      position='relative'
+      zIndex='100'
     >
       <MainPageHeader navigationList={navigationList} />
       <Box

@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { Box } from 'components/Box';
 import {
   BkCoffeeLogo,
@@ -18,6 +19,7 @@ const gradients = [
 ];
 
 const Donation = () => {
+  const {t} = useTranslation('calc')
   return (
     <Box
       id="donation"
@@ -31,14 +33,8 @@ const Donation = () => {
         px={['37px', '32px', '84px']}
         m="0 auto"
       >
-        <LikeTheProject>
-          Если тебе понравился калькулятор, ты можешь угостить команду
-          разработчиков чашечкой кофе
-        </LikeTheProject>
-        <SaveService>
-          Это поможет сохранить сервис бесплатным и работать над его
-          улучшениями.
-        </SaveService>
+        <LikeTheProject>{t('donationLikeTheProject')}</LikeTheProject>
+        <SaveService>{t('donationSaveService')}</SaveService>
         <Box
           display={[null, 'flex']}
           flexWrap={[null, 'wrap', 'no-wrap']}

@@ -5,8 +5,10 @@ import {
   KarmaElementInfoTitle,
   KarmaListInfoText,
 } from '../../KarmaList.styled';
+import { useTranslation } from 'react-i18next';
 
 const KarmaElementInfo = ({ infoEl, mr }) => {
+  const {t} = useTranslation('calc')
   const { type, energyInfo } = infoEl;
   return (
     <Box as="li" flex="2" mr={mr}>
@@ -27,7 +29,7 @@ const KarmaElementInfo = ({ infoEl, mr }) => {
           {type}
         </KarmaElementInfoTitle>
         <KarmaElementInfoTitle flex="1" justifyContent="center">
-          Энергия
+          {t('karmaIssuesEnergy')}
         </KarmaElementInfoTitle>
       </Box>
       <ElemenInfoList>

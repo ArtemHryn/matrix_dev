@@ -7,21 +7,18 @@ import {
 } from '../PersonalMatrix/MatrixBtn/MatrixBtn.styled';
 import { useMatrix } from 'pages/Calculator';
 import MatrixLoader from 'components/Spinner/MatrixLoader';
+import btnList from 'helper/compatibilityCalcButtonList';
+import { useTranslation } from 'react-i18next';
 
 const Partners = lazy(() => import('./Partners/Partners'));
 const Team = lazy(() => import('./Team/Team'));
 const Annual = lazy(() => import('./Annual/Annual'));
 
-const btnList = [
-  { name: 'ПАРТНЕРЫ', type: 'partners' },
-  { name: 'КОЛЛЕКТИВ', type: 'team' },
-  { name: 'Матрица ГОДА', type: 'year_matrix' },
-];
-
 const CompatibilityMatrix = () => {
   const [compatibilityType, setCompatibilityType] = useState('partners');
   const { setShowMatrix, setPartnersDate } = useMatrix();
   const [showSpinner, setShowSpinner] = useState(true);
+  const { i18n } = useTranslation();
 
   const onChangeCal = type => {
     setCompatibilityType(type);
@@ -64,7 +61,7 @@ const CompatibilityMatrix = () => {
         m="0 auto"
       >
         <BtnList>
-          {btnList.map(({ name, type }) => (
+          {btnList(i18n.language).map(({ name, type }) => (
             <BtnItem key={name}>
               {' '}
               <Link

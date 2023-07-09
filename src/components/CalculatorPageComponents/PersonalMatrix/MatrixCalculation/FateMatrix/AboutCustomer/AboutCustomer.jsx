@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Box } from 'components/Box';
 import { useMatrix } from 'pages/Calculator';
 
@@ -20,6 +21,7 @@ const AboutCustomer = () => {
     ageList,
   } = useMatrix();
   const { day, month, year } = date;
+  const {t} = useTranslation('calc')
 
   useEffect(() => {
     if (!ageList) {
@@ -83,11 +85,11 @@ const AboutCustomer = () => {
             </Box>
             <Box display="flex" justifyContent="center" gridGap="15px">
               <Key>
-                Возраст: <Info>{years}</Info>{' '}
+                {t('aboutCustomerAge')}: <Info>{years}</Info>{' '}
               </Key>
               {currentKey && (
                 <Key>
-                  Период: <Info>{currentKey}</Info>
+                  {t('aboutCustomerPeriod')}: <Info>{currentKey}</Info>
                 </Key>
               )}
             </Box>

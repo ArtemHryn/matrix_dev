@@ -5,10 +5,12 @@ import DataByDate from './DataByDate/DataByDate';
 import { Form, SubmitBtn } from './DataInput.styled';
 import DataByNineDigits from './DataByNineDigits/DataByNineDigits';
 import { useMatrix } from 'pages/Calculator';
+import { useTranslation } from 'react-i18next';
 
 const DataInput = () => {
   const [isFlipped, setIsFlipped] = useState(false);
   const { setIsGenerated, setDate, setShowMatrix, setName } = useMatrix();
+  const {t} = useTranslation('calc')
 
   const {
     register,
@@ -57,7 +59,7 @@ const DataInput = () => {
           whileFocus={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          Рассчитать
+          {t('personalMatrixCalc')}
         </SubmitBtn>
       </Form>
     </Box>

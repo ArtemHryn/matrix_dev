@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { BoxTitle, FlipButton } from '../DataInput.styled';
 import {
   BackCard,
@@ -25,6 +26,7 @@ const DataByNineDigits = ({
   setValue,
   index,
 }) => {
+  const {t} = useTranslation('calc')
   const onChange = e => {
     const { name, value } = e.target;
     if (value > 22) {
@@ -52,7 +54,7 @@ const DataByNineDigits = ({
           <FlippToFrontBtn />
         </FlipButton>
       )}
-      <BoxTitle>Ввод данных</BoxTitle>
+      <BoxTitle>{t('personalMatrixBoxTitle')}</BoxTitle>
       <DataList>
         {table.map(({ name }) => (
           <li key={name}>

@@ -14,7 +14,7 @@ import {
 import getNavList from '../navigationLisCalc';
 
 const Footer = () => {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation('calc');
   const getNavCalList = () => {
     const lng = i18n.language;
     return getNavList(lng);
@@ -45,10 +45,10 @@ const Footer = () => {
           </NavigationList>
           <PoliticList>
             <li>
-              <PoliticText>Политика конфиденциальности</PoliticText>
+              <PoliticText>{t('footerPoliticText1')}</PoliticText>
             </li>
             <li>
-              <PoliticText>Дизайн сайта by aleomore и dari.karma</PoliticText>
+              <PoliticText>{t('footerPoliticText2')}</PoliticText>
             </li>
           </PoliticList>
         </Box>
