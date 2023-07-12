@@ -70,6 +70,24 @@ const mainRu = {
     'Также вы можете подарить своим близким',
   ServicesAndPriceExpressServicesAdditionalInfo2: 'на любую услугу.',
   ServicesAndPriceExpressServicesCert: 'сертификат',
+  masterClassTitle: 'Авторские <1>мастер-классы</1>',
+  cost: 'Стоимость:',
+  feedback: 'Отзывы',
+  feedbackDesc:
+    'Я буду рада стать твоим проводником в новом этапе твоей жизни!',
+  calculate: 'Рассчитай',
+  yourMatrix: 'свою Матрицу Судьбы',
+  aboutCalc:
+    'Продвинутый бесплатный калькулятор для быстрого и профессионального расчета',
+  infoAboutCalc:
+    '* Калькулятор на 100% соответствует классическим расчётам метода «Матрица Судьбы» Наталии Ладини',
+  calcBtn: 'Рассчитать',
+  freeRecommendationTitle: 'Бесплатно делюсь полезностями в соц. сетях:',
+  peopleAsk: 'Меня часто спрашивают',
+  FourLevels: '4 уровня матрицы',
+  aboutMethods: 'О методе Матрицы',
+  policy: 'Политика конфиденциальности',
+  designedBy: 'Дизайн сайта by shlm.anna',
 };
 
 export default mainRu;

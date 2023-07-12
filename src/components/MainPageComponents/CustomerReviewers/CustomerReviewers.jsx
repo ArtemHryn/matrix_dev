@@ -38,11 +38,12 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
 import 'swiper/css/effect-coverflow';
-
+import { useTranslation } from 'react-i18next';
 
 export const CustomerReviewers = () => {
-  const [swiperStyleNumber, setSwiperStyleNumber] = useState(null)
-  const [ref, {width}] = useMeasure()
+  const [swiperStyleNumber, setSwiperStyleNumber] = useState(null);
+  const [ref, { width }] = useMeasure();
+  const { t } = useTranslation();
 
   useEffect(() => {
     if (width === 1440) {
@@ -53,32 +54,30 @@ export const CustomerReviewers = () => {
     }
     if (width === 400) {
       setSwiperStyleNumber(1);
-        }
+    }
   }, [width]);
 
   return (
-    <Box as="section" py={["40px", "40px", "90px"]} id="feedback">
+    <Box as="section" py={['40px', '40px', '90px']} id="feedback">
       <Box
-        maxWidth={["400px", "768px", "1440px"]}
-        px={["60px", "33px", "100px"]}
+        maxWidth={['400px', '768px', '1440px']}
+        px={['60px', '33px', '100px']}
         m="0 auto"
         ref={ref}
       >
         <Box
-          display={[null, "flex", "flex"]}
+          display={[null, 'flex', 'flex']}
           alignItems="center"
           justifyContent="space-between"
         >
-          <FeedbackTitle>Отзывы</FeedbackTitle>
-          <FeedbackDescription>
-            Я буду рада стать твоим проводником в новом этапе твоей жизни!
-          </FeedbackDescription>
+          <FeedbackTitle>{t('feedback')}</FeedbackTitle>
+          <FeedbackDescription>{t('feedbackDesc')}</FeedbackDescription>
         </Box>
         <YourDarina>
           ваша Дарина <HeardIcon />
         </YourDarina>
 
-        <Box width={[null, "550px", "100%"]} m="0 auto">
+        <Box width={[null, '550px', '100%']} m="0 auto">
           <Swiper
             slidesPerView={swiperStyleNumber}
             autoplay={true}

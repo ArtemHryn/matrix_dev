@@ -69,6 +69,22 @@ const mainUa = {
     'Також ви можете подарувати своїм близьким',
   ServicesAndPriceExpressServicesAdditionalInfo2: 'на будь-яку послугу.',
   ServicesAndPriceExpressServicesCert: 'сертифікат',
+  masterClassTitle: 'Авторські <1>майстер-класи</1>',
+  cost: 'Вартість:',
+  feedback: 'Відгуки',
+  feedbackDesc: 'Я з радістю стату твоїм провідником у новий етап твого життя!',
+  calculate: 'Дізнайся',
+  yourMatrix: 'свою Матрицю Долі',
+  aboutCalc: 'Поглиблений калькулятор для швидкого та професійного розрахунку.',
+  infoAboutCalc:
+    '* Калькулятор на 100% відповідає класичному обчисленню «Матриця Долі» Наталії Ладіні',
+  calcBtn: 'Розрахувати',
+  freeRecommendationTitle: 'Багато корисної інформації у моїх соц.мережах:',
+  peopleAsk: 'Мене часто запитують',
+  FourLevels: '4  рівні матриці',
+  aboutMethods: 'Про метод',
+  policy: 'Політика конфіденційності',
+  designedBy: 'Дизайн сайту by shlm.anna',
 };
 
 export default mainUa;

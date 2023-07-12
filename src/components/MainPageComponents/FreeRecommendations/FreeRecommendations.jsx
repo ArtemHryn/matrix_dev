@@ -1,11 +1,11 @@
+import { useTranslation } from 'react-i18next';
 import socialMediaList from './socialMediaList';
 import { Box } from 'components/Box';
 import { Title } from './FreeRecommendations.styled';
 import { SocialMediaItem } from './SocialMediaItem/SocialMediaItem';
-import { useTranslation } from 'react-i18next';
 
 export const FreeRecommendations = () => {
-  const {i18n} = useTranslation()
+  const { i18n, t } = useTranslation();
   return (
     <Box as="section" py={['40px', '40px', '90px']}>
       <Box
@@ -13,7 +13,7 @@ export const FreeRecommendations = () => {
         px={['60px', '33px', '100px']}
         m="0 auto"
       >
-        <Title>Бесплатно делюсь полезностями в соц. сетях:</Title>
+        <Title>{t('freeRecommendationTitle')}</Title>
         <Box as="ul" display={[null, 'flex']}>
           {socialMediaList(i18n.language).map(({ name, link, info }) => (
             <SocialMediaItem key={name} name={name} link={link} info={info} />

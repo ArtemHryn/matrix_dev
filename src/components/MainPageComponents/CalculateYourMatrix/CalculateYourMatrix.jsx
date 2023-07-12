@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { Box } from 'components/Box';
 import phones from 'images/CalculateYourMatrix/Phones.webp';
 import phonesTab from 'images/CalculateYourMatrix/phonesTab.webp';
@@ -16,6 +17,7 @@ const sectionGradient =
   'radial-gradient(circle,rgba(236, 229, 255, 0.72) 18%,rgba(255, 255, 255, 0.38) 52%, rgba(255, 255, 255, 0.72) 90%)';
 
 export const CalculateYourMatrix = () => {
+  const { t } = useTranslation();
   return (
     <Box
       as="section"
@@ -33,9 +35,9 @@ export const CalculateYourMatrix = () => {
       >
         <Box display={[null, null, 'flex']} flexDirection={'column'}>
           <Title>
-            Рассчитай{' '}
+            {t('calculate')}{' '}
             <TitleAdditional fontStyle="normal" m="0px">
-              свою Матрицу Судьбы
+              {t('yourMatrix')}
             </TitleAdditional>
           </Title>
           <Box display={[null, 'flex']} flexDirection="row-reverse">
@@ -48,15 +50,11 @@ export const CalculateYourMatrix = () => {
               />
             </picture>
             <Box ml="10px">
-              <AboutCalculator>
-                Продвинутый бесплатный калькулятор для быстрого и
-                профессионального расчета
-              </AboutCalculator>
-              <LinkToCalculator to="calculator">Рассчитать</LinkToCalculator>
-              <Info>
-                * Калькулятор на 100% соответствует классическим расчётам метода
-                «Матрица Судьбы» Наталии Ладини
-              </Info>
+              <AboutCalculator>{t('aboutCalc')}</AboutCalculator>
+              <LinkToCalculator to="calculator">
+                {t('calcBtn')}
+              </LinkToCalculator>
+              <Info>{t('infoAboutCalc')}</Info>
             </Box>
           </Box>
         </Box>

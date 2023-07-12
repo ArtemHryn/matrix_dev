@@ -1,6 +1,4 @@
 import { Box } from 'components/Box';
-import authorPhoto from 'images/author/authorPhoto.webp';
-import authorPhotoTab from 'images/author/authorTab.webp';
 import authorPhotoDesc from 'images/author/authorDesc.webp';
 import symbol1 from 'images/author/symbol1.webp';
 import symbol2 from 'images/author/symbol2.webp';
@@ -20,7 +18,7 @@ import {
 import { Trans, useTranslation } from 'react-i18next';
 
 export const Author = () => {
-  const {t} =useTranslation()
+  const { t } = useTranslation();
   return (
     <Box as="section" py={['40px', '40px', '90px']} id="author">
       <Box
@@ -48,11 +46,13 @@ export const Author = () => {
               консультант по предназначению, диагностике и коррекции судьбы
             </Trans>
           </Description>
-          <picture>
-            <source srcSet={authorPhotoTab} media="(min-width: 768px)" />
-            <source srcSet={authorPhoto} />
-            <AuthorImg srcSet={authorPhoto} alt="Дарина Дупак" loading="lazy" />
-          </picture>
+
+          <AuthorImg
+            srcSet={authorPhotoDesc}
+            alt="Дарина Дупак"
+            loading="lazy"
+          />
+
           <AboutAuthor>
             <AboutAuthorListElement>
               <Symbols

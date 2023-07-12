@@ -1,7 +1,15 @@
+import { useTranslation } from 'react-i18next';
 import { Box } from 'components/Box';
-import { FooterTitle, NavigationElement, NavigationLink, NavigationList, PoliticsAndDesign } from './Footer.styled';
+import {
+  FooterTitle,
+  NavigationElement,
+  NavigationLink,
+  NavigationList,
+  PoliticsAndDesign,
+} from './Footer.styled';
 
 export const Footer = () => {
+  const { t } = useTranslation();
   return (
     <Box as="footer" py={['40px', '40px', '90px']}>
       <Box
@@ -13,23 +21,27 @@ export const Footer = () => {
         <Box display={[null, 'flex']} alignItems="center">
           <NavigationList>
             <NavigationElement>
-              <NavigationLink href="#author">Автор проекта</NavigationLink>
+              <NavigationLink href="#author">
+                {t('projectAuthor')}
+              </NavigationLink>
             </NavigationElement>
             <NavigationElement>
-              <NavigationLink href="#4methods">4 уровня матрицы</NavigationLink>
+              <NavigationLink href="#4methods">
+                {t('FourLevels')}
+              </NavigationLink>
             </NavigationElement>
             <NavigationElement>
               <NavigationLink href="#aboutMatrix">
-                О методе Матрицы
+                {t('aboutMethods')}
               </NavigationLink>
             </NavigationElement>
             <NavigationElement>
               <NavigationLink href="#consultations">
-                Консультации
+                {t('ServicesAndPriceConsultationsTitle')}
               </NavigationLink>
             </NavigationElement>
             <NavigationElement>
-              <NavigationLink href="#feedback">Отзывы</NavigationLink>
+              <NavigationLink href="#feedback">{t('feedback')}</NavigationLink>
             </NavigationElement>
             <NavigationElement>
               <NavigationLink href="#calculateMatrix">
@@ -38,8 +50,8 @@ export const Footer = () => {
             </NavigationElement>
           </NavigationList>
           <Box display="flex" flexDirection="column" alignItems="center">
-            <PoliticsAndDesign>Политика конфиденциальности</PoliticsAndDesign>
-            <PoliticsAndDesign>Дизайн сайта by shlm.anna</PoliticsAndDesign>
+            <PoliticsAndDesign>{t('policy')}</PoliticsAndDesign>
+            <PoliticsAndDesign>{t('designedBy')}</PoliticsAndDesign>
           </Box>
         </Box>
       </Box>

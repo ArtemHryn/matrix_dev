@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const AuthorTitle = styled.h2`
   font-weight: 400;
-  font-size: 48px;
+  font-size: 44px;
   line-height: 58px;
   letter-spacing: 0.01em;
   margin-bottom: 25px;
