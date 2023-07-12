@@ -17,7 +17,7 @@ const calcUa = {
   donationLikeTheProject:
     'Якщо тобі сподобався калькулятор, ти можеш пригостити команду розробників горнятком кави.',
   donationSaveService:
-    'Це допоможе зберегти сервіс безкоштовним та працювати надйого покращеннями.',
+    'Це допоможе зберегти сервіс безкоштовним та працювати надійного покращеннями.',
   contactsTitle: 'Контакти',
   getPDFTemplateTitle: 'Отримай PDF-шаблон для розрахунку Матриці Долі!',
   getPDFTemplateHowTo1: 'Долучайся до сторінки',
@@ -48,7 +48,7 @@ const calcUa = {
   healthCardTypePersonal: 'Особиста',
   healthCardTypeHolistic: 'Цілісна',
   result: 'Результат',
-  periodMatrixHeader: 'Енергії покровителі по рокам',
+  periodMatrixHeader: 'Енергії покровителі періодів',
   tableMatrix: 'Матриця',
   compatibility: 'Сумістність',
   compatibilityMatrix: 'МАТРИЦЯ СУМІСТНОСТІ',

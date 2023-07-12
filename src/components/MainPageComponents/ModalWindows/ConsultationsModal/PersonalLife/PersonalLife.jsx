@@ -1,14 +1,24 @@
+import { useTranslation } from 'react-i18next';
 import { Box } from 'components/Box';
 import { BuyContainer } from '../../Buy';
-import { HowIsGoingConsultation, List, MainTitle, Requests, Text } from './PersonalLife.styled';
+import {
+  HowIsGoingConsultation,
+  List,
+  MainTitle,
+  Requests,
+  Text,
+} from './PersonalLife.styled';
 
 const dotGradient =
   'linear-gradient( to right, #000 10%, rgba(255, 255,255, 0) 0% )';
 
 export const PersonalLife = ({ price }) => {
+  const { t } = useTranslation('modals');
   return (
     <>
-      <MainTitle display={['none', 'none', 'block']}>Личная жизнь</MainTitle>
+      <MainTitle display={['none', 'none', 'block']}>
+        {t('personalLife.title')}
+      </MainTitle>
       <Box display={[null, null, 'flex']}>
         <Box
           pb="30px"
@@ -18,36 +28,30 @@ export const PersonalLife = ({ price }) => {
           backgroundRepeat="repeat-x"
           mr={[null, null, '100px']}
         >
-          <MainTitle display={[null, null, 'none']}>Личная жизнь</MainTitle>
+          <MainTitle display={[null, null, 'none']}>
+            {t('personalLife.title')}
+          </MainTitle>
           <Requests>
-            <strong>Какие запросы разберем?</strong>
+            <strong>{t('requests')}</strong>
           </Requests>
-          <Text>Данная консультация поможет:</Text>
+          <Text>{t('personalLife.listTitle')}</Text>
           <List>
             <li>
-              <Text>наладить личную жизнь;</Text>
+              <Text>{t('personalLife.listEl1')}</Text>
             </li>
             <li>
-              <Text>найти вторую половинку;</Text>
+              <Text>{t('personalLife.listEl1')}</Text>
             </li>
             <li>
-              <Text>понять какой для вас комфортный тип взаимоотношений;</Text>
+              <Text>{t('personalLife.listEl1')}</Text>
             </li>
             <li>
-              <Text>прийти к взаимопониманию с партнером.</Text>
+              <Text>{t('personalLife.listEl1')}</Text>
             </li>
           </List>
-          <Text>
-            Разбор личных качеств и почему не удается построить личную жизнь.
-            Понять какой партнер подходит и какие потребности вам важно
-            закрывать в отношениях.
-          </Text>
-          <Text>
-            На трансформации будет возможность прокачать внутреннюю энергетику,
-            усилить свои достоинства и проработать негативные установки,
-            мешающие построить гармоничные отношения.
-          </Text>
-          <Text>Разбор матрицы совместимости с 1 – 2 партнерами</Text>
+          <Text>{t('personalLife.desc1')}</Text>
+          <Text>{t('personalLife.desc2')}</Text>
+          <Text>{t('personalLife.desc3')}</Text>
         </Box>
         <Box>
           <Box
@@ -62,10 +66,10 @@ export const PersonalLife = ({ price }) => {
           >
             <Box width="100%" mb={[null, null, '20px']}>
               <HowIsGoingConsultation>
-                Как проходит консультация?
+                {t('howIsGoingCons')}
               </HowIsGoingConsultation>
               <Text mb={['20px', '0px']} width={[null, '420px']}>
-                Видеовстреча 60 минут + трансформация 1 блок
+                {t('personalLife.videoMeeting')}
               </Text>
             </Box>
           </Box>

@@ -1,7 +1,6 @@
 import { Box } from 'components/Box';
 import {
-    AdditionalInfo,
-
+  AdditionalInfo,
   BuyButton,
   HowIsGoingConsultation,
   MainTitle,
@@ -9,14 +8,18 @@ import {
   Requests,
   Text,
 } from './FamilyTree.styled';
+import { useTranslation } from 'react-i18next';
 
 const dotGradient =
   'linear-gradient( to right, #000 10%, rgba(255, 255,255, 0) 0% )';
 
 export const FamilyTree = () => {
+  const { t } = useTranslation('modals');
   return (
     <>
-      <MainTitle display={['none', 'none', 'block']}>9 колен рода</MainTitle>
+      <MainTitle display={['none', 'none', 'block']}>
+        {t('family.title')}
+      </MainTitle>
       <Box display={[null, null, 'flex']}>
         <Box
           pb="30px"
@@ -26,39 +29,16 @@ export const FamilyTree = () => {
           backgroundRepeat="repeat-x"
           mr={[null, null, '100px']}
         >
-          <MainTitle display={[null, null, 'none']}>9 колен рода</MainTitle>
+          <MainTitle display={[null, null, 'none']}>
+            {t('family.title')}
+          </MainTitle>
           <Requests>
-            <strong>Какие запросы разберем?</strong>
+            <strong>{t('requests')}</strong>
           </Requests>
-          <Text mb="15px">
-            2 ступень Матрицы Судьбы. Проработка родовой матрицы дает
-            социальную реализацию; показывает нашу значимость и задачу в
-            социуме. Убирает глубинные негативные установки; нейтрализует
-            повторение родовых сценариев. Реализация нашей матрицы зависит от
-            родового квадрата, который составляет 50 % всей матрицы, поэтому 9
-            колен рода является следующим важнейшим этапом трансформации.
-            Проработка поможет в реализации социального предназначения; и
-            выполнении задач рода для получения дополнительного ресурса.
-          </Text>
-          <Text mb="15px">
-            Задача данного этапа, не столько понять и разобрать все проблемы
-            рода, а их исцелить и проработать. Происходит расчет всех 9 колен
-            рода, вскрытие энергетических накоплений рода мастером в канале
-            инициации(яснознания), расчет примирения всех родов и отработка
-            каждого ключа в процессе трансформации.
-          </Text>
-          <Text mb="15px">
-            С помощью данного исцеления вы откроете дверь для своих детей и
-            ваших потомков! Вы привлечете в свою жизнь и в свой род любовь,
-            изобилие, процветание и глубинное единение. Данная проработка может
-            помочь найти родственников, получить дар рода, встретить свою
-            любовь, наладить отношения с родными, исцелить физические болезни,
-            узнать о долгожданной беременности и т.д.
-          </Text>
-          <Text>
-            Исправление ошибок родовых линий — это длительный и сложный процесс,
-            но пройдя его вы получите гораздо больше.
-          </Text>
+          <Text mb="15px">{t('family.desc1')}</Text>
+          <Text mb="15px">{t('family.desc2')}</Text>
+          <Text mb="15px">{t('family.desc3')}</Text>
+          <Text>{t('family.desc4')}</Text>
         </Box>
         <Box>
           <Box
@@ -73,16 +53,13 @@ export const FamilyTree = () => {
           >
             <Box width="100%">
               <HowIsGoingConsultation>
-                Как проходит консультация?
+                {t('howIsGoingCons')}
               </HowIsGoingConsultation>
               <Text mb={['20px', '0px', '20px']} width={[null, '220px']}>
-                Видеовстреча 2 часа + трансформация от 70 дней
+                {t('family.videoMeeting')}
               </Text>
             </Box>
-            <AdditionalInfo>
-              *Большое количество ритуальной работы и практик. Трансформации и
-              исцеления могут проходить через обострения
-            </AdditionalInfo>
+            <AdditionalInfo>{t('family.additionalInfo1')}</AdditionalInfo>
           </Box>
           <Box
             display="flex"
@@ -91,7 +68,7 @@ export const FamilyTree = () => {
             pt={['25px', '40px']}
           >
             <Price>$150</Price>
-            <BuyButton href="https://t.me/DariKarma">Купить</BuyButton>
+            <BuyButton href="https://t.me/DariKarma">{t('buy')}</BuyButton>
           </Box>
         </Box>
       </Box>

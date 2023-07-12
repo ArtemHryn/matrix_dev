@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { Box } from 'components/Box';
 import { BuyContainer } from '../Buy';
 import {
@@ -13,6 +14,7 @@ const dotGradient =
   'linear-gradient( to right, #000 10%, rgba(255, 255,255, 0) 0% )';
 
 export const ModalTeamplate = ({ info, price, title }) => {
+  const { t } = useTranslation('modals');
   const { textBefore, meeting, additionInfo, list, textAfter } = info;
   return (
     <>
@@ -28,7 +30,7 @@ export const ModalTeamplate = ({ info, price, title }) => {
         >
           <MainTitle display={[null, null, 'none']}>{title}</MainTitle>
           <Requests>
-            <strong>Какие запросы разберем?</strong>
+            <strong>{t('requests')}</strong>
           </Requests>
           {textBefore &&
             textBefore.map((text, index) => (
@@ -71,7 +73,7 @@ export const ModalTeamplate = ({ info, price, title }) => {
           >
             <Box width="100%">
               <HowIsGoingConsultation>
-                Как проходит консультация?
+                {t('howIsGoingCons')}
               </HowIsGoingConsultation>
               <Box
                 display={[null, 'flex']}

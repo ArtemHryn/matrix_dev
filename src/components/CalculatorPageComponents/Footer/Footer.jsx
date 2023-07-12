@@ -1,10 +1,8 @@
 import { useTranslation } from 'react-i18next';
 import { Box } from 'components/Box';
-import star from 'images/Calculator/Hero/star.webp';
 import {
   DariLogo,
   DariLogoImg,
-  LogoStar,
   NavigationElement,
   NavigationLink,
   NavigationList,
@@ -34,7 +32,7 @@ const Footer = () => {
         </Box>
         <Box flex="2">
           <DariLogo>
-            Dari.Karma <LogoStar src={star} alt="star" />
+            Dari.Karma
           </DariLogo>
           <NavigationList>
             {getNavCalList().map(item => (

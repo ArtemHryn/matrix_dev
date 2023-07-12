@@ -2,8 +2,7 @@ import { Box } from 'components/Box';
 import { ageCalculator } from 'helper/ageCalculator';
 import { useEffect, useState } from 'react';
 
-import star from 'images/Calculator/personalMatrix/star.webp';
-import { Age, NameDate, StarImg } from '../../Partners.styled';
+import { Age, NameDate } from '../../Partners.styled';
 import { useTranslation } from 'react-i18next';
 
 const gradient =
@@ -49,7 +48,6 @@ const PartnerInfo = ({ date, hideInfo }) => {
           </Age>
         </Age>
       )}
-      <StarImg src={star} alt="star" />
     </Box>
   );
 };

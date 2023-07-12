@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import {
   AdditionalInfo,
   BuyButton,
@@ -14,10 +15,11 @@ const dotGradient =
   'linear-gradient( to right, #000 10%, rgba(255, 255,255, 0) 0% )';
 
 export const PersonalMatrix = () => {
+  const { t } = useTranslation('modals');
   return (
     <>
       <MainTitle display={['none', 'none', 'block']}>
-        Целостная личная матрица
+        {t('personal.title')}
       </MainTitle>
 
       <Box display={[null, null, 'flex']}>
@@ -30,61 +32,44 @@ export const PersonalMatrix = () => {
           mr={[null, null, '100px']}
         >
           <MainTitle display={[null, null, 'none']}>
-            Целостная личная матрица
+            {t('personal.title')}
           </MainTitle>
           <Requests>
-            <strong>Какие запросы разберем?</strong>
+            <strong>{t('requests')}</strong>
           </Requests>
-          <Text mb="20px">
-            1 ступень Матрицы Судьбы является идеальной базой для старта в
-            познании себя и своих глубинных процессов. Матрица отвечает на
-            большинство вопросов, таких как:
-          </Text>
+          <Text mb="20px">{t('personal.firstStep')}</Text>
           <List>
             <li>
-              <Text>Какие у меня сильные качества? </Text>
+              <Text>{t('personal.stepsList1')} </Text>
             </li>
             <li>
-              <Text>Какое моё предназначениe? </Text>
+              <Text>{t('personal.stepsList2')}</Text>
             </li>
             <li>
-              <Text>Какие у меня таланты? </Text>
+              <Text>{t('personal.stepsList3')}</Text>
             </li>
             <li>
-              <Text>Как мне реализовать себя? </Text>
+              <Text>{t('personal.stepsList4')}</Text>
             </li>
             <li>
-              <Text>Как заработать деньги? </Text>
+              <Text>{t('personal.stepsList5')}</Text>
             </li>
             <li>
-              <Text>Как построить личную жизнь? </Text>
+              <Text>{t('personal.stepsList6')}</Text>
             </li>
             <li>
-              <Text>Куда пойти учиться? </Text>
+              <Text>{t('personal.stepsList7')}</Text>
             </li>
             <li>
-              <Text>Могу ли я открыть свой бизнес? </Text>
+              <Text>{t('personal.stepsList8')}</Text>
             </li>
             <li>
-              <Text>Почему сложные отношения с родными? И т.д.</Text>
+              <Text>{t('personal.stepsList9')}</Text>
             </li>
           </List>
-          <Text mb="20px">
-            Также, матрица расскажет какие склонности, изюминки и
-            сверхспособности заложены в вашей личности. Возможные трудности,
-            испытания и негативные установки с прошлых воплощений, которые нужно
-            проработать и преобразовать в ресурс.
-          </Text>
-          <Text mb="20px">
-            Личная матрица раскроет тему здоровья и психосоматических процессов
-            в вашем теле. Это самая глубокая и самая фундаментальная трансформация
-            в вашей жизни.
-          </Text>
-          <Text>
-            В дальнейшем можно наслаивать на эту базу изучения своей личности с
-            помощью других методов, а также спускаться на более глубинные уровни
-            своей души. И выходить на новые уровни понимания и осознанности.
-          </Text>
+          <Text mb="20px">{t('personal.desc1')}</Text>
+          <Text mb="20px">{t('personal.desc2')}</Text>
+          <Text>{t('personal.desc3')}</Text>
         </Box>
         <Box>
           <Box
@@ -99,20 +84,15 @@ export const PersonalMatrix = () => {
           >
             <Box width="100%" mb={[null, null, '20px']}>
               <HowIsGoingConsultation>
-                Как проходит консультация?
+                {t('howIsGoingCons')}
               </HowIsGoingConsultation>
               <Text mb={['20px', '0px']} width={[null, '220px']}>
-                Видеовстреча 2 - 3 часа + трансформация от 60 дней
+                {t('personal.videoMeeting')}
               </Text>
             </Box>
             <Box display={[null, null, 'flex']}>
-              <AdditionalInfo>
-                + Дополнительно входит разбор совместимости с 1 человеком или
-                разбор периода (на выбор)
-              </AdditionalInfo>
-              <AdditionalInfo>
-                *Процесс исцеления может проходить через обострение.
-              </AdditionalInfo>
+              <AdditionalInfo>{t('personal.additionalInfo1')}</AdditionalInfo>
+              <AdditionalInfo>{t('personal.additionalInfo2')}</AdditionalInfo>
             </Box>
           </Box>
           <Box
@@ -122,7 +102,7 @@ export const PersonalMatrix = () => {
             pt={['25px', '40px']}
           >
             <Price>$119</Price>
-            <BuyButton href="https://t.me/DariKarma">Купить</BuyButton>
+            <BuyButton href="https://t.me/DariKarma">{t('buy')}</BuyButton>
           </Box>
         </Box>
       </Box>

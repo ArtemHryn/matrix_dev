@@ -44,19 +44,6 @@ export const DariLogo = styled.h2`
   }
 `;
 
-export const LogoStar = styled.img`
-  position: absolute;
-  left: 90%;
-  top: -10%;
-  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
-    left: 70%;
-    top: -10%;
-  }
-  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
-    left: 65%;
-    width: 37px;
-  }
-`;
 
 export const NavigationList = styled.ul`
   display: flex;

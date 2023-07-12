@@ -1,8 +1,7 @@
 import { Box } from 'components/Box';
 import PartnerGraph from '../PartnerMatrix/PartnerGraph/PartnerGraph';
-import { NameDate, StarImg } from '../Partners.styled';
+import { NameDate } from '../Partners.styled';
 
-import star from 'images/Calculator/personalMatrix/star.webp';
 import { ReactComponent as Matrix } from 'images/Calculator/CompatibilityMatrix/resultMatrix.svg';
 import PurposeTable from '../PurposeTable/PurposeTable';
 import InformationTable from 'components/CalculatorPageComponents/PersonalMatrix/MatrixCalculation/FateMatrix/AssignmentTable/Desktop/InformationTable/InformationTable';
@@ -35,7 +34,6 @@ const ResultMatrix = ({
         <NameDate fontFamily={'main'} fontSize={['24px', '36px']}>
           {t('compatibility')}
         </NameDate>
-        <StarImg src={star} alt="star" />
       </Box>
       <Box
         display={[null, null, 'flex']}

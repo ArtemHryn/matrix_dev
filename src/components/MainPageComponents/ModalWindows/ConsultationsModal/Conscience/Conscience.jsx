@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { Box } from 'components/Box';
 import { BuyContainer } from '../../Buy';
 import {
@@ -13,9 +14,12 @@ const dotGradient =
   'linear-gradient( to right, #000 10%, rgba(255, 255,255, 0) 0% )';
 
 export const Conscience = ({ price }) => {
+  const { t } = useTranslation('modals');
   return (
     <>
-      <MainTitle display={['none', 'none', 'block']}>Осознанность</MainTitle>
+      <MainTitle display={['none', 'none', 'block']}>
+        {t('conscience.title')}
+      </MainTitle>
       <Box display={[null, null, 'flex']}>
         <Box
           pb="30px"
@@ -25,34 +29,27 @@ export const Conscience = ({ price }) => {
           backgroundRepeat="repeat-x"
           mr={[null, null, '100px']}
         >
-          <MainTitle display={[null, null, 'none']}>Осознанность</MainTitle>
+          <MainTitle display={[null, null, 'none']}>
+            {t('conscience.title')}
+          </MainTitle>
           <Requests>
-            <strong>Какие запросы разберем?</strong>
+            <strong>{t('requests')}</strong>
           </Requests>
-          <Text mb="15px">
-            Данная консультация вскрывает глубинную проблематику жизни и её
-            исцеление, выход на новый уровень духовного развития. Проработка
-            внутренней кармы. Открытие сердечной чакры, кристалла души и
-            глубинных способностей личности.
-          </Text>
-          <Text mb="25px">
-            Данный расчёт показывает полный сценарий ситуаций в жизни человека и
-            кармические истории, которые прорабатываются. В итоге человек
-            получает алмазную огранку матрицы, то есть защиту судьбы.
-          </Text>
-          <Text>Входят расчет таких матриц:</Text>
+          <Text mb="15px">{t('conscience.desc1')}</Text>
+          <Text mb="25px">{t('conscience.desc2')}</Text>
+          <Text>{t('conscience.listTitle')}</Text>
           <List>
             <li>
-              <Text>матрица души;</Text>
+              <Text>{t('conscience.listEl1')}</Text>
             </li>
             <li>
-              <Text>матрица внутренней кармы;</Text>
+              <Text>{t('conscience.listEl2')}</Text>
             </li>
             <li>
-              <Text>матрица осознанности; </Text>
+              <Text>{t('conscience.listEl3')}</Text>
             </li>
             <li>
-              <Text>матрица врат света.</Text>
+              <Text>{t('conscience.listEl4')}</Text>
             </li>
           </List>
         </Box>
@@ -69,21 +66,19 @@ export const Conscience = ({ price }) => {
           >
             <Box width="100%" mb={[null, null, '20px']}>
               <HowIsGoingConsultation>
-                Как проходит консультация?
+                {t('howIsGoingCons')}
               </HowIsGoingConsultation>
               <Text mb={['20px', '0px']} width={[null, '320px']}>
-                Видеовстреча 90 минут + трансформация
+                {t('conscience.videoMeeting')}
               </Text>
             </Box>
             <Box display={[null, null, 'flex']} flexDirection="column">
               <AdditionalInfo mb="15px" fontSize={[null, null, '14px']}>
-                Требует минимального знакомства с базовым уровнем собственной
-                матрицы!
+                {t('conscience.additionalInfo1')}
               </AdditionalInfo>
               <AdditionalInfo>
                 <AdditionalInfo fontSize={[null, null, '14px']}>
-                  !Включает в себя большое количество практической и ритуальной
-                  работы. Процесс исцеления может проходить через обострение.
+                  {t('conscience.additionalInfo2')}
                 </AdditionalInfo>
               </AdditionalInfo>
             </Box>

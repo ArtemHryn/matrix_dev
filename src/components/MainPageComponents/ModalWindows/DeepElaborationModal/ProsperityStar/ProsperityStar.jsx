@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { Box } from 'components/Box';
 import {
   AdditionalInfo,
@@ -15,10 +16,11 @@ const dotGradient =
   'linear-gradient( to right, #000 10%, rgba(255, 255,255, 0) 0% )';
 
 export const ProsperityStar = () => {
+  const { t } = useTranslation('modals');
   return (
     <>
       <MainTitle display={['none', 'none', 'block']}>
-        Звезда процветания
+        {t('prosperity.title')}
       </MainTitle>
       <Box display={[null, null, 'flex']}>
         <Box
@@ -30,45 +32,24 @@ export const ProsperityStar = () => {
           mr={[null, null, '100px']}
         >
           <MainTitle display={[null, null, 'none']}>
-            Звезда процветания
+            {t('prosperity.title')}
           </MainTitle>
           <Requests>
-            <strong>Какие запросы разберем?</strong>
+            <strong>{t('requests')}</strong>
           </Requests>
-          <Text mb="15px">
-            4 ступень Матрицы Судьбы. Выход на новый уровень реализации.
-            Раскрытие своей путеводной звезды и энергий материализации желаний.
-            Объединение уровней духа и материи, что открывает новый путь и
-            методы реализации. Активация нового ключа силы. Осознание
-            целостности 2-х миров.
-          </Text>
-          <Text mb="15px">
-            Матрица звезды процветания даст понимание как формируется идея, на
-            чем она строится и что необходимо для реализации. Данная проработка
-            поможет понять, что мешает воплощаться желаниям и как их можно
-            реализовывать. Физически и энергетически слабая личность не способна
-            удержать большое количество земных благ, так как все они являются
-            очень энергоемкими.
-          </Text>
-          <Text mb="15px">
-            Проработка Звезды Процветания создает состояние целостности,
-            благодаря которому человек получает более чистый поток для осознания
-            истинных желаний и творческой реализации.
-          </Text>
-          <ListTitle>Какие запросы разберем?</ListTitle>
+          <Text mb="15px">{t('prosperity.desc1')}</Text>
+          <Text mb="15px">{t('prosperity.desc2')}</Text>
+          <Text mb="15px">{t('prosperity.desc3')}</Text>
+          <ListTitle>{t('prosperity.listTitle')}</ListTitle>
           <List>
             <li>
-              <Text>ключи небесного и земного процветания;</Text>
+              <Text>{t('prosperity.listEl1')}</Text>
             </li>
             <li>
-              <Text>
-                ключи результата и признания, почестей и известности;
-              </Text>
+              <Text>{t('prosperity.listEl2')}</Text>
             </li>
             <li>
-              <Text>
-                целостную звезду процветания и инструкцию по ее активации.
-              </Text>
+              <Text>{t('prosperity.listEl3')}</Text>
             </li>
           </List>
         </Box>
@@ -85,20 +66,15 @@ export const ProsperityStar = () => {
           >
             <Box width="100%" mb={[null, null, '20px']}>
               <HowIsGoingConsultation>
-                Как проходит консультация?
+                {t('howIsGoingCons')}
               </HowIsGoingConsultation>
               <Text mb={['20px', '0px']} width={['200px', '220px']}>
-                Видеовстреча 2 - 3 часа + трансформация от 60 дней
+                {t('prosperity.videoMeeting')}
               </Text>
             </Box>
             <Box display={[null, null, 'flex']}>
-              <AdditionalInfo>
-                * Обязательно прохождение исцеления 9 колен рода
-              </AdditionalInfo>
-              <AdditionalInfo>
-                * Включает в себя большое количество практической и ритуальной
-                работы.
-              </AdditionalInfo>
+              <AdditionalInfo>{t('prosperity.additionalInfo1')}</AdditionalInfo>
+              <AdditionalInfo>{t('prosperity.additionalInfo2')}</AdditionalInfo>
             </Box>
           </Box>
           <Box
@@ -108,7 +84,7 @@ export const ProsperityStar = () => {
             pt={['25px', '40px']}
           >
             <Price>$150</Price>
-            <BuyButton href="https://t.me/DariKarma">Купить</BuyButton>
+            <BuyButton href="https://t.me/DariKarma">{t('buy')}</BuyButton>
           </Box>
         </Box>
       </Box>

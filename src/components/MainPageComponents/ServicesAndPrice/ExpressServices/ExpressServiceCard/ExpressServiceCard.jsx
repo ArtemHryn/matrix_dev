@@ -12,11 +12,11 @@ import {
 } from './ExpressServiceCard.styled';
 
 export const ExpressServiceCard = ({
-  card: { img, text, imgTab, imgDesc, price, info },
+  card: { img, text, imgTab, imgDesc, price, info, isHideStar },
 }) => {
   const [showDetails, setShowDetails] = useState(false);
   const [showModal, setShowModal] = useState(false);
-  const {t} = useTranslation()
+  const { t } = useTranslation();
 
   return (
     <ExpressServiceCardElement
@@ -48,6 +48,7 @@ export const ExpressServiceCard = ({
             setShowModal={setShowModal}
             boxShadow="0px 0px 30px rgba(190, 148, 232, 0.3);"
             backgroundColor="rgba(255, 255, 255, 0.95);"
+            isHideStar={isHideStar}
           >
             <ModalTeamplate info={info} price={price} title={text} />
           </ModalLayout>

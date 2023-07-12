@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { Box } from 'components/Box';
 import {
   BuyButton,
@@ -12,10 +13,11 @@ const dotGradient =
   'linear-gradient( to right, #000 10%, rgba(255, 255,255, 0) 0% )';
 
 export const GameModal = () => {
+  const { t } = useTranslation('modals');
   return (
     <>
       <MainTitle display={['none', 'none', 'block']}>
-        Трансформационная игра “Кармические Путешествия”
+        {t('game.title')}
       </MainTitle>
       <Box display={[null, null, 'flex']}>
         <Box
@@ -27,47 +29,37 @@ export const GameModal = () => {
           mr={[null, null, '100px']}
         >
           <MainTitle display={[null, null, 'none']}>
-            Трансформационная игра “Кармические Путешествия”
+            {t('game.title')}
           </MainTitle>
           <Requests>
-            <strong>Какие запросы разберем?</strong>
+            <strong>{t('requests')}</strong>
           </Requests>
-          <Text mb="15px">
-            В основе игры лежат два метода: ТАРО и «Диагностика предназначения
-            судьбы по дате рождения» Наталии Ладини. Форматы игры хорошо
-            раскрывают практически любые запросы. Ведущая игры поможет игрокам
-            исследовать свой запрос, найти причинно-следственные связи в
-            жизненных ситуациях, получить конкретные рекомендации.
-          </Text>
-          <Text>Спектр запросов для игры:</Text>
+          <Text mb="15px">{t('game.desc1')}</Text>
+          <Text>{t('game.listTitle')}</Text>
           <List>
             <li>
-              <Text>жизненное предназначение;</Text>
+              <Text>{t('game.listEl1')}</Text>
             </li>
             <li>
-              <Text>личностное развитие;</Text>
+              <Text>{t('game.listEl2')}</Text>
             </li>
             <li>
-              <Text>вопросы здоровья;</Text>
+              <Text>{t('game.listEl3')}</Text>
             </li>
             <li>
-              <Text>финансовые затруднения;</Text>
+              <Text>{t('game.listEl4')}</Text>
             </li>
             <li>
-              <Text>поиск работы;</Text>
+              <Text>{t('game.listEl5')}</Text>
             </li>
             <li>
-              <Text>цикличные ситуации;</Text>
+              <Text>{t('game.listEl6')}</Text>
             </li>
             <li>
-              <Text>межличностные отношения и т.д.</Text>
+              <Text>{t('game.listEl7')}</Text>
             </li>
           </List>
-          <Text>
-            ! В игре можно принимать участие без определенного запроса. В таком
-            случае, игра послужит отличным диагностическим инструментом для
-            нескольких жизненных сфер.
-          </Text>
+          <Text>{t('game.desc2')}</Text>
         </Box>
         <Box>
           <Box
@@ -82,14 +74,15 @@ export const GameModal = () => {
           >
             <Box width="100%" mb={[null, null, '20px']}>
               <HowIsGoingConsultation>
-                Как проходит консультация?
+                {t('howIsGoingCons')}
               </HowIsGoingConsultation>
               <Text>
-                <span>ONLINE: </span>Видеовстреча от 90 минут
+                <span>ONLINE: </span>
+                {t('game.videoMeeting')}
               </Text>
               <Text>
-                <span>OFFLINE: </span>Встреча в г. Киев (локация согласовывается
-                с участниками)
+                <span>OFFLINE: </span>
+                {t('game.meeting')}
               </Text>
             </Box>
           </Box>
@@ -99,17 +92,17 @@ export const GameModal = () => {
               <List>
                 <li>
                   <Text maxWidth={['125px']}>
-                    Групповая игра (2-4 человека) -{' '}
+                    {t('game.groupGame')} -{' '}
                     <Text as="span" fontWeight="700">
-                      14$/чел
+                      14$/{t('game.person')}
                     </Text>
                   </Text>
                 </li>
                 <li>
                   <Text>
-                    Индивидуальная игра -{' '}
+                    {t('game.personalGame')} -{' '}
                     <Text as="span" fontWeight="700">
-                      21$/чел
+                      21$/{t('game.person')}
                     </Text>
                   </Text>
                 </li>
@@ -120,7 +113,7 @@ export const GameModal = () => {
                 justifyContent={['space-between', 'flex-start']}
                 flexDirection={[null, null, 'column']}
               >
-                <BuyButton href="https://t.me/DariKarma">Купить</BuyButton>
+                <BuyButton href="https://t.me/DariKarma">{t('buy')}</BuyButton>
               </Box>
             </Box>
             <Box>
@@ -128,17 +121,17 @@ export const GameModal = () => {
               <List>
                 <li>
                   <Text maxWidth={['125px']}>
-                    Групповая игра (2-4 человека) -{' '}
+                    {t('game.groupGame')} -{' '}
                     <Text as="span" fontWeight="700">
-                      18$/чел
+                      18$/{t('game.person')}
                     </Text>
                   </Text>
                 </li>
                 <li>
                   <Text>
-                    Индивидуальная игра -
+                    {t('game.personalGame')} -
                     <Text as="span" fontWeight="700">
-                      28$/чел
+                      28$/{t('game.person')}
                     </Text>
                   </Text>
                 </li>
@@ -149,7 +142,7 @@ export const GameModal = () => {
                 justifyContent={['space-between', 'flex-start']}
                 flexDirection={[null, null, 'column']}
               >
-                <BuyButton href="https://t.me/DariKarma">Купить</BuyButton>
+                <BuyButton href="https://t.me/DariKarma">{t('buy')}</BuyButton>
               </Box>
             </Box>
           </Box>

@@ -7,14 +7,18 @@ import {
   Requests,
   Text,
 } from './YearModal.styled';
+import { useTranslation } from 'react-i18next';
 
 const dotGradient =
   'linear-gradient( to right, #000 10%, rgba(255, 255,255, 0) 0% )';
 
 export const YearModal = ({ price }) => {
+  const { t } = useTranslation('modals');
   return (
     <>
-      <MainTitle display={['none', 'none', 'block']}>Прогноз на год</MainTitle>
+      <MainTitle display={['none', 'none', 'block']}>
+        {t('year.title')}
+      </MainTitle>
       <Box display={[null, null, 'flex']}>
         <Box
           pb="30px"
@@ -24,20 +28,14 @@ export const YearModal = ({ price }) => {
           backgroundRepeat="repeat-x"
           mr={[null, null, '100px']}
         >
-          <MainTitle display={[null, null, 'none']}>Прогноз на год</MainTitle>
+          <MainTitle display={[null, null, 'none']}>
+            {t('year.title')}
+          </MainTitle>
           <Requests>
-            <strong>Какие запросы разберем?</strong>
+            <strong>{t('requests')}</strong>
           </Requests>
-          <Text mb="15px">
-            Позволяет узнать свои энергии в прошлом, текущем или будущем году.
-            Включает в себя прогностику на каждые 22 дня, где прописаны все
-            ключи данного периода и дана вариативность, как позитивных, так и
-            негативных событий.
-          </Text>
-          <Text mb="25px">
-            Раскрытие задач, возможностей, испытаний данного года. Денежные и
-            любовные аспекты года и возможности их реализаций.
-          </Text>
+          <Text mb="15px">{t('year.desc1')}</Text>
+          <Text mb="25px">{t('year.desc2')}</Text>
         </Box>
         <Box>
           <Box
@@ -52,18 +50,14 @@ export const YearModal = ({ price }) => {
           >
             <Box width="100%" mb={[null, null, '20px']}>
               <HowIsGoingConsultation>
-                Как проходит консультация?
+                {t('howIsGoingCons')}
               </HowIsGoingConsultation>
               <Text mb={['20px', '0px']} width={[null, '320px']}>
-                Видеовстреча 30 - 40 минут + файл с прогностикой на каждые 22
-                дня + материалы для гармонизации года на усмотрение мастера
+                {t('year.videoMeeting')}
               </Text>
             </Box>
             <Box display={[null, null, 'flex']}>
-              <AdditionalInfo>
-                *Возможность обратиться к мастеру за дополнительными
-                разъяснениями и рекомендациями в течение всего года.
-              </AdditionalInfo>
+              <AdditionalInfo>{t('year.additionalInfo2')}</AdditionalInfo>
             </Box>
           </Box>
           <BuyContainer price={price} />

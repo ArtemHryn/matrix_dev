@@ -11,15 +11,17 @@ import {
   Requests,
   Text,
 } from './Awareness.styled';
+import { useTranslation } from 'react-i18next';
 
 const dotGradient =
   'linear-gradient( to right, #000 10%, rgba(255, 255,255, 0) 0% )';
 
 export const Awareness = () => {
+  const { t } = useTranslation('modals');
   return (
     <>
       <MainTitle display={['none', 'none', 'block']}>
-        Матрица осознанности
+        {t('awareness.title')}
       </MainTitle>
 
       <Box display={[null, null, 'flex']}>
@@ -32,48 +34,30 @@ export const Awareness = () => {
           mr={[null, null, '100px']}
         >
           <MainTitle display={[null, null, 'none']}>
-            Матрица осознанности
+            {t('awareness.title')}
           </MainTitle>
           <Requests>
-            <strong>Матрица осознанности</strong>
+            <strong>{t('requests')}</strong>
           </Requests>
-          <Text mb="15px">
-            3 ступень Матрицы судьбы. Проработка внутренней и внешней кармы.
-            Получение своего кристалла души. Прохождение пути трансформации от
-            12 до 15 архетипа. Трансформация матрицы жертвы в матрицу нового
-            видения.
-          </Text>
-          <Text mb="15px">
-            Избавление от душевных и физических страданий; стабилизация
-            психологического состояния; понимание истинных желаний. Познание
-            более глубинных процессов души и тела. Развитие телесности.
-            Раскрытие и проработка подсознательных негативных сценариев и
-            установок. Выявление теневой стороны личности и приумножение
-            собственного ресурса. Создание духовного стержня. Освобождение от
-            старых циклов, токсичных связей, переход в состояние любви и
-            принятия.
-          </Text>
-          <Text mb="15px">
-            Данные расчёты показывают событийные сценарии в жизни
-            человека и кармические истории, которые прорабатываются. В итоге
-            человек получает алмазную огранку матрицы, то есть защиту судьбы.
-          </Text>
-          <ListTitle>Какие запросы разберем?</ListTitle>
+          <Text mb="15px">{t('awareness.desc1')}</Text>
+          <Text mb="15px">{t('awareness.desc2')}</Text>
+          <Text mb="15px">{t('awareness.desc3')}</Text>
+          <ListTitle>{t('awareness.listTitle')}:</ListTitle>
           <List>
             <ListElemet>
-              <Text>Демон-Жертва;</Text>
+              <Text>{t('awareness.listEl1')}</Text>
             </ListElemet>
             <ListElemet>
-              <Text>16 Карм;</Text>
+              <Text>{t('awareness.listEl2')}</Text>
             </ListElemet>
             <ListElemet>
-              <Text>Кристалл души;</Text>
+              <Text>{t('awareness.listEl3')}</Text>
             </ListElemet>
             <ListElemet>
-              <Text>Матрица осознанности; </Text>
+              <Text>{t('awareness.listEl4')}</Text>
             </ListElemet>
             <ListElemet>
-              <Text>Матрица внутренней кармы</Text>
+              <Text>{t('awareness.listEl5')}</Text>
             </ListElemet>
           </List>
         </Box>
@@ -90,16 +74,13 @@ export const Awareness = () => {
           >
             <Box width="100%" mb={[null, null, '20px']}>
               <HowIsGoingConsultation>
-                Как проходит консультация?
+                {t('howIsGoingCons')}
               </HowIsGoingConsultation>
               <Text mb={['20px', '0px', '20px']} width={[null, '220px']}>
-                Видеовстреча 2 - 3 часа + трансформация от 60 дней
+                {t('awareness.videoMeeting')}
               </Text>
             </Box>
-            <AdditionalInfo>
-              *Большое количество ритуальной работы и практик. Трансформации и
-              исцеления могут проходить через обострения
-            </AdditionalInfo>
+            <AdditionalInfo>{t('awareness.additionalInfo1')}</AdditionalInfo>
           </Box>
           <Box
             display="flex"
@@ -108,7 +89,7 @@ export const Awareness = () => {
             pt={['25px', '40px']}
           >
             <Price>$119</Price>
-            <BuyButton href="https://t.me/DariKarma">Купить</BuyButton>
+            <BuyButton href="https://t.me/DariKarma">{t('buy')}</BuyButton>
           </Box>
         </Box>
       </Box>

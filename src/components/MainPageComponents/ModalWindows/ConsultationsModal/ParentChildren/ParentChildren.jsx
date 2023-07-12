@@ -8,15 +8,17 @@ import {
   Requests,
   Text,
 } from './ParentChildren.styled';
+import { useTranslation } from 'react-i18next';
 
 const dotGradient =
   'linear-gradient( to right, #000 10%, rgba(255, 255,255, 0) 0% )';
 
 export const ParentChildren = ({ price }) => {
+  const { t } = useTranslation('modals');
   return (
     <>
       <MainTitle display={['none', 'none', 'block']}>
-        Детско-родительские отношения
+        {t('parentChildren.title')}
       </MainTitle>
       <Box display={[null, null, 'flex']}>
         <Box
@@ -29,35 +31,33 @@ export const ParentChildren = ({ price }) => {
           width={[null, null, 'calc((100% - 100px) / 2)']}
         >
           <MainTitle display={[null, null, 'none']}>
-            Детско-родительские отношения
+            {t('parentChildren.title')}
           </MainTitle>
           <Requests>
-            <strong>Какие запросы разберем?</strong>
+            <strong>{t('requests')}</strong>
           </Requests>
-          <Text>Данная консультация поможет:</Text>
+          <Text>{t('parentChildren.listTitle')}</Text>
           <List>
             <li>
-              <Text>понять себя и своего ребёнка;</Text>
+              <Text>{t('parentChildren.listEl1')}</Text>
             </li>
             <li>
-              <Text>выстроить правильную коммуникацию;</Text>
+              <Text>{t('parentChildren.listEl2')}</Text>
             </li>
             <li>
-              <Text>уделить внимание определённым качествам ребёнка;</Text>
+              <Text>{t('parentChildren.listEl3')}</Text>
             </li>
             <li>
-              <Text>направить в нужную сферу деятельности;</Text>
+              <Text>{t('parentChildren.listEl4')}</Text>
             </li>
             <li>
-              <Text>эффективно решать конфликтные ситуации;</Text>
+              <Text>{t('parentChildren.listEl5')}</Text>
             </li>
             <li>
-              <Text>выбрать верную модель поведения родителя;</Text>
+              <Text>{t('parentChildren.listEl6')}</Text>
             </li>
             <li>
-              <Text>
-                узнать таланты, способности, задачи и ключевые энергии ребёнка.
-              </Text>
+              <Text>{t('parentChildren.listEl7')}</Text>
             </li>
           </List>
         </Box>
@@ -77,12 +77,10 @@ export const ParentChildren = ({ price }) => {
               pb={['25px', '40px']}
             >
               <HowIsGoingConsultation>
-                Как проходит консультация?
+                {t('howIsGoingCons')}
               </HowIsGoingConsultation>
               <Text mb={['20px', '0px']}>
-                Видеовстреча 60 - 90 минут + индивидуальные рекомендации для
-                ребенка и детско-родительских отношений + трансформация для
-                родителя исходя из запроса
+                {t('parentChildren.videoMeeting')}
               </Text>
             </Box>
             <Box pt={['25px', '25px', '25px']} display={[null, 'flex']}>
@@ -94,16 +92,16 @@ export const ParentChildren = ({ price }) => {
                 flexDirection="column"
                 justifyContent="space-between"
               >
-                <Text mb="15px">
-                  Матрица ребёнка, Совместимость 1 родителя с ребёнком
-                </Text>
+                <Text mb="15px">{t('parentChildren.additionalInfo1')}</Text>
                 <Box
                   display="flex"
                   alignItems="center"
                   justifyContent={['space-between', 'flex-start']}
                 >
                   <Price>{price}</Price>
-                  <BuyButton href="https://t.me/DariKarma">Купить</BuyButton>
+                  <BuyButton href="https://t.me/DariKarma">
+                    {t('buy')}
+                  </BuyButton>
                 </Box>
               </Box>
               <Box
@@ -113,9 +111,7 @@ export const ParentChildren = ({ price }) => {
                 justifyContent="space-between"
               >
                 <Text mb="15px" maxWidth={[null, null, '230px']}>
-                  Комплексная консультация: Счастливая семья (матрица ребёнка,
-                  совместимость ребёнка с каждым родителем, совместимость
-                  родителей)
+                  {t('parentChildren.additionalInfo2')}
                 </Text>
                 <Box
                   display="flex"
@@ -123,7 +119,9 @@ export const ParentChildren = ({ price }) => {
                   justifyContent={['space-between', 'flex-start']}
                 >
                   <Price>$90</Price>
-                  <BuyButton href="https://t.me/DariKarma">Купить</BuyButton>
+                  <BuyButton href="https://t.me/DariKarma">
+                    {t('buy')}
+                  </BuyButton>
                 </Box>
               </Box>
             </Box>

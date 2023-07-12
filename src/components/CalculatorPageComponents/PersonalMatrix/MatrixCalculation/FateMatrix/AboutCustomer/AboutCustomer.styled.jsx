@@ -52,16 +52,3 @@ export const Info = styled.span`
   ${typography}
 `;
 
-export const Img = styled.img`
-  position: absolute;
-  top: 0%;
-  left: 3%;
-  width: 52px;
-  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
-    width: 61px;
-    left: 0%;
-  }
-  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
-    display: none;
-  }
-`;

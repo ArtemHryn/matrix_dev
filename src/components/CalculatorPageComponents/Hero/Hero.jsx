@@ -43,7 +43,9 @@ export const Hero = () => {
         zIndex="20"
       >
         <Logo>Dari.Karma</Logo>
+        
         <Title>
+          
           <Trans i18nKey="heroTitle" ns="calc">
             Калькулятор <SecondTitle>матрицы судьбы</SecondTitle>
           </Trans>

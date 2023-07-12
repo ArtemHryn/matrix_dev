@@ -16,13 +16,6 @@ export const MatrixNumber = styled.p`
   ${space}
 `;
 
-export const StarImg = styled.img`
-  position: absolute;
-  width: 48px;
-  top: 0%;
-  left: 10px;
-`;
-
 export const NameDate = styled.p`
   font-family: 'Cardo';
   font-style: normal;

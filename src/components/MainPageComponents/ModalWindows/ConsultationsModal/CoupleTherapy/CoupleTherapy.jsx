@@ -7,14 +7,18 @@ import {
   Text,
   Warning,
 } from './CoupleTherapy.styled';
+import { useTranslation } from 'react-i18next';
 
 const dotGradient =
   'linear-gradient( to right, #000 10%, rgba(255, 255,255, 0) 0% )';
 
 export const CoupleTherapy = ({ price }) => {
+  const { t } = useTranslation('modals');
   return (
     <>
-      <MainTitle display={['none', 'none', 'block']}>Парная терапия</MainTitle>
+      <MainTitle display={['none', 'none', 'block']}>
+        {t('coupleTherapy.title')}
+      </MainTitle>
       <Box display={[null, null, 'flex']}>
         <Box
           pb="30px"
@@ -24,25 +28,15 @@ export const CoupleTherapy = ({ price }) => {
           backgroundRepeat="repeat-x"
           mr={[null, null, '100px']}
         >
-          <MainTitle display={[null, null, 'none']}>Парная терапия</MainTitle>
+          <MainTitle display={[null, null, 'none']}>
+            {t('coupleTherapy.title')}
+          </MainTitle>
           <Requests>
-            <strong>Какие запросы разберем?</strong>
+            <strong>{t('requests')}</strong>
           </Requests>
-          <Text mb="15px">
-            Диагностика взаимоотношений с партнёром (вторая половинка, родители,
-            дети, друзья, знакомые, братья/сестры, коллеги).
-          </Text>
-          <Text mb="15px">
-            Поможет выявить цели и проблемы коммуникации; точки роста; задачи
-            партнёров; ресурсное состояние. Работа с негативными и позитивными
-            качествами каждого из партнёров; проработка факторов, которые мешают
-            гармоничному существованию партнёров; разбор плюсов и минусов
-            совместимости.
-          </Text>
-          <Text>
-            + Заключительные рекомендации для эффективного решения проблем,
-            достижения общих целей и баланса в партнёрстве по итогам терапии.
-          </Text>
+          <Text mb="15px">{t('coupleTherapy.desc1')}</Text>
+          <Text mb="15px">{t('coupleTherapy.desc2')}</Text>
+          <Text>{t('coupleTherapy.desc3')}</Text>
         </Box>
         <Box>
           <Box
@@ -57,13 +51,12 @@ export const CoupleTherapy = ({ price }) => {
           >
             <Box width="100%" mb={[null, null, '20px']}>
               <HowIsGoingConsultation>
-                Как проходит консультация?
+                {t('howIsGoingCons')}
               </HowIsGoingConsultation>
               <Text mb={['20px']} width={[null, '485px', '100%']}>
-                Личная встреча или видеовстреча от 3-х часов ( 1-2 перерыва по
-                10 минут) + трансформация для партнеров
+                {t('coupleTherapy.videoMeeting')}
               </Text>
-              <Warning>*ТРЕБУЕТСЯ ПРИСУТСТВИЕ ДВУХ ПАРТНЁРОВ!</Warning>
+              <Warning>{t('coupleTherapy.warning')}</Warning>
             </Box>
           </Box>
           <BuyContainer price={price} />

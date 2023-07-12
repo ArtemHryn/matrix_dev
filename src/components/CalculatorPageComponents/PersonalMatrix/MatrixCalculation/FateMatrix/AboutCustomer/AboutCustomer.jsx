@@ -3,8 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Box } from 'components/Box';
 import { useMatrix } from 'pages/Calculator';
 
-import star from 'images/Calculator/personalMatrix/star.webp';
-import { Img, Info, Key, NameDate } from './AboutCustomer.styled';
+import { Info, Key, NameDate } from './AboutCustomer.styled';
 import { checkNum } from 'helper/calculateMatrix';
 
 const gradient =
@@ -95,7 +94,6 @@ const AboutCustomer = () => {
             </Box>
           </>
         )}
-        <Img src={star} alt="star" />
       </Box>
     </Box>
   );
