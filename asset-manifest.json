@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/matrix/static/js/main.18a5d2ea.js",
-    "static/js/755.70fdf719.chunk.js": "/matrix/static/js/755.70fdf719.chunk.js",
-    "static/js/553.43fe27e2.chunk.js": "/matrix/static/js/553.43fe27e2.chunk.js",
-    "static/js/815.e3e6291f.chunk.js": "/matrix/static/js/815.e3e6291f.chunk.js",
-    "static/js/859.9831e234.chunk.js": "/matrix/static/js/859.9831e234.chunk.js",
+    "main.js": "/matrix/static/js/main.706e151c.js",
+    "static/js/755.91fcfdc6.chunk.js": "/matrix/static/js/755.91fcfdc6.chunk.js",
+    "static/js/553.76b6be74.chunk.js": "/matrix/static/js/553.76b6be74.chunk.js",
+    "static/js/815.087232f1.chunk.js": "/matrix/static/js/815.087232f1.chunk.js",
+    "static/js/859.da2a4bf4.chunk.js": "/matrix/static/js/859.da2a4bf4.chunk.js",
     "static/js/851.357d5b2d.chunk.js": "/matrix/static/js/851.357d5b2d.chunk.js",
     "static/js/154.8768c737.chunk.js": "/matrix/static/js/154.8768c737.chunk.js",
     "static/js/134.04e06642.chunk.js": "/matrix/static/js/134.04e06642.chunk.js",
@@ -14,8 +14,8 @@
     "static/css/207.d6f89cd3.chunk.css": "/matrix/static/css/207.d6f89cd3.chunk.css",
     "static/js/207.67da116d.chunk.js": "/matrix/static/js/207.67da116d.chunk.js",
     "static/js/968.47726f67.chunk.js": "/matrix/static/js/968.47726f67.chunk.js",
-    "static/js/242.61dc347b.chunk.js": "/matrix/static/js/242.61dc347b.chunk.js",
-    "static/js/861.013249ab.chunk.js": "/matrix/static/js/861.013249ab.chunk.js",
+    "static/js/820.9c142c83.chunk.js": "/matrix/static/js/820.9c142c83.chunk.js",
+    "static/js/861.af65dc24.chunk.js": "/matrix/static/js/861.af65dc24.chunk.js",
     "static/js/934.13decfc7.chunk.js": "/matrix/static/js/934.13decfc7.chunk.js",
     "static/media/backgroundPlanet.webp": "/matrix/static/media/backgroundPlanet.57cb30f1c3380a009aa1.webp",
     "static/media/periodCard.webp": "/matrix/static/media/periodCard.3c3218af74149e957b07.webp",
@@ -102,7 +102,6 @@
     "static/media/hands.webp": "/matrix/static/media/hands.0993062ed2e853310a10.webp",
     "static/media/handWithFlowerTab.webp": "/matrix/static/media/handWithFlowerTab.691807b2d9b27db08211.webp",
     "static/media/bmc-logo.svg": "/matrix/static/media/bmc-logo.25d9e9faf2cb2905743d13dd44c3ecf9.svg",
-    "static/media/star.webp": "/matrix/static/media/star.fd354665f3f8c6ea6cd3.webp",
     "static/media/deepDrow.webp": "/matrix/static/media/deepDrow.e1c269b996d9631f92c0.webp",
     "static/media/heroStar1.svg": "/matrix/static/media/heroStar1.5259ee8ba53d38bb9dea17e0a3185df2.svg",
     "static/media/heroStar2.svg": "/matrix/static/media/heroStar2.968160994490927777c9f2311d128dca.svg",
@@ -137,11 +136,11 @@
     "static/media/closeModal.svg": "/matrix/static/media/closeModal.77f566a13863502e75085358a5296aff.svg",
     "static/media/menuButton.svg": "/matrix/static/media/menuButton.6543f21211fdf3fdf52f174cb0d6e241.svg",
     "static/media/plus.svg": "/matrix/static/media/plus.8d6f5f239025f72163429b7dffd2d420.svg",
-    "main.18a5d2ea.js.map": "/matrix/static/js/main.18a5d2ea.js.map",
-    "755.70fdf719.chunk.js.map": "/matrix/static/js/755.70fdf719.chunk.js.map",
-    "553.43fe27e2.chunk.js.map": "/matrix/static/js/553.43fe27e2.chunk.js.map",
-    "815.e3e6291f.chunk.js.map": "/matrix/static/js/815.e3e6291f.chunk.js.map",
-    "859.9831e234.chunk.js.map": "/matrix/static/js/859.9831e234.chunk.js.map",
+    "main.706e151c.js.map": "/matrix/static/js/main.706e151c.js.map",
+    "755.91fcfdc6.chunk.js.map": "/matrix/static/js/755.91fcfdc6.chunk.js.map",
+    "553.76b6be74.chunk.js.map": "/matrix/static/js/553.76b6be74.chunk.js.map",
+    "815.087232f1.chunk.js.map": "/matrix/static/js/815.087232f1.chunk.js.map",
+    "859.da2a4bf4.chunk.js.map": "/matrix/static/js/859.da2a4bf4.chunk.js.map",
     "851.357d5b2d.chunk.js.map": "/matrix/static/js/851.357d5b2d.chunk.js.map",
     "154.8768c737.chunk.js.map": "/matrix/static/js/154.8768c737.chunk.js.map",
     "134.04e06642.chunk.js.map": "/matrix/static/js/134.04e06642.chunk.js.map",
@@ -151,11 +150,11 @@
     "207.d6f89cd3.chunk.css.map": "/matrix/static/css/207.d6f89cd3.chunk.css.map",
     "207.67da116d.chunk.js.map": "/matrix/static/js/207.67da116d.chunk.js.map",
     "968.47726f67.chunk.js.map": "/matrix/static/js/968.47726f67.chunk.js.map",
-    "242.61dc347b.chunk.js.map": "/matrix/static/js/242.61dc347b.chunk.js.map",
-    "861.013249ab.chunk.js.map": "/matrix/static/js/861.013249ab.chunk.js.map",
+    "820.9c142c83.chunk.js.map": "/matrix/static/js/820.9c142c83.chunk.js.map",
+    "861.af65dc24.chunk.js.map": "/matrix/static/js/861.af65dc24.chunk.js.map",
     "934.13decfc7.chunk.js.map": "/matrix/static/js/934.13decfc7.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.18a5d2ea.js"
+    "static/js/main.706e151c.js"
   ]
 }
