@@ -31,10 +31,7 @@ export const WaysToTransformation = () => {
           <TransformationWay />
         </Box>
         <TransformationWarning>
-          *Беспечное вскрытие судьбоносных программ, без готовности работать над
-          ними, чревато последствиями. Поэтому для вашей безопасности и блага
-          все полноценные разборы матрицы НЕ проводятся без готовности идти в
-          трансформацию.
+          {t('waysToTransformationWarning')}
         </TransformationWarning>
       </Box>
     </Box>

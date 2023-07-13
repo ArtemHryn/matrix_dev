@@ -180,6 +180,7 @@ export const Button = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   width: 244px;
   height: 52px;
 
@@ -204,6 +205,7 @@ export const Button = styled.a`
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     width: 260px;
     margin: 0 auto;
+    font-size: 18px;
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
     width: 460px;

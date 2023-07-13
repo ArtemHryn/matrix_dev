@@ -91,7 +91,7 @@ export const GameModal = () => {
               <Text>ONLINE:</Text>
               <List>
                 <li>
-                  <Text maxWidth={['125px']}>
+                  <Text>
                     {t('game.groupGame')} -{' '}
                     <Text as="span" fontWeight="700">
                       14$/{t('game.person')}
@@ -120,7 +120,7 @@ export const GameModal = () => {
               <Text>OFFLINE:</Text>
               <List>
                 <li>
-                  <Text maxWidth={['125px']}>
+                  <Text>
                     {t('game.groupGame')} -{' '}
                     <Text as="span" fontWeight="700">
                       18$/{t('game.person')}

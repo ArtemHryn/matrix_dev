@@ -55,7 +55,7 @@ export const FamilyTree = () => {
               <HowIsGoingConsultation>
                 {t('howIsGoingCons')}
               </HowIsGoingConsultation>
-              <Text mb={['20px', '0px', '20px']} width={[null, '220px']}>
+              <Text mb={['20px', '0px', '20px']} width={[null, '265px']}>
                 {t('family.videoMeeting')}
               </Text>
             </Box>

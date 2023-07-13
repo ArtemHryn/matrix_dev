@@ -84,7 +84,7 @@ export const getExpressServiceCards = lng => {
           : 'Диагностика состояния матрицы',
       imgTab: card1Tab,
       imgDesc: card1Desc,
-      price: '$21',
+      price: '$23',
       info: {
         textBefore:
           lng === 'ua'
@@ -131,7 +131,7 @@ export const getExpressServiceCards = lng => {
       text: lng === 'ua' ? 'Сумісність' : 'Совместимость',
       imgTab: card2Tab,
       imgDesc: card2Desc,
-      price: '$21',
+      price: '$23',
       info: {
         textBefore: lng === 'ua' ? [textBeforeCard2aUa] : [textBeforeCard2aRu],
         list:
@@ -190,18 +190,29 @@ export const getExpressServiceCards = lng => {
         list:
           lng === 'ua'
             ? [
-                'експрес-розбір матриці',
-                'додаткову консультацію таролога щодо поточної ситуації.',
+                'експрес-розбір матриці від кармолога Дарини',
+                'додаткову консультацію таролога Софії щодо поточної ситуації.',
               ]
             : [
-                'экспресс-разбор матрицы',
-                'дополнительную консультацию таролога по ситуации на данный момент.',
+                'экспресс-разбор матрицы от кармолого Дарины',
+                'дополнительную консультацию таролога Софии по ситуации на данный момент.',
               ],
         meeting:
           lng === 'ua'
             ? 'Відеозустріч з 2 майстрами'
             : 'Видеовстреча с 2 мастерами',
+        links: [
+          {
+            name: lng === 'ua' ? 'Дарина' : 'Дарина',
+            link: 'https://www.instagram.com/dari.karma/',
+          },
+          {
+            name: lng === 'ua' ? 'Софія' : 'София',
+            link: 'https://www.instagram.com/mooncats_taro/',
+          },
+        ],
       },
+
       isHideStar: true,
     },
   ];

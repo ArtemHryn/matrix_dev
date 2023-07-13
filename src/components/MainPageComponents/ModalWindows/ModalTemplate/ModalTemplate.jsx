@@ -4,6 +4,8 @@ import { BuyContainer } from '../Buy';
 import {
   AdditionalInfo,
   HowIsGoingConsultation,
+  Link,
+  LinksList,
   List,
   MainTitle,
   Requests,
@@ -15,7 +17,7 @@ const dotGradient =
 
 export const ModalTeamplate = ({ info, price, title }) => {
   const { t } = useTranslation('modals');
-  const { textBefore, meeting, additionInfo, list, textAfter } = info;
+  const { textBefore, meeting, additionInfo, list, textAfter, links } = info;
   return (
     <>
       <MainTitle display={['none', 'none', 'block']}>{title}</MainTitle>
@@ -85,6 +87,22 @@ export const ModalTeamplate = ({ info, price, title }) => {
                 >
                   {meeting}
                 </Text>
+                {links && (
+                  <LinksList>
+                    {links.map(({ name, link }) => (
+                      <li key={name}>
+                        <Link
+                          href={link}
+                          target="_blank"
+                          rel="noreferrer noopener"
+                        >
+                          <big>{name}</big>
+                        </Link>
+                      </li>
+                    ))}
+                  </LinksList>
+                )}
+
                 <Box>
                   {additionInfo &&
                     additionInfo.map((info, index) => (
