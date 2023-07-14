@@ -25,6 +25,7 @@ const calcUa = {
     'та напиши в особисті повідомлення кодову фразу “Хочу Шаблони”',
   footerPoliticText1: 'Політика конфіденційності',
   footerPoliticText2: 'Дизайн сайту by aleomore і dari.karma',
+  fullOverlapCheckbox: 'Техніка повного накладання матриць Н. Ладіні',
   personalMatrixCalc: 'розрахувати',
   personalMatrixBoxTitle: 'введіть дані',
   personalMatrixNamePlaceholder: 'Ім’я',
@@ -45,6 +46,9 @@ const calcUa = {
   assignmentTabledthrirdNameDesk1: 'Особисте призначення',
   assignmentTabledthrirdNameDesk2: 'Соціальне призначення',
   karmaIssuesEnergy: 'Енергія',
+  healthAuthor: 'авторська',
+  healthAuthorPasswordModalData: 'Введіть ключ доступу',
+  incorrectPassword: '! Невірний пароль',
   healthCardTypePersonal: 'Особиста',
   healthCardTypeHolistic: 'Цілісна',
   result: 'Результат',
@@ -57,5 +61,6 @@ const calcUa = {
   year: 'Рік',
   yearEnterError: 'Введіть рік',
   yearPatternError: 'Введіть 4-значний рік від 2000 до 2100',
+  yearPeriods: 'Періоди року',
 };
 export default calcUa;

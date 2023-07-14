@@ -16,6 +16,7 @@ const getMasterClass = lng => {
           format: 'Формат: відеолекція',
           duration: 'Тривалість: 2 години',
           btn: 'Незабаром',
+          link: 'https://t.me/DariKarma',
         },
         {
           title: 'Бранч',
@@ -29,6 +30,7 @@ const getMasterClass = lng => {
           duration: 'Тривалість: 2-3 години',
           price: '16',
           btn: 'Дізнатись дати найближчих зустрічей',
+          link: 'https://www.instagram.com/stories/highlights/17988946340104079/',
         },
       ]
     : [
@@ -44,6 +46,7 @@ const getMasterClass = lng => {
           format: 'Формат: видеолекция',
           duration: 'Длительность: 2 часа ',
           btn: 'Скоро доступно',
+          link: 'https://t.me/DariKarma',
         },
         {
           title: 'Бранч',
@@ -57,6 +60,7 @@ const getMasterClass = lng => {
           duration: 'Длительность: 2-3 часа',
           price: '16',
           btn: 'Узнать даты ближайших встреч',
+          link: 'https://www.instagram.com/stories/highlights/17988946340104079/',
         },
       ];
 };

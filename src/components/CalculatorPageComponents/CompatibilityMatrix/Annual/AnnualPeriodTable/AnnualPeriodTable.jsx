@@ -8,6 +8,7 @@ import {
 } from 'components/CalculatorPageComponents/PersonalMatrix/MatrixCalculation/PeriodMatrix/PeriodMatrix.styled';
 import { AgeColumnList } from 'components/CalculatorPageComponents/PersonalMatrix/MatrixCalculation/PeriodMatrix/PeriodMatrix.styled';
 import { AgeColumnItem } from 'components/CalculatorPageComponents/PersonalMatrix/MatrixCalculation/PeriodMatrix/PeriodMatrix.styled';
+import { useTranslation } from 'react-i18next';
 
 const AnnualPeriodTable = ({
   resultData,
@@ -15,6 +16,7 @@ const AnnualPeriodTable = ({
   tableInfo,
   setTableInfo,
 }) => {
+  const { t } = useTranslation('calc');
   useEffect(() => {
     const {
       day,
@@ -44,8 +46,8 @@ const AnnualPeriodTable = ({
   }, [resultData, matrixYear, setTableInfo]);
 
   return (
-    <Box maxWidth="900px" margin="0 auto">
-      <TableTitle>Периоды года</TableTitle>
+    <Box maxWidth="900px" margin="0 auto" mb={['40px', '70px', '110px']}>
+      <TableTitle>{t('yearPeriods')}</TableTitle>
       <Box
         as="ul"
         display="flex"
@@ -58,13 +60,13 @@ const AnnualPeriodTable = ({
         mb={['4px']}
       >
         <AgeColumnName flex="3">
-          <AgeColumnNameText>Период</AgeColumnNameText>
+          <AgeColumnNameText>{t('aboutCustomerPeriod')}</AgeColumnNameText>
         </AgeColumnName>
         <AgeColumnName>
           <AgeColumnNameText>Ключ</AgeColumnNameText>
         </AgeColumnName>
         <AgeColumnName flex="3">
-          <AgeColumnNameText>Период</AgeColumnNameText>
+          <AgeColumnNameText>{t('aboutCustomerPeriod')}</AgeColumnNameText>
         </AgeColumnName>
         <AgeColumnName border={['none', 'none', 'none']}>
           <AgeColumnNameText>Ключ</AgeColumnNameText>

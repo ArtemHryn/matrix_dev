@@ -11,11 +11,18 @@ import {
 
 const HealthCard = ({ card, cardType }) => {
   const { t } = useTranslation('calc');
-  const { cardName, columnName, chakraList, total, id } = card;
+  const {
+    cardName,
+    columnName,
+    chakraList,
+    total,
+    id,
+    partners = false,
+  } = card;
   return (
     <>
       {cardType === id && (
-        <Box as="li">
+        <Box>
           <CardName>{cardName}</CardName>
           <Box
             display="flex"
@@ -40,7 +47,19 @@ const HealthCard = ({ card, cardType }) => {
           </Box>
           <List>
             {chakraList.map(
-              ({ chakraName, physics, energy, emotions, color }, index) => (
+              (
+                {
+                  chakraName,
+                  physics,
+                  energy,
+                  emotions,
+                  color,
+                  partner1,
+                  partner2,
+                  couple,
+                },
+                index
+              ) => (
                 <ChakraElement
                   key={chakraName}
                   border={
@@ -58,10 +77,10 @@ const HealthCard = ({ card, cardType }) => {
                     {chakraName}
                   </ChakraText>
 
-                  <ChakraText>{physics}</ChakraText>
-                  <ChakraText>{energy}</ChakraText>
+                  <ChakraText>{partners ? partner1 : physics}</ChakraText>
+                  <ChakraText>{partners ? partner2 : energy}</ChakraText>
                   <ChakraText border={['none', 'none', 'none']}>
-                    {emotions}
+                    {partners ? couple : emotions}
                   </ChakraText>
                 </ChakraElement>
               )

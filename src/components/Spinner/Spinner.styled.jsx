@@ -1,5 +1,5 @@
 import styled, { keyframes } from 'styled-components';
-import { ReactComponent as MatrixLoader } from 'images/matrixLoader.svg';
+import { ReactComponent as HeroStar1 } from 'images/Calculator/Hero/heroStar1.svg';
 
 const uiverse723 = keyframes`
 0%, 100% {
@@ -60,13 +60,13 @@ export const AdditionalSpinnerPart = styled.span`
   }
 `;
 
-export const MatrixLoaderImg = styled(MatrixLoader)`
-  width: 100%;
+export const MatrixLoaderImg = styled(HeroStar1)`
+  width: 110%;
   animation: ${infinityRotate} 3s linear infinite;
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
-    width: 60%;
+    width: 80%;
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
-    width: 40%;
+    width: 50%;
   }
 `;

@@ -12,6 +12,7 @@ const Team = () => {
 
   const [resultData, setResultData] = useState();
   const [teamMatrixData, setTeamMatrixData] = useState([]);
+  const [isFullOverlap, setIsFullOverlap] = useState(false);
   const { t } = useTranslation('calc');
 
   useEffect(() => {
@@ -29,12 +30,12 @@ const Team = () => {
   }, [partnersDate, t]);
 
   useEffect(() => {
-    setResultData(getCompatData(teamMatrixData));
-  }, [teamMatrixData]);
+    setResultData(getCompatData(teamMatrixData, isFullOverlap));
+  }, [isFullOverlap, teamMatrixData]);
 
   return (
     <Box>
-      <DataInput />
+      <DataInput setIsFullOverlap={setIsFullOverlap} />
       {showMatrix && (
         <>
           <ResultMatrix resultData={resultData} />

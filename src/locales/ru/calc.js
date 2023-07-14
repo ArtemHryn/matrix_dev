@@ -24,6 +24,7 @@ const calcRu = {
     'и пиши в личные сообщения кодовую фразу “Хочу Шаблоны”',
   footerPoliticText1: 'Политика конфиденциальности',
   footerPoliticText2: 'Дизайн сайта by aleomore и dari.karma',
+  fullOverlapCheckbox: 'Техника полного наложения матриц Н. Ладини',
   personalMatrixCalc: 'Рассчитать',
   personalMatrixBoxTitle: 'Ввод данных',
   personalMatrixNamePlaceholder: 'Имя',
@@ -44,6 +45,9 @@ const calcRu = {
   assignmentTabledthrirdNameDesk1: 'Личное предназначение',
   assignmentTabledthrirdNameDesk2: 'Социальное предназначение',
   karmaIssuesEnergy: 'Энергия',
+  healthAuthor: 'авторская',
+  healthAuthorPasswordModalData: 'Введите ключ доступа',
+  incorrectPassword: '! Неверный пароль',
   healthCardTypePersonal: 'Личная',
   healthCardTypeHolistic: 'Целостная',
   result: 'Итог',
@@ -56,5 +60,6 @@ const calcRu = {
   year: 'Год',
   yearEnterError: 'Введите год',
   yearPatternError: 'Введите 4-значный год от 2000 до 2100',
+  yearPeriods: 'Периоды года',
 };
 export default calcRu;

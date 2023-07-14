@@ -39,3 +39,5 @@ export const Age = styled.p`
   color: #979797;
   ${color}
 `;
+
+

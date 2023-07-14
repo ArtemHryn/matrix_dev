@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import {
+  background,
   border,
   color,
   flexbox,
@@ -43,6 +44,8 @@ export const SetCardTypeBtn = styled.button`
   ${space}
   ${color}
   ${shadow}
+  ${layout}
+  ${background}
 `;
 
 export const CardName = styled.p`

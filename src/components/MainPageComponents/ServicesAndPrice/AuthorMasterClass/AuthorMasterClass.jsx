@@ -19,7 +19,7 @@ export const AuthorMasterClass = () => {
       </AuthorMasterClassTitle>
       <MasterClassList>
         {getMasterClass(i18n.language).map(
-          ({ title, img, services, format, duration, price, btn }) => (
+          ({ title, img, services, format, duration, price, btn, link }) => (
             <MasterClassCard
               title={title}
               img={img}
@@ -29,6 +29,7 @@ export const AuthorMasterClass = () => {
               price={price}
               btn={btn}
               key={title}
+              link={link}
             />
           )
         )}

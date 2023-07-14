@@ -33,7 +33,7 @@ const InputLine = ({ index, register, remove, setValue }) => {
         placeholder={t('personalMatrixNamePlaceholder')}
       />
       <Input
-        width={['135px', null, '240px']}
+        width={['140px', '210px', '240px']}
         type="text"
         placeholder={t('personalMatrixDatePlaceholder')}
         {...register(`info.${index}.date`, {

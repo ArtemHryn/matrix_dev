@@ -16,6 +16,7 @@ const Annual = () => {
   const [resultData, setResultData] = useState();
   const [annualMatrixData, setAnnualMatrixData] = useState([]);
   const [tableInfo, setTableInfo] = useState([]);
+  const [isFullOverlap, setIsFullOverlap] = useState(false);
 
   useEffect(() => {
     if (partnersDate === 0) {
@@ -31,12 +32,12 @@ const Annual = () => {
   }, [partnersDate, t]);
 
   useEffect(() => {
-    setResultData(getCompatData(annualMatrixData));
-  }, [annualMatrixData]);
+    setResultData(getCompatData(annualMatrixData, isFullOverlap));
+  }, [annualMatrixData, isFullOverlap]);
 
   return (
     <Box>
-      <DataInput />
+      <DataInput setIsFullOverlap={setIsFullOverlap} />
       {showMatrix && (
         <>
           <ResultMatrix
@@ -44,6 +45,12 @@ const Annual = () => {
             matrix={Matrix}
             isAnual={true}
             yearArcanes={tableInfo.filter((element, index) => index % 2 !== 0)}
+          />
+          <AnnualPeriodTable
+            resultData={resultData}
+            matrixYear={partnersDate[1].year}
+            tableInfo={tableInfo}
+            setTableInfo={setTableInfo}
           />
           <Box
             display={[null, null, 'flex']}
@@ -62,12 +69,6 @@ const Annual = () => {
               />
             ))}
           </Box>
-          <AnnualPeriodTable
-            resultData={resultData}
-            matrixYear={partnersDate[1].year}
-            tableInfo={tableInfo}
-            setTableInfo={setTableInfo}
-          />
         </>
       )}
     </Box>

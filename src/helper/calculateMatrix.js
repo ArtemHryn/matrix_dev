@@ -16,6 +16,7 @@ export function allData(date, isGenerated, calCanter2 = true) {
     ...date,
   };
   Object.keys(data).forEach(element => {
+    if (element === 'name') return;
     if (element === 'year') {
       data[element] = checkNum(checkNum(data[element]));
       return;
@@ -156,14 +157,14 @@ export const getKarmaIssueData = (info, lng) => {
             {
               name:
                 lng === 'ua'
-                  ? 'Духовная карма роду батька'
+                  ? 'Духовна карма роду батька'
                   : 'Духовная карма рода отца',
               energy: topLeft1,
             },
             {
               name:
                 lng === 'ua'
-                  ? 'Духовная карма роду матері'
+                  ? 'Духовна карма роду матері'
                   : 'Духовная карма рода матери',
               energy: topRight1,
             },
@@ -471,6 +472,123 @@ export const getHealthInfo = (info, lng) => {
   return list;
 };
 
+export const authorHelthCard = (info, lng) => {
+  const {
+    day,
+    month,
+    year,
+    left2,
+    left3,
+    innerLeft2,
+    center,
+    right2,
+    right3,
+    top2,
+    top3,
+    innerTop2,
+    bottom3,
+    bottom2,
+    bottom1,
+    innerBottom2,
+    innerRight2,
+  } = info;
+
+  const personalEmotionList = [
+    checkNum(day + month),
+    checkNum(left2 + top2),
+    checkNum(left3 + top3),
+    checkNum(innerLeft2 + innerTop2),
+    checkNum(center + center),
+    checkNum(innerRight2 + innerBottom2),
+    checkNum(right3 + bottom3),
+    checkNum(right2 + bottom2),
+    checkNum(year + bottom1),
+  ];
+
+  const totalPers = personalEmotionList.reduce((accum, key) => {
+    return accum + key;
+  }, 0);
+  const list = {
+    id: 3,
+    cardName:
+      lng === 'ua' ? 'Особиста карта здоров’я' : 'Личная карта здоровья',
+    columnName:
+      lng === 'ua'
+        ? ['Фізика', 'Енергія', 'Емоції']
+        : ['Физика', 'Энергия', 'Эмоции'],
+    chakraList: [
+      {
+        chakraName: 'Душа',
+        physics: day,
+        energy: month,
+        emotions: '20',
+        color: '#FEE1FF',
+      },
+      {
+        chakraName: 'Сахасрара',
+        physics: left2,
+        energy: top2,
+        emotions: '20',
+        color: '#DCB9FF',
+      },
+      {
+        chakraName: 'Аджна',
+        physics: left3,
+        energy: top3,
+        emotions: '20',
+        color: '#B9C0FF',
+      },
+      {
+        chakraName: lng === 'ua' ? 'Вішудха' : 'Вишудха',
+        physics: innerLeft2,
+        energy: innerTop2,
+        emotions: '20',
+        color: '#C1F4FF',
+      },
+      {
+        chakraName: 'Анахата',
+        physics: center,
+        energy: center,
+        emotions: '20',
+        color: '#C5F1D7',
+      },
+      {
+        chakraName: lng === 'ua' ? 'Маніпура' : 'Манипура',
+        physics: innerRight2,
+        energy: innerBottom2,
+        emotions: '20',
+        color: '#F7F9A1',
+      },
+      {
+        chakraName: lng === 'ua' ? 'Свадхістана' : 'Свадхистана',
+        physics: right3,
+        energy: bottom3,
+        emotions: '20',
+        color: '#FCDCAC',
+      },
+      {
+        chakraName: 'Муладхара',
+        physics: right2,
+        energy: bottom2,
+        emotions: '20',
+        color: '#FFB7B7',
+      },
+      {
+        chakraName: 'Земля',
+        physics: year,
+        energy: bottom1,
+        emotions: '20',
+        color: '#e1b095',
+      },
+    ],
+    total: checkNum(totalPers),
+  };
+  personalEmotionList.forEach((element, index) => {
+    list.chakraList[index].emotions = element;
+  });
+  return list;
+};
+
 export const getPeriod = info => {
   const {
     day,
@@ -560,14 +678,54 @@ export const getPeriod = info => {
   return ageList;
 };
 
-export const getCompatData = partners => {
+export const getCompatData = (partners, isFullOverlap) => {
   const result = partners.reduce((acc, partner) => {
     Object.entries(partner).forEach(([key, value]) => {
-      acc[key] = (acc[key] || 0) + value;
+      acc[key] = checkNum((acc[key] || 0) + value);
     });
     return acc;
   }, {});
-  return allData(result, true, false);
+  delete result.order;
+  return isFullOverlap ? result : allData(result, true, false);
+};
+
+export const getPartnersChakra = (info, lng) => {
+  const healthOfEachPartner = info.map(el => getHealthInfo(el, lng));
+  const partnersChakraList = healthOfEachPartner.map(el => el[0].chakraList);
+  const list = {
+    id: 1,
+    cardName:
+      lng === 'ua'
+        ? "Партнерська карта здоров'я"
+        : 'Партнерская карта здоровья',
+    columnName: [
+      info[0].name ? info[0].name : info[0].order,
+      info[1].name ? info[1].name : info[1].order,
+      'Пара',
+    ],
+  };
+  list.chakraList = partnersChakraList[0].map(
+    ({ chakraName, physics, energy, emotions, color }, index) => ({
+      chakraName,
+      color,
+      partner1: `${physics} - ${energy} - ${emotions}`,
+    })
+  );
+
+  partnersChakraList[1].forEach(
+    ({ physics, energy, emotions }, index) =>
+      (list.chakraList[index].partner2 = `${physics} - ${energy} - ${emotions}`)
+  );
+
+  list.chakraList.forEach(el => {
+    const [ph1, en1, em1] = el.partner1.split(' - ');
+    const [ph2, en2, em2] = el.partner2.split(' - ');
+    el.couple = `${checkNum(+ph1 + +ph2)} - ${checkNum(
+      +en1 + +en2
+    )} - ${checkNum(+em1 + +em2)}`;
+  });
+  list.partners = true;
+  return list;
 };
 
 export const getAnnualPeriodData = (data, year) => {

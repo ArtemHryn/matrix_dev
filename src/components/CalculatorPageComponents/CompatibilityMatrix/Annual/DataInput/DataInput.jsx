@@ -9,11 +9,12 @@ import {
 import { Input } from '../../Team/DataInput/InputLine/InputLine.styled';
 import { Error } from 'components/CalculatorPageComponents/PersonalMatrix/DataInput/DataByDate/DataByDate.styled';
 import { format } from 'date-fns';
+import FullOverlapCheckBox from '../../FullOverlapCheckBox/FullOverlapCheckBox';
 
 const gradient =
   'linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(249, 237, 255, 0.3) 100%)';
 
-const DataInput = () => {
+const DataInput = ({ setIsFullOverlap }) => {
   const { t } = useTranslation('calc');
   const { setPartnersDate, setShowMatrix } = useMatrix();
   const {
@@ -43,6 +44,7 @@ const DataInput = () => {
       { day: 1, month: 1, year: data.year, name: t('annualMatrix') },
     ]);
     setShowMatrix(true);
+    setIsFullOverlap(data.isFullOverlap);
     document.activeElement.blur();
   };
 
@@ -102,6 +104,7 @@ const DataInput = () => {
         {errors.date && <Error>{errors.date.message}</Error>}
         {errors.year && <Error>{errors.year.message}</Error>}
       </Box>
+      <FullOverlapCheckBox register={register} />
       <SubmitBtn
         type="submit"
         whileHover={{ scale: 1.05 }}

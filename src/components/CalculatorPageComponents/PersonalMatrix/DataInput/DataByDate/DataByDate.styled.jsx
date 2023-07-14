@@ -21,8 +21,7 @@ export const FrontCard = styled(motion.div)`
     margin: 0 auto 38px;
     padding: 48px 55px 68px;
   }
-  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
-  }
+
 `;
 
 export const Input = styled.input`

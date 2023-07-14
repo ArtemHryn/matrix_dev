@@ -24,6 +24,7 @@ export const MasterClassCard = ({
   duration,
   price,
   btn,
+  link,
 }) => {
   const { t } = useTranslation();
   return (
@@ -61,11 +62,7 @@ export const MasterClassCard = ({
           </Box>
         </Box>
       </Box>
-      <Button
-        href="https://t.me/DariKarma"
-        target="_blank"
-        rel="noreferrer noopener"
-      >
+      <Button href={link} target="_blank" rel="noreferrer noopener">
         {btn}
       </Button>
     </MasterClassCardElement>

@@ -1,12 +1,13 @@
+import { useTranslation } from 'react-i18next';
 import { Box } from 'components/Box';
 import { useFieldArray, useForm } from 'react-hook-form';
 import PartnerData from './PartnerData';
 import { SubmitBtn } from 'components/CalculatorPageComponents/PersonalMatrix/DataInput/DataInput.styled';
 import { useMatrix } from 'pages/Calculator';
 import { MatrixNumber } from '../Partners.styled';
-import { useTranslation } from 'react-i18next';
+import FullOverlapCheckBox from '../../FullOverlapCheckBox/FullOverlapCheckBox';
 
-const DataInput = () => {
+const DataInput = ({ setIsFullOverlap }) => {
   const { setPartnersDate, setShowMatrix } = useMatrix();
   const { t } = useTranslation('calc');
   const {
@@ -48,6 +49,7 @@ const DataInput = () => {
 
     setPartnersDate(partnersInfo);
     setShowMatrix(true);
+    setIsFullOverlap(data.isFullOverlap);
     document.activeElement.blur();
   };
 
@@ -69,6 +71,7 @@ const DataInput = () => {
           </Box>
         ))}
       </Box>
+      <FullOverlapCheckBox register={register} />
       <SubmitBtn
         type="submit"
         whileHover={{ scale: 1.05 }}
