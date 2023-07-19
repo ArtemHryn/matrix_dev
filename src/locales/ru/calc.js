@@ -48,6 +48,9 @@ const calcRu = {
   healthAuthor: 'авторская',
   healthAuthorPasswordModalData: 'Введите ключ доступа',
   incorrectPassword: '! Неверный пароль',
+  healthAuthorWarning1:
+    '<0>ВНИМАНИЕ!</0> Расчет "INTEGRITY" является разработкой команды "Dari.Karma" и представлен на сайте для тестирования.',
+  healthAuthorWarning2: 'Данный расчёт карты здоровья является авторским и <2>не соответствует </2> алгоритму расчёта Н. Ладини',
   healthCardTypePersonal: 'Личная',
   healthCardTypeHolistic: 'Целостная',
   result: 'Итог',

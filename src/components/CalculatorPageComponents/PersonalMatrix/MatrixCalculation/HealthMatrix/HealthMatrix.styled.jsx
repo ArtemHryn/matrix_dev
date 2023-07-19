@@ -185,3 +185,25 @@ export const ChakraText = styled.p`
   ${layout}
   ${typography}
 `;
+
+export const Warning = styled.span`
+  color: #9072af;
+  font-family: Cormorant;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.18;
+  letter-spacing: 0.01em;
+  text-align: center;
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    font-size: 22px;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    font-size: 26px;
+  }
+`;
+
+export const WarningText = styled(Warning)`
+  font-weight: 400;
+  display: block;
+  letter-spacing: 100%;
+`;

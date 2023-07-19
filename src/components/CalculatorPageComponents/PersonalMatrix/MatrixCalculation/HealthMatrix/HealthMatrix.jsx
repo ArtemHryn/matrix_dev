@@ -32,6 +32,7 @@ const HealthMatrix = () => {
         <AssignmentTableDesktop />
       </Box>
       <AssignmentTabledMobTabled mb={['90px']} />
+
       <HealthTables cardType={cardType} setCardType={setCardType} />
     </>
   );

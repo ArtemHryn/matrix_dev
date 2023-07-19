@@ -49,6 +49,10 @@ const calcUa = {
   healthAuthor: 'авторська',
   healthAuthorPasswordModalData: 'Введіть ключ доступу',
   incorrectPassword: '! Невірний пароль',
+  healthAuthorWarning1:
+    '<0>УВАГА!</0> Розрахунок "INTEGRITY" є розробкою команди "Dari.Karma" та представлений на сайті для тестування.',
+  healthAuthorWarning2:
+    "Даний розрахунок карти здоров'я є авторським і <2>не відповідає </2> алгоритму розрахунку Н. Ладіні",
   healthCardTypePersonal: 'Особиста',
   healthCardTypeHolistic: 'Цілісна',
   result: 'Результат',

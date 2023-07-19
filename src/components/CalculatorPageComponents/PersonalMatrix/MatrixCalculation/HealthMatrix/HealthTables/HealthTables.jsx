@@ -1,8 +1,8 @@
-import { useTranslation } from 'react-i18next';
+import { useTranslation, Trans } from 'react-i18next';
 import { useEffect, useState } from 'react';
 import { Box } from 'components/Box';
 import HealthCard from './HealthCard/HealthCard';
-import { SetCardTypeBtn } from '../HealthMatrix.styled';
+import { SetCardTypeBtn, Warning, WarningText } from '../HealthMatrix.styled';
 import { useMatrix } from 'pages/Calculator';
 import { authorHelthCard, getHealthInfo } from 'helper/calculateMatrix';
 import PasswordModal from './PasswordModal/PasswordModal';
@@ -85,7 +85,30 @@ const HealthTables = ({ setCardType, cardType }) => {
         <HealthCard key={card.cardName} card={card} cardType={cardType} />
       ))}
       {authorMethod.id === cardType && (
-        <HealthCard card={authorMethod} cardType={authorMethod.id} />
+        <>
+          <Box
+            display="flex"
+            flexDirection="column"
+            gridGap={['10px']}
+            my={['20px']}
+          >
+            <WarningText as="p">
+              <Trans i18nKey="healthAuthorWarning1" ns="calc">
+                <Warning>ВНИМАНИЕ!</Warning> Расчет "INTEGRITY" является
+                разработкой команды "Dari.Karma" и представлен на сайте для
+                тестирования.
+              </Trans>
+            </WarningText>
+            <WarningText as="p">
+              <Trans i18nKey="healthAuthorWarning2" ns="calc">
+                Данный расчёт карты здоровья является авторским и{' '}
+                <Warning>не соответствует </Warning>
+                алгоритму расчёта Н. Ладини
+              </Trans>
+            </WarningText>
+          </Box>
+          <HealthCard card={authorMethod} cardType={authorMethod.id} />
+        </>
       )}
       {showPasswordModal && (
         <PasswordModal
