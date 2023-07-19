@@ -34,7 +34,7 @@ const HealthTables = ({ setCardType, cardType }) => {
 
   const onFormSubmit = e => {
     e.preventDefault();
-    if (passValue !== '1') {
+    if (passValue !== 'Dsaorniyn10234A') {
       setFormError(t('incorrectPassword'));
       return;
     }
