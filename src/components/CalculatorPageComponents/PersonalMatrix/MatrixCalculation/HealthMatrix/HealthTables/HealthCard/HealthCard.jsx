@@ -77,8 +77,8 @@ const HealthCard = ({ card, cardType }) => {
                     {chakraName}
                   </ChakraText>
 
-                  <ChakraText>{partners ? partner1 : physics}</ChakraText>
                   <ChakraText>{partners ? partner2 : energy}</ChakraText>
+                  <ChakraText>{partners ? partner1 : physics}</ChakraText>
                   <ChakraText border={['none', 'none', 'none']}>
                     {partners ? couple : emotions}
                   </ChakraText>

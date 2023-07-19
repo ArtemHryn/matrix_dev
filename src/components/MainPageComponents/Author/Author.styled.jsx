@@ -67,10 +67,11 @@ export const AuthorImg = styled.img`
 `;
 export const AboutAuthor = styled.ul`
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
-    margin-bottom: 54px;
+    margin-bottom: 80px;
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
     display: flex;
+     margin-bottom: 54px;
   }
 `;
 

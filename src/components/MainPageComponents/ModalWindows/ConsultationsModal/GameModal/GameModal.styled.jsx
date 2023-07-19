@@ -53,12 +53,12 @@ export const Text = styled.p`
   ${space}
   ${layout}
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    max-width: 100%;
     font-size: 17px;
     line-height: 1.23;
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
     font-size: 18px;
-    max-width: 100%;
   }
   ${typography}
 `;

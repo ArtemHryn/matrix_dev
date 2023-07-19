@@ -40,13 +40,13 @@ export const PersonalLife = ({ price }) => {
               <Text>{t('personalLife.listEl1')}</Text>
             </li>
             <li>
-              <Text>{t('personalLife.listEl1')}</Text>
+              <Text>{t('personalLife.listEl2')}</Text>
             </li>
             <li>
-              <Text>{t('personalLife.listEl1')}</Text>
+              <Text>{t('personalLife.listEl3')}</Text>
             </li>
             <li>
-              <Text>{t('personalLife.listEl1')}</Text>
+              <Text>{t('personalLife.listEl4')}</Text>
             </li>
           </List>
           <Text>{t('personalLife.desc1')}</Text>

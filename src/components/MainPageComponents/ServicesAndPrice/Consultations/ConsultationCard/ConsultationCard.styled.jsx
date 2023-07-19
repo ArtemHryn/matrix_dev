@@ -27,7 +27,7 @@ export const ConcultationCardText = styled.p`
   color: ${p => p.theme.colors.main};
 
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
-    bottom: 36px;
+    bottom: 46px;
     font-size: 22px;
     line-height: 1.22;
   }

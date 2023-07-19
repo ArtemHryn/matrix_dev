@@ -60,6 +60,9 @@ export const List = styled.ul`
   padding-left: 20px;
   margin-bottom: 20px;
   width: 320px;
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    width: 100%;
+  }
 `;
 
 export const HowIsGoingConsultation = styled.h4`
@@ -73,7 +76,6 @@ export const HowIsGoingConsultation = styled.h4`
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     font-size: 25px;
   }
-
 `;
 
 export const AdditionalInfo = styled.p`
@@ -85,8 +87,8 @@ export const AdditionalInfo = styled.p`
   color: rgba(0, 0, 0, 0.8);
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
     max-width: 200px;
-    :first-child{
-        margin-right: 30px;
+    :first-child {
+      margin-right: 30px;
     }
   }
 `;

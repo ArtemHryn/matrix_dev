@@ -364,8 +364,8 @@ export const getHealthInfo = (info, lng) => {
         lng === 'ua' ? 'Особиста карта здоров’я' : 'Личная карта здоровья',
       columnName:
         lng === 'ua'
-          ? ['Фізика', 'Енергія', 'Емоції']
-          : ['Физика', 'Энергия', 'Эмоции'],
+          ? ['Енергія', 'Фізика', 'Емоції']
+          : ['Энергия', 'Физика', 'Эмоции'],
       chakraList: [
         {
           chakraName: 'Сахасрара',
@@ -463,8 +463,8 @@ export const getHealthInfo = (info, lng) => {
     list[0].chakraList[index].emotions = element;
   });
   list[0].chakraList.forEach((element, index) => {
-    list[1].chakraList[index].physics = element.emotions;
-    list[1].chakraList[index].energy = integralEmotionList[index];
+    list[1].chakraList[index].energy = element.emotions;
+    list[1].chakraList[index].physics = integralEmotionList[index];
     list[1].chakraList[index].emotions = checkNum(
       list[1].chakraList[index].physics + list[1].chakraList[index].energy
     );
@@ -514,8 +514,8 @@ export const authorHelthCard = (info, lng) => {
       lng === 'ua' ? 'Особиста карта здоров’я' : 'Личная карта здоровья',
     columnName:
       lng === 'ua'
-        ? ['Фізика', 'Енергія', 'Емоції']
-        : ['Физика', 'Энергия', 'Эмоции'],
+        ? ['Енергія', 'Фізика', 'Емоції']
+        : ['Энергия', 'Физика', 'Эмоции'],
     chakraList: [
       {
         chakraName: 'Душа',
@@ -705,16 +705,16 @@ export const getPartnersChakra = (info, lng) => {
     ],
   };
   list.chakraList = partnersChakraList[0].map(
-    ({ chakraName, physics, energy, emotions, color }, index) => ({
+    ({ chakraName, physics, energy, emotions, color }) => ({
       chakraName,
       color,
-      partner1: `${physics} - ${energy} - ${emotions}`,
+      partner1: ` ${energy} - ${physics} -  ${emotions}`,
     })
   );
 
   partnersChakraList[1].forEach(
     ({ physics, energy, emotions }, index) =>
-      (list.chakraList[index].partner2 = `${physics} - ${energy} - ${emotions}`)
+      (list.chakraList[index].partner2 = `${energy} - ${physics} -  ${emotions}`)
   );
 
   list.chakraList.forEach(el => {
