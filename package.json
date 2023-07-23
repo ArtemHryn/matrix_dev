@@ -13,6 +13,7 @@
     "framer-motion": "^8.4.7",
     "i18next": "^22.5.1",
     "i18next-browser-languagedetector": "^7.0.2",
+    "primereact": "^9.6.0",
     "prop-types": "^15.8.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",

@@ -5,20 +5,13 @@ import {
   ChakraElement,
   ChakraTableTitle,
   ChakraText,
-  Exclamation,
   List,
 } from '../../HealthMatrix.styled';
+import HealthCardElement from './HealthCardElement';
 
 const HealthCard = ({ card, cardType }) => {
   const { t } = useTranslation('calc');
-  const {
-    cardName,
-    columnName,
-    chakraList,
-    total,
-    id,
-    partners = false,
-  } = card;
+  const { cardName, columnName, chakraList, total, id, partners = false } = card;
   return (
     <>
       {cardType === id && (
@@ -35,56 +28,23 @@ const HealthCard = ({ card, cardType }) => {
             {columnName.map((column, index) => (
               <ChakraTableTitle
                 key={column}
-                border={
-                  index === columnName.length - 1
-                    ? ['none', 'none', 'none']
-                    : null
-                }
+                border={index === columnName.length - 1 ? ['none', 'none', 'none'] : null}
               >
                 {column}
               </ChakraTableTitle>
             ))}
           </Box>
           <List>
-            {chakraList.map(
-              (
-                {
-                  chakraName,
-                  physics,
-                  energy,
-                  emotions,
-                  color,
-                  partner1,
-                  partner2,
-                  couple,
-                },
-                index
-              ) => (
-                <ChakraElement
-                  key={chakraName}
-                  border={
-                    index === chakraList.length - 1 && !total
-                      ? ['none', 'none', 'none']
-                      : null
-                  }
-                >
-                  <Exclamation bg={color}>!</Exclamation>
-                  <ChakraText
-                    flex="2"
-                    justifyContent="flex-start"
-                    fontFamily="bona"
-                  >
-                    {chakraName}
-                  </ChakraText>
-
-                  <ChakraText>{partners ? partner2 : energy}</ChakraText>
-                  <ChakraText>{partners ? partner1 : physics}</ChakraText>
-                  <ChakraText border={['none', 'none', 'none']}>
-                    {partners ? couple : emotions}
-                  </ChakraText>
-                </ChakraElement>
-              )
-            )}
+            {chakraList.map((element, index) => (
+              <HealthCardElement
+                key={element.chakraName}
+                index={index}
+                partners={partners}
+                length={chakraList.length}
+                chakraElement={element}
+                total={total}
+              />
+            ))}
             {total && (
               <ChakraElement border={['none', 'none', 'none']}>
                 <ChakraText fontFamily="bona">{t('result')}</ChakraText>

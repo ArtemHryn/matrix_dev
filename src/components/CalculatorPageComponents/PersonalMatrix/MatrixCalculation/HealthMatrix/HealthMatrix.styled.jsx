@@ -54,11 +54,7 @@ export const CardName = styled.p`
   align-items: center;
   height: 48px;
 
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.7) 0%,
-    rgba(249, 237, 255, 0.7) 100%
-  );
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, rgba(249, 237, 255, 0.7) 100%);
   border: 0.7px solid ${p => p.theme.colors.text};
   border-radius: 8px;
   margin-bottom: 4px;
@@ -132,7 +128,7 @@ export const ChakraElement = styled.li`
   ${border}
 `;
 
-export const Exclamation = styled.span`
+export const Exclamation = styled.button`
   width: 16px;
   height: 16px;
   display: flex;
@@ -147,7 +143,13 @@ export const Exclamation = styled.span`
   font-size: 11px;
   line-height: 1.18;
   color: ${p => p.theme.colors.main};
+  cursor: pointer;
   ${color}
+  transition: all 250ms linear;
+  &:hover,
+  &:focus {
+    scale: 1.15;
+  }
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     width: 30px;
     height: 30px;
@@ -206,4 +208,84 @@ export const WarningText = styled(Warning)`
   font-weight: 400;
   display: block;
   letter-spacing: 100%;
+`;
+
+export const TipHeaderBox = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 20px 20px 10px;
+  background-image: linear-gradient(to right, #9072af 10%, rgba(255, 255, 255, 0) 0%);
+  background-position: bottom;
+  background-size: 10px 2px;
+  background-repeat: repeat-x;
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    padding: 0px 30px 30px 20px;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+  }
+`;
+
+export const TipHeaderText = styled.p`
+  color: #72499b;
+  text-align: center;
+  font-family: Cormorant;
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.68;
+  letter-spacing: 0.208px;
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    font-size: 32px;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+  }
+`;
+
+export const TipGoalText = styled.p`
+  color: #4b216c;
+  font-family: Cormorant;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 0.82;
+  letter-spacing: 0.077px;
+  text-transform: lowercase;
+  padding: 15px 12px;
+  background-image: linear-gradient(to right, #9072af 10%, rgba(255, 255, 255, 0) 0%);
+  background-position: bottom;
+  background-size: 10px 2px;
+  background-repeat: repeat-x;
+  text-align: right;
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    padding: 15px 22px 15px 85px;
+    font-size: 22px;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+  }
+`;
+
+export const TipDesc = styled.p`
+  color: #4b216c;
+  font-family: Cormorant;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: 0.084px;
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    font-size: 20px;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+  }
+`;
+
+export const TipDescName = styled(TipDesc)`
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.68;
+  letter-spacing: 0.103px;
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    font-size: 22px;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+  }
 `;

@@ -12,7 +12,7 @@ const MatrixBtn = () => {
         to: 'fateMatrix',
       },
       {
-        name: lng === 'ua' ? 'Кармичні задачі' : 'кармические задачи',
+        name: lng === 'ua' ? 'Кармічні задачі' : 'кармические задачи',
         to: 'karmaIssues',
       },
       {

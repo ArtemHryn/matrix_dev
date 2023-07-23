@@ -80,7 +80,7 @@ export const Title = styled.h2`
   color: ${p => p.theme.colors.main};
   margin-bottom: 16px;
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
-    max-width: 80%;
+    width: 80%;
     margin-bottom: 22px;
     font-weight: 600;
     font-size: 28px;
@@ -88,7 +88,7 @@ export const Title = styled.h2`
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
     font-size: 40px;
-    max-width: 90%;
+    width: 100%;
   }
 `;
 
