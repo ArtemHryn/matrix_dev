@@ -1,11 +1,9 @@
 const calcRu = {
   heroTitle: 'Калькулятор <1>матрицы судьбы</1>',
-  heroAboutCalc:
-    'Продвинутый калькулятор для быстрого и профессионального расчета.',
+  heroAboutCalc: 'Продвинутый калькулятор для быстрого и профессионального расчета.',
   heroAuthoring:
     'Калькулятор на 100% соответствует классическому вычислению «Матрицы Судьбы» Наталии Ладини',
-  changeYourFateTitle:
-    'Хочешь больше узнать о своей судьбе и изменить её к лучшему?',
+  changeYourFateTitle: 'Хочешь больше узнать о своей судьбе и изменить её к лучшему?',
   changeYourFateAssistanseText:
     'Я буду рада стать твоим проводником на прекрасном пути трансформации.',
   changeYourFateConsultationBtn: 'Записаться на консультацию',
@@ -15,13 +13,11 @@ const calcRu = {
   changeYourFateCalcAuthor4: 'Сергея Скляренко',
   donationLikeTheProject:
     'Если тебе понравился калькулятор, ты можешь угостить команду разработчиков чашечкой кофе',
-  donationSaveService:
-    'Это поможет сохранить сервис бесплатным и работать над его улучшениями.',
+  donationSaveService: 'Это поможет сохранить сервис бесплатным и работать над его улучшениями.',
   contactsTitle: 'Контакты',
   getPDFTemplateTitle: 'Получи PDF-шаблон для расчета Матрицы Судьбы!',
   getPDFTemplateHowTo1: 'Подписывайся на',
-  getPDFTemplateHowTo2:
-    'и пиши в личные сообщения кодовую фразу “Хочу Шаблоны”',
+  getPDFTemplateHowTo2: 'и пиши в личные сообщения кодовую фразу “Хочу Шаблоны”',
   footerPoliticText1: 'Политика конфиденциальности',
   footerPoliticText2: 'Дизайн сайта by aleomore и dari.karma',
   fullOverlapCheckbox: 'Техника полного наложения матриц Н. Ладини',
@@ -50,9 +46,14 @@ const calcRu = {
   incorrectPassword: '! Неверный пароль',
   healthAuthorWarning1:
     '<0>ВНИМАНИЕ!</0> Расчет "INTEGRITY" является разработкой команды "Dari.Karma" и представлен на сайте для тестирования.',
-  healthAuthorWarning2: 'Данный расчёт карты здоровья является авторским и <2>не соответствует </2> алгоритму расчёта Н. Ладини',
+  healthAuthorWarning2:
+    'Данный расчёт карты здоровья является авторским и <2>не соответствует </2> алгоритму расчёта Н. Ладини',
   healthCardTypePersonal: 'Личная',
   healthCardTypeHolistic: 'Целостная',
+  healthCardTipPurpose: 'Функция',
+  healthCardTipInternalCondition: 'Внутреннее состояние',
+  healthCardTipDisturbance: 'Нарушения',
+  healthCardTipVerb: 'Глагол',
   result: 'Итог',
   periodMatrixHeader: 'Энергии покровители по годам',
   tableMatrix: 'Матрица',

@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { Box } from 'components/Box';
 import {
   TipDesc,
@@ -21,6 +22,7 @@ const HealthCardTip = ({
     chakraName,
   },
 }) => {
+  const { t } = useTranslation('calc');
   return (
     <Box
       backgroundImage={bgColor}
@@ -39,16 +41,17 @@ const HealthCardTip = ({
           <TipDescName as="span">Область: </TipDescName> {bodyPart}
         </TipDesc>
         <TipDesc>
-          <TipDescName as="span">Функція: </TipDescName> {purpose}
+          <TipDescName as="span">{t('healthCardTipPurpose')}: </TipDescName> {purpose}
         </TipDesc>
         {internalCondition && (
           <TipDesc>
-            <TipDescName as="span">Внутрішній стан: </TipDescName> {internalCondition}
+            <TipDescName as="span">{t('healthCardTipInternalCondition')}: </TipDescName>{' '}
+            {internalCondition}
           </TipDesc>
         )}
         {disturbance && (
           <TipDesc>
-            <TipDescName as="span">Порушення: </TipDescName> {disturbance}
+            <TipDescName as="span">{t('healthCardTipDisturbance')}: </TipDescName> {disturbance}
           </TipDesc>
         )}
         <TipDesc>
@@ -56,7 +59,7 @@ const HealthCardTip = ({
         </TipDesc>
         {verb && (
           <TipDesc>
-            <TipDescName as="span">Дієслово: </TipDescName> {verb}
+            <TipDescName as="span">{t('healthCardTipVerb')}: </TipDescName> {verb}
           </TipDesc>
         )}
       </Box>
