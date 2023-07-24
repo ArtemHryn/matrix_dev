@@ -6,6 +6,7 @@ import {
   TipGoalText,
   TipHeaderText,
   TipHeaderBox,
+  ImgTip,
 } from '../../HealthMatrix.styled';
 
 const HealthCardTip = ({
@@ -28,15 +29,15 @@ const HealthCardTip = ({
       backgroundImage={bgColor}
       border="0.6px solid #72499B"
       borderRadius="8px"
-      py={['15px']}
-      maxWidth={['280px', '500px']}
+      py={['5px']}
+      maxWidth={['260px', '400px']}
     >
       <TipHeaderBox>
-        <img src={img} alt={chakraName} />
+        <ImgTip src={img} alt={chakraName} width={40}/>
         <TipHeaderText>{chakraName}</TipHeaderText>
       </TipHeaderBox>
       <TipGoalText>{goal}</TipGoalText>
-      <Box p={['15px 15px 25px']} display="flex" flexDirection="column" gridGap={['6px', '10px']}>
+      <Box p={['15px 15px 15px']} display="flex" flexDirection="column">
         <TipDesc>
           <TipDescName as="span">Область: </TipDescName> {bodyPart}
         </TipDesc>

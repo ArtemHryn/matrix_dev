@@ -214,13 +214,13 @@ export const TipHeaderBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0px 20px 20px 10px;
+  padding: 0px 15px 10px 10px;
   background-image: linear-gradient(to right, #9072af 10%, rgba(255, 255, 255, 0) 0%);
   background-position: bottom;
   background-size: 10px 2px;
   background-repeat: repeat-x;
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
-    padding: 0px 30px 30px 20px;
+    padding: 0px 15px 15px 10px;
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
   }
@@ -230,15 +230,24 @@ export const TipHeaderText = styled.p`
   color: #72499b;
   text-align: center;
   font-family: Cormorant;
-  font-size: 28px;
+  font-size: 26px;
   font-style: italic;
   font-weight: 400;
   line-height: 1.68;
   letter-spacing: 0.208px;
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
-    font-size: 32px;
+    font-size: 36px;
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+  }
+`;
+
+export const ImgTip = styled.img`
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    width: 50px;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    width: 60px;
   }
 `;
 
@@ -258,7 +267,7 @@ export const TipGoalText = styled.p`
   text-align: right;
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     padding: 15px 22px 15px 85px;
-    font-size: 22px;
+    font-size: 18px;
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
   }
@@ -272,7 +281,7 @@ export const TipDesc = styled.p`
   line-height: 1.1;
   letter-spacing: 0.084px;
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
-    font-size: 20px;
+    font-size: 18px;
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
   }
