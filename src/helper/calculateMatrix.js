@@ -475,6 +475,14 @@ const getHealthChakraTips = lng => {
   ];
 };
 
+const addTipsToHealthTable = (chakraList, lng) => {
+  const healthCardTips = getHealthChakraTips(lng);
+  chakraList.forEach(element => {
+    const tip = healthCardTips.find(tipEl => tipEl.chakraName === element.chakraName);
+    element.tip = tip;
+  });
+};
+
 export const getHealthInfo = (info, lng) => {
   const {
     day,
@@ -527,8 +535,6 @@ export const getHealthInfo = (info, lng) => {
   const totalPers = personalEmotionList.reduce((accum, key) => {
     return accum + key;
   }, 0);
-
-  const healthCardTips = getHealthChakraTips(lng);
 
   const list = [
     {
@@ -628,12 +634,8 @@ export const getHealthInfo = (info, lng) => {
   personalEmotionList.forEach((element, index) => {
     list[0].chakraList[index].emotions = element;
   });
-  list.forEach(card =>
-    card.chakraList.forEach(element => {
-      const tip = healthCardTips.find(tipEl => tipEl.chakraName === element.chakraName);
-      element.tip = tip;
-    })
-  );
+
+  list.forEach(card => addTipsToHealthTable(card.chakraList, lng));
 
   list[0].chakraList.forEach((element, index) => {
     list[1].chakraList[index].energy = element.emotions;
@@ -682,7 +684,6 @@ export const authorHelthCard = (info, lng) => {
     return accum + key;
   }, 0);
 
-  const healthCardTips = getHealthChakraTips(lng);
   const list = {
     id: 3,
     cardName: lng === 'ua' ? 'Особиста карта здоров’я' : 'Личная карта здоровья',
@@ -758,10 +759,7 @@ export const authorHelthCard = (info, lng) => {
     list.chakraList[index].emotions = element;
   });
 
-  list.chakraList.forEach(element => {
-    const tip = healthCardTips.find(tipEl => tipEl.chakraName === element.chakraName);
-    element.tip = tip;
-  });
+  addTipsToHealthTable(list.chakraList, lng);
   return list;
 };
 
@@ -871,6 +869,7 @@ export const getPartnersChakra = (info, lng) => {
     el.couple = `${checkNum(+ph1 + +ph2)} - ${checkNum(+en1 + +en2)} - ${checkNum(+em1 + +em2)}`;
   });
   list.partners = true;
+  addTipsToHealthTable(list.chakraList, lng);
   return list;
 };
 
