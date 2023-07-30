@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { Box } from 'components/Box';
 import {
   AssistanseText,
-  CalcAuthor,
+  // CalcAuthor,
   ConsultationBtn,
   Image,
   Karmolog,
@@ -57,7 +57,7 @@ export const ChangeYourFate = () => {
             <Image src={authorMob} alt="author" />
           </picture>
         </Box>
-        <CalcAuthor>
+        {/* <CalcAuthor>
           {t('changeYourFateCalcAuthor1')}{' '}
           <CalcAuthor as="span" fontWeight="700" fontStyle="italic">
             {t('changeYourFateCalcAuthor2')}
@@ -66,7 +66,7 @@ export const ChangeYourFate = () => {
           <CalcAuthor as="span" fontWeight="700" fontStyle="italic">
             {t('changeYourFateCalcAuthor4')}
           </CalcAuthor>
-        </CalcAuthor>
+        </CalcAuthor> */}
       </Box>
     </Box>
   );
