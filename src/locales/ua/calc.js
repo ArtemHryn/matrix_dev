@@ -55,6 +55,8 @@ const calcUa = {
   healthCardTipInternalCondition: 'Внутрішній стан',
   healthCardTipDisturbance: 'Порушення',
   healthCardTipVerb: 'Дієслово',
+  check: 'Переглянути',
+  healthAuthorLesson: 'УРОК ПРО СИСТЕМУ "INTEGRITY"',
   result: 'Результат',
   periodMatrixHeader: 'Енергії покровителі періодів',
   tableMatrix: 'Матриця',

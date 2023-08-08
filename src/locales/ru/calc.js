@@ -54,6 +54,8 @@ const calcRu = {
   healthCardTipInternalCondition: 'Внутреннее состояние',
   healthCardTipDisturbance: 'Нарушения',
   healthCardTipVerb: 'Глагол',
+  check: 'Смотреть',
+  healthAuthorLesson: 'УРОК О СИСТЕМЕ "INTEGRITY"',
   result: 'Итог',
   periodMatrixHeader: 'Энергии покровители по годам',
   tableMatrix: 'Матрица',

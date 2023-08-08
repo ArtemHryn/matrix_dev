@@ -298,3 +298,46 @@ export const TipDescName = styled(TipDesc)`
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
   }
 `;
+
+export const AuthorLessonText = styled.p`
+  color: #9072af;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.18;
+  letter-spacing: 0.14px;
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    font-size: 22px;
+  }
+`;
+
+export const AuthorLessonLink = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 29px;
+
+  border-radius: 6px;
+  background: linear-gradient(180deg, #fff 19.44%, #f5e9ff 52.78%, #f7c8ff 100%);
+
+  color: #9072af;
+  text-align: center;
+  font-family: Cormorant;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.18;
+  letter-spacing: 0.158px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    width: 220px;
+    height: 48px;
+
+    font-size: 22px;
+  }
+
+  &:hover,
+  &:focus {
+    scale: 1.1;
+  }
+`;
