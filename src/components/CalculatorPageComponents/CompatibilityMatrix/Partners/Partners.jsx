@@ -6,14 +6,20 @@ import {
   allData,
   getCompatData,
   getPartnersChakra,
+  partnersAuthorHealthCard,
 } from 'helper/calculateMatrix';
 import { Box } from 'components/Box';
 import PartnerMatrix from './PartnerMatrix/PartnerMatrix';
 import ResultMatrix from './ResultMatrix/ResultMatrix';
 import HealthCard from 'components/CalculatorPageComponents/PersonalMatrix/MatrixCalculation/HealthMatrix/HealthTables/HealthCard/HealthCard';
+import { SetCardTypeBtn } from 'components/CalculatorPageComponents/PersonalMatrix/MatrixCalculation/HealthMatrix/HealthMatrix.styled';
+
+const btnGradient = 'linear-gradient(180deg, #FFF 19.44%, #F5E9FF 52.78%, #F7C8FF 100%);';
+const btnGradientActive = 'linear-gradient(180deg, #765D90 5.73%, rgba(198, 106, 201, 0.51) 100%)';
 
 const Partners = () => {
   const [resultData, setResultData] = useState([]);
+  const [cardType, setCardType] = useState(1);
   const [partnersMatrixData, setPartnersMatrixData] = useState([]);
   const [partnersHealthCard, setPartnersHealthCard] = useState([]);
   const [isFullOverlap, setIsFullOverlap] = useState(false);
@@ -38,7 +44,9 @@ const Partners = () => {
     setResultData(getCompatData(partnersMatrixData, isFullOverlap));
 
     if (partnersMatrixData.length === 0) return;
-    setPartnersHealthCard(getPartnersChakra(partnersMatrixData, i18n.language));
+    const classicTable = getPartnersChakra(partnersMatrixData, i18n.language);
+    const authorTable = partnersAuthorHealthCard(partnersMatrixData, i18n.language);
+    setPartnersHealthCard([classicTable, authorTable]);
   }, [i18n.language, isFullOverlap, partnersMatrixData]);
 
   return (
@@ -51,23 +59,43 @@ const Partners = () => {
             width={[null, null, '900px']}
             m={'0 auto'}
             mb={['40px', '70px', '110px']}
+            gridGap={['5px', '10px']}
           >
-            {' '}
-            <HealthCard card={partnersHealthCard} cardType={1} />
+            <Box
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+              gridGap={['5px', '10px']}
+              mb={['12px', '28px']}
+            >
+              <SetCardTypeBtn
+                color={cardType === 1 ? 'white' : null}
+                bg={cardType === 1 ? '#765D90' : null}
+                onClick={() => setCardType(1)}
+              >
+                {t('classic')}
+              </SetCardTypeBtn>
+              <SetCardTypeBtn
+                color={cardType === 2 ? 'white' : null}
+                background={cardType === 2 ? btnGradientActive : btnGradient}
+                onClick={() => setCardType(2)}
+                fontSize={['14px']}
+              >
+                {t('healthAuthor')} INTEGRITY*
+              </SetCardTypeBtn>
+            </Box>
+
+            {partnersHealthCard.map(table => (
+              <HealthCard key={table.id} card={table} cardType={cardType} />
+            ))}
           </Box>
-          <Box
-            display={[null, null, 'flex']}
-            justifyContent="space-between"
-            gridGap="40px"
-          >
+          <Box display={[null, null, 'flex']} justifyContent="space-between" gridGap="40px">
             {partnersMatrixData.map((partner, index) => (
               <PartnerMatrix
                 key={partner.order}
                 partner={partner}
                 date={partnersDate[index]}
-                lastIndex={
-                  index === partnersMatrixData.length - 1 ? true : false
-                }
+                lastIndex={index === partnersMatrixData.length - 1 ? true : false}
               />
             ))}
           </Box>

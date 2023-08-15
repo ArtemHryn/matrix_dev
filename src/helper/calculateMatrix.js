@@ -647,7 +647,7 @@ export const getHealthInfo = (info, lng) => {
   return list;
 };
 
-export const authorHelthCard = (info, lng) => {
+export const authorHealthCard = (info, lng) => {
   const {
     day,
     month,
@@ -679,9 +679,8 @@ export const authorHelthCard = (info, lng) => {
     checkNum(right2 + bottom2),
     checkNum(year + bottom1),
   ];
-
   const totalPers = personalEmotionList.reduce((accum, key) => {
-    return accum + key;
+    return accum + +key;
   }, 0);
 
   const list = {
@@ -760,6 +759,38 @@ export const authorHelthCard = (info, lng) => {
   });
 
   addTipsToHealthTable(list.chakraList, lng);
+  return list;
+};
+
+export const partnersAuthorHealthCard = (info, lng) => {
+  const healthOfEachPartner = info.map(el => authorHealthCard(el, lng));
+  const list = {
+    id: 2,
+    cardName: lng === 'ua' ? "Партнерська карта здоров'я" : 'Партнерская карта здоровья',
+    columnName: [
+      info[0].name ? info[0].name : info[0].order,
+      info[1].name ? info[1].name : info[1].order,
+      'Пара',
+    ],
+  };
+  list.chakraList = healthOfEachPartner[0].chakraList.map(
+    ({ chakraName, physics, energy, emotions, color, tip }) => ({
+      chakraName,
+      color,
+      tip,
+      partner1: ` ${energy} - ${physics} -  ${emotions}`,
+    })
+  );
+  healthOfEachPartner[1].chakraList.forEach(
+    ({ physics, energy, emotions }, index) =>
+      (list.chakraList[index].partner2 = `${energy} - ${physics} -  ${emotions}`)
+  );
+  list.chakraList.forEach(el => {
+    const [ph1, en1, em1] = el.partner1.split(' - ');
+    const [ph2, en2, em2] = el.partner2.split(' - ');
+    el.couple = `${checkNum(+ph1 + +ph2)} - ${checkNum(+en1 + +en2)} - ${checkNum(+em1 + +em2)}`;
+  });
+  list.partners = true;
   return list;
 };
 

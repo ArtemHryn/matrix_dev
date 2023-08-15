@@ -46,6 +46,7 @@ export const SetCardTypeBtn = styled.button`
   ${shadow}
   ${layout}
   ${background}
+  ${typography}
 `;
 
 export const CardName = styled.p`

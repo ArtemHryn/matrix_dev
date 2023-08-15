@@ -10,8 +10,7 @@ import {
   WarningText,
 } from '../HealthMatrix.styled';
 import { useMatrix } from 'pages/Calculator';
-import { authorHelthCard, getHealthInfo } from 'helper/calculateMatrix';
-import PasswordModal from './PasswordModal/PasswordModal';
+import { authorHealthCard, getHealthInfo } from 'helper/calculateMatrix';
 
 const btnGradient = 'linear-gradient(180deg, #FFF 19.44%, #F5E9FF 52.78%, #F7C8FF 100%);';
 const btnGradientActive = 'linear-gradient(180deg, #765D90 5.73%, rgba(198, 106, 201, 0.51) 100%)';
@@ -20,47 +19,15 @@ const HealthTables = ({ setCardType, cardType }) => {
   const { i18n, t } = useTranslation('calc');
   const [list, setList] = useState([]);
   const [authorMethod, setAuthorMethod] = useState({});
-  const [showPasswordModal, setShowPasswordModal] = useState(false);
-  const [showAuthorMethod, setShowAuthorMethod] = useState(false);
 
-  const [formError, setFormError] = useState('');
-  const [passValue, setPassValue] = useState('');
   const { matrixData } = useMatrix();
 
   useEffect(() => {
-    if (showAuthorMethod) {
-      setAuthorMethod(authorHelthCard(matrixData, i18n.language));
-      return;
-    }
+    setAuthorMethod(authorHealthCard(matrixData, i18n.language));
     const result = getHealthInfo(matrixData, i18n.language);
     setList(result);
-  }, [i18n.language, matrixData, showAuthorMethod]);
+  }, [i18n.language, matrixData]);
 
-  const onShowAuthorMethodClick = () => {
-    const targetDate = new Date(2023, 7, 8, 10, 10);
-    const currentDate = Date.now();
-    if (currentDate > targetDate) {
-      setCardType(3);
-      setShowAuthorMethod(true);
-      return;
-    }
-    if (showAuthorMethod) {
-      setCardType(3);
-      return;
-    }
-    setShowPasswordModal(true);
-  };
-
-  const onFormSubmit = e => {
-    e.preventDefault();
-    if (passValue !== 'Dsaorniyn10234A') {
-      setFormError(t('incorrectPassword'));
-      return;
-    }
-    setShowPasswordModal(false);
-    setShowAuthorMethod(true);
-    setCardType(3);
-  };
   return (
     <Box width={[null, null, '900px']} m={'0 auto'}>
       <Box
@@ -89,7 +56,7 @@ const HealthTables = ({ setCardType, cardType }) => {
           width={['80%']}
           color={cardType === 3 ? 'white' : null}
           background={cardType === 3 ? btnGradientActive : btnGradient}
-          onClick={() => onShowAuthorMethodClick()}
+          onClick={() => setCardType(3)}
         >
           {t('healthAuthor')} INTEGRITY*
         </SetCardTypeBtn>
@@ -119,7 +86,7 @@ const HealthTables = ({ setCardType, cardType }) => {
               flexDirection="column"
               justifyContent="center"
               alignItems="center"
-              gridGap='8px'
+              gridGap="8px"
             >
               <AuthorLessonText>{t('healthAuthorLesson')}</AuthorLessonText>
               <AuthorLessonLink
@@ -133,16 +100,6 @@ const HealthTables = ({ setCardType, cardType }) => {
           </Box>
           <HealthCard card={authorMethod} cardType={authorMethod.id} />
         </>
-      )}
-      {showPasswordModal && (
-        <PasswordModal
-          setShowPasswordModal={setShowPasswordModal}
-          onFormSubmit={onFormSubmit}
-          formError={formError}
-          setFormError={setFormError}
-          passValue={passValue}
-          setPassValue={setPassValue}
-        />
       )}
     </Box>
   );

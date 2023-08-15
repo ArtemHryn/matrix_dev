@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { color, space, typography } from 'styled-system';
 
+
 export const MatrixNumber = styled.p`
   font-family: 'Cardo';
   font-style: normal;
@@ -39,5 +40,3 @@ export const Age = styled.p`
   color: #979797;
   ${color}
 `;
-
-

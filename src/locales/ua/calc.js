@@ -61,6 +61,7 @@ const calcUa = {
   periodMatrixHeader: 'Енергії покровителі періодів',
   tableMatrix: 'Матриця',
   compatibility: 'Сумісність',
+  classic: 'Класична',
   compatibilityMatrix: 'МАТРИЦЯ СУМІСНОСТІ',
   add: 'Додати',
   annualMatrix: 'Матриця року',

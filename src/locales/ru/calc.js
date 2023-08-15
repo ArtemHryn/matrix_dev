@@ -59,6 +59,7 @@ const calcRu = {
   result: 'Итог',
   periodMatrixHeader: 'Энергии покровители по годам',
   tableMatrix: 'Матрица',
+  classic: 'Классическая',
   compatibility: 'Совместимость',
   compatibilityMatrix: 'МАТРИЦА СОВМЕСТИМОСТИ',
   add: 'Добавить',
