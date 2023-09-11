@@ -1,10 +1,4 @@
-import {
-  Suspense,
-  createContext,
-  useContext,
-  useEffect,
-  useState,
-} from 'react';
+import { Suspense, createContext, useContext, useEffect, useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import { Header } from 'components/MainPageComponents/Header/Header';
 import { Hero } from 'components/CalculatorPageComponents/Hero/Hero';
@@ -21,6 +15,7 @@ import MatrixLoader from 'components/Spinner/MatrixLoader';
 import { useTranslation } from 'react-i18next';
 import getNavList from 'components/CalculatorPageComponents/navigationLisCalc';
 import { Box } from 'components/Box';
+import Instruction from 'components/CalculatorPageComponents/Instruction/Instruction';
 
 const MatrixContext = createContext();
 export const useMatrix = () => useContext(MatrixContext);
@@ -76,12 +71,13 @@ const Calculator = () => {
     >
       <CalcContainer>
         <Header navigationList={getNavCalList()} />
-        <Box as='main'>
+        <Box as="main">
           <Hero />
           <Suspense fallback={<MatrixLoader />}>
             <Outlet />
           </Suspense>
           <ChangeYourFate />
+          <Instruction />
           <Donation />
           <Contacts />
           <GetPDFTemplate />

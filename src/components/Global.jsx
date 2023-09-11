@@ -20,6 +20,7 @@ ul {
 
 body {
   letter-spacing: 0.03em;
+  color: #9072AF;
   margin: 0;
   font-family: 'Cormorant', serif;
 /* font-family: 'Montserrat', sans-serif; */
@@ -55,7 +56,5 @@ a {
   color: #9072af;
 }
 `;
-
-
 
 export default GlobalStyle;

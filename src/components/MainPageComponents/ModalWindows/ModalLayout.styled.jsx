@@ -14,6 +14,18 @@ export const ModalContainer = styled.div`
   border-radius: 30px;
 
   overflow-y: scroll;
+  ::-webkit-scrollbar {
+    width: 2px; /* Ширина скроллбару */
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #f7d0f7; /* Колір скроллбару */
+    border-radius: 6px; /* Закруглені кути скроллбару */
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: #f0f0f0; /* Колір фону за скроллбаром */
+    margin: 30px 0;
+  }
   ${color}
   ${shadow}
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
