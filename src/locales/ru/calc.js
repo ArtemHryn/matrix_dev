@@ -45,7 +45,7 @@ const calcRu = {
   healthAuthorPasswordModalData: 'Введите ключ доступа',
   incorrectPassword: '! Неверный пароль',
   healthAuthorWarning1:
-    '<0>ВНИМАНИЕ!</0> Расчет "INTEGRITY" является разработкой команды "Dari.Karma" и представлен на сайте для тестирования.',
+    '<0>ВНИМАНИЕ!</0> Система "INTEGRITY" является разработкой команды "Dari.Karma" и представлена на сайте для тестирования.',
   healthAuthorWarning2:
     'Данный расчёт карты здоровья является авторским и <2>не соответствует </2> алгоритму расчёта Н. Ладини',
   healthCardTypePersonal: 'Личная',
@@ -68,7 +68,7 @@ const calcRu = {
   yearEnterError: 'Введите год',
   yearPatternError: 'Введите 4-значный год от 2000 до 2100',
   yearPeriods: 'Периоды года',
-  instructionTitle: 'Используй возможности калькулятора от <1>“Dari.Karma” на все 100%</1>',
+  instructionTitle: 'Используй возможности калькулятора от <1>Dari.Karma</1> на все 100%',
   instructionCircleBtn1: 'Видеоинструкция к калькулятору',
   instructionCircleBtn2: 'Бесплатные вебинары об "INTEGRITY"',
   instructionBtn1: 'Видеоинструкция к калькулятору',

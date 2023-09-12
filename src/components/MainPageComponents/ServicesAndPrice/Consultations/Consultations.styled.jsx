@@ -9,8 +9,6 @@ export const ConsultationsTitle = styled.h3`
 
   margin-bottom: 8px;
 
-  color: ${p => p.theme.colors.main};
-
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     font-size: 40px;
     line-height: 1.2;
@@ -60,7 +58,6 @@ export const IndividualRequestTitle = styled.h3`
 
   margin-bottom: 20px;
   text-align: center;
-  color: ${p => p.theme.colors.main};
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     font-size: 22px;
     line-height: 1.2;

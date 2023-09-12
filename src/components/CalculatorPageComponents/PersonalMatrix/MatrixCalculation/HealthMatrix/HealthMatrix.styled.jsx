@@ -209,6 +209,7 @@ export const WarningText = styled(Warning)`
   font-weight: 400;
   display: block;
   letter-spacing: 100%;
+  margin-top: 30px;
 `;
 
 export const TipHeaderBox = styled.div`

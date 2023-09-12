@@ -45,7 +45,6 @@ export const CardTitle = styled.h4`
   line-height: 1.2;
   letter-spacing: 0.01em;
 
-  color: ${p => p.theme.colors.main};
   //dots like border
   background-image: linear-gradient(
     to right,

@@ -8,7 +8,6 @@ export const MainTitle = styled.h3`
 
   margin-bottom: 35px;
 
-  color: ${p => p.theme.colors.main};
   ${layout}
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     font-size: 60px;
@@ -61,7 +60,6 @@ export const Warning = styled.p`
   line-height: 22px;
   text-transform: uppercase;
 
-  color: ${p => p.theme.colors.main};
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     
   }

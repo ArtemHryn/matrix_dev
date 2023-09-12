@@ -18,7 +18,6 @@ export const TemplateTitle = styled.h2`
   font-size: 32px;
   line-height: 1.08;
   max-width: 290px;
-  color: ${p => p.theme.colors.main};
   margin-bottom: 16px;
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     font-size: 60px;
@@ -36,7 +35,6 @@ export const HowToGetTemplate = styled.p`
   font-size: 18px;
   line-height: 1.22;
   font-weight: 600;
-  color: ${p => p.theme.colors.main};
   max-width: 280px;
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     font-size: 23px;

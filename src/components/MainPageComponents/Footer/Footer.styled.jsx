@@ -8,8 +8,6 @@ export const FooterTitle = styled.h2`
   letter-spacing: 0.01em;
   text-align: center;
 
-  color: ${p => p.theme.colors.main};
-
   margin-bottom: 30px;
 
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {

@@ -8,8 +8,6 @@ export const AuthorTitle = styled.h2`
   margin-bottom: 25px;
   letter-spacing: 0.01em;
 
-  color: ${p => p.theme.colors.main};
-
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     font-size: 80px;
     line-height: 1;

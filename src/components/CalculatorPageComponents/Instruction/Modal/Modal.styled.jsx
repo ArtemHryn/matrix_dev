@@ -36,6 +36,9 @@ export const ModalContainerBox = styled.div`
     max-width: ${p => p.theme.sizes.tabletModal};
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     max-width: 1250px;
     padding-top: 34px;
   }

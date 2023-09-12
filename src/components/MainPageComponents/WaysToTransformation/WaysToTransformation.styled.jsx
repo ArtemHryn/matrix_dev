@@ -7,7 +7,6 @@ export const Title = styled.h2`
   line-height: 0.96;
   margin-bottom: 24px;
 
-  color: ${p => p.theme.colors.main};
   background-image: url(${titleLine});
   background-size: 315px;
   background-repeat: no-repeat;

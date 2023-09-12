@@ -23,7 +23,6 @@ body {
   color: #9072AF;
   margin: 0;
   font-family: 'Cormorant', serif;
-/* font-family: 'Montserrat', sans-serif; */
 }
 
 h1,

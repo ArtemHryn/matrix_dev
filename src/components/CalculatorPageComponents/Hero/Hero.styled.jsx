@@ -27,7 +27,6 @@ export const Logo = styled.p`
 
   letter-spacing: 0.01em;
 
-  color: ${p => p.theme.colors.main};
   margin-bottom: 45px;
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     font-size: 40px;
@@ -46,7 +45,6 @@ export const Title = styled.h1`
   text-align: center;
   letter-spacing: 0.01em;
 
-  color: ${p => p.theme.colors.main};
   margin-bottom: 35px;
 
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
@@ -74,7 +72,6 @@ export const AboutCalc = styled.p`
   text-align: center;
   letter-spacing: 0.01em;
   font-weight: 600;
-  color: ${p => p.theme.colors.main};
   margin-bottom: 53px;
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     font-size: 28px;
@@ -99,7 +96,6 @@ export const Authoring = styled.p`
   text-align: center;
   letter-spacing: 0.01em;
 
-  color: ${p => p.theme.colors.main};
   width: 251px;
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     font-size: 17px;

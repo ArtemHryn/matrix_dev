@@ -25,25 +25,25 @@ const imgPhonesAnimation = keyframes`
 `;
 
 export const Title = styled.h1`
-  color: #9072af;
-  font-family: ${p => p.theme.fonts.main};
-  font-size: 48px;
+  font-size: 46px;
   font-weight: 400;
   line-height: 1;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.01em;
+  text-wrap: balance;
   & > span {
-    font-style: italic;
+    font-family: ${p => p.theme.fonts.title};
+    color: #592e85;
   }
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     font-size: 102px;
-    line-height: 0.84;
-    letter-spacing: 0.03em;
+    line-height: 0.9;
+    letter-spacing: 0.01em;
     text-wrap: balance;
     margin-bottom: 7px;
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
     text-align: center;
-    font-size: 86px;
+    font-size: 80px;
     font-weight: 400;
     line-height: 0.78;
     margin-bottom: 55px;

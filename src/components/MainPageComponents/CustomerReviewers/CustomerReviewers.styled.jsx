@@ -8,8 +8,6 @@ export const FeedbackTitle = styled.h3`
 
   margin-bottom: 20px;
 
-  color: ${p => p.theme.colors.main};
-
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     margin-bottom: 20px;
 

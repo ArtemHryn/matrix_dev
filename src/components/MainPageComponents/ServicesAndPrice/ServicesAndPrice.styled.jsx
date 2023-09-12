@@ -6,8 +6,6 @@ export const ServiceAndPriceTitle = styled.h2`
   line-height: 1.88;
   letter-spacing: 0.01em;
 
-  color: ${p => p.theme.colors.main};
-
   margin-bottom: 24px;
 
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
@@ -27,8 +25,6 @@ export const FourStagesTitle = styled.h3`
   font-size: 30px;
   line-height: 1;
   letter-spacing: 0.01em;
-
-  color: ${p => p.theme.colors.main};
 
   margin-bottom: 24px;
 

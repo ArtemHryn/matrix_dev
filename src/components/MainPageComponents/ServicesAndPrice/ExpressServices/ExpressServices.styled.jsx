@@ -6,7 +6,6 @@ export const ExpressServicesTitle = styled.h3`
   line-height: 1.2;
   letter-spacing: 0.01em;
 
-  color: ${p => p.theme.colors.main};
   margin-bottom: 20px;
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     margin-bottom: 23px;

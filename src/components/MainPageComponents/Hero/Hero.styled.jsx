@@ -24,8 +24,6 @@ export const Title = styled.h1`
   line-height: 1.22;
   letter-spacing: 0.01em;
 
-  color: ${p => p.theme.colors.main};
-
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     font-size: 120px;
     line-height: 1;
@@ -112,11 +110,11 @@ export const MatrxiLink = styled(Link)`
 
   letter-spacing: 0.03em;
 
-  color: ${p => p.theme.colors.main};
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   :hover,
   :focus {
     transform: scale(1.05);
+    color: ${p => p.theme.colors.main};
   }
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     width: 380px;

@@ -9,8 +9,6 @@ export const Title = styled.h2`
   line-height: 0.96;
   letter-spacing: 0.01em;
 
-  color: ${p => p.theme.colors.main};
-
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     font-size: 80px;
   }
@@ -190,7 +188,6 @@ export const AboutResultText = styled.p`
   font-size: 30px;
   line-height: 1.2;
 
-  color: ${p => p.theme.colors.main};
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
     margin-left: auto;
     max-width: 435px;

@@ -11,7 +11,6 @@ export const Title = styled.h2`
   letter-spacing: 0.01em;
   margin-bottom: 35px;
 
-  color: ${p => p.theme.colors.main};
   ${typography}
   ${space}
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
@@ -33,7 +32,6 @@ export const TitleAdditional = styled.span`
   line-height: 1;
   letter-spacing: 0.01em;
 
-  color: ${p => p.theme.colors.main};
   ${typography}
   ${space}
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {

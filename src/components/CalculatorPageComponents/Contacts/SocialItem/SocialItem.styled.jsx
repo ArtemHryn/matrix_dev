@@ -25,6 +25,5 @@ export const Info = styled.p`
   line-height: 22px;
   font-weight: 600;
 
-  color: ${p => p.theme.colors.main};
   margin: 10px 0;
 `;

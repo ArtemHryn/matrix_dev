@@ -14,6 +14,7 @@ export const ButtonsList = styled.ul`
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
     margin-bottom: 41px;
+
   }
 `;
 

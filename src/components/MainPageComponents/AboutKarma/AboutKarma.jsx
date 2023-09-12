@@ -71,11 +71,7 @@ export const AboutKarma = () => {
       backgroundSize={[null, null, 'contain, auto']}
       backgroundRepeat="no-repeat"
     >
-      <Box
-        maxWidth={['400px', '768px', '1440px']}
-        px={['60px', '33px', '100px']}
-        m="0 auto"
-      >
+      <Box maxWidth={['400px', '768px', '1440px']} px={['60px', '33px', '100px']} m="0 auto">
         <Box position="relative" mb="39px">
           <Title>{t('aboutKarmaTitle')}</Title>
           <TitleStarImg src={smallStar} alt="star" />
@@ -98,12 +94,7 @@ export const AboutKarma = () => {
           >
             <AboutDesc>{t('aboutKarmaDesc2')}</AboutDesc>
             <CrystalContainer ml="5px" mr={[null, null, '15px']}>
-              <CrystalImg
-                src={mirrorCrystal}
-                alt="crystal"
-                left="60%"
-                width="55"
-              />
+              <CrystalImg src={mirrorCrystal} alt="crystal" left="60%" width="55" />
             </CrystalContainer>
           </AboutReasonContainer>
         </Box>
@@ -111,10 +102,7 @@ export const AboutKarma = () => {
           <TextNearHands>{t('aboutKarmaNearHands')}</TextNearHands>
 
           <div>
-            <UnderHandImg
-              top={['10%', '20%', '92%']}
-              left={['-20%', '15%', '16%']}
-            ></UnderHandImg>
+            <UnderHandImg top={['10%', '20%', '92%']} left={['-20%', '15%', '16%']}></UnderHandImg>
             <picture>
               <source srcSet={handWithJelDesc} media="(min-width: 1440px)" />
               <source srcSet={handWithJelTab} media="(min-width: 768px)" />
@@ -133,10 +121,7 @@ export const AboutKarma = () => {
             </picture>
           </div>
           <div>
-            <UnderHandImg
-              bottom={['5%', '-10%', '60%']}
-              left={['1%', '80%', '86%']}
-            ></UnderHandImg>
+            <UnderHandImg bottom={['5%', '-10%', '60%']} left={['1%', '80%', '86%']}></UnderHandImg>
             <picture>
               <source srcSet={handsDesc} media="(min-width: 1440px)" />
               <source srcSet={handsTab} media="(min-width: 768px)" />
@@ -155,10 +140,7 @@ export const AboutKarma = () => {
             </picture>
           </div>
           <div>
-            <UnderHandImg
-              top={['3%', '10%', '29%']}
-              right={['2%', '49%', '61%']}
-            ></UnderHandImg>
+            <UnderHandImg top={['3%', '10%', '29%']} right={['2%', '49%', '61%']}></UnderHandImg>
             <picture>
               <source srcSet={plantDesc} media="(min-width: 1440px)" />
               <source srcSet={plantTab} media="(min-width: 768px)" />
@@ -199,9 +181,7 @@ export const AboutKarma = () => {
             </picture>
           </div>
         </HandsContainer>
-        <TextUnderContainer>
-          {t('aboutKarmaTextUnderContainer')}
-        </TextUnderContainer>
+        <TextUnderContainer>{t('aboutKarmaTextUnderContainer')}</TextUnderContainer>
         <AboutResultText>{t('aboutKarmaResultText')}</AboutResultText>
       </Box>
     </Box>

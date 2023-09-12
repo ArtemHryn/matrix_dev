@@ -68,6 +68,7 @@ export const Karmolog = styled.span`
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
     font-size: 8px;
+    z-index: 0;
   }
 `;
 
@@ -77,7 +78,6 @@ export const Title = styled.h2`
 
   letter-spacing: 0.01em;
 
-  color: ${p => p.theme.colors.main};
   margin-bottom: 16px;
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     width: 80%;
@@ -96,7 +96,6 @@ export const AssistanseText = styled.p`
   font-size: 18px;
   line-height: 22px;
 
-  color: ${p => p.theme.colors.main};
   margin-bottom: 35px;
   font-weight: 600;
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
@@ -166,7 +165,6 @@ export const CalcAuthor = styled.p`
   font-size: 20px;
   line-height: 1.2;
 
-  color: ${p => p.theme.colors.main};
   ${typography}
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     font-size: 22px;

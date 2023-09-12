@@ -24,8 +24,6 @@ export const ConcultationCardText = styled.p`
   line-height: 1.18;
   text-align: center;
 
-  color: ${p => p.theme.colors.main};
-
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     bottom: 46px;
     font-size: 22px;
@@ -65,7 +63,6 @@ export const ShowDetailsButton = styled.button`
 
   letter-spacing: 0.03em;
 
-  color: ${p => p.theme.colors.main};
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   :hover,

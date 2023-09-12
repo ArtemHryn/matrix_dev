@@ -9,7 +9,6 @@ export const AuthorMasterClassTitle = styled.h3`
 
   margin-bottom: 33px;
 
-  color: ${p => p.theme.colors.main};
 
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     font-size: 80px;

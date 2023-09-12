@@ -15,7 +15,7 @@ import { ButtonList } from './ButtonList/ButtonList';
 export const Hero = () => {
   const { t } = useTranslation('calc');
   return (
-    <Box as="section" py={['40px', null, '35px']} position="relative">
+    <Box as="section" py={['40px', null, '35px']} position="relative" zIndex='0'>
       <HeroStar
         top={['11%', '15%', '8%']}
         right={['57vw', '63vw']}

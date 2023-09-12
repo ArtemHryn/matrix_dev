@@ -63,7 +63,6 @@ export const CardTitle = styled.h4`
   letter-spacing: 0.01em;
   min-height: 65px;
 
-  color: ${p => p.theme.colors.main};
   background-color: #f5f1ff;
   border-radius: 100px;
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {

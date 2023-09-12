@@ -67,19 +67,6 @@ const HealthTables = ({ setCardType, cardType }) => {
       {authorMethod.id === cardType && (
         <>
           <Box display="flex" flexDirection="column" gridGap={['10px']} my={['20px']}>
-            <WarningText as="p">
-              <Trans i18nKey="healthAuthorWarning1" ns="calc">
-                <Warning>ВНИМАНИЕ!</Warning> Расчет "INTEGRITY" является разработкой команды
-                "Dari.Karma" и представлен на сайте для тестирования.
-              </Trans>
-            </WarningText>
-            <WarningText as="p">
-              <Trans i18nKey="healthAuthorWarning2" ns="calc">
-                Данный расчёт карты здоровья является авторским и{' '}
-                <Warning>не соответствует </Warning>
-                алгоритму расчёта Н. Ладини
-              </Trans>
-            </WarningText>
             <Box
               mt={['14px']}
               display="flex"
@@ -90,7 +77,7 @@ const HealthTables = ({ setCardType, cardType }) => {
             >
               <AuthorLessonText>{t('healthAuthorLesson')}</AuthorLessonText>
               <AuthorLessonLink
-                href="https://www.buymeacoffee.com/dari.karma/e/157070"
+                href="https://youtube.com/playlist?list=PLSMNBvCJA4Ot8KXprQnpJqvcjuc_vdsd1&si=ndjLHp3XicpxvK3U"
                 target="_blank"
                 rel="noreferrer noopener"
               >
@@ -99,6 +86,18 @@ const HealthTables = ({ setCardType, cardType }) => {
             </Box>
           </Box>
           <HealthCard card={authorMethod} cardType={authorMethod.id} />
+          <WarningText as="p">
+            <Trans i18nKey="healthAuthorWarning1" ns="calc">
+              <Warning>ВНИМАНИЕ!</Warning> Система "INTEGRITY" является разработкой команды
+              "Dari.Karma" и представлен на сайте для тестирования.
+            </Trans>
+          </WarningText>
+          <WarningText as="p">
+            <Trans i18nKey="healthAuthorWarning2" ns="calc">
+              Данный расчёт карты здоровья является авторским и <Warning>не соответствует </Warning>
+              алгоритму расчёта Н. Ладини
+            </Trans>
+          </WarningText>
         </>
       )}
     </Box>

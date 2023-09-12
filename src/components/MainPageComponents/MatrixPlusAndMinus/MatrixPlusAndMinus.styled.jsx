@@ -6,8 +6,6 @@ export const Title = styled.h2`
   line-height: 1;
   letter-spacing: 0.01em;
 
-  color: ${p => p.theme.colors.main};
-
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     width: 335px;
     font-size: 80px;
@@ -25,7 +23,6 @@ export const CheckBoxText = styled.p`
   font-style: italic;
   font-size: 25px;
   line-height: 1.04;
-  color: ${p => p.theme.colors.main};
   opacity: ${p => (p.op ? 0.3 : 1)};
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     font-size: 30px;

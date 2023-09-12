@@ -6,7 +6,6 @@ export const MainTitle = styled.h3`
   font-size: 35px;
   line-height: 1.14;
 
-  color: ${p => p.theme.colors.main};
   margin-bottom: 25px;
   ${layout}
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {

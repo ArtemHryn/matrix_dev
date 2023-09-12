@@ -9,7 +9,6 @@ export const MainTitle = styled.h3`
   margin-bottom: 12px;
   max-width: 275px;
 
-  color: ${p => p.theme.colors.main};
   ${layout}
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     font-size: 60px;

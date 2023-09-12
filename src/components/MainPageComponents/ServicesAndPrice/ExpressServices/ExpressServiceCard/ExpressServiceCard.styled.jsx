@@ -41,8 +41,6 @@ export const ExpressServiceCardText = styled.p`
   line-height: 1.25;
   text-align: center;
 
-  color: ${p => p.theme.colors.main};
-
   li:last-child & {
     transform: translate(-50%, 50%);
   }

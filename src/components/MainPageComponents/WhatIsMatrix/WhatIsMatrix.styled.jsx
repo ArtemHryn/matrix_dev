@@ -9,8 +9,6 @@ export const Title = styled.h2`
   margin-bottom: 20px;
   letter-spacing: 0.01em;
 
-  color: ${p => p.theme.colors.main};
-
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     font-size: 80px;
     max-width: 635px;

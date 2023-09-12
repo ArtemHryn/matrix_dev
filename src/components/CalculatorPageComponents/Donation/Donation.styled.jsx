@@ -10,7 +10,6 @@ export const LikeTheProject = styled.h3`
   line-height: 1;
   letter-spacing: 0.02em;
 
-  color: ${p => p.theme.colors.main};
   margin-bottom: 25px;
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     font-size: 40px;
@@ -28,7 +27,6 @@ export const SaveService = styled.p`
   font-size: 18px;
   line-height: 1.27;
   letter-spacing: 0.01em;
-  color: ${p => p.theme.colors.main};
   margin-bottom: 67px;
 
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
