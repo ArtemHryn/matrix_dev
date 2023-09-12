@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/matrix/static/js/main.f1bc13b7.js",
+    "main.js": "/matrix/static/js/main.1bf838ae.js",
     "static/js/696.70e9efbf.chunk.js": "/matrix/static/js/696.70e9efbf.chunk.js",
-    "static/js/922.7293690e.chunk.js": "/matrix/static/js/922.7293690e.chunk.js",
+    "static/js/922.b7da7444.chunk.js": "/matrix/static/js/922.b7da7444.chunk.js",
     "static/js/240.b6d98144.chunk.js": "/matrix/static/js/240.b6d98144.chunk.js",
     "static/js/859.3632ef1c.chunk.js": "/matrix/static/js/859.3632ef1c.chunk.js",
     "static/js/3.184bac39.chunk.js": "/matrix/static/js/3.184bac39.chunk.js",
@@ -44,6 +44,7 @@
     "static/media/9.webp": "/matrix/static/media/9.7a73e864ed5bc3933d85.webp",
     "static/media/moneyCard.webp": "/matrix/static/media/moneyCard.785b3785cc6c23bee15e.webp",
     "static/media/13.webp": "/matrix/static/media/13.16240fd0bf3340d3f104.webp",
+    "static/media/mobile_instruction_ru.webp": "/matrix/static/media/mobile_instruction_ru.ed9ed66181018eac41dd.webp",
     "static/media/5.webp": "/matrix/static/media/5.1f6e36d0fe091c931c30.webp",
     "static/media/mobile_instruction.webp": "/matrix/static/media/mobile_instruction.ef8b6e15990248e907db.webp",
     "static/media/10.webp": "/matrix/static/media/10.89032f5e6c4f617d9b06.webp",
@@ -52,6 +53,7 @@
     "static/media/12.webp": "/matrix/static/media/12.d5829a1c7ff351cff4f0.webp",
     "static/media/prosperity.webp": "/matrix/static/media/prosperity.9d449ca040dcd41e570b.webp",
     "static/media/8.webp": "/matrix/static/media/8.992b2d43cb672cda6b2c.webp",
+    "static/media/mobile_integrity_ru.webp": "/matrix/static/media/mobile_integrity_ru.e465fdc972c3ab0aade2.webp",
     "static/media/heroDariPhoto.webp": "/matrix/static/media/heroDariPhoto.346cdb7f34f8a92fd11b.webp",
     "static/media/mobile_integrity.webp": "/matrix/static/media/mobile_integrity.89c443d1f78eae578ceb.webp",
     "static/media/personalMatrix.webp": "/matrix/static/media/personalMatrix.4733da7d9b197c7483c6.webp",
@@ -158,9 +160,9 @@
     "static/media/closeModal.svg": "/matrix/static/media/closeModal.77f566a13863502e75085358a5296aff.svg",
     "static/media/menuButton.svg": "/matrix/static/media/menuButton.6543f21211fdf3fdf52f174cb0d6e241.svg",
     "static/media/plus.svg": "/matrix/static/media/plus.8d6f5f239025f72163429b7dffd2d420.svg",
-    "main.f1bc13b7.js.map": "/matrix/static/js/main.f1bc13b7.js.map",
+    "main.1bf838ae.js.map": "/matrix/static/js/main.1bf838ae.js.map",
     "696.70e9efbf.chunk.js.map": "/matrix/static/js/696.70e9efbf.chunk.js.map",
-    "922.7293690e.chunk.js.map": "/matrix/static/js/922.7293690e.chunk.js.map",
+    "922.b7da7444.chunk.js.map": "/matrix/static/js/922.b7da7444.chunk.js.map",
     "240.b6d98144.chunk.js.map": "/matrix/static/js/240.b6d98144.chunk.js.map",
     "859.3632ef1c.chunk.js.map": "/matrix/static/js/859.3632ef1c.chunk.js.map",
     "3.184bac39.chunk.js.map": "/matrix/static/js/3.184bac39.chunk.js.map",
@@ -181,6 +183,6 @@
     "443.781c47fd.chunk.js.map": "/matrix/static/js/443.781c47fd.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.f1bc13b7.js"
+    "static/js/main.1bf838ae.js"
   ]
 }
