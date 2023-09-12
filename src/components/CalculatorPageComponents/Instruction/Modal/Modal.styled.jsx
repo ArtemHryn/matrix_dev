@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export const ModalContainerBox = styled.div`
   position: relative;
-  top: 30px;
+  top: 2%;
   height: 90%;
   max-width: ${p => p.theme.sizes.mobileModal};
   background-color: #fff;

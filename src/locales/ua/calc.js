@@ -69,5 +69,14 @@ const calcUa = {
   yearEnterError: 'Введіть рік',
   yearPatternError: 'Введіть 4-значний рік від 2000 до 2100',
   yearPeriods: 'Періоди року',
+  instructionTitle: 'Використай можливості калькулятора від <1>“Dari.Karma” на всі 100%</1>',
+  instructionCircleBtn1: 'Відеоінструкція до калькулятора',
+  instructionCircleBtn2: 'Безкоштовні вебінари про “INTEGRITY”',
+  instructionBtn1: 'Відеоінструкція до калькулятора',
+  instructionBtn2: 'Безкоштовні вебінари про “INTEGRITY”',
+  instructionModalTitle1: 'Відеоінструкція',
+  instructionModalTitle2: 'Вебінари про систему "INTEGRITY"',
+  instructionModalBtn1: 'купити інструкцію',
+  instructionModalBtn2: 'Дивитися безкоштовно',
 };
 export default calcUa;

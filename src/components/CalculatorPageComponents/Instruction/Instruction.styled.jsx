@@ -12,6 +12,18 @@ const buttonAnimation = keyframes`
     rotate: 0deg
   }`;
 
+const imgPhonesAnimation = keyframes`
+  0%{
+    transform: translateY(0px)
+  }
+  50% {
+    transform: translateY(30px)
+  }
+    100% {
+    transform: translateY(0px)
+  }
+`;
+
 export const Title = styled.h1`
   color: #9072af;
   font-family: ${p => p.theme.fonts.main};
@@ -44,6 +56,8 @@ export const Img = styled.img`
   height: auto;
   z-index: 0;
   ${position}
+  animation: ${imgPhonesAnimation} 10s ease infinite;
+  animation-delay: ${p => p.delay};
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     width: 380px;
   }
@@ -91,7 +105,7 @@ export const UnderBtnText = styled.p`
     max-width: 311px;
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
-    font-size: 46px;
+    font-size: 42px;
     max-width: 410px;
   }
 `;
