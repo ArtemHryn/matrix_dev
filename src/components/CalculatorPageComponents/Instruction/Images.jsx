@@ -14,14 +14,14 @@ const Images = () => {
         src={i18n.language === 'ua' ? mob_integrity_ua : mob_integrity_ru}
         alt="Мобілка з інтегріті"
         top={['8%', null, '-10%']}
-        left={['-7%', '0%', '0%']}
+        left={['-7%', '0%', '5%']}
       />
       <Img
         src={i18n.language === 'ua' ? mob_instruction_ua : mob_instruction_ru}
         alt="Мобілка з інстрікцією"
         top={['25%', null, '7%']}
-        left={['40%', null, '39%']}
-        width={['245px', '450px', '590px']}
+        left={['40%', null, '42%']}
+        width={['245px', '450px', '520px']}
         delay={'5s'}
       />
     </>

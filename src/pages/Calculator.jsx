@@ -73,11 +73,11 @@ const Calculator = () => {
         <Header navigationList={getNavCalList()} />
         <Box as="main">
           <Hero />
+          <Instruction />
           <Suspense fallback={<MatrixLoader />}>
             <Outlet />
           </Suspense>
           <ChangeYourFate />
-          <Instruction />
           <Donation />
           <Contacts />
           <GetPDFTemplate />

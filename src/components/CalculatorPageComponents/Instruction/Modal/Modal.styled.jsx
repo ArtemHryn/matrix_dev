@@ -3,8 +3,7 @@ import { motion } from 'framer-motion';
 
 export const ModalContainerBox = styled.div`
   position: relative;
-  top: 2%;
-  height: 90%;
+  height: 100%;
   max-width: ${p => p.theme.sizes.mobileModal};
   background-color: #fff;
   background-image: linear-gradient(
@@ -38,7 +37,7 @@ export const ModalContainerBox = styled.div`
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
     max-width: 1250px;
-    padding-top: 64px;
+    padding-top: 34px;
   }
 `;
 
@@ -48,10 +47,14 @@ export const Button = styled.button`
   margin: 0 auto 49px;
   background-color: transparent;
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
-    margin-bottom: 62px;
+    margin-bottom: 32px;
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
-    margin-bottom: 29px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    margin-bottom: 0px;
+    z-index: 10;
   }
 `;
 
@@ -60,13 +63,12 @@ export const AnimatedContainer = styled(motion.div)`
     min-height: 1240px;
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
-    min-height: 603px;
+    min-height: 550px;
   }
 `;
 
 export const ModalTitle = styled.h1`
   font-size: 40px;
-  font-style: normal;
   font-weight: 500;
   line-height: 1; /* 100% */
   letter-spacing: 0.025em;
@@ -107,6 +109,7 @@ export const Price = styled.p`
   font-weight: 400;
   line-height: 0.8;
   letter-spacing: 0.025em;
+  font-family: ${p => p.theme.fonts.digits};
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
     font-size: 60px;
     margin-bottom: 0px;
@@ -128,7 +131,7 @@ export const Link = styled.a`
   color: #fff;
   font-family: Cormorant Infant;
   font-size: 17px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1;
   letter-spacing: 0.01em;
   text-transform: uppercase;

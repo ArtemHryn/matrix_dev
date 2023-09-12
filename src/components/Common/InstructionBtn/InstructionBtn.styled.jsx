@@ -7,8 +7,5 @@ export const InstructionBtnSvg = styled.svg`
     width: 98px;
     height: 98px;
   }
-  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
-    width: 110px;
-    height: 110px;
-  }
+
 `;

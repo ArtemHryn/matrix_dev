@@ -46,7 +46,7 @@ export const Title = styled.h1`
     font-size: 86px;
     font-weight: 400;
     line-height: 0.78;
-    margin-bottom: 95px;
+    margin-bottom: 55px;
   }
 `;
 
@@ -62,7 +62,7 @@ export const Img = styled.img`
     width: 380px;
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
-    width: 510px;
+    width: 430px;
   }
   ${layout}
 `;
@@ -81,10 +81,6 @@ export const OpenModalBtn = styled.button`
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     width: 98px;
     height: 98px;
-  }
-  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
-    width: 110px;
-    height: 110px;
   }
 `;
 
@@ -105,7 +101,7 @@ export const UnderBtnText = styled.p`
     max-width: 311px;
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
-    font-size: 42px;
+    font-size: 38px;
     max-width: 410px;
   }
 `;

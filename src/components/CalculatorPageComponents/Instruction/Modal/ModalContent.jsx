@@ -25,7 +25,7 @@ const ModalContent = ({ title, description, href, linkText, price, setPage, page
               ? ['-65px 104%', '10px 100%', '-60px 100%']
               : ['15% 97%', '22% 90%', '8% 75%']
           }
-          p={['0px 30px 40px', null, '0px 90px 40px']}
+          p={['0px 30px 20px', null, '0px 90px 40px']}
         >
           <Box
             display={[null, null, 'flex']}
@@ -44,7 +44,9 @@ const ModalContent = ({ title, description, href, linkText, price, setPage, page
                 alignItems={[null, null, 'center']}
               >
                 {price && <Price>{price}</Price>}
-                <Link href={href}>{linkText}</Link>
+                <Link href={href} target="_blank" rel="noreferrer noopener">
+                  {linkText}
+                </Link>
               </Box>
             </Box>
             <Img
@@ -54,7 +56,7 @@ const ModalContent = ({ title, description, href, linkText, price, setPage, page
           </Box>
         </Box>
       </AnimatedContainer>
-      <Box p={['0px 30px 107px', null, '0px 90px 64px']}>
+      <Box p={['0px 30px 47px', null, '0px 90px 34px']}>
         <BottomBtnsNav page={page} setPage={setPage} />
       </Box>
     </>
