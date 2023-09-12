@@ -111,10 +111,10 @@ export const MatrxiLink = styled(Link)`
   letter-spacing: 0.03em;
 
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: ${p => p.theme.colors.main};
   :hover,
   :focus {
     transform: scale(1.05);
-    color: ${p => p.theme.colors.main};
   }
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     width: 380px;

@@ -48,7 +48,7 @@ const calcUa = {
   healthAuthorWarning1:
     '<0>УВАГА!</0> Система "INTEGRITY" є розробкою команди "Dari.Karma" та представлена на сайті для тестування.',
   healthAuthorWarning2:
-    "Даний розрахунок карти здоров'я є авторським і <2>не відповідає </2> алгоритму розрахунку Н. Ладіні",
+    "Даний розрахунок карти здоров'я <1>не відповідає </1> алгоритму розрахунку Н. Ладіні",
   healthCardTypePersonal: 'Особиста',
   healthCardTypeHolistic: 'Цілісна',
   healthCardTipPurpose: 'Функція',
