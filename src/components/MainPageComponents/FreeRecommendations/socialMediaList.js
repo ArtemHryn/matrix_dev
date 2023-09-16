@@ -18,7 +18,7 @@ const socialMediaList = lng => {
     },
     {
       name: 'Telegram',
-      link: 'https://t.me/DariKarma',
+      link: 'https://t.me/darikarma_channel',
       info:
         lng === 'ua'
           ? 'Можливість познайомитися зі мною ближче, обговорення тонкощів методу, пошук кармічного партнера для досягнення своїх цілей.'

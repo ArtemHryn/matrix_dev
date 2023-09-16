@@ -11,11 +11,14 @@ const gradient =
 const PartnerInfo = ({ date, hideInfo }) => {
   const [age, setAge] = useState(null);
   const { t } = useTranslation('calc');
-  const { day, month, year, name } = date;
+  const isDateHere = date.day || date.month || date.year;
 
   useEffect(() => {
+    if (!isDateHere) return;
+    const { day, month, year } = date;
+
     setAge(ageCalculator(day, month, year));
-  }, [day, hideInfo, month, year]);
+  }, [date, hideInfo, isDateHere]);
 
   return (
     <Box
@@ -33,12 +36,18 @@ const PartnerInfo = ({ date, hideInfo }) => {
       mx="auto"
     >
       <NameDate>
-        {name && (
+        {date?.name && (
           <NameDate as="span" mr="6px" fontFamily={'main'}>
-            {name}
+            {date.name}
           </NameDate>
         )}
-        {`${day}.${month}.${year}`}
+        {isDateHere ? (
+          `${date.day}.${date.month}.${date.year}`
+        ) : (
+          <NameDate as="span" mr="6px" fontFamily={'digits'} fontWeight='400'>
+            {`${date.demonMatrix} КОД`}
+          </NameDate>
+        )}
       </NameDate>
       {hideInfo && (
         <Age>

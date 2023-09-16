@@ -20,6 +20,7 @@ export const HeaderList = styled.ul`
   display: flex;
   min-width: 500px;
   justify-content: center;
+  align-items: center;
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     min-width: 580px;
   }
@@ -42,13 +43,15 @@ export const HeaderListItem = styled.li`
 `;
 
 export const HeaderLink = styled.a`
-  display: block;
+  display: flex;
+  justify-content: center;
   font-family: ${p => p.theme.fonts.main};
   font-weight: 400;
   font-size: 18px;
   line-height: 1.22;
+  text-align: center;
   letter-spacing: 0.01em;
-
+  width: 100px;
   color: ${p => p.theme.colors.secondText};
   padding: 16px 0;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -62,6 +65,7 @@ export const HeaderLink = styled.a`
     border-radius: 5px;
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    width: 100%;
     font-size: 20px;
     padding: 26px 0;
     margin: 6px 0;

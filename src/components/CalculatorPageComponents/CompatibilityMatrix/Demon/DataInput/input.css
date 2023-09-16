@@ -1,0 +1,9 @@
+.p-dropdown-items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-radius: 8px;
+  border: 0.8px solid rgba(221, 197, 255, 0.6);
+  background: rgba(255, 255, 255, 1);
+  padding: 12px;
+}

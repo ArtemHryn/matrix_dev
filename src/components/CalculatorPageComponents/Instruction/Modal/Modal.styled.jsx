@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export const ModalContainerBox = styled.div`
   position: relative;
-  height: 100%;
+  height: 80%;
   max-width: ${p => p.theme.sizes.mobileModal};
   background-color: #fff;
   background-image: linear-gradient(
@@ -36,6 +36,7 @@ export const ModalContainerBox = styled.div`
     max-width: ${p => p.theme.sizes.tabletModal};
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
