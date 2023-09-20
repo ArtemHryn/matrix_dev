@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/602.0d0866da.chunk.js","mappings":"yHASA,UARmC,WACjC,OACE,kBAIH,C","sources":["pages/ParentsAndChildrenPageCalc.jsx"],"sourcesContent":["\nconst ParentsAndChildrenPageCalc = () => {\n  return (\n    <div>\n      \n    </div>\n  )\n}\n\nexport default ParentsAndChildrenPageCalc\n"],"names":[],"sourceRoot":""}
