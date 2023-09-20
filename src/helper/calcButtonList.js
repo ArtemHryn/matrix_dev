@@ -13,7 +13,7 @@ const getCalcButtonList = lng => {
     {
       name: lng === 'ua' ? 'ГЛИБИННІ РОЗРАХУНКИ' : 'ГЛУБИННЫЕ РАСЧЕТЫ',
       to: 'deep_calc',
-      disabled: true,
+      disabled: false,
     },
   ];
 };

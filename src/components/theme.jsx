@@ -28,6 +28,7 @@ export const theme = {
   borders: {
     none: 'none',
     normal: '1px solid',
+    tables: '0.5px solid #72499b',
   },
   radii: {
     none: '0',

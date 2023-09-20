@@ -1,15 +1,27 @@
 import { lazy, useEffect, useState } from 'react';
 import { Box } from 'components/Box';
-import { BtnItem, BtnList, Link } from '../PersonalMatrix/MatrixBtn/MatrixBtn.styled';
+import {
+  BtnItem,
+  BtnList,
+  Link,
+} from '../components/CalculatorPageComponents/PersonalMatrix/MatrixBtn/MatrixBtn.styled';
 import { useMatrix } from 'pages/Calculator';
 import MatrixLoader from 'components/Spinner/MatrixLoader';
 import btnList from 'helper/compatibilityCalcButtonList';
 import { useTranslation } from 'react-i18next';
 
-const Partners = lazy(() => import('./Partners/Partners'));
-const Team = lazy(() => import('./Team/Team'));
-const Annual = lazy(() => import('./Annual/Annual'));
-const Demon = lazy(() => import('./Demon/Demon'));
+const Partners = lazy(() =>
+  import('../components/CalculatorPageComponents/CompatibilityMatrix/Partners/Partners')
+);
+const Team = lazy(() =>
+  import('../components/CalculatorPageComponents/CompatibilityMatrix/Team/Team')
+);
+const Annual = lazy(() =>
+  import('../components/CalculatorPageComponents/CompatibilityMatrix/Annual/Annual')
+);
+const Demon = lazy(() =>
+  import('../components/CalculatorPageComponents/CompatibilityMatrix/Demon/Demon')
+);
 
 const CompatibilityMatrix = () => {
   const [compatibilityType, setCompatibilityType] = useState('partners');

@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
-import { layout, position } from 'styled-system';
+import styled from "styled-components";
+import { motion } from "framer-motion";
+import { layout, position } from "styled-system";
 
 export const HeroStar = styled(motion.div)`
   position: absolute;
@@ -9,10 +9,10 @@ export const HeroStar = styled(motion.div)`
   justify-content: center;
   width: 72vw;
   height: 50px;
-  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+  @media screen and (min-width: ${(p) => p.theme.sizes.tablet}) {
     width: 62vw;
   }
-  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+  @media screen and (min-width: ${(p) => p.theme.sizes.desktop}) {
     height: 500px;
   }
   ${position}
@@ -20,7 +20,7 @@ export const HeroStar = styled(motion.div)`
 `;
 
 export const Logo = styled.p`
-  font-family: ${p => p.theme.fonts.title};
+  font-family: ${(p) => p.theme.fonts.title};
   font-size: 26px;
   line-height: 0.66;
   text-align: center;
@@ -28,10 +28,10 @@ export const Logo = styled.p`
   letter-spacing: 0.01em;
 
   margin-bottom: 45px;
-  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+  @media screen and (min-width: ${(p) => p.theme.sizes.tablet}) {
     font-size: 40px;
   }
-  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+  @media screen and (min-width: ${(p) => p.theme.sizes.desktop}) {
     font-size: 36px;
     margin-bottom: 10px;
   }
@@ -47,10 +47,10 @@ export const Title = styled.h1`
 
   margin-bottom: 35px;
 
-  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+  @media screen and (min-width: ${(p) => p.theme.sizes.tablet}) {
     font-size: 100px;
   }
-  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+  @media screen and (min-width: ${(p) => p.theme.sizes.desktop}) {
     font-size: 115px;
     width: 1000px;
     margin: 0 auto 25px;
@@ -61,7 +61,7 @@ export const SecondTitle = styled.span`
   font-style: italic;
   display: block;
   margin-top: 7px;
-  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+  @media screen and (min-width: ${(p) => p.theme.sizes.desktop}) {
     font-size: 127px;
   }
 `;
@@ -73,7 +73,7 @@ export const AboutCalc = styled.p`
   letter-spacing: 0.01em;
   font-weight: 600;
   margin-bottom: 53px;
-  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+  @media screen and (min-width: ${(p) => p.theme.sizes.tablet}) {
     font-size: 28px;
     line-height: 1.22;
 
@@ -81,7 +81,7 @@ export const AboutCalc = styled.p`
     margin-right: auto;
     margin-left: auto;
   }
-  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+  @media screen and (min-width: ${(p) => p.theme.sizes.desktop}) {
     font-size: 28px;
     line-height: 1.21;
     width: 100%;
@@ -97,9 +97,19 @@ export const Authoring = styled.p`
   letter-spacing: 0.01em;
 
   width: 251px;
-  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+  @media screen and (min-width: ${(p) => p.theme.sizes.tablet}) {
     font-size: 17px;
     line-height: 1.24;
     width: 365px;
+  }
+`;
+
+export const HeroStarIcon = styled.svg`
+  width: 50vw;
+  @media screen and (min-width: ${(p) => p.theme.sizes.tablet}) {
+    width: 45vw;
+  }
+  @media screen and (min-width: ${(p) => p.theme.sizes.desktop}) {
+    width: 45vw;
   }
 `;

@@ -1,12 +1,12 @@
 import { useEffect } from 'react';
 import { Box } from 'components/Box';
-import DataInput from './DataInput/DataInput';
-import MatrixBtn from './MatrixBtn/MatrixBtn';
+import DataInput from '../components/CalculatorPageComponents/PersonalMatrix/DataInput/DataInput';
+import MatrixBtn from '../components/CalculatorPageComponents/PersonalMatrix/MatrixBtn/MatrixBtn';
 import { useMatrix } from 'pages/Calculator';
-import FateMatrix from './MatrixCalculation/FateMatrix/FateMatrix';
-import KarmaIssues from './MatrixCalculation/KarmaIssues/KarmaIssues';
-import HealthMatrix from './MatrixCalculation/HealthMatrix/HealthMatrix';
-import PeriodMatrix from './MatrixCalculation/PeriodMatrix/PeriodMatrix';
+import FateMatrix from '../components/CalculatorPageComponents/PersonalMatrix/MatrixCalculation/FateMatrix/FateMatrix';
+import KarmaIssues from '../components/CalculatorPageComponents/PersonalMatrix/MatrixCalculation/KarmaIssues/KarmaIssues';
+import HealthMatrix from '../components/CalculatorPageComponents/PersonalMatrix/MatrixCalculation/HealthMatrix/HealthMatrix';
+import PeriodMatrix from '../components/CalculatorPageComponents/PersonalMatrix/MatrixCalculation/PeriodMatrix/PeriodMatrix';
 import { intervalToDuration } from 'date-fns';
 
 const PersonalMatrix = () => {

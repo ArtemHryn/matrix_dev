@@ -2,10 +2,11 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 import { ReactComponent as FlipToBack } from 'images/Calculator/personalMatrix/flipToBack.svg';
-import { layout, typography } from 'styled-system';
+import { layout, space, typography } from 'styled-system';
 
 export const Form = styled.form`
   position: relative;
+  ${space}
 `;
 
 export const FlipButton = styled(motion.button)`
