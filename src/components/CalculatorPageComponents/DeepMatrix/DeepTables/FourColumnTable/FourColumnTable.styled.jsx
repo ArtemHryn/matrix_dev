@@ -55,7 +55,8 @@ export const ColumnName = styled.p`
   color: #72499b;
   font-size: 15px;
   font-weight: 400;
-  line-height: 1.6; /* 159.279% */
+  line-height: 1;
+  text-align: center;
   letter-spacing: 0.01em;
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     font-size: 18px;

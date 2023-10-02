@@ -7,6 +7,7 @@ import { Title } from './DeepTables.styled';
 
 import getGenericTablesData from 'helper/genericTablesData';
 import GenericTables from './GenericTables/GenericTables';
+import HolisticTables from './GenericTables/HolisticTables';
 
 const DeepTables = () => {
   const [tableId, setTableId] = useState(1);
@@ -27,7 +28,10 @@ const DeepTables = () => {
       <Title>ПРОГРАММЫ</Title>
       <DeepTablesBtn tableId={tableId} setTableId={setTableId} />
       {Object.keys(matrixData).length !== 0 && (
-        <>{tableId === 1 && <GenericTables tables={tablesData.generic} />}</>
+        <>
+          {tableId === 1 && <GenericTables tables={tablesData.generic} />}
+          {tableId === 2 && <HolisticTables tables={tablesData.holistic} />}
+        </>
       )}
     </Box>
   );

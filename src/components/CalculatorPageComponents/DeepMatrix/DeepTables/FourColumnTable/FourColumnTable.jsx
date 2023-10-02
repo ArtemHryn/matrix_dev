@@ -26,13 +26,13 @@ const FourColumnTable = ({ tableInfo }) => {
               {index + 1}
             </ColumnName>
             <ColumnName flex={3} color="#000" fontFamily="digits">
-              {row.father}
+              {row.column1}
             </ColumnName>
             <ColumnName flex={3} color="#000" fontFamily="digits">
-              {row.mother}
+              {row.column2}
             </ColumnName>
             <ColumnName flex={3} color="#000" fontFamily="digits">
-              {row.result}
+              {row.column3}
             </ColumnName>
           </ColumnItem>
         ))}

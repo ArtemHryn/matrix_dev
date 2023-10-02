@@ -15,6 +15,7 @@ import {
   TopElements,
 } from './MatrixElements/Sides';
 import PeriodCircle from '../../PeriodMatrix/PeriodCircle/PeriodCircle';
+import GenericLines from './MatrixElements/Sides/GenericLines';
 
 const MatrixGraph = ({
   matrix: Matrix,
@@ -22,15 +23,15 @@ const MatrixGraph = ({
   hideInner,
   hideBalance,
   showPeriodCircle,
+  isGeneric,
 }) => {
-  const { setMatrixData, isGenerated, date, setAgeList, matrixData } =
-    useMatrix();
+  const { setMatrixData, isGenerated, date, setAgeList, matrixData } = useMatrix();
   useEffect(() => {
-    const result = allData(date, isGenerated);
+    const result = allData(date, isGenerated, true, isGeneric);
     const ageResult = getPeriod(result);
     setMatrixData(result);
     setAgeList(ageResult);
-  }, [date, isGenerated, setAgeList, setMatrixData]);
+  }, [date, isGenerated, isGeneric, setAgeList, setMatrixData]);
 
   return (
     <Box>
@@ -48,6 +49,7 @@ const MatrixGraph = ({
         {hideBalance && <Health matrixData={matrixData} />}
         {!hideInner && <InnerBox matrixData={matrixData} />}
         {showPeriodCircle && <PeriodCircle matrixData={matrixData} />}
+        {isGeneric && <GenericLines matrixData={matrixData} />}
       </Box>
     </Box>
   );

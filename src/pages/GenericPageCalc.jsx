@@ -39,7 +39,7 @@ const GenericPageCalc = () => {
             alignItems="center"
             justifyContent="space-evenly"
           >
-            <MatrixGraph matrix={Generic} hideInner hideBalance/>
+            <MatrixGraph matrix={Generic} hideInner hideBalance isGeneric={true} />
             <AssignmentTableDesktop />
           </Box>
           <AssignmentTabledMobTabled mb={['24px', '40px']} />
