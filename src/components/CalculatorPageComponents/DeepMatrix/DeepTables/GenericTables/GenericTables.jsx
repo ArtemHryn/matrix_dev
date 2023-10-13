@@ -6,7 +6,7 @@ const GenericTables = ({ tables }) => {
   if (!tables) return null;
 
   return (
-    <Box display="flex" flexDirection="column" gridGap={['12px', '16px', '20px']}>
+    <Box display="flex" flexDirection={['column', null, 'row']} gridGap={['12px', '16px', '20px']}>
       <FourColumnTable tableInfo={tables.table1} />
       <TwoColumnTable tableInfo={tables.table2} />
     </Box>

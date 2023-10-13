@@ -51,6 +51,7 @@ const getFatherArcanesList = info => {
     topLeft3,
     healthTopLeft,
     healthBottomRight,
+    center,
     center2,
     bottomRight1,
     bottomRight2,
@@ -105,8 +106,8 @@ const getFatherArcanesList = info => {
       column2: `${innerLeft2} - ${healthTopLeft} - ${fatherEarth4}`,
     },
     {
-      column1: `${center2} - ${center2} - ${checkNum(center2 + center2)}`,
-      column2: `${center2} - ${center2} - ${checkNum(center2 + center2)}`,
+      column1: `${center} - ${center2} - ${checkNum(center2 + center2)}`,
+      column2: `${center} - ${center2} - ${checkNum(center2 + center2)}`,
     },
     {
       column1: `${innerBottom2} - ${healthBottomRight} - ${fatherSpirit6}`,
@@ -156,6 +157,7 @@ const getMotherArcanesList = info => {
     motherSpirit9,
     bottom1,
     bottomLeft1,
+    center,
     center2,
     motherEarth1,
     motherEarth2,
@@ -192,8 +194,8 @@ const getMotherArcanesList = info => {
       column2: `${innerRight2} - ${healthTopRight} - ${motherEarth4}`,
     },
     {
-      column1: `${center2} - ${center2} - ${checkNum(center2 + center2)}`,
-      column2: `${center2} - ${center2} - ${checkNum(center2 + center2)}`,
+      column1: `${center} - ${center2} - ${checkNum(center2 + center2)}`,
+      column2: `${center} - ${center2} - ${checkNum(center2 + center2)}`,
     },
     {
       column1: `${innerBottom2} - ${healthBottomLeft} - ${motherSpirit6}`,
@@ -254,7 +256,7 @@ const getGenericTablesData = (info, lng) => {
           { name: lng === 'ua' ? 'Колено' : 'Колено' },
           { name: lng === 'ua' ? 'Род отца' : 'Род отца' },
           { name: lng === 'ua' ? 'Род матери' : 'Род матери' },
-          { name: lng === 'ua' ? 'Примерение' : 'Примерение' },
+          { name: lng === 'ua' ? 'Примирение' : 'Примирение' },
         ],
         arcanes: [
           { column1: topLeft1, column2: topRight1 },
@@ -292,7 +294,7 @@ const getGenericTablesData = (info, lng) => {
           { name: lng === 'ua' ? 'Колено' : 'Колено' },
           { name: lng === 'ua' ? 'Целостный ключ рода отца' : 'Целостный ключ рода отца' },
           { name: lng === 'ua' ? 'Целостный ключ рода матери' : 'Целостный ключ рода матери' },
-          { name: lng === 'ua' ? 'Ключ примерения' : 'Ключ примерения' },
+          { name: lng === 'ua' ? 'Ключ примирения' : 'Ключ примирения' },
         ],
         arcanes: [],
       },

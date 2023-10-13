@@ -31,7 +31,7 @@ const PartnerInfo = ({ date, hideInfo }) => {
       flexDirection="column"
       alignItems="center"
       justifyContent="center"
-      mb={['50px', '40px']}
+      mb={['20px', '40px']}
       width={['100%', '70%', '60%']}
       mx="auto"
     >

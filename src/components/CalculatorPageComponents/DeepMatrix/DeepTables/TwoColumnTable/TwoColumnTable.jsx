@@ -16,8 +16,8 @@ const TwoColumnTable = ({ tableInfo }) => {
       display="flex"
       flexDirection="column"
       gridGap={['4px']}
-      width={['100%', '90%', '70%']}
-      m={'0 auto'}
+      width={['100%', '90%', 'calc((100% - 20px) / 2)']}
+      m={['0 auto', null, '0px']}
     >
       <TableTitle>{name}</TableTitle>
       <ColumnList>
@@ -31,7 +31,11 @@ const TwoColumnTable = ({ tableInfo }) => {
       </ColumnList>
       <ColumnListArcanes>
         {keys.map((row, index) => (
-          <ColumnItem key={index} border={index === 0 ? 'none' : null}>
+          <ColumnItem
+            key={index}
+            border={index === 0 ? 'none' : null}
+            bg={index % 2 !== 0 && '#b49bd145'}
+          >
             <ColumnName flex={2} borderLeft={'none'} color="#000" fontFamily="digits">
               {index === keys.length - 1 ? 1 : index + 2} &nbsp; <HiOutlineArrowNarrowRight />{' '}
               &nbsp;

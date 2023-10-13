@@ -43,6 +43,7 @@ export const ColumnItem = styled.li`
   justify-content: space-between;
   border-top: ${p => p.theme.borders.tables};
   ${border}
+  ${color}
 `;
 
 export const ColumnName = styled.p`
