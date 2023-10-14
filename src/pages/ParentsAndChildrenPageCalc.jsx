@@ -22,7 +22,7 @@ const ParentsAndChildrenPageCalc = () => {
     const partners = [];
     partnersDate.forEach((element, index) => {
       const partnerInfo = allData(element, element.isGenerated);
-      partnerInfo.order = index === 0 ? 'МАТРИЦА МАТЕРИ' : 'МАТРИЦА РЕБЕНКА';
+      partnerInfo.order = index === 0 ? t('motherMatrixTitle') : t('childMatrixTitle');
       partnerInfo.table =
         index === 0
           ? getParentTable(partnerInfo, i18n.language)
@@ -43,7 +43,6 @@ const ParentsAndChildrenPageCalc = () => {
             gridGap={['50px']}
           >
             {parentsMatrixDate.map((parent, index) => (
-              <>
                 <PartnerMatrix
                   key={parent.order}
                   partner={parent}
@@ -52,7 +51,6 @@ const ParentsAndChildrenPageCalc = () => {
                   hideSoulCrystal={true}
                   showFourColumns={true}
                 />
-              </>
             ))}
           </Box>
         </>

@@ -1,7 +1,9 @@
 import React from 'react';
 import { BtnList, ChangeTableBtn } from './DeepTablesBtn.styled';
+import { useTranslation } from 'react-i18next';
 
 const DeepTablesBtn = ({ tableId, setTableId }) => {
+  const { t } = useTranslation('calc');
   return (
     <BtnList>
       <li>
@@ -10,7 +12,7 @@ const DeepTablesBtn = ({ tableId, setTableId }) => {
           bg={tableId === 1 ? 'activeBtn' : null}
           onClick={() => setTableId(1)}
         >
-          РОДОВЫЕ
+          {t('deepGenericBtn1')}
         </ChangeTableBtn>
       </li>
       <li>
@@ -19,7 +21,7 @@ const DeepTablesBtn = ({ tableId, setTableId }) => {
           bg={tableId === 2 ? 'activeBtn' : null}
           onClick={() => setTableId(2)}
         >
-          ЦелостнЫЕ
+          {t('deepGenericBtn2')}
         </ChangeTableBtn>
       </li>
     </BtnList>

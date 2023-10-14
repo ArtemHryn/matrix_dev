@@ -9,11 +9,11 @@ const DeepMatrix = () => {
   const { i18n } = useTranslation();
   const btnList = getDeepBtnList(i18n.language);
   useEffect(() => {
-    const section = document.querySelector('#deep');
+    const section = document.querySelector('#deepPage');
     section.scrollIntoView({ behavior: 'smooth' });
   }, []);
   return (
-    <Box as="section" py={['40px', null, '35px']} id="deep">
+    <Box as="section" py={['40px', null, '35px']} id="deepPage">
       <Box
         maxWidth={['400px', '768px', '1440px']}
         position="relative"

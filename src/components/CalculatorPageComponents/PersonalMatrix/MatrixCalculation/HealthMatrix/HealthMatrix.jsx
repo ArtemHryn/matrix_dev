@@ -12,7 +12,7 @@ import HealthTables from './HealthTables/HealthTables';
 
 const HealthMatrix = () => {
   const { isGenerated } = useMatrix();
-  const [cardType, setCardType] = useState(1);
+  const [cardType, setCardType] = useState(3);
 
   return (
     <>

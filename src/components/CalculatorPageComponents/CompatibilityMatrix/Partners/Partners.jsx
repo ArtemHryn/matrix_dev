@@ -19,7 +19,7 @@ const btnGradientActive = 'linear-gradient(180deg, #765D90 5.73%, rgba(198, 106,
 
 const Partners = () => {
   const [resultData, setResultData] = useState([]);
-  const [cardType, setCardType] = useState(1);
+  const [cardType, setCardType] = useState(2);
   const [partnersMatrixData, setPartnersMatrixData] = useState([]);
   const [partnersHealthCard, setPartnersHealthCard] = useState([]);
   const [isFullOverlap, setIsFullOverlap] = useState(false);

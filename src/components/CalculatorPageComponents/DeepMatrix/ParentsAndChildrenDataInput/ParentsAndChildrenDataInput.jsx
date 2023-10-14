@@ -57,7 +57,9 @@ const ParentsAndChildrenDataInput = () => {
       <Box display={[null, null, 'flex']} justifyContent="space-evenly">
         {fields.map((field, index) => (
           <Box key={field.id}>
-            <MatrixNumber>{index === 0 ? 'МАТРИЦА МАТЕРИ' : 'МАТРИЦА РЕБЕНКА'}</MatrixNumber>
+            <MatrixNumber>
+              {index === 0 ? t('motherMatrixTitle') : t('childMatrixTitle')}
+            </MatrixNumber>
             <PartnerData
               register={register}
               setValue={setValue}

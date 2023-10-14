@@ -25,7 +25,7 @@ const getArcanesList = (info, isChildren) => {
     { column1: month, column2: bottom1 },
     { column1: top2, column2: bottom2 },
     { column1: top3, column2: bottom3 },
-    { column1: innerBottom1, column2: innerTop1 },
+    { column1: innerTop1, column2: innerBottom1 },
     { column1: innerTopLeft, column2: innerBottomLeft },
     { column1: innerLeft1, column2: innerLeft3 },
     { column1: left3, column2: right3 },
@@ -38,15 +38,18 @@ const getArcanesList = (info, isChildren) => {
   return data;
 };
 
+const getColumnName = lng => {
+  return [
+    { name: lng === 'ua' ? 'Верхній світ' : 'Верхний мир' },
+    { name: lng === 'ua' ? 'Нижній світ' : 'Нижний мир' },
+    { name: lng === 'ua' ? 'Зцілююча' : 'Исцеляющая' },
+  ];
+};
+
 const getParentTable = (info, lng) => {
   const data = {
-    name: lng === 'ua' ? 'Ключи вынашивания ребенка' : 'Ключи вынашивания ребенка',
-    columnsName: [
-      { name: lng === 'ua' ? 'Месяц' : 'Месяц' },
-      { name: lng === 'ua' ? 'Верхний мир' : 'Верхний мир' },
-      { name: lng === 'ua' ? 'Нижний мир' : 'Нижний мир' },
-      { name: lng === 'ua' ? 'Исцеляющая' : 'Исцеляющая' },
-    ],
+    name: lng === 'ua' ? 'Ключі виношування дитини' : 'Ключи вынашивания ребенка',
+    columnsName: [{ name: lng === 'ua' ? 'Місяць' : 'Месяц' }, ...getColumnName(lng)],
     arcanes: getArcanesList(info, false),
   };
   data.arcanes.forEach(el => (el.column3 = checkNum(el.column1 + el.column2)));
@@ -56,13 +59,8 @@ const getParentTable = (info, lng) => {
 const getChildrenTable = (info, lng) => {
   const age = ['0', '0.5', '5', '7.5', '10', '12.5', '15', '17.5', '20'];
   const data = {
-    name: lng === 'ua' ? 'Кармический долг родителей' : 'Кармический долг родителей',
-    columnsName: [
-      { name: lng === 'ua' ? 'Возраст' : 'Возраст' },
-      { name: lng === 'ua' ? 'Верхний мир' : 'Верхний мир' },
-      { name: lng === 'ua' ? 'Нижний мир' : 'Нижний мир' },
-      { name: lng === 'ua' ? 'Исцеляющая' : 'Исцеляющая' },
-    ],
+    name: lng === 'ua' ? 'Кармічний обов\'язок батьків' : 'Кармический долг родителей',
+    columnsName: [{ name: lng === 'ua' ? 'Вік' : 'Возраст' }, ...getColumnName(lng)],
     arcanes: getArcanesList(info, true),
   };
   data.arcanes.forEach((el, index) => {

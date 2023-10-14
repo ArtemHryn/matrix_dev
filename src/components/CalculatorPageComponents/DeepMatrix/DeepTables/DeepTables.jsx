@@ -12,7 +12,7 @@ import HolisticTables from './GenericTables/HolisticTables';
 const DeepTables = () => {
   const [tableId, setTableId] = useState(1);
   const [tablesData, setTablesData] = useState([]);
-  const { i18n } = useTranslation('calc');
+  const { i18n, t } = useTranslation('calc');
   const { matrixData } = useMatrix();
 
   useEffect(() => {
@@ -25,7 +25,7 @@ const DeepTables = () => {
   }, [i18n.language, matrixData]);
   return (
     <Box>
-      <Title>ПРОГРАММЫ</Title>
+      <Title>{t('deepCalcProg')}</Title>
       <DeepTablesBtn tableId={tableId} setTableId={setTableId} />
       {Object.keys(matrixData).length !== 0 && (
         <>

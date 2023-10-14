@@ -35,10 +35,10 @@ const resultColumn = info => {
 
 const getGenusColumnNames = lng => {
   return [
-    { name: lng === 'ua' ? 'Колено' : 'Колено' },
-    { name: lng === 'ua' ? 'Духовный урок' : 'Духовный урок' },
-    { name: lng === 'ua' ? 'Земной урок' : 'Земной урок' },
-    { name: lng === 'ua' ? 'Целостный ключ ' : 'Целостный ключ' },
+    { name: lng === 'ua' ? 'Коліно' : 'Колено' },
+    { name: lng === 'ua' ? 'Духовний урок' : 'Духовный урок' },
+    { name: lng === 'ua' ? 'Земний урок' : 'Земной урок' },
+    { name: lng === 'ua' ? 'Цілісний ключ' : 'Целостный ключ' },
   ];
 };
 
@@ -251,12 +251,12 @@ const getGenericTablesData = (info, lng) => {
     generic: {
       id: 1,
       table1: {
-        name: lng === 'ua' ? '9 колен рода' : '9 колен рода',
+        name: lng === 'ua' ? '9 колін роду' : '9 колен рода',
         columnsName: [
-          { name: lng === 'ua' ? 'Колено' : 'Колено' },
-          { name: lng === 'ua' ? 'Род отца' : 'Род отца' },
-          { name: lng === 'ua' ? 'Род матери' : 'Род матери' },
-          { name: lng === 'ua' ? 'Примирение' : 'Примирение' },
+          { name: lng === 'ua' ? 'Коліно' : 'Колено' },
+          { name: lng === 'ua' ? 'Рід батька' : 'Род отца' },
+          { name: lng === 'ua' ? 'Рід матері' : 'Род матери' },
+          { name: lng === 'ua' ? 'Примирення' : 'Примирение' },
         ],
         arcanes: [
           { column1: topLeft1, column2: topRight1 },
@@ -271,36 +271,36 @@ const getGenericTablesData = (info, lng) => {
         ],
       },
       table2: {
-        name: lng === 'ua' ? 'Коленопреклонение' : 'Коленопреклонение',
-        columnsName: [{ name: lng === 'ua' ? 'Колено' : 'Колено' }, { name: 'Ключ' }],
+        name: lng === 'ua' ? 'Колінопоклоніння' : 'Коленопреклонение',
+        columnsName: [{ name: lng === 'ua' ? 'Коліно' : 'Колено' }, { name: 'Ключ' }],
         keys: '',
       },
     },
     holistic: {
       id: 2,
       table1: {
-        name: lng === 'ua' ? 'Род отца' : 'Род отца',
+        name: lng === 'ua' ? 'Рід батька' : 'Род отца',
         columnsName: getGenusColumnNames(lng),
         arcanes: getFatherArcanesList(info),
       },
       table2: {
-        name: lng === 'ua' ? 'Род матери' : 'Род матери',
+        name: lng === 'ua' ? 'Рід матері' : 'Род матери',
         columnsName: getGenusColumnNames(lng),
         arcanes: getMotherArcanesList(info),
       },
       table3: {
-        name: lng === 'ua' ? 'Примирение родов' : 'Примирение родов',
+        name: lng === 'ua' ? 'Примирення родів' : 'Примирение родов',
         columnsName: [
-          { name: lng === 'ua' ? 'Колено' : 'Колено' },
-          { name: lng === 'ua' ? 'Целостный ключ рода отца' : 'Целостный ключ рода отца' },
-          { name: lng === 'ua' ? 'Целостный ключ рода матери' : 'Целостный ключ рода матери' },
-          { name: lng === 'ua' ? 'Ключ примирения' : 'Ключ примирения' },
+          { name: lng === 'ua' ? 'Коліно' : 'Колено' },
+          { name: lng === 'ua' ? 'Цілісний ключ роду батька' : 'Целостный ключ рода отца' },
+          { name: lng === 'ua' ? 'Цілісний ключ роду матері' : 'Целостный ключ рода матери' },
+          { name: lng === 'ua' ? 'Ключ примирення' : 'Ключ примирения' },
         ],
         arcanes: [],
       },
       table4: {
-        name: lng === 'ua' ? 'Коленопреклонение' : 'Коленопреклонение',
-        columnsName: [{ name: lng === 'ua' ? 'Колено' : 'Колено' }, { name: 'Ключ' }],
+        name: lng === 'ua' ? 'Колінопоклоніння' : 'Коленопреклонение',
+        columnsName: [{ name: lng === 'ua' ? 'Коліно' : 'Колено' }, { name: 'Ключ' }],
         keys: '',
       },
     },
