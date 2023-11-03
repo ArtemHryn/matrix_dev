@@ -638,6 +638,61 @@ export const getHealthInfo = (info, lng) => {
       total: checkNum(totalPers),
     },
     {
+      cardName: lng === 'ua' ? 'Родова карта здоров’я' : 'Родова карта здоровья',
+      columnName: lng === 'ua' ? ['Батько', 'Мати', 'Зцілююча'] : ['Отец', 'Мать', 'Исцеляющая'],
+      chakraList: [
+        {
+          chakraName: 'Сахасрара',
+          physics: topRight1,
+          energy: topLeft1,
+          emotions: '20',
+          color: '#DCB9FF',
+        },
+        {
+          chakraName: 'Аджна',
+          physics: topRight2,
+          energy: topLeft2,
+          emotions: '20',
+          color: '#B9C0FF',
+        },
+        {
+          chakraName: lng === 'ua' ? 'Вішудха' : 'Вишудха',
+          physics: topRight3,
+          energy: topLeft3,
+          emotions: '20',
+          color: '#C1F4FF',
+        },
+        {
+          chakraName: 'Анахата',
+          physics: healthTopRight,
+          energy: healthTopLeft,
+          emotions: '20',
+          color: '#C5F1D7',
+        },
+        {
+          chakraName: lng === 'ua' ? 'Маніпура' : 'Манипура',
+          physics: center2,
+          energy: center2,
+          emotions: '20',
+          color: '#F7F9A1',
+        },
+        {
+          chakraName: lng === 'ua' ? 'Свадхістана' : 'Свадхистана',
+          physics: bottomLeft3,
+          energy: bottomRight3,
+          emotions: '20',
+          color: '#FCDCAC',
+        },
+        {
+          chakraName: 'Муладхара',
+          physics: bottomLeft1,
+          energy: bottomRight1,
+          emotions: '20',
+          color: '#FFB7B7',
+        },
+      ],
+    },
+    {
       id: 2,
       cardName: lng === 'ua' ? 'Цілісна карта здоров’я' : 'Целостная карта здоровья',
       columnName:
@@ -681,12 +736,15 @@ export const getHealthInfo = (info, lng) => {
   list.forEach(card => addTipsToHealthTable(card.chakraList, lng));
 
   list[0].chakraList.forEach((element, index) => {
-    list[1].chakraList[index].energy = element.emotions;
-    list[1].chakraList[index].physics = integralEmotionList[index];
-    list[1].chakraList[index].emotions = checkNum(
-      list[1].chakraList[index].physics + list[1].chakraList[index].energy
+    list[2].chakraList[index].energy = element.emotions;
+    list[2].chakraList[index].physics = integralEmotionList[index];
+    list[2].chakraList[index].emotions = checkNum(
+      list[2].chakraList[index].physics + list[2].chakraList[index].energy
     );
   });
+  list[1].chakraList.forEach(
+    (element, index) => (element.emotions = list[2].chakraList[index].physics)
+  );
   return list;
 };
 
@@ -709,6 +767,23 @@ export const authorHealthCard = (info, lng) => {
     bottom1,
     innerBottom2,
     innerRight2,
+    topLeft1,
+    topLeft2,
+    topLeft3,
+    healthTopLeft,
+    center2,
+    healthBottomRight,
+    bottomRight3,
+    bottomRight2,
+    bottomRight1,
+    topRight1,
+    topRight2,
+    topRight3,
+    healthTopRight,
+    healthBottomLeft,
+    bottomLeft3,
+    bottomLeft2,
+    bottomLeft1,
   } = info;
 
   const personalEmotionList = [
@@ -726,82 +801,187 @@ export const authorHealthCard = (info, lng) => {
     return accum + +key;
   }, 0);
 
-  const list = {
-    id: 3,
-    cardName: lng === 'ua' ? 'Особиста карта здоров’я' : 'Личная карта здоровья',
-    columnName: lng === 'ua' ? ['Енергія', 'Фізика', 'Емоції'] : ['Энергия', 'Физика', 'Эмоции'],
-    chakraList: [
-      {
-        chakraName: 'Душа',
-        physics: day,
-        energy: month,
-        emotions: '20',
-        color: '#FEE1FF',
-      },
-      {
-        chakraName: 'Сахасрара',
-        physics: left2,
-        energy: top2,
-        emotions: '20',
-        color: '#DCB9FF',
-      },
-      {
-        chakraName: 'Аджна',
-        physics: left3,
-        energy: top3,
-        emotions: '20',
-        color: '#B9C0FF',
-      },
-      {
-        chakraName: lng === 'ua' ? 'Вішудха' : 'Вишудха',
-        physics: innerLeft2,
-        energy: innerTop2,
-        emotions: '20',
-        color: '#C1F4FF',
-      },
-      {
-        chakraName: 'Анахата',
-        physics: center,
-        energy: center,
-        emotions: '20',
-        color: '#C5F1D7',
-      },
-      {
-        chakraName: lng === 'ua' ? 'Маніпура' : 'Манипура',
-        physics: innerRight2,
-        energy: innerBottom2,
-        emotions: '20',
-        color: '#F7F9A1',
-      },
-      {
-        chakraName: lng === 'ua' ? 'Свадхістана' : 'Свадхистана',
-        physics: right3,
-        energy: bottom3,
-        emotions: '20',
-        color: '#FCDCAC',
-      },
-      {
-        chakraName: 'Муладхара',
-        physics: right2,
-        energy: bottom2,
-        emotions: '20',
-        color: '#FFB7B7',
-      },
-      {
-        chakraName: 'Земля',
-        physics: year,
-        energy: bottom1,
-        emotions: '20',
-        color: '#e1b095',
-      },
-    ],
-    total: checkNum(totalPers),
-  };
+  const list = [
+    {
+      cardName: lng === 'ua' ? 'Особиста карта здоров’я' : 'Личная карта здоровья',
+      columnName: lng === 'ua' ? ['Енергія', 'Фізика', 'Емоції'] : ['Энергия', 'Физика', 'Эмоции'],
+      chakraList: [
+        {
+          chakraName: 'Душа',
+          physics: day,
+          energy: month,
+          color: '#FEE1FF',
+        },
+        {
+          chakraName: 'Сахасрара',
+          physics: left2,
+          energy: top2,
+          color: '#DCB9FF',
+        },
+        {
+          chakraName: 'Аджна',
+          physics: left3,
+          energy: top3,
+          color: '#B9C0FF',
+        },
+        {
+          chakraName: lng === 'ua' ? 'Вішудха' : 'Вишудха',
+          physics: innerLeft2,
+          energy: innerTop2,
+          color: '#C1F4FF',
+        },
+        {
+          chakraName: 'Анахата',
+          physics: center,
+          energy: center,
+          color: '#C5F1D7',
+        },
+        {
+          chakraName: lng === 'ua' ? 'Маніпура' : 'Манипура',
+          physics: innerRight2,
+          energy: innerBottom2,
+          color: '#F7F9A1',
+        },
+        {
+          chakraName: lng === 'ua' ? 'Свадхістана' : 'Свадхистана',
+          physics: right3,
+          energy: bottom3,
+          color: '#FCDCAC',
+        },
+        {
+          chakraName: 'Муладхара',
+          physics: right2,
+          energy: bottom2,
+          color: '#FFB7B7',
+        },
+        {
+          chakraName: 'Земля',
+          physics: year,
+          energy: bottom1,
+          color: '#e1b095',
+        },
+      ],
+      total: checkNum(totalPers),
+    },
+    {
+      cardName: lng === 'ua' ? "Родова карта здоров'я" : 'Родовая карта здоровья',
+      columnName: lng === 'ua' ? ['Батько', 'Мати', 'Зцілююча'] : ['Отец', 'Мать', 'Исцеляющая'],
+      chakraList: [
+        {
+          chakraName: 'Душа',
+          physics: topRight1,
+          energy: topLeft1,
+          color: '#FEE1FF',
+        },
+        {
+          chakraName: 'Сахасрара',
+          physics: topRight2,
+          energy: topLeft2,
+          color: '#DCB9FF',
+        },
+        {
+          chakraName: 'Аджна',
+          physics: topRight3,
+          energy: topLeft3,
+          color: '#B9C0FF',
+        },
+        {
+          chakraName: lng === 'ua' ? 'Вішудха' : 'Вишудха',
+          physics: healthTopRight,
+          energy: healthTopLeft,
+          color: '#C1F4FF',
+        },
+        {
+          chakraName: 'Анахата',
+          physics: center2,
+          energy: center2,
+          color: '#C5F1D7',
+        },
+        {
+          chakraName: lng === 'ua' ? 'Маніпура' : 'Манипура',
+          physics: healthBottomLeft,
+          energy: healthBottomRight,
+          color: '#F7F9A1',
+        },
+        {
+          chakraName: lng === 'ua' ? 'Свадхістана' : 'Свадхистана',
+          physics: bottomLeft3,
+          energy: bottomRight3,
+          color: '#FCDCAC',
+        },
+        {
+          chakraName: 'Муладхара',
+          physics: bottomLeft2,
+          energy: bottomRight2,
+          color: '#FFB7B7',
+        },
+        {
+          chakraName: 'Земля',
+          physics: bottomLeft1,
+          energy: bottomRight1,
+          color: '#e1b095',
+        },
+      ],
+    },
+    {
+      cardName: lng === 'ua' ? 'Цілісна карта здоров’я' : 'Целостная карта здоровья',
+      columnName:
+        lng === 'ua' ? ['Особиста', 'Родова', 'Зцілююча'] : ['Личная', 'Родовая', 'Исцеляющая'],
+      chakraList: [
+        {
+          chakraName: 'Душа',
+          color: '#FEE1FF',
+        },
+        {
+          chakraName: 'Сахасрара',
+          color: '#DCB9FF',
+        },
+        {
+          chakraName: 'Аджна',
+          color: '#B9C0FF',
+        },
+        {
+          chakraName: lng === 'ua' ? 'Вішудха' : 'Вишудха',
+          color: '#C1F4FF',
+        },
+        {
+          chakraName: 'Анахата',
+          color: '#C5F1D7',
+        },
+        {
+          chakraName: lng === 'ua' ? 'Маніпура' : 'Манипура',
+          color: '#F7F9A1',
+        },
+        {
+          chakraName: lng === 'ua' ? 'Свадхістана' : 'Свадхистана',
+          color: '#FCDCAC',
+        },
+        {
+          chakraName: 'Муладхара',
+          color: '#FFB7B7',
+        },
+        {
+          chakraName: 'Земля',
+          color: '#e1b095',
+        },
+      ],
+    },
+  ];
+
   personalEmotionList.forEach((element, index) => {
-    list.chakraList[index].emotions = element;
+    list[0].chakraList[index].emotions = element;
   });
 
-  addTipsToHealthTable(list.chakraList, lng);
+  list[1].chakraList.forEach(el => (el.emotions = checkNum(el.physics + el.energy)));
+  list[2].chakraList.forEach((el, index) => {
+    const emotion0 = list[0].chakraList[index].emotions;
+    const emotion1 = list[1].chakraList[index].emotions;
+    el.energy = emotion0;
+    el.physics = emotion1;
+    el.emotions = checkNum(emotion0 + emotion1);
+  });
+
+  list.forEach(card => addTipsToHealthTable(card.chakraList, lng));
   return list;
 };
 

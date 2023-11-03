@@ -12,7 +12,7 @@ import HealthTables from './HealthTables/HealthTables';
 
 const HealthMatrix = () => {
   const { isGenerated } = useMatrix();
-  const [cardType, setCardType] = useState(3);
+  const [cardType, setCardType] = useState(2);
 
   return (
     <>
@@ -25,7 +25,7 @@ const HealthMatrix = () => {
         justifyContent="space-evenly"
       >
         <MatrixGraph
-          matrix={cardType === 3 ? AuthorMatrix : Matrix}
+          matrix={cardType === 2 ? AuthorMatrix : Matrix}
           hideInner={true}
           hideBalance={true}
         />

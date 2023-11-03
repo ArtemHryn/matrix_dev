@@ -18,7 +18,7 @@ const btnGradientActive = 'linear-gradient(180deg, #765D90 5.73%, rgba(198, 106,
 const HealthTables = ({ setCardType, cardType }) => {
   const { i18n, t } = useTranslation('calc');
   const [list, setList] = useState([]);
-  const [authorMethod, setAuthorMethod] = useState({});
+  const [authorMethod, setAuthorMethod] = useState([]);
 
   const { matrixData } = useMatrix();
 
@@ -46,25 +46,22 @@ const HealthTables = ({ setCardType, cardType }) => {
           {t('healthCardTypePersonal')}
         </SetCardTypeBtn>
         <SetCardTypeBtn
-          color={cardType === 2 ? 'white' : null}
-          bg={cardType === 2 ? '#765D90' : null}
-          onClick={() => setCardType(2)}
-        >
-          {t('healthCardTypeHolistic')}
-        </SetCardTypeBtn>
-        <SetCardTypeBtn
           width={['80%']}
-          color={cardType === 3 ? 'white' : null}
-          background={cardType === 3 ? btnGradientActive : btnGradient}
-          onClick={() => setCardType(3)}
+          color={cardType === 2 ? 'white' : null}
+          background={cardType === 2 ? btnGradientActive : btnGradient}
+          onClick={() => setCardType(2)}
         >
           {t('healthAuthor')} INTEGRITY*
         </SetCardTypeBtn>
       </Box>
-      {list.map(card => (
-        <HealthCard key={card.cardName} card={card} cardType={cardType} />
-      ))}
-      {authorMethod.id === cardType && (
+      {cardType === 1 && (
+        <Box display="flex" flexDirection="column" gridGap={['10px', '20px', '40px']}>
+          {list.map(card => (
+            <HealthCard key={card.cardName} card={card} />
+          ))}
+        </Box>
+      )}
+      {cardType === 2 && (
         <>
           <Box display="flex" flexDirection="column" gridGap={['10px']} my={['20px']}>
             <Box
@@ -85,7 +82,11 @@ const HealthTables = ({ setCardType, cardType }) => {
               </AuthorLessonLink>
             </Box>
           </Box>
-          <HealthCard card={authorMethod} cardType={authorMethod.id} />
+          <Box display="flex" flexDirection="column" gridGap={['10px', '20px', '40px']}>
+            {authorMethod.map(table => (
+              <HealthCard card={table} key={table.cardName} />
+            ))}
+          </Box>
           <WarningText as="p">
             <Trans i18nKey="healthAuthorWarning1" ns="calc">
               <Warning>ВНИМАНИЕ!</Warning> Система "INTEGRITY" является разработкой команды

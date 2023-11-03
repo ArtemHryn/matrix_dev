@@ -29,7 +29,7 @@ export const App = () => {
             <Route path="personal" element={<PersonalMatrix />} />
             <Route path="compatibility" element={<CompatibilityMatrix />} />
             <Route path="deep_calc" element={<DeepMatrix />}>
-              <Route index element={<Navigate to="generic" />} />
+              <Route index element={<Navigate to="parents_and_children" />} />
               <Route path="generic" element={<GenericPageCalc />} />
               <Route path="rising_star" element={<RisingStarPageCalc />} />
               <Route path="parents_and_children" element={<ParentsAndChildrenPageCalc />} />

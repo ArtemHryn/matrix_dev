@@ -37,9 +37,8 @@ const TwoColumnTable = ({ tableInfo }) => {
             bg={index % 2 !== 0 && '#b49bd145'}
           >
             <ColumnName flex={2} borderLeft={'none'} color="#000" fontFamily="digits">
-              {index === keys.length - 1 ? 1 : index + 2} &nbsp; <HiOutlineArrowNarrowRight />{' '}
-              &nbsp;
-              {index + 1}
+              {index + 1} &nbsp; <HiOutlineArrowNarrowRight /> &nbsp;
+              {index === keys.length - 1 ? 1 : index + 2}
             </ColumnName>
             <ColumnName flex={5} color="#000" fontFamily="digits">
               {row}

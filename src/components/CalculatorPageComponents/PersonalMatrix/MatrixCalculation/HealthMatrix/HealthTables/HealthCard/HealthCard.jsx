@@ -9,56 +9,54 @@ import {
 } from '../../HealthMatrix.styled';
 import HealthCardElement from './HealthCardElement';
 
-const HealthCard = ({ card, cardType }) => {
+const HealthCard = ({ card }) => {
   const { t } = useTranslation('calc');
-  const { cardName, columnName, chakraList, total, id, partners = false } = card;
+
+  if (Object.keys(card).length === 0) return null;
+
+  const { cardName, columnName, chakraList, total, partners = false } = card;
   return (
     <>
-      {cardType === id && (
-        <Box>
-          <CardName>{cardName}</CardName>
-          <Box
-            display="flex"
-            bg="rgba(255, 255, 255, 0.7)"
-            border={['0.5px solid #72499B']}
-            borderRadius={['7px', '13px']}
-            mb={['3px', '6px']}
-          >
-            <ChakraTableTitle flex="2">Чакра</ChakraTableTitle>
-            {columnName.map((column, index) => (
-              <ChakraTableTitle
-                key={column}
-                border={index === columnName.length - 1 ? ['none', 'none', 'none'] : null}
-              >
-                {column}
-              </ChakraTableTitle>
-            ))}
-          </Box>
-          <List>
-            {chakraList.map((element, index) => (
-              <HealthCardElement
-                key={element.chakraName}
-                index={index}
-                partners={partners}
-                length={chakraList.length}
-                chakraElement={element}
-                total={total}
-              />
-            ))}
-            {total && (
-              <ChakraElement border={['none', 'none', 'none']}>
-                <ChakraText fontFamily="bona">{t('result')}</ChakraText>
-                <ChakraText
-                  border={['none', 'none', 'none']}
-                  minWidth={['225px', '423px', '570px']}
-                >
-                  {total}
-                </ChakraText>
-              </ChakraElement>
-            )}
-          </List>
+      <Box>
+        <CardName>{cardName}</CardName>
+        <Box
+          display="flex"
+          bg="rgba(255, 255, 255, 0.7)"
+          border={['0.5px solid #72499B']}
+          borderRadius={['7px', '13px']}
+          mb={['3px', '6px']}
+        >
+          <ChakraTableTitle flex="2">Чакра</ChakraTableTitle>
+          {columnName.map((column, index) => (
+            <ChakraTableTitle
+              key={column}
+              border={index === columnName.length - 1 ? ['none', 'none', 'none'] : null}
+            >
+              {column}
+            </ChakraTableTitle>
+          ))}
         </Box>
-      )}
+        <List>
+          {chakraList.map((element, index) => (
+            <HealthCardElement
+              key={element.chakraName}
+              index={index}
+              partners={partners}
+              length={chakraList.length}
+              chakraElement={element}
+              total={total}
+            />
+          ))}
+          {total && (
+            <ChakraElement border={['none', 'none', 'none']}>
+              <ChakraText fontFamily="bona">{t('result')}</ChakraText>
+              <ChakraText border={['none', 'none', 'none']} minWidth={['225px', '423px', '570px']}>
+                {total}
+              </ChakraText>
+            </ChakraElement>
+          )}
+        </List>
+      </Box>
     </>
   );
 };
