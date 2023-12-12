@@ -85,9 +85,9 @@ const Partners = () => {
               </SetCardTypeBtn>
             </Box>
 
-            {partnersHealthCard.map(table => (
-              <HealthCard key={table.id} card={table} cardType={cardType} />
-            ))}
+            {partnersHealthCard.length !== 0 && (
+              <HealthCard card={cardType === 1 ? partnersHealthCard[0] : partnersHealthCard[1]} />
+            )}
           </Box>
           <Box display={[null, null, 'flex']} justifyContent="space-between" gridGap="40px">
             {partnersMatrixData.map((partner, index) => (

@@ -20,7 +20,6 @@ const DeepTables = () => {
       return;
     }
     const result = getGenericTablesData(matrixData, i18n.language);
-    console.log(result);
     setTablesData(result);
   }, [i18n.language, matrixData]);
   return (

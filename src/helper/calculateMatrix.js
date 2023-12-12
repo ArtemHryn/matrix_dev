@@ -1016,7 +1016,7 @@ export const partnersAuthorHealthCard = (info, lng) => {
       'Пара',
     ],
   };
-  list.chakraList = healthOfEachPartner[0].chakraList.map(
+  list.chakraList = healthOfEachPartner[0][0].chakraList.map(
     ({ chakraName, physics, energy, emotions, color, tip }) => ({
       chakraName,
       color,
@@ -1024,7 +1024,7 @@ export const partnersAuthorHealthCard = (info, lng) => {
       partner1: ` ${energy} - ${physics} -  ${emotions}`,
     })
   );
-  healthOfEachPartner[1].chakraList.forEach(
+  healthOfEachPartner[1][0].chakraList.forEach(
     ({ physics, energy, emotions }, index) =>
       (list.chakraList[index].partner2 = `${energy} - ${physics} -  ${emotions}`)
   );
