@@ -7,3 +7,4 @@ export { default as Balances } from './Balances.jsx';
 export { default as InnerBox } from './InnerBox.jsx';
 export { default as Health } from './Health.jsx';
 export { default as TopElements } from './TopElements.jsx';
+export { default as RisingStar } from './RisingStar.jsx';

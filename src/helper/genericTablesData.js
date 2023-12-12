@@ -9,8 +9,8 @@ const getKeys = (source, holistic = false) => {
       secondKey = arcane.column3;
     }
     if (index === array.length - 1) {
-      firstKey = array[0].column3;
-      secondKey = arcane.column3;
+      secondKey = array[0].column3;
+      firstKey = arcane.column3;
     }
     if (holistic) {
       const [, , el3C1] = firstKey.split(' - ');
@@ -106,23 +106,23 @@ const getFatherArcanesList = info => {
       column2: `${innerLeft2} - ${healthTopLeft} - ${fatherEarth4}`,
     },
     {
-      column1: `${center} - ${center2} - ${checkNum(center2 + center2)}`,
-      column2: `${center} - ${center2} - ${checkNum(center2 + center2)}`,
+      column1: `${center} - ${center2} - ${checkNum(center2 + center)}`,
+      column2: `${center} - ${center2} - ${checkNum(center2 + center)}`,
     },
     {
-      column1: `${innerBottom2} - ${healthBottomRight} - ${fatherSpirit6}`,
+      column1: `${healthBottomRight} - ${innerBottom2} - ${fatherSpirit6}`,
       column2: `${innerRight2} - ${healthBottomRight} - ${fatherEarth6}`,
     },
     {
-      column1: `${bottom3} - ${bottomRight3} - ${fatherSpirit7}`,
+      column1: `${bottomRight3} - ${bottom3} - ${fatherSpirit7}`,
       column2: `${right3} - ${bottomRight3} - ${fatherEarth7}`,
     },
     {
-      column1: `${bottom2} - ${bottomRight2} - ${fatherSpirit8}`,
+      column1: `${bottomRight2} - ${bottom2} - ${fatherSpirit8}`,
       column2: `${right2} - ${bottomRight2} - ${fatherEarth8}`,
     },
     {
-      column1: `${bottom1} - ${bottomRight1} - ${fatherSpirit9}`,
+      column1: `${bottomRight1} - ${bottom1} - ${fatherSpirit9}`,
       column2: `${year} - ${bottomRight1} - ${fatherEarth9}`,
     },
   ];
@@ -194,8 +194,8 @@ const getMotherArcanesList = info => {
       column2: `${innerRight2} - ${healthTopRight} - ${motherEarth4}`,
     },
     {
-      column1: `${center} - ${center2} - ${checkNum(center2 + center2)}`,
-      column2: `${center} - ${center2} - ${checkNum(center2 + center2)}`,
+      column1: `${center} - ${center2} - ${checkNum(center + center2)}`,
+      column2: `${center} - ${center2} - ${checkNum(center + center2)}`,
     },
     {
       column1: `${innerBottom2} - ${healthBottomLeft} - ${motherSpirit6}`,

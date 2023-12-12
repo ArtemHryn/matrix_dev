@@ -20,6 +20,8 @@ const DataInputDemon = ({ setIsFullOverlap }) => {
     { name: '13 код', code: '13' },
     { name: '14 код', code: '14' },
     { name: '15 код', code: '15' },
+    { name: '4 $', code: 'm' },
+    { name: '3 $', code: 'w' },
   ];
   const {
     register,

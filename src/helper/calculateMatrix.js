@@ -20,7 +20,13 @@ export function checkNum(num) {
   return +num;
 }
 
-export function allData(date, isGenerated, calCanter2 = true, isGeneric = false) {
+export function allData(
+  date,
+  isGenerated,
+  calCanter2 = true,
+  isGeneric = false,
+  isRisingStar = false
+) {
   const data = {
     ...date,
   };
@@ -101,6 +107,20 @@ export function allData(date, isGenerated, calCanter2 = true, isGeneric = false)
   data.healthTopRight = checkNum(data.center2 + data.topRight3);
   data.healthBottomRight = checkNum(data.center2 + data.bottomRight3);
   data.healthBottomLeft = checkNum(data.center2 + data.bottomLeft3);
+
+  if (isRisingStar) {
+    data.risingStarTop = checkNum(data.topLeft1 + data.topRight1);
+    data.risingStarLeft = checkNum(data.topLeft1 + data.bottomLeft1);
+    data.risingStarBottom = checkNum(data.bottomRight1 + data.bottomLeft1);
+    data.risingStarRight = checkNum(data.bottomRight1 + data.topRight1);
+    data.manCenter = checkNum(data.bottomLeft1 + data.bottomRight1 + data.month);
+    data.womanCenter = checkNum(data.topLeft1 + data.topRight1 + data.bottom1);
+    data.groundCenter = checkNum(data.topLeft1 + data.bottomLeft1 + data.year);
+    data.honorAndGloryCenter = checkNum(data.topRight1 + data.bottomRight1 + data.day);
+    data.risingStarSky = checkNum(data.manCenter + data.womanCenter);
+    data.risingStarEarth = checkNum(data.groundCenter + data.honorAndGloryCenter);
+    data.risingStarCenter = checkNum(data.risingStarEarth + data.risingStarSky);
+  }
 
   if (isGeneric) {
     //father spirit line in deep generic matrix
