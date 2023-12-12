@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/818.fbb4dd61.chunk.js","mappings":"yHAQA,UAR2B,WACzB,OACE,kBAIH,C","sources":["pages/RisingStarPageCalc.jsx"],"sourcesContent":["const RisingStarPageCalc = () => {\n  return (\n    <div>\n      \n    </div>\n  )\n}\n\nexport default RisingStarPageCalc\n"],"names":[],"sourceRoot":""}
