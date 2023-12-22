@@ -17,6 +17,7 @@ import {
 } from './MatrixElements/Sides';
 import PeriodCircle from '../../PeriodMatrix/PeriodCircle/PeriodCircle';
 import GenericLines from './MatrixElements/Sides/GenericLines';
+import LightGate from './MatrixElements/Sides/LightGate';
 
 const MatrixGraph = ({
   matrix: Matrix,
@@ -29,14 +30,16 @@ const MatrixGraph = ({
   hideHealth,
   hideInnerLines,
   isRisingStar,
+  isLightGate,
 }) => {
   const { setMatrixData, isGenerated, date, setAgeList, matrixData } = useMatrix();
+
   useEffect(() => {
-    const result = allData(date, isGenerated, true, isGeneric, isRisingStar);
+    const result = allData({ date, isGenerated, isGeneric, isRisingStar, isLightGate });
     const ageResult = getPeriod(result);
     setMatrixData(result);
     setAgeList(ageResult);
-  }, [date, isGenerated, isGeneric, isRisingStar, setAgeList, setMatrixData]);
+  }, [date, isGenerated, isGeneric, isRisingStar, setAgeList, setMatrixData, isLightGate]);
 
   return (
     <Box>
@@ -56,6 +59,7 @@ const MatrixGraph = ({
         {!hideInner && <InnerBox matrixData={matrixData} />}
         {showPeriodCircle && <PeriodCircle matrixData={matrixData} />}
         {isGeneric && <GenericLines matrixData={matrixData} />}
+        {isLightGate && <LightGate matrixData={matrixData} />}
       </Box>
     </Box>
   );

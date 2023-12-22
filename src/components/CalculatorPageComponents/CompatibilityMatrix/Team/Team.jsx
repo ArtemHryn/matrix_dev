@@ -21,7 +21,7 @@ const Team = () => {
     }
     const members = [];
     partnersDate.forEach((element, index) => {
-      const memberInfo = allData(element, false);
+      const memberInfo = allData({date: element, isGenerated: false});
       memberInfo.name = element.name;
       memberInfo.order = `${t('tableMatrix')} ${index + 1}`;
       members.push(memberInfo);

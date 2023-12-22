@@ -21,7 +21,7 @@ const ParentsAndChildrenPageCalc = () => {
     }
     const partners = [];
     partnersDate.forEach((element, index) => {
-      const partnerInfo = allData(element, element.isGenerated);
+      const partnerInfo = allData({date: element, isGenerated: element.isGenerated});
       partnerInfo.order = index === 0 ? t('motherMatrixTitle') : t('childMatrixTitle');
       partnerInfo.table =
         index === 0

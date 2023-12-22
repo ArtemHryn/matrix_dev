@@ -74,17 +74,17 @@ const womanMoney = {
 export const getStaticDemonMatrix = number => {
   switch (number) {
     case '12':
-      return allData(demon12, true);
+      return allData({ date: demon12, isGenerated: true });
     case '13':
-      return allData(demon13, true);
+      return allData({ date: demon13, isGenerated: true });
     case '14':
-      return allData(demon14, true);
+      return allData({ date: demon14, isGenerated: true });
     case '15':
-      return allData(demon15, true);
+      return allData({ date: demon15, isGenerated: true });
     case 'm':
-      return allData(manMoney, true);
+      return allData({ date: manMoney, isGenerated: true });
     case 'w':
-      return allData(womanMoney, true);
+      return allData({ date: womanMoney, isGenerated: true });
     default:
       break;
   }

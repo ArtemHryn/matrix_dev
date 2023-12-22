@@ -20,13 +20,14 @@ export function checkNum(num) {
   return +num;
 }
 
-export function allData(
+export function allData({
   date,
   isGenerated,
   calCanter2 = true,
-  isGeneric = false,
-  isRisingStar = false
-) {
+  isGeneric,
+  isRisingStar,
+  isLightGate,
+}) {
   const data = {
     ...date,
   };
@@ -162,6 +163,53 @@ export function allData(
     data.motherEarth7 = checkNum(data.left3 + data.bottomLeft3);
     data.motherEarth8 = checkNum(data.left2 + data.bottomLeft2);
     data.motherEarth9 = checkNum(data.day + data.bottomLeft1);
+  }
+
+  if (isLightGate) {
+    //main
+    data.lightLeft1 = checkNum(data.day + data.left2);
+    data.lightLeft2 = checkNum(data.left2 + data.left3);
+    data.lightRight2 = checkNum(data.right2 + data.year);
+    data.lightRight1 = checkNum(data.right3 + data.right2);
+    data.lightTop1 = checkNum(data.month + data.top2);
+    data.lightTop2 = checkNum(data.top2 + data.top3);
+    data.lightBottom2 = checkNum(data.bottom3 + data.bottom2);
+    data.lightBottom1 = checkNum(data.bottom2 + data.bottom1);
+    //additional
+    ////Father
+    data.lightTopLeft1 = checkNum(data.topLeft1 + data.topLeft2);
+    data.lightTopLeft2 = checkNum(data.topLeft2 + data.topLeft3);
+    data.lightBottomRight1 = checkNum(data.bottomRight1 + data.bottomRight2);
+    data.lightBottomRight2 = checkNum(data.bottomRight2 + data.bottomRight3);
+
+    //mother
+    data.lightTopRight1 = checkNum(data.topRight1 + data.topRight2);
+    data.lightTopRight2 = checkNum(data.topRight2 + data.topRight3);
+    data.lightBottomLeft1 = checkNum(data.bottomLeft1 + data.bottomLeft2);
+    data.lightBottomLeft2 = checkNum(data.bottomLeft2 + data.bottomLeft3);
+
+    const circle1 =
+      checkNum(data.day + data.topLeft1) +
+      checkNum(data.topLeft1 + data.month) +
+      checkNum(data.month + data.topRight1) +
+      checkNum(data.topRight1 + data.year) +
+      checkNum(data.year + data.bottomRight1) +
+      checkNum(data.bottomRight1 + data.bottom1) +
+      checkNum(data.bottom1 + data.bottomLeft1) +
+      checkNum(data.bottomLeft1 + data.day);
+
+    const circle2 =
+      checkNum(data.left3 + data.topLeft3) +
+      checkNum(data.topLeft3 + data.top3) +
+      checkNum(data.top3 + data.topRight3) +
+      checkNum(data.topRight3 + data.right3) +
+      checkNum(data.right3 + data.bottomRight3) +
+      checkNum(data.bottomRight3 + data.bottom3) +
+      checkNum(data.bottom3 + data.bottomLeft3) +
+      checkNum(data.bottomLeft3 + data.left3);
+
+    data.outCircle = checkNum(circle1);
+    data.innerCircle = checkNum(circle2);
   }
 
   return data;
@@ -1109,7 +1157,7 @@ export const getCompatData = (partners, isFullOverlap) => {
     return acc;
   }, {});
   delete result.order;
-  return isFullOverlap ? result : allData(result, true, false);
+  return isFullOverlap ? result : allData({ date: result, isGenerated: true, calCanter2: false });
 };
 
 export const getPartnersChakra = (info, lng) => {

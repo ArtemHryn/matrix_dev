@@ -24,7 +24,7 @@ const Demon = () => {
       return;
     }
     const result = [
-      allData(partnersDate[0], false),
+      allData({date: partnersDate[0]}),
       getStaticDemonMatrix(partnersDate[1].demonMatrix),
     ];
     result[0].order = `${t('tableMatrix')} 1`;
