@@ -82,5 +82,6 @@ const calcUa = {
   instructionModalTitle2: 'Вебінари про систему "INTEGRITY"',
   instructionModalBtn1: 'купити інструкцію',
   instructionModalBtn2: 'Дивитися безкоштовно',
+  deepLightGateBtn: 'Зцілення',
 };
 export default calcUa;

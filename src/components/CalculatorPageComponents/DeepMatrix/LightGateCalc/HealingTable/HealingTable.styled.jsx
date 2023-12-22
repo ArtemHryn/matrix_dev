@@ -62,6 +62,7 @@ export const HealingRowNameListEl = styled.li`
 `;
 
 export const HealingRowName = styled.p`
+  font-style: italic;
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     font-size: 22px;
   }

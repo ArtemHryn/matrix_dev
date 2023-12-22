@@ -81,5 +81,6 @@ const calcRu = {
   instructionModalTitle2: 'Вебинары по системе "INTEGRITY"',
   instructionModalBtn1: 'купить инструкцию',
   instructionModalBtn2: 'Смотреть бесплатно',
+  deepLightGateBtn: 'Исцеление',
 };
 export default calcRu;

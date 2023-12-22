@@ -171,7 +171,7 @@ export const getLightGate = (info, lng) => {
   ];
 
   const healing = {
-    tablesName: lng === 'ua' ? 'Зняття проблематики з долі' : 'Снятие проблематики с судьбы',
+    tablesName: lng === 'ua' ? 'Корекція долі' : 'Коррекция судьбы',
     tables: [
       {
         rowName: [
@@ -181,8 +181,8 @@ export const getLightGate = (info, lng) => {
           'Ключ',
         ],
         keys: getLightGateHealing(
-          [day, left2, left3, lightLeft1, lightLeft2],
-          [year, right2, right3, lightRight1, lightRight2]
+          [day, left3, left2, lightLeft1, lightLeft2],
+          [year, right3, right2, lightRight2, lightRight1]
         ),
       },
       {
@@ -193,8 +193,8 @@ export const getLightGate = (info, lng) => {
           'Ключ',
         ],
         keys: getLightGateHealing(
-          [topLeft1, topLeft2, topLeft3, lightTopLeft1, lightTopLeft2],
-          [bottomRight1, bottomRight2, bottomRight3, lightBottomLeft1, lightBottomLeft2]
+          [topLeft1, topLeft3, topLeft2, lightTopLeft1, lightTopLeft2],
+          [bottomRight1, bottomRight3, bottomRight2, lightBottomRight1, lightBottomRight2]
         ),
       },
       {
@@ -205,8 +205,8 @@ export const getLightGate = (info, lng) => {
           'Ключ',
         ],
         keys: getLightGateHealing(
-          [month, top2, top3, lightTop1, lightTop2],
-          [bottom1, bottom2, bottom3, lightBottom1, lightBottom2]
+          [month, top3, top2, lightTop1, lightTop2],
+          [bottom1, bottom3, bottom2, lightBottom1, lightBottom2]
         ),
       },
       {
@@ -217,8 +217,8 @@ export const getLightGate = (info, lng) => {
           'Ключ',
         ],
         keys: getLightGateHealing(
-          [topRight1, topRight2, topRight3, lightTopRight1, lightTopRight2],
-          [bottomLeft1, bottomLeft2, bottomLeft3, lightBottomLeft1, lightBottomLeft2]
+          [topRight1, topRight3, topRight2, lightTopRight1, lightTopRight2],
+          [bottomLeft1, bottomLeft3, bottomLeft2, lightBottomLeft1, lightBottomLeft2]
         ),
       },
     ],

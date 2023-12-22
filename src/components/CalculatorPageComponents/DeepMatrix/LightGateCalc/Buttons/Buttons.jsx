@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import {
   BtnItem,
   BtnList,
@@ -5,6 +6,7 @@ import {
 import { Button } from './Buttons.styled';
 
 const Buttons = ({ setTable, table }) => {
+  const { t } = useTranslation('calc');
   return (
     <BtnList>
       <BtnItem>
@@ -14,7 +16,7 @@ const Buttons = ({ setTable, table }) => {
       </BtnItem>
       <BtnItem>
         <Button onClick={() => setTable(2)} className={table === 2 ? 'active' : ''}>
-          Исцеление
+          {t('deepLightGateBtn')}
         </Button>
       </BtnItem>
     </BtnList>

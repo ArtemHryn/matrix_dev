@@ -35,14 +35,14 @@ const HealingTableEl = ({ table }) => {
             opacity: 1,
             y: 0,
             pointerEvents: 'all',
-            transition: { duration: 0.5 },
+            transition: { duration: 0.5, ease: 'easeInOut' },
           },
           hidden: {
             maxHeight: '0',
             opacity: 0,
             y: -10,
             pointerEvents: 'none',
-            transition: { duration: 0.5 },
+            transition: { duration: 0.5, ease: 'easeInOut' },
           },
         }}
         initial="hidden"
