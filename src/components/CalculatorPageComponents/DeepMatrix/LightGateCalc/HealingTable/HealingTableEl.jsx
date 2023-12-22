@@ -34,7 +34,7 @@ const HealingTableEl = ({ table }) => {
             maxHeight: '1000px',
             opacity: 1,
             y: 0,
-            vpointerEvents: 'all',
+            pointerEvents: 'all',
             transition: { duration: 0.5 },
           },
           hidden: {
