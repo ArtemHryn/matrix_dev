@@ -7,7 +7,7 @@ import { useMatrix } from 'pages/Calculator';
 import { MatrixNumber } from '../Partners.styled';
 import FullOverlapCheckBox from '../../FullOverlapCheckBox/FullOverlapCheckBox';
 
-const DataInput = ({ setIsFullOverlap }) => {
+const DataInput = ({ setIsFullOverlap, setIsMethod2023 }) => {
   const { setPartnersDate, setShowMatrix } = useMatrix();
   const { t } = useTranslation('calc');
   const {
@@ -46,9 +46,9 @@ const DataInput = ({ setIsFullOverlap }) => {
         name: element.name,
       });
     });
-
     setPartnersDate(partnersInfo);
     setShowMatrix(true);
+    setIsMethod2023(data.method2023);
     setIsFullOverlap(data.isFullOverlap);
     document.activeElement.blur();
   };
@@ -71,7 +71,7 @@ const DataInput = ({ setIsFullOverlap }) => {
           </Box>
         ))}
       </Box>
-      <FullOverlapCheckBox register={register} />
+      <FullOverlapCheckBox register={register} setValue={setValue} control={control } />
       <SubmitBtn
         type="submit"
         whileHover={{ scale: 1.05 }}

@@ -9,6 +9,7 @@ import { useTranslation } from 'react-i18next';
 
 const Team = () => {
   const { partnersDate, showMatrix } = useMatrix();
+  const [isMethod2023, setIsMethod2023] = useState(false);
 
   const [resultData, setResultData] = useState();
   const [teamMatrixData, setTeamMatrixData] = useState([]);
@@ -21,7 +22,7 @@ const Team = () => {
     }
     const members = [];
     partnersDate.forEach((element, index) => {
-      const memberInfo = allData({date: element, isGenerated: false});
+      const memberInfo = allData({ date: element, isGenerated: false });
       memberInfo.name = element.name;
       memberInfo.order = `${t('tableMatrix')} ${index + 1}`;
       members.push(memberInfo);
@@ -30,12 +31,12 @@ const Team = () => {
   }, [partnersDate, t]);
 
   useEffect(() => {
-    setResultData(getCompatData(teamMatrixData, isFullOverlap));
-  }, [isFullOverlap, teamMatrixData]);
+    setResultData(getCompatData(teamMatrixData, isFullOverlap, isMethod2023));
+  }, [isFullOverlap, isMethod2023, teamMatrixData]);
 
   return (
     <Box>
-      <DataInput setIsFullOverlap={setIsFullOverlap} />
+      <DataInput setIsFullOverlap={setIsFullOverlap} setIsMethod2023={setIsMethod2023} />
       {showMatrix && (
         <>
           <ResultMatrix resultData={resultData} />

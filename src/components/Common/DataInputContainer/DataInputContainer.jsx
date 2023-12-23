@@ -9,7 +9,7 @@ import FullOverlapCheckBox from 'components/CalculatorPageComponents/Compatibili
 const gradient =
   'linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(249, 237, 255, 0.3) 100%)';
 
-const DataInputContainer = ({ handleSubmit, children, register }) => {
+const DataInputContainer = ({ handleSubmit, children, register, control, setValue }) => {
   const { t } = useTranslation('calc');
 
   return (
@@ -26,7 +26,7 @@ const DataInputContainer = ({ handleSubmit, children, register }) => {
         <BoxTitle width="100%">{t('personalMatrixBoxTitle')}</BoxTitle>
         {children}
       </Box>
-      <FullOverlapCheckBox register={register} />
+      <FullOverlapCheckBox register={register} setValue={setValue} control={control} />
 
       <SubmitBtn
         type="submit"

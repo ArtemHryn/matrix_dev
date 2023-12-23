@@ -12,6 +12,7 @@ import { getStaticDemonMatrix } from 'helper/demonCalculator';
 
 const Demon = () => {
   const [isFullOverlap, setIsFullOverlap] = useState(false);
+  const [isMethod2023, setIsMethod2023] = useState(false);
   const [demonMatrix, setDemonMatrix] = useState([]);
   const { partnersDate, showMatrix } = useMatrix();
 
@@ -24,7 +25,7 @@ const Demon = () => {
       return;
     }
     const result = [
-      allData({date: partnersDate[0]}),
+      allData({ date: partnersDate[0] }),
       getStaticDemonMatrix(partnersDate[1].demonMatrix),
     ];
     result[0].order = `${t('tableMatrix')} 1`;
@@ -35,12 +36,12 @@ const Demon = () => {
   }, [partnersDate, t]);
 
   useEffect(() => {
-    setResultData(getCompatData(demonMatrix, isFullOverlap));
-  }, [demonMatrix, isFullOverlap]);
+    setResultData(getCompatData(demonMatrix, isFullOverlap, isMethod2023));
+  }, [demonMatrix, isFullOverlap, isMethod2023]);
 
   return (
     <Box>
-      <DataInputDemon setIsFullOverlap={setIsFullOverlap} />
+      <DataInputDemon setIsFullOverlap={setIsFullOverlap} setIsMethod2023={setIsMethod2023} />
       {showMatrix && (
         <>
           <ResultMatrix resultData={resultData} />

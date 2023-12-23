@@ -11,7 +11,7 @@ import { Error } from 'components/CalculatorPageComponents/PersonalMatrix/DataIn
 import './input.css';
 import { DropDownLib } from './DataInputDemon.styled';
 
-const DataInputDemon = ({ setIsFullOverlap }) => {
+const DataInputDemon = ({ setIsFullOverlap, setIsMethod2023 }) => {
   const { t } = useTranslation('calc');
   const { setPartnersDate, setShowMatrix } = useMatrix();
 
@@ -50,11 +50,17 @@ const DataInputDemon = ({ setIsFullOverlap }) => {
     setPartnersDate([{ day, month, year, name: data.name }, { demonMatrix: data.demonMatrix }]);
     setShowMatrix(true);
     setIsFullOverlap(data.isFullOverlap);
+    setIsMethod2023(data.method2023);
     document.activeElement.blur();
   };
 
   return (
-    <DataInputContainer handleSubmit={handleSubmit(onSubmitForm)} register={register}>
+    <DataInputContainer
+      handleSubmit={handleSubmit(onSubmitForm)}
+      register={register}
+      setValue={setValue}
+      control={control}
+    >
       <Box display="flex" flexWrap="wrap" gridGap={['6px']}>
         <Input
           type="text"

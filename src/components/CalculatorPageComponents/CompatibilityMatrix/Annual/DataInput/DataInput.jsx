@@ -7,13 +7,14 @@ import { Error } from 'components/CalculatorPageComponents/PersonalMatrix/DataIn
 import { format } from 'date-fns';
 import DataInputContainer from 'components/Common/DataInputContainer/DataInputContainer';
 
-const DataInput = ({ setIsFullOverlap }) => {
+const DataInput = ({ setIsFullOverlap, setIsMethod2023 }) => {
   const { t } = useTranslation('calc');
   const { setPartnersDate, setShowMatrix } = useMatrix();
   const {
     register,
     setValue,
     handleSubmit,
+    control,
     formState: { errors },
   } = useForm({ defaultValues: { year: format(new Date(), 'yyyy') } });
   const onChange = e => {
@@ -38,11 +39,17 @@ const DataInput = ({ setIsFullOverlap }) => {
     ]);
     setShowMatrix(true);
     setIsFullOverlap(data.isFullOverlap);
+    setIsMethod2023(data.method2023);
     document.activeElement.blur();
   };
 
   return (
-    <DataInputContainer handleSubmit={handleSubmit(onSubmitForm)} register={register}>
+    <DataInputContainer
+      handleSubmit={handleSubmit(onSubmitForm)}
+      register={register}
+      setValue={setValue}
+      control={control}
+    >
       <Box display="flex" flexWrap="wrap" gridGap={['6px']}>
         <Input
           type="text"

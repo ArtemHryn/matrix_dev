@@ -23,6 +23,7 @@ const Partners = () => {
   const [partnersMatrixData, setPartnersMatrixData] = useState([]);
   const [partnersHealthCard, setPartnersHealthCard] = useState([]);
   const [isFullOverlap, setIsFullOverlap] = useState(false);
+  const [isMethod2023, setIsMethod2023] = useState(false);
   const { t, i18n } = useTranslation('calc');
 
   const { partnersDate, showMatrix } = useMatrix();
@@ -33,7 +34,7 @@ const Partners = () => {
     }
     const partners = [];
     partnersDate.forEach((element, index) => {
-      const partnerInfo = allData({date: element, isGenerated: element.isGenerated});
+      const partnerInfo = allData({ date: element, isGenerated: element.isGenerated });
       partnerInfo.order = `${t('tableMatrix')} ${index + 1}`;
       partners.push(partnerInfo);
     });
@@ -41,17 +42,17 @@ const Partners = () => {
   }, [partnersDate, showMatrix, t]);
 
   useEffect(() => {
-    setResultData(getCompatData(partnersMatrixData, isFullOverlap));
+    setResultData(getCompatData(partnersMatrixData, isFullOverlap, isMethod2023));
 
     if (partnersMatrixData.length === 0) return;
     const classicTable = getPartnersChakra(partnersMatrixData, i18n.language);
     const authorTable = partnersAuthorHealthCard(partnersMatrixData, i18n.language);
     setPartnersHealthCard([classicTable, authorTable]);
-  }, [i18n.language, isFullOverlap, partnersMatrixData]);
+  }, [i18n.language, isFullOverlap, isMethod2023, partnersMatrixData]);
 
   return (
     <>
-      <DataInput setIsFullOverlap={setIsFullOverlap} />
+      <DataInput setIsFullOverlap={setIsFullOverlap} setIsMethod2023={setIsMethod2023} />
       {showMatrix && (
         <>
           <ResultMatrix resultData={resultData} />

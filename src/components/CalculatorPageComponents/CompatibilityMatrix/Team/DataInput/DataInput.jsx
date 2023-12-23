@@ -16,7 +16,7 @@ const initialState = { date: '', name: '' };
 const gradient =
   'linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(249, 237, 255, 0.3) 100%)';
 
-const DataInput = ({ setIsFullOverlap }) => {
+const DataInput = ({ setIsFullOverlap, setIsMethod2023 }) => {
   const { setPartnersDate, setShowMatrix } = useMatrix();
   const { t } = useTranslation('calc');
 
@@ -40,7 +40,7 @@ const DataInput = ({ setIsFullOverlap }) => {
     setPartnersDate(teamInfo);
     setShowMatrix(true);
     setIsFullOverlap(data.isFullOverlap);
-
+    setIsMethod2023(data.method2023);
     document.activeElement.blur();
   };
 
@@ -80,7 +80,7 @@ const DataInput = ({ setIsFullOverlap }) => {
           </Box>
         )}
       </Box>
-      <FullOverlapCheckBox register={register} />
+      <FullOverlapCheckBox register={register} setValue={setValue} control={control} />
       <SubmitBtn
         type="submit"
         whileHover={{ scale: 1.05 }}

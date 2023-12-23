@@ -27,6 +27,7 @@ export function allData({
   isGeneric,
   isRisingStar,
   isLightGate,
+  isMethod2023,
 }) {
   const data = {
     ...date,
@@ -47,6 +48,10 @@ export function allData({
     data.topRight1 = checkNum(data.month + data.year);
     data.bottomLeft1 = checkNum(data.day + data.bottom1);
     data.bottomRight1 = checkNum(data.bottom1 + data.year);
+  }
+
+  if (isMethod2023) {
+    data.center = checkNum(data.day + data.month + data.year + data.bottom1);
   }
 
   data.bottom3 = checkNum(data.center + data.bottom1);
@@ -1149,15 +1154,21 @@ export const getPeriod = info => {
   return ageList;
 };
 
-export const getCompatData = (partners, isFullOverlap) => {
+export const getCompatData = (partners, isFullOverlap, isMethod2023) => {
   const result = partners.reduce((acc, partner) => {
     Object.entries(partner).forEach(([key, value]) => {
-      acc[key] = checkNum((acc[key] || 0) + value);
+      acc[key] = (acc[key] || 0) + value;
     });
     return acc;
   }, {});
+
+  Object.keys(result).forEach(el => {
+    result[el] = checkNum(result[el]);
+  });
   delete result.order;
-  return isFullOverlap ? result : allData({ date: result, isGenerated: true, calCanter2: false });
+  return isFullOverlap
+    ? result
+    : allData({ date: result, isGenerated: true, calCanter2: false, isMethod2023 });
 };
 
 export const getPartnersChakra = (info, lng) => {
