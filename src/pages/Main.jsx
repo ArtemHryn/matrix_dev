@@ -17,14 +17,14 @@ import { MatrixPlusAndMinus } from 'components/MainPageComponents/MatrixPlusAndM
 import { Header } from 'components/MainPageComponents/Header/Header';
 import { useTranslation } from 'react-i18next';
 import getNavList from 'components/MainPageComponents/Header/navigationList';
+import SnowFallen from 'components/Common/SnowFallen/SnowFallen';
 
 const imgLink = `url(${backgroundFooterImage})`;
 
 const Main = () => {
   const location = useLocation();
   const navigate = useNavigate();
-    const { i18n } = useTranslation();
-
+  const { i18n } = useTranslation();
 
   const getNavCalList = () => {
     const lng = i18n.language;
@@ -58,6 +58,7 @@ const Main = () => {
         <FreeRecommendations />
         <Footer />
       </Box>
+      <SnowFallen />
     </>
   );
 };
