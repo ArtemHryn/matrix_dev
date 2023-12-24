@@ -41,7 +41,8 @@ const Team = () => {
         <>
           <ResultMatrix resultData={resultData} />
           <Box
-            display={[null, null, 'flex']}
+            display={'flex'}
+            flexDirection={['column', null, 'row']}
             justifyContent="center"
             gridGap="40px"
             flexWrap="wrap"

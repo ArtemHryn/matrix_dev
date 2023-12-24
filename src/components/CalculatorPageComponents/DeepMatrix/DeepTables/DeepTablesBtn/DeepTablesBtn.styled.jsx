@@ -35,6 +35,9 @@ export const ChangeTableBtn = styled.button`
   &:is(:hover, :focus) {
     scale: 1.05;
   }
+  &:disabled {
+    opacity: 0.5;
+  }
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     font-size: 22px;
     width: 310px;

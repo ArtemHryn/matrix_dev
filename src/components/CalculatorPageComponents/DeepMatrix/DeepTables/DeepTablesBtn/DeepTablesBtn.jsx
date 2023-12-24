@@ -20,6 +20,7 @@ const DeepTablesBtn = ({ tableId, setTableId }) => {
           color={tableId === 2 ? 'white' : null}
           bg={tableId === 2 ? 'activeBtn' : null}
           onClick={() => setTableId(2)}
+          disabled={true}
         >
           {t('deepGenericBtn2')}
         </ChangeTableBtn>
