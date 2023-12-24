@@ -1,8 +1,8 @@
 {
-  "name": "matrix",
+  "name": "matrix_dev",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ArtemHryn.github.io/matrix/",
+  "homepage": "https://ArtemHryn.github.io/matrix_dev/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",

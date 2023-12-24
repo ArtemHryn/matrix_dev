@@ -6,7 +6,7 @@ const getNavList = lng => {
         { name: 'Послуги', href: '#4methods' },
         { name: 'Відгуки', href: '#feedback' },
         { name: 'FAQ', href: '#peopleAsk' },
-        { name: 'Калькулятор', href: '/matrix/calculator' },
+        { name: 'Калькулятор', href: '/matrix_dev/calculator' },
       ]
     : [
         { name: 'Автор', href: '#author' },
@@ -14,7 +14,7 @@ const getNavList = lng => {
         { name: 'Услуги', href: '#4methods' },
         { name: 'Отзывы', href: '#feedback' },
         { name: 'FAQ', href: '#peopleAsk' },
-        { name: 'Калькулятор', href: '/matrix/calculator' },
+        { name: 'Калькулятор', href: '/matrix_dev/calculator' },
       ];
 };
 
