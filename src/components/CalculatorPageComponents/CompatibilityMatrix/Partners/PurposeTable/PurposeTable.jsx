@@ -16,17 +16,13 @@ const PurposeTable = ({ partnerMatrix, display = null }) => {
   const {
     bottom1,
     month,
-    sky,
     day,
     year,
-    earth,
     personal,
     bottomRight1,
     topLeft1,
-    father,
     topRight1,
     bottomLeft1,
-    mother,
     social,
     spirit,
     planet,
@@ -48,11 +44,9 @@ const PurposeTable = ({ partnerMatrix, display = null }) => {
           thrirdName={t('assignmentTabledthrirdName1')}
           el1={month}
           el2={bottom1}
-          el3={sky}
-          el4={day}
-          el5={year}
-          el6={earth}
-          el7={personal}
+          el3={day}
+          el4={year}
+
         />
         <FirstTemplate
           firstName={t('assignmentTabledfirstName2')}
@@ -60,11 +54,9 @@ const PurposeTable = ({ partnerMatrix, display = null }) => {
           thrirdName={t('assignmentTabledthrirdName2')}
           el1={topLeft1}
           el2={bottomRight1}
-          el3={father}
-          el4={topRight1}
-          el5={bottomLeft1}
-          el6={mother}
-          el7={social}
+          el3={topRight1}
+          el4={bottomLeft1}
+
         />
       </Box>
       <Box display="flex" gridGap={['4px', '8px']} mb={['2px', '4px']}>

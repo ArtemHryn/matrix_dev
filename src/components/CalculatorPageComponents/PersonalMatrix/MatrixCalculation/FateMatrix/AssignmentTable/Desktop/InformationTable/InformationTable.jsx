@@ -8,21 +8,20 @@ const gradient =
   'linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(249, 237, 255, 0.5) 100%)';
 
 const InformationTable = ({ matrixData, title = null, display = null }) => {
-  const {t} = useTranslation('calc')
+  const { t } = useTranslation('calc');
   const {
     bottom1,
     month,
-    sky,
     day,
     year,
-    earth,
+
     personal,
     bottomRight1,
     topLeft1,
-    father,
+
     topRight1,
     bottomLeft1,
-    mother,
+
     social,
     spirit,
     planet,
@@ -51,11 +50,8 @@ const InformationTable = ({ matrixData, title = null, display = null }) => {
         name3={t('assignmentTabledsecondName1')}
         el1={month}
         el2={bottom1}
-        el3={sky}
-        el4={day}
-        el5={year}
-        el6={earth}
-        el7={personal}
+        el3={day}
+        el4={year}
       />
       <FirstTemplate
         name1={t('assignmentTabledthrirdNameDesk2')}
@@ -63,24 +59,11 @@ const InformationTable = ({ matrixData, title = null, display = null }) => {
         name3={t('assignmentTabledsecondName2')}
         el1={topLeft1}
         el2={bottomRight1}
-        el3={father}
-        el4={topRight1}
-        el5={bottomLeft1}
-        el6={mother}
-        el7={social}
+        el3={topRight1}
+        el4={bottomLeft1}
       />
-      <SecondTemplate
-        name={t('assignmentTabledname1')}
-        el1={personal}
-        el2={social}
-        el3={spirit}
-      />
-      <SecondTemplate
-        name={t('assignmentTabledname2')}
-        el1={social}
-        el2={spirit}
-        el3={planet}
-      />
+      <SecondTemplate name={t('assignmentTabledname1')} el1={personal} el2={social} el3={spirit} />
+      <SecondTemplate name={t('assignmentTabledname2')} el1={social} el2={spirit} el3={planet} />
       <SecondTemplate
         name={t('assignmentTabledkey')}
         el1={center}

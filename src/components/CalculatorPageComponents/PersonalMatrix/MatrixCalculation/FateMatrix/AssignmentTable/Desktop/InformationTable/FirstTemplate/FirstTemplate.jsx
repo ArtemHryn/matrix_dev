@@ -1,21 +1,13 @@
 import { Box } from 'components/Box';
 import { Element, ElementsList, MainElement, Name } from './FirstTemplate.styled';
+import { checkNum } from 'helper/calculateMatrix';
 
-const dotsGradient =
-  'linear-gradient(to right,#9072af 10%, rgba(255, 255, 255, 0) 0%);';
+const dotsGradient = 'linear-gradient(to right,#9072af 10%, rgba(255, 255, 255, 0) 0%);';
 
-const FirstTemplate = ({
-  name1,
-  name2,
-  name3,
-  el1,
-  el2,
-  el3,
-  el4,
-  el5,
-  el6,
-  el7,
-}) => {
+const FirstTemplate = ({ name1, name2, name3, el1, el2, el3, el4 }) => {
+  const sum1 = checkNum(el1 + el2);
+  const sum2 = checkNum(el3 + el4);
+  const total = checkNum(sum1 + sum2)
   return (
     <Box
       py="12px"
@@ -40,7 +32,7 @@ const FirstTemplate = ({
               <Element>{el2}</Element>
             </li>
             <li>
-              <Element>{el3}</Element>
+              <Element>{sum1}</Element>
             </li>
           </ElementsList>
           <ElementsList>
@@ -48,17 +40,17 @@ const FirstTemplate = ({
               <Name width="50px">{name3}</Name>
             </li>
             <li>
+              <Element>{el3}</Element>
+            </li>
+            <li>
               <Element>{el4}</Element>
             </li>
             <li>
-              <Element>{el5}</Element>
-            </li>
-            <li>
-              <Element>{el6}</Element>
+              <Element>{sum2}</Element>
             </li>
           </ElementsList>
         </Box>
-        <MainElement as="p">{el7}</MainElement>
+        <MainElement as="p">{total}</MainElement>
       </Box>
     </Box>
   );

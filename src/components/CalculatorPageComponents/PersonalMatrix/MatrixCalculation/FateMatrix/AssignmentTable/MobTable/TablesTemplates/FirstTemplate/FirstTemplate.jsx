@@ -1,5 +1,6 @@
 import { Box } from 'components/Box';
 import { Element, ElementsList, Name } from './FirstTemplate.styled';
+import { checkNum } from 'helper/calculateMatrix';
 
 const gradient =
   'linear-gradient(89.9deg, rgba(255, 255, 255, 0.7) 9.56%, rgba(251, 244, 255, 0.7) 85.28%);';
@@ -16,11 +17,10 @@ const FirstTemplate = props => {
     el2,
     el3,
     el4,
-    el5,
-    el6,
-    el7,
   } = props;
-
+  const sum1 = checkNum(el1 + el2);
+  const sum2 = checkNum(el3 + el4);
+  const total = checkNum(sum1 + sum2);
   return (
     <Box
       backgroundImage={gradient}
@@ -49,7 +49,7 @@ const FirstTemplate = props => {
             <Element>{el2}</Element>
           </li>
           <li>
-            <Element bg="#F3E8FF">{el3}</Element>
+            <Element bg="#F3E8FF">{sum1}</Element>
           </li>
         </ElementsList>
       </Box>
@@ -63,13 +63,13 @@ const FirstTemplate = props => {
         <Name>{secondName}</Name>
         <ElementsList>
           <li>
+            <Element>{el3}</Element>
+          </li>
+          <li>
             <Element>{el4}</Element>
           </li>
           <li>
-            <Element>{el5}</Element>
-          </li>
-          <li>
-            <Element bg="#F3E8FF">{el6}</Element>
+            <Element bg="#F3E8FF">{sum2}</Element>
           </li>
         </ElementsList>
       </Box>
@@ -83,7 +83,7 @@ const FirstTemplate = props => {
         borderRadius={['7px', '12px']}
       >
         <Name mr={['55px', '110px']}>{thrirdName}</Name>
-        <Element bg="#F3E8FF">{el7}</Element>
+        <Element bg="#F3E8FF">{total}</Element>
       </Box>
     </Box>
   );
