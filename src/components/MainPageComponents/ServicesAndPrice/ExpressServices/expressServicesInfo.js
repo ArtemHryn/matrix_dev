@@ -3,17 +3,17 @@ import {
   card2,
   card3,
   card4,
-  card5,
+  // card5,
   card1Tab,
   card2Tab,
   card3Tab,
   card4Tab,
-  card5Tab,
+  // card5Tab,
   card1Desc,
   card2Desc,
   card3Desc,
   card4Desc,
-  card5Desc,
+  // card5Desc,
 } from './';
 
 const textBeforeCard1aRu =
@@ -64,15 +64,15 @@ const textBeforeCard4bRu =
 const textBeforeCard4bUa =
   'Підбір сприятливої енергії для телефону, авто, квартири, будинку, банківської картки для покращення якості вашого життя.';
 
-const textBeforeCard5aRu = 'Экстренный разбор запроса в день обращения.';
-const textBeforeCard5aUa = 'Терміновий розгляд запиту у день звернення.';
+// const textBeforeCard5aRu = 'Экстренный разбор запроса в день обращения.';
+// const textBeforeCard5aUa = 'Терміновий розгляд запиту у день звернення.';
 
-const textBeforeCard5bRu =
-  'Поможет вам рассмотреть ситуацию с нескольких сторон, понять причинно-следственные связи и принять верное решение.';
-const textBeforeCard5bUa =
-  "Допоможе вам розглянути ситуацію з різних сторін, зрозуміти причинно-наслідкові зв'язки та прийняти правильне рішення.";
-const textBeforeCard5cRu = 'Включает в себя:';
-const textBeforeCard5cUa = 'В консультацію входить:';
+// const textBeforeCard5bRu =
+//   'Поможет вам рассмотреть ситуацию с нескольких сторон, понять причинно-следственные связи и принять верное решение.';
+// const textBeforeCard5bUa =
+//   "Допоможе вам розглянути ситуацію з різних сторін, зрозуміти причинно-наслідкові зв'язки та прийняти правильне рішення.";
+// const textBeforeCard5cRu = 'Включает в себя:';
+// const textBeforeCard5cUa = 'В консультацію входить:';
 
 export const getExpressServiceCards = lng => {
   return [
@@ -176,44 +176,44 @@ export const getExpressServiceCards = lng => {
       },
       isHideStar: true,
     },
-    {
-      img: card5,
-      text: lng === 'ua' ? 'SOS-допомога' : 'SOS - помощь',
-      imgTab: card5Tab,
-      imgDesc: card5Desc,
-      price: '$28',
-      info: {
-        textBefore:
-          lng === 'ua'
-            ? [textBeforeCard5aUa, textBeforeCard5bUa, textBeforeCard5cUa]
-            : [textBeforeCard5aRu, textBeforeCard5bRu, textBeforeCard5cRu],
-        list:
-          lng === 'ua'
-            ? [
-                'експрес-розбір матриці від кармолога Дарини',
-                'додаткову консультацію таролога Софії щодо поточної ситуації.',
-              ]
-            : [
-                'экспресс-разбор матрицы от кармолога Дарины',
-                'дополнительную консультацию таролога Софии по ситуации на данный момент.',
-              ],
-        meeting:
-          lng === 'ua'
-            ? 'Відеозустріч з 2 майстрами'
-            : 'Видеовстреча с 2 мастерами',
-        links: [
-          {
-            name: lng === 'ua' ? 'Дарина' : 'Дарина',
-            link: 'https://www.instagram.com/dari.karma/',
-          },
-          {
-            name: lng === 'ua' ? 'Софія' : 'София',
-            link: 'https://www.instagram.com/mooncats_taro/',
-          },
-        ],
-      },
+    // {
+    //   img: card5,
+    //   text: lng === 'ua' ? 'SOS-допомога' : 'SOS - помощь',
+    //   imgTab: card5Tab,
+    //   imgDesc: card5Desc,
+    //   price: '$28',
+    //   info: {
+    //     textBefore:
+    //       lng === 'ua'
+    //         ? [textBeforeCard5aUa, textBeforeCard5bUa, textBeforeCard5cUa]
+    //         : [textBeforeCard5aRu, textBeforeCard5bRu, textBeforeCard5cRu],
+    //     list:
+    //       lng === 'ua'
+    //         ? [
+    //             'експрес-розбір матриці від кармолога Дарини',
+    //             'додаткову консультацію таролога Софії щодо поточної ситуації.',
+    //           ]
+    //         : [
+    //             'экспресс-разбор матрицы от кармолога Дарины',
+    //             'дополнительную консультацию таролога Софии по ситуации на данный момент.',
+    //           ],
+    //     meeting:
+    //       lng === 'ua'
+    //         ? 'Відеозустріч з 2 майстрами'
+    //         : 'Видеовстреча с 2 мастерами',
+    //     links: [
+    //       {
+    //         name: lng === 'ua' ? 'Дарина' : 'Дарина',
+    //         link: 'https://www.instagram.com/dari.karma/',
+    //       },
+    //       {
+    //         name: lng === 'ua' ? 'Софія' : 'София',
+    //         link: 'https://www.instagram.com/mooncats_taro/',
+    //       },
+    //     ],
+    //   },
 
-      isHideStar: true,
-    },
+    //   isHideStar: true,
+    // },
   ];
 };

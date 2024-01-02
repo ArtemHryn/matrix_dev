@@ -25,7 +25,7 @@ const Annual = () => {
     }
     const partners = [];
     partnersDate.forEach((element, index) => {
-      const partnerInfo = allData({date: element, isGenerated: element.isGenerated});
+      const partnerInfo = allData({ date: element, isGenerated: element.isGenerated });
       partnerInfo.order = `${t('tableMatrix')} ${index + 1}`;
       partners.push(partnerInfo);
     });
@@ -54,9 +54,10 @@ const Annual = () => {
             setTableInfo={setTableInfo}
           />
           <Box
-            display={[null, null, 'flex']}
+            display={['flex']}
+            flexDirection={['column', 'column', 'row']}
             justifyContent="center"
-            gridGap="40px"
+            gridGap={["20px",'40px']}
             mb={['60px', '70px']}
           >
             {annualMatrixData.map((partner, index) => (

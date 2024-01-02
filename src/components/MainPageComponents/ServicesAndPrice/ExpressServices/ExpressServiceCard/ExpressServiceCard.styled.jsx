@@ -5,12 +5,6 @@ export const ExpressServiceCardElement = styled.li`
   position: relative;
   overflow: hidden;
   border-radius: 20px;
-  @media screen and (max-width: ${p => p.theme.sizes.tablet}) {
-    :last-child {
-      grid-column-start: 1;
-      grid-column-end: 3;
-    }
-  }
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     border-radius: 27px;
   }
@@ -20,15 +14,7 @@ export const ExpressServiceCardElement = styled.li`
 `;
 
 export const Img = styled.img`
-  @media screen and (min-width: ${p => p.theme.sizes.tablet}) and (max-width: ${p => p.theme.sizes.desktop}) {
-    width: 232px;
-    li:nth-last-child(-n + 2) & {
-      width: 350px;
-    }
-  }
-  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
-    flex-wrap: nowrap;
-  }
+  height: 100%;
 `;
 export const ExpressServiceCardText = styled.p`
   text-align: center;
@@ -41,16 +27,9 @@ export const ExpressServiceCardText = styled.p`
   line-height: 1.25;
   text-align: center;
 
-  li:last-child & {
-    transform: translate(-50%, 50%);
-  }
-
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     font-size: 25px;
     line-height: 1.2;
-    li:last-child & {
-      transform: translate(-50%, -50%);
-    }
   }
 `;
 
@@ -65,6 +44,14 @@ export const DetailsContainer = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 12px;
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    height: 98%;
+    border-radius: 26px;
+  }
+  @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
+    border-radius: 36px;
+  }
 `;
 
 export const ShowDetailsButton = styled.button`

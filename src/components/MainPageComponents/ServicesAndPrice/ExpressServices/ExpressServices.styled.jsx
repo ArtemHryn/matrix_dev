@@ -18,18 +18,15 @@ export const ExpressServicesTitle = styled.h3`
 
 export const ExpressServicesList = styled.ul`
   display: grid;
-  grid-template-columns: repeat(2, 150px);
-
+  grid-template-columns: repeat(2, minmax(150px, 1fr));
   margin-bottom: 20px;
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     margin-bottom: 35px;
-    display: flex;
-    flex-wrap: wrap;
   }
   @media screen and (min-width: ${p => p.theme.sizes.desktop}) {
-    flex-wrap: nowrap;
     gap: 15px;
     margin-bottom: 30px;
+    grid-template-columns: repeat(4, minmax(150px, 1fr));
   }
 `;
 

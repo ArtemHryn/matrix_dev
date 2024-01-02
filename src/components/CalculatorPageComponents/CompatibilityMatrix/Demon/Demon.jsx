@@ -46,9 +46,10 @@ const Demon = () => {
         <>
           <ResultMatrix resultData={resultData} />
           <Box
-            display={[null, null, 'flex']}
+            display={['flex']}
             justifyContent="center"
-            gridGap="40px"
+            flexDirection={['column', 'column', 'row']}
+            gridGap={['20px', '40px']}
             mb={['60px', '70px']}
           >
             {demonMatrix.map((partner, index) => (

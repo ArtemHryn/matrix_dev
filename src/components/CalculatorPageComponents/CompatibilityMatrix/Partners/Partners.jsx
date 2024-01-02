@@ -90,7 +90,7 @@ const Partners = () => {
               <HealthCard card={cardType === 1 ? partnersHealthCard[0] : partnersHealthCard[1]} />
             )}
           </Box>
-          <Box display={[null, null, 'flex']} justifyContent="space-between" gridGap="40px">
+          <Box display={[ 'flex']} justifyContent="space-between" gridGap={[ "20px","40px"]} flexDirection={['column', 'column', 'row']}>
             {partnersMatrixData.map((partner, index) => (
               <PartnerMatrix
                 key={partner.order}
