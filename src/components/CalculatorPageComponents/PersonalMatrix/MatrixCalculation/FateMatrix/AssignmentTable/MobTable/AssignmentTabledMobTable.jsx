@@ -3,11 +3,7 @@ import { Box } from 'components/Box';
 import { useMatrix } from 'pages/Calculator';
 
 import FirstTemplate from './TablesTemplates/FirstTemplate/FirstTemplate';
-import {
-  Element,
-  ElementsList,
-  Name,
-} from './TablesTemplates/FirstTemplate/FirstTemplate.styled';
+import { Element, ElementsList, Name } from './TablesTemplates/FirstTemplate/FirstTemplate.styled';
 import SecondsTemplate from './TablesTemplates/SecondsTemplate/SecondsTemplate';
 
 const gradient =
@@ -15,21 +11,17 @@ const gradient =
 
 const AssignmentTabledMobTabled = ({ mb }) => {
   const { matrixData } = useMatrix();
-  const {t} = useTranslation('calc')
+  const { t } = useTranslation('calc');
   const {
     bottom1,
     month,
-    sky,
     day,
     year,
-    earth,
     personal,
     bottomRight1,
     topLeft1,
-    father,
     topRight1,
     bottomLeft1,
-    mother,
     social,
     spirit,
     planet,
