@@ -47,11 +47,8 @@ const AssignmentTabledMobTabled = ({ mb }) => {
           thrirdName={t('assignmentTabledthrirdName1')}
           el1={month}
           el2={bottom1}
-          el3={sky}
-          el4={day}
-          el5={year}
-          el6={earth}
-          el7={personal}
+          el3={day}
+          el4={year}
         />
         <FirstTemplate
           firstName={t('assignmentTabledfirstName2')}
@@ -59,11 +56,8 @@ const AssignmentTabledMobTabled = ({ mb }) => {
           thrirdName={t('assignmentTabledthrirdName2')}
           el1={topLeft1}
           el2={bottomRight1}
-          el3={father}
-          el4={topRight1}
-          el5={bottomLeft1}
-          el6={mother}
-          el7={social}
+          el3={topRight1}
+          el4={bottomLeft1}
         />
       </Box>
       <Box display="flex" gridGap={['4px', '8px']} mb={['2px', '4px']}>
@@ -73,12 +67,7 @@ const AssignmentTabledMobTabled = ({ mb }) => {
           el2={social}
           el3={spirit}
         />
-        <SecondsTemplate
-          name={t('assignmentTabledname2')}
-          el1={social}
-          el2={spirit}
-          el3={planet}
-        />
+        <SecondsTemplate name={t('assignmentTabledname2')} el1={social} el2={spirit} el3={planet} />
       </Box>
       <Box
         backgroundImage={gradient}

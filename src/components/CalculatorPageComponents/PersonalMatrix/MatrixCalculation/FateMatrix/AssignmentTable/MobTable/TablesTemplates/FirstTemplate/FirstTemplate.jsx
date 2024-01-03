@@ -21,6 +21,8 @@ const FirstTemplate = props => {
   const sum1 = checkNum(el1 + el2);
   const sum2 = checkNum(el3 + el4);
   const total = checkNum(sum1 + sum2);
+  if(!total) return null
+  
   return (
     <Box
       backgroundImage={gradient}
