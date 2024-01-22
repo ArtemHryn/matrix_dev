@@ -78,7 +78,7 @@ const Instruction = () => {
                     page={page}
                     setPage={setPage}
                     key={'1'}
-                    price={'70$'}
+                    price={'60$'}
                     href={
                       i18n.language === 'ua'
                         ? 'https://www.buymeacoffee.com/dari.karma/e/155304'
