@@ -150,3 +150,16 @@ export const TableHeader = styled.p`
     font-size: 24px;
   }
 `;
+
+export const PeriodTip = styled.p`
+  font-size: 14px;
+  font-family: ${p => p.theme.fonts.digits};
+  padding: 6px;
+  border-radius: 12px;
+  color: #4d4b4c;
+  background-image: linear-gradient(180deg, #fff 0%, #ecd3ff 100%);
+  @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
+    font-size: 22px;
+    padding: 8px;
+  }
+`;

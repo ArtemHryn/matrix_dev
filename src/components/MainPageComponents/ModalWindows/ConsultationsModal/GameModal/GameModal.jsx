@@ -102,7 +102,7 @@ export const GameModal = () => {
                   <Text>
                     {t('game.personalGame')} -{' '}
                     <Text as="span" fontWeight="700">
-                      21$/{t('game.person')}
+                      26$/{t('game.person')}
                     </Text>
                   </Text>
                 </li>

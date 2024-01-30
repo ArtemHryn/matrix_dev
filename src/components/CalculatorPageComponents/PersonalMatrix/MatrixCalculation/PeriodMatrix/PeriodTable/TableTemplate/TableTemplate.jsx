@@ -1,13 +1,12 @@
 import { Box } from 'components/Box';
-import {
-  AgeColumnItem,
-  AgeColumnList,
-  AgeElement,
-} from '../../PeriodMatrix.styled';
-import { checkNum } from 'helper/calculateMatrix';
+import { AgeColumnList } from '../../PeriodMatrix.styled';
 import { useEffect, useState } from 'react';
+import AgeRowElement from './AgeRowElement';
+import AgeRowElementSecond from './AgeRowElementSecond';
+import { useMatrix } from 'pages/Calculator';
 
 const TableTemplate = ({ main, additional, age: customerAge }) => {
+  const { date, isGenerated } = useMatrix();
   const [currentArcane, setCurrentArcane] = useState(null);
   useEffect(() => {
     const fullAge = customerAge.years + customerAge.months / 12;
@@ -18,30 +17,22 @@ const TableTemplate = ({ main, additional, age: customerAge }) => {
     const result = main.findIndex(element => element.age > fullAge);
     setCurrentArcane(result - 1);
   }, [customerAge, main]);
-
   return (
     <Box display="flex" justifyContent="space-between">
       <AgeColumnList>
         {main.map(({ age, arcane }, index) => {
           if (index < 16) {
             return (
-              <AgeColumnItem
-                className={index === currentArcane && 'active'}
-                bg={index % 2 === 0 && '#b49bd145'}
+              <AgeRowElement
                 key={age}
-              >
-                <AgeElement
-                  borderBottom={index === 15 && ['none', 'none', 'none']}
-                >
-                  {age}
-                </AgeElement>{' '}
-                <AgeElement
-                  flex="3"
-                  borderBottom={index === 15 && ['none', 'none', 'none']}
-                >{`${arcane} - ${additional[index].arcane} - ${checkNum(
-                  arcane + additional[index].arcane
-                )}`}</AgeElement>
-              </AgeColumnItem>
+                age={age}
+                arcane={arcane}
+                index={index}
+                currentArcane={currentArcane}
+                additional={additional}
+                date={date}
+                isGenerated={isGenerated}
+              />
             );
           }
           return null;
@@ -51,28 +42,17 @@ const TableTemplate = ({ main, additional, age: customerAge }) => {
         {main.map(({ age, arcane }, index) => {
           if (index >= 16) {
             return (
-              <AgeColumnItem
+              <AgeRowElementSecond
                 key={age}
-                className={index === currentArcane && 'active'}
-                bg={index % 2 === 0 && '#b49bd145'}
-              >
-                <AgeElement
-                  borderBottom={
-                    index === main.length - 1 && ['none', 'none', 'none']
-                  }
-                >
-                  {age}
-                </AgeElement>{' '}
-                <AgeElement
-                  flex="3"
-                  borderBottom={
-                    index === main.length - 1 && ['none', 'none', 'none']
-                  }
-                  borderRight={['none', 'none']}
-                >{`${arcane} - ${additional[index].arcane} - ${checkNum(
-                  arcane + additional[index].arcane
-                )}`}</AgeElement>
-              </AgeColumnItem>
+                age={age}
+                arcane={arcane}
+                index={index}
+                currentArcane={currentArcane}
+                additional={additional}
+                main={main}
+                date={date}
+                isGenerated={isGenerated}
+              />
             );
           }
           return null;

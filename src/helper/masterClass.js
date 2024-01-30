@@ -58,7 +58,7 @@ const getMasterClass = lng => {
           ],
           format: 'Формат: личная встреча, группа 3-7 человек',
           duration: 'Длительность: 2-3 часа',
-          price: '16',
+          price: '21',
           btn: 'Узнать даты ближайших встреч',
           link: 'https://www.instagram.com/stories/highlights/17988946340104079/',
         },
