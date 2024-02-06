@@ -179,19 +179,19 @@ const getMotherArcanesList = info => {
   const data = [
     {
       column1: `${month} - ${topRight1} - ${motherSpirit1}`,
-      column2: `${year} - ${topRight1} - ${motherEarth1}`,
+      column2: `${day} - ${bottomLeft1} - ${motherEarth9}`,
     },
     {
       column1: `${top2} - ${topRight2} - ${motherSpirit2}`,
-      column2: `${right2} - ${topRight2} - ${motherEarth2}`,
+      column2: `${left2} - ${bottomLeft2} - ${motherEarth8}`,
     },
     {
       column1: `${top3} - ${topRight3} - ${motherSpirit3}`,
-      column2: `${right3} - ${topRight3} - ${motherEarth3}`,
+      column2: `${left3} - ${bottomLeft3} - ${motherEarth7}`,
     },
     {
       column1: `${innerTop2} - ${healthTopRight} - ${motherSpirit4}`,
-      column2: `${innerRight2} - ${healthTopRight} - ${motherEarth4}`,
+      column2: `${innerLeft2} - ${healthBottomLeft} - ${motherEarth6}`,
     },
     {
       column1: `${center} - ${center2} - ${checkNum(center + center2)}`,
@@ -199,19 +199,21 @@ const getMotherArcanesList = info => {
     },
     {
       column1: `${innerBottom2} - ${healthBottomLeft} - ${motherSpirit6}`,
-      column2: `${innerLeft2} - ${healthBottomLeft} - ${motherEarth6}`,
+      column2: `${innerRight2} - ${healthTopRight} - ${motherEarth4}`,
     },
     {
       column1: `${bottom3} - ${bottomLeft3} - ${motherSpirit7}`,
-      column2: `${left3} - ${bottomLeft3} - ${motherEarth7}`,
+      column2: `${right3} - ${topRight3} - ${motherEarth3}`,
     },
     {
       column1: `${bottom2} - ${bottomLeft2} - ${motherSpirit8}`,
-      column2: `${left2} - ${bottomLeft2} - ${motherEarth8}`,
+
+      column2: `${right2} - ${topRight2} - ${motherEarth2}`,
     },
     {
       column1: `${bottom1} - ${bottomLeft1} - ${motherSpirit9}`,
-      column2: `${day} - ${bottomLeft1} - ${motherEarth9}`,
+
+      column2: `${year} - ${topRight1} - ${motherEarth1}`,
     },
   ];
 
