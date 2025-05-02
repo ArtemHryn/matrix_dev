@@ -17,7 +17,7 @@ import { MatrixPlusAndMinus } from 'components/MainPageComponents/MatrixPlusAndM
 import { Header } from 'components/MainPageComponents/Header/Header';
 import { useTranslation } from 'react-i18next';
 import getNavList from 'components/MainPageComponents/Header/navigationList';
-import SnowFallen from 'components/Common/SnowFallen/SnowFallen';
+// import SnowFallen from 'components/Common/SnowFallen/SnowFallen';
 
 const imgLink = `url(${backgroundFooterImage})`;
 
@@ -58,7 +58,7 @@ const Main = () => {
         <FreeRecommendations />
         <Footer />
       </Box>
-      <SnowFallen />
+      {/* <SnowFallen /> */}
     </>
   );
 };

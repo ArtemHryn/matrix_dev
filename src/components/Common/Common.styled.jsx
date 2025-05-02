@@ -39,6 +39,7 @@ export const ScrollToTopBtn = styled.button`
 `;
 
 export const CalcContainer = styled.div`
+  position: relative;
   background-image: linear-gradient(
     90deg,
     #fdfcfe 0%,

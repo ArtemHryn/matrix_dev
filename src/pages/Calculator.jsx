@@ -16,7 +16,8 @@ import { useTranslation } from 'react-i18next';
 import getNavList from 'components/CalculatorPageComponents/navigationLisCalc';
 import { Box } from 'components/Box';
 import Instruction from 'components/CalculatorPageComponents/Instruction/Instruction';
-import SnowFallen from 'components/Common/SnowFallen/SnowFallen';
+import Advertising from '../components/CalculatorPageComponents/Advertising/Advertising';
+// import SnowFallen from 'components/Common/SnowFallen/SnowFallen';
 
 const MatrixContext = createContext();
 export const useMatrix = () => useContext(MatrixContext);
@@ -84,8 +85,9 @@ const Calculator = () => {
           <GetPDFTemplate />
         </Box>
         <Footer />
+        <Advertising />
       </CalcContainer>
-      <SnowFallen />
+      {/* <SnowFallen /> */}
     </MatrixContext.Provider>
   );
 };
