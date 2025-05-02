@@ -5,6 +5,7 @@ import { Box } from './Box';
 import { Route, Routes } from 'react-router-dom';
 import { Spinner } from './Spinner/Spinner';
 import ScrollToTop from './Common/ScrollToTop';
+import Advertising from './MainPageComponents/Advertising/Advertising';
 
 const Main = lazy(() => import('pages/Main'));
 const Calculator = lazy(() => import('pages/Calculator'));
@@ -20,7 +21,8 @@ export const App = () => {
   const location = useLocation();
 
   return (
-    <Box m="0 auto">
+    <Box m="0 auto" position="relative">
+      <Advertising />
       <ScrollToTop />
       <Suspense fallback={<Spinner />}>
         <Routes key={location.pathname} location={location}>

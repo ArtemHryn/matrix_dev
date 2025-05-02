@@ -10,6 +10,7 @@ export const AdvertisingContainer = styled.div`
   transform: translateX(${props => (props.$visible ? '0' : '100%')});
   transition: transform 0.3s ease-in-out;
   background: linear-gradient(47deg, #f9f7fe 0%, #fdf6fb 100%);
+  z-index: 9999;
 `;
 
 export const CloseBtn = styled.button`
@@ -123,6 +124,7 @@ export const BottomWrapper = styled.div`
   z-index: 100;
   @media screen and (min-width: ${p => p.theme.sizes.tablet}) {
     justify-content: center;
+    padding-right: 0;
   }
 `;
 
